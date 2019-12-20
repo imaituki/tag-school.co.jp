@@ -1,0 +1,15 @@
+# RewriteEngine
+RewriteEngine On
+RewriteBase /
+
+# wwwなしで統一
+RewriteCond %{HTTP_HOST} ^www\.tag-school\.co\.jp
+RewriteRule ^(.*)$ https://tag-school.co.jp/$1 [R=302,L]
+
+RewriteCond %{HTTP_HOST} ^tag-school\.sakura\.ne\.jp
+RewriteRule ^(.*)$ https://tag-school.co.jp/$1 [R=302,L]
+
+# SSL
+RewriteCond %{ENV:HTTPS} !^on$
+RewriteCond %{HTTP:X-SAKURA-FORWARDED-FOR} ^$
+RewriteRule ^(.*)$ https://tag-school.co.jp/$1 [R=302,L]
