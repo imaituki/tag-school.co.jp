@@ -25,10 +25,31 @@
 				</div>
 				*}
 			</li>
-			<li{if $manage == ""} class="active"{/if}><a href="{$_ADMIN.home}/"><i class="fa fa-home"></i><span class="nav-label">HOME</span></a></li>
-			<li{if $manage == "information"} class="active"{/if}><a href="{$_ADMIN.home}/contents/information/"><i class="fa fa-info-circle"></i><span class="nav-label">お知らせ管理</span></a></li>
-			<li{if $manage == "contact"} class="active"{/if}><a href="{$_ADMIN.home}/contents/contact/"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="nav-label">お問い合わせ管理</span></a></li>
-			<li{if $manage == "siteconf"} class="active"{/if}><a href="{$_ADMIN.home}/contents/siteconf/"><i class="fa fa-gear"></i><span class="nav-label">サイト設定</span></a></li>
+			<li {if $manage == ''} class="active"{/if}>
+				<a href="{$_ADMIN.home}/"><i class="fa fa-home"></i><span class="nav-label">HOME</span></a>
+			</li>
+			<li {if $manage == 'information'} class="active"{/if}>
+				<a href="{$_ADMIN.home}/contents/information/"><i class="fa fa-info-circle"></i><span class="nav-label">お知らせ管理</span></a>
+			</li>
+			<li {if $manage == 'contact'} class="active"{/if}>
+				<a href="{$_ADMIN.home}/contents/contact/"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="nav-label">お問い合わせ管理</span></a>
+			</li>
+			<li {if $manage == 'siteconf'} class="active"{/if}>
+				<a href="{$_ADMIN.home}/contents/siteconf/"><i class="fa fa-gear"></i><span class="nav-label">サイト設定</span></a>
+			</li>
+			<li {if $action == 'mypage'} class="active"{/if}>
+				<a href="#" class="nav-drop">
+					<i class="fa fa-r fa-th-large"></i>
+					<span class="nav-label">マイページ管理 </span>
+					<i class="fa {if $action == 'mypage'}fa-angle-down{else}fa-angle-left{/if} fl_arrow_r"></i>
+				</a>
+				<ul class="nav nav-second-level">
+					<li {if $manage == 'member'}class="active"{/if}><a href="{$_ADMIN.home}/contents/member/"><i class="fa fa-group"></i>会員管理</a></li>
+					<li {if $manage == 'article'}class="active"{/if}><a href="{$_ADMIN.home}/contents/article/"><i class="fa fa-folder-open"></i>ブログ管理</a></li>
+					<li {if $manage == 'article_category'}class="active"{/if}><a href="{$_ADMIN.home}/contents/article_category/"><i class="fa fa-folder-open"></i>ブログカテゴリー管理</a></li>
+					<li {if $manage == 'magazine'}class="active"{/if}><a href="{$_ADMIN.home}/contents/magazine/"><i class="fa fa-newspaper-o"></i>メールマガジン配信</a></li>
+				</ul>
+			</li>
 		</ul>
 	</div>
 </nav>

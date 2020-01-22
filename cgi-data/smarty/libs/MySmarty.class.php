@@ -8,6 +8,7 @@ class MySmarty extends Smarty {
 		global $_HTML_HEADER;
 		global $_ADMIN;
 		global $_FRONT;
+		global $_DIR_NAME;
 
 		// 設定
 		parent::__construct();
@@ -25,6 +26,7 @@ class MySmarty extends Smarty {
 
 		$this->assign( "_ADMIN", $_ADMIN ); // 詳しくはadmin.iniに記載
 		$this->assign( "_FRONT", $_FRONT ); // 詳しくはfront.iniに記載
+		$this->assign( "_DIR_NAME", $_DIR_NAME ); // ディレクトリ名
 
 		// メタ設定
 		$this->assign( "_HTML_HEADER_DEFAULT", $_HTML_HEADER_DEFAULT );  // デフォルト
@@ -35,6 +37,7 @@ class MySmarty extends Smarty {
 		$this->assign( "_UPLOADFULLPATH", _UPLOADFULLPATH );
 		$this->assign( "_UPLOADPATH"    , _UPLOADPATH     );
 		$this->assign( "_IMAGEFULLPATH" , _IMAGEFULLPATH  );
+		$this->assign( "_MYPAGEFULLPATH", _MYPAGEFULLPATH );
 		$this->assign( "_IMAGEPATH"     , _IMAGEPATH      );
 		$this->assign( "_IMAGEROOTPATH" , _IMAGEROOTPATH  );
 		
@@ -54,7 +57,7 @@ class MySmarty extends Smarty {
 	function admin(){
 
 		global $_ADMIN; // 必須
-		// global $OptionInfoCategory;
+		global $OptionYesNo;
 
 		// ディレクトリ
 		$this->compile_dir  = _CGI_PATH. "/smarty/templates_c/admin/";
@@ -68,7 +71,7 @@ class MySmarty extends Smarty {
 		$this->assign( "_CONTENTS_NAME"     , _CONTENTS_NAME      ); // 
 
 		// オプション
-		// $this->assign( "OptionInfoCategory" , $OptionInfoCategory );
+		$this->assign( "OptionYesNo" , $OptionYesNo );
 
 		// テンプレート変数
 		$this->assign( "template_header"    , _DOCUMENT_ROOT. $_ADMIN["home"]. "/common/inc/header.tpl"     );
@@ -86,7 +89,7 @@ class MySmarty extends Smarty {
 
 		global $_FRONT; // 必須
 		global $_INFO;
-		// global $OptionInfoCategory;
+		global $OptionYesNo;
 
 		// ディレクトリ
 		$this->compile_dir  = _CGI_PATH. "/smarty/templates_c/";
@@ -95,7 +98,7 @@ class MySmarty extends Smarty {
 		// 汎用配列
 		$this->assign( "_INFO" , $_INFO  ); // 詳しくはfront.iniに記載
 		// オプション
-		// $this->assign( "OptionInfoCategory" , $OptionInfoCategory );
+		$this->assign( "OptionYesNo" , $OptionYesNo );
 
 
 		// 変数 - インクルードパス

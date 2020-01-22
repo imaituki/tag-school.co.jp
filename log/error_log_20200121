@@ -1,0 +1,2 @@
+[Tue Jan 21 19:13:47.246620 2020] [php7:error] [pid 58106] [client 118.21.102.9:0] script '/home/tag-school/www/admin/contents/contact/php/new.php' not found or unable to stat
+[Tue Jan 21 19:43:50.822493 2020] [php7:error] [pid 58108] [client 118.21.102.9:0] script '/home/tag-school/www/contact/check.php' not found or unable to stat, referer: https://tag-school.co.jp/contact/

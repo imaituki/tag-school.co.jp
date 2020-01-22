@@ -43,6 +43,8 @@ if( !empty($_POST[_CONTENTS_ID]) ) {
 	$smarty = new MySmarty("admin");
 	$smarty->compile_dir .= _CONTENTS_DIR. "/";
 
+	$smarty->assign( "OptionCategory", $OptionCategory );
+
 	// テンプレートに設定
 	if( !empty($_ARR_IMAGE) ){
 		$smarty->assign( '_ARR_IMAGE', $_ARR_IMAGE );

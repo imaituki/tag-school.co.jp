@@ -1,7 +1,7 @@
 <?php
 //----------------------------------------------------------------------------
-// 作成日: 2016/11/01
-// 作成者: 鈴木
+// 作成日: 2020/01/21
+// 作成者: yamada
 // 内  容: お知らせクラス
 //----------------------------------------------------------------------------
 
@@ -33,7 +33,7 @@ class FT_information {
 	function __construct( $dbconn ) {
 
 		// クラス宣言
-		if( !empty( $dbconn ) ) {
+		if( !empty($dbconn) ) {
 			$this->_DBconn  = $dbconn;
 		} else {
 			$this->_DBconn  = new DB_manage( _DNS );
@@ -63,16 +63,19 @@ class FT_information {
 	function GetSearchList( $search, $option = null, $limit = null ) {
 
 		// SQL配列
-		$creation_kit = array(  "select" => "*",
-								"from"   => $this->_CtrTable,
-								"where"  => "date <= NOW() AND
-											 display_flg = 1 AND
-											 ( display_indefinite = 1 OR ( display_indefinite = 0 AND display_start <= NOW() AND  NOW() <= display_end  ) ) ",
-								"order"  => "date DESC"
-							);
+		$creation_kit = array(
+			"select" => "*",
+			"from"   => $this->_CtrTable,
+			"where"  => "date <= NOW() AND
+						 display_flg = 1 AND
+						 ( display_indefinite = 1 OR ( display_indefinite = 0 AND display_start <= NOW() AND  NOW() <= display_end  ) ) ",
+			"order"  => "date DESC",
+			"bind"   => array()
+		);
 
 		if( !empty($search["cid"]) ){
-			$creation_kit["where"] .= " AND id_category = ". $search["cid"]. " ";
+			$creation_kit["where"] .= " AND id_category = ? ";
+			$creation_kit["bind"][] = $search["cid"];
 		}
 
 		// 取得条件
@@ -99,7 +102,7 @@ class FT_information {
 		} else {
 
 			// 取得件数制限
-			if( !empty( $limit ) ) {
+			if( !empty($limit) ) {
 				$creation_kit["limit"] = $limit;
 			}
 
@@ -138,17 +141,20 @@ class FT_information {
 	function GetIdRow( $id ) {
 
 		// データチェック
-		if( !is_numeric( $id ) ) {
+		if( !is_numeric($id) ) {
 			return null;
 		}
 
 		// SQL配列
-		$creation_kit = array( "select" => "*",
-							   "from"   => $this->_CtrTable,
-							   "where"  => "date <= NOW() AND
-											 display_flg = 1 AND
-											( display_indefinite = 1 OR ( display_indefinite = 0 AND display_start <= NOW() AND  NOW() <= display_end ) ) AND " .
-											$this->_CtrTablePk . " = " . $id );
+		$creation_kit = array(
+			"select" => "*",
+			"from"   => $this->_CtrTable,
+			"where"  => "date <= NOW() AND
+						 display_flg = 1 AND
+						( display_indefinite = 1 OR ( display_indefinite = 0 AND display_start <= NOW() AND  NOW() <= display_end ) ) AND " .
+						$this->_CtrTablePk . " = ? ",
+			"bind"   => array( $id )
+		);
 
 		// データ取得
 		$res = $this->_DBconn->selectCtrl( $creation_kit, array( "fetch" => _DB_FETCH ) );
@@ -173,7 +179,7 @@ class FT_information {
 	function GetDetailPageNavi( $id ) {
 
 		// データチェック
-		if( !is_numeric( $id ) ) {
+		if( !is_numeric($id) ) {
 			return null;
 		}
 
@@ -218,18 +224,19 @@ class FT_information {
 	function GetOption() {
 
 		// SQL配列
-		$creation_kit = array(  "select" => "id_category, title",
-								"from"   => "mst_info_category",
-								"where"  => "delete_flg = 0 ",
-								"order"  => "display_num ASC"
-							);
+		$creation_kit = array(
+			"select" => "id_category, name",
+			"from"   => "mst_category",
+			"where"  => "delete_flg = 0 ",
+			"order"  => "display_num ASC"
+		);
 		// データ取得
 		$arr_option = $this->_DBconn->selectCtrl( $creation_kit, array("fetch" => _DB_FETCH_ALL) );
 
 		// オプション用に成形
 		if( !empty($arr_option) ){
 			foreach( $arr_option as $val ){
-				$res[$val["id_category"]] = $val["title"];
+				$res[$val["id_category"]] = $val["name"];
 			}
 		}
 

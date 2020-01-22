@@ -9,10 +9,11 @@
 //  定数
 //-------------------------------------------------------
 // 取得方法
-define( "_DB_FETCH"    , 1 );
-define( "_DB_FETCH_ALL", 2 );
-define( "_DB_FETCH_ONE", 3 );
-define( "_DB_FETCH_COL", 4 );
+define( "_DB_FETCH"      , 1 );
+define( "_DB_FETCH_ALL"  , 2 );
+define( "_DB_FETCH_ONE"  , 3 );
+define( "_DB_FETCH_COL"  , 4 );
+define( "_DB_FETCH_ASSOC", 5 );
 
 
 //-------------------------------------------------------
@@ -28,6 +29,9 @@ class DB_master {
 	
 	// キャッシュディレクトリ
 	var $_CACHE_DIR = _CACHE_DIR;
+	
+	// 変数生成ID　衝突回避のため静的メンバ
+	static $varId = 1;
 	
 	
 	//-------------------------------------------------------
@@ -177,10 +181,11 @@ class DB_master {
 	//       : arrVal - 登録データ（ 'カラム名' => '値' ）
 	//       : arrSql - 登録データ（ 'カラム名' => 'SQL' ）
 	//       : where  - 更新条件
+	//       : argBindVal - where句プレースホルダデータ配列
 	// 戻り値: SQL発行結果
 	// 内  容: INSERT文作成と発行
 	//-------------------------------------------------------
-	function update( $table, $arrVal, $arrSql, $where, $whereVal = null ) {
+	function update( $table, $arrVal, $arrSql, $where, $whereVal = null, $argBindVal = array() ) {
 		
 		// データチェック
 		if( empty( $table ) || ( !is_array( $arrVal ) && !is_array( $arrSql ) ) || empty( $where ) ) {
@@ -212,6 +217,7 @@ class DB_master {
 				$sqlcol[] = "`" . $key . "`" . "=" . $val;
 			}
 		}
+		$bindVal = array_merge( $bindVal, $argBindVal );
 		
 		// SQL発行
 		if( is_array( $sqlcol ) ) {
@@ -382,10 +388,11 @@ class DB_master {
 	// 関数名: function delete()
 	// 引  数: table  - テーブル
 	//       : where  - 更新条件
+	//       : argBindVal - where句プレースホルダデータ配列
 	// 戻り値: SQL発行結果
 	// 内  容: DELETE文作成と発行
 	//-------------------------------------------------------
-	function delete( $table, $where ) {
+	function delete( $table, $where, $argBindVal = array() ) {
 		
 		// データチェック（怖いので条件は必須にしてます。）
 		if( empty( $table ) || empty( $where ) ) {
@@ -396,7 +403,7 @@ class DB_master {
 		$sql = "DELETE FROM " . $table . " WHERE " . $where . " ";
 		
 		// 実行
-		$res = $this->_ADODB->query( $sql );
+		$res = $this->_ADODB->query( $sql, $argBindVal );
 		
 		// 戻り値
 		return $res;
@@ -486,15 +493,58 @@ class DB_master {
 			$limit = "LIMIT " . $creation_kit["limit"] . " ";
 		}
 		
+		// BIND
+		$bind = array();
+		$bindPage = array();
+		if( is_array( $creation_kit["bind"] ) ) {
+			if( count( array_filter( array_keys( $creation_kit["bind"] ), "is_numeric" ) ) > 0 ){
+				$bindPage = $bind = $creation_kit["bind"];
+			}else{
+				if( is_array( $creation_kit["bind"]["select"] ) ){
+					$bind = $creation_kit["bind"]["select"];
+				}
+				if( is_array( $creation_kit["bind"]["from"] ) ){
+					$bind = array_merge( $bind, $creation_kit["bind"]["from"] );
+				}
+				if( is_array( $creation_kit["bind"]["join"] ) ){
+					$bind = array_merge( $bind, $creation_kit["bind"]["join"] );
+				}
+				if( is_array( $creation_kit["bind"]["where"] ) ){
+					$bind = array_merge( $bind, $creation_kit["bind"]["where"] );
+				}
+				if( is_array( $creation_kit["bind"]["group"] ) ){
+					$bind = array_merge( $bind, $creation_kit["bind"]["group"] );
+				}
+				if( is_array( $creation_kit["bind"]["order"] ) ){
+					$bind = array_merge( $bind, $creation_kit["bind"]["order"] );
+				}
+				if( !empty( $page ) ) {
+					if( is_array( $creation_kit["bind"]["group"] ) ){
+						$bindPage = array_merge( $bindPage, $creation_kit["bind"]["group"] );
+					}
+					if( is_array( $creation_kit["bind"]["from"] ) ){
+						$bindPage = array_merge( $bindPage, $creation_kit["bind"]["from"] );
+					}
+					if( is_array( $creation_kit["bind"]["join"] ) ){
+						$bindPage = array_merge( $bindPage, $creation_kit["bind"]["join"] );
+					}
+					if( is_array( $creation_kit["bind"]["where"] ) ){
+						$bindPage = array_merge( $bindPage, $creation_kit["bind"]["where"] );
+					}
+				}
+			}
+		}
+		
 		// ページ切り替え
 		if( !empty( $page ) ) {
 			
 			// グループ設定を行う場合
 			if( $group != NULL ) {
-				$page["PageItemTotal"] = $this->_ADODB->GetOne("SELECT COUNT( DISTINCT " . $creation_kit["group"] . " ) FROM $from $join $where");
+				$temp = $this->_ADODB->GetRow( "SELECT COUNT( DISTINCT {$creation_kit['group']} ) FROM {$from} {$join} {$where}", $bindPage );
 			} else {
-				$page["PageItemTotal"] = $this->_ADODB->GetOne("SELECT COUNT( * ) FROM $from $join $where");
+				$temp = $this->_ADODB->GetRow( "SELECT COUNT( * ) FROM {$from} {$join} {$where}", $bindPage );
 			}
+			$page["PageItemTotal"] = array_shift( $temp );
 			
 			// ページ切替
 			$res["page"] = $this->createPageNavi( $page );
@@ -507,6 +557,9 @@ class DB_master {
 			// SQL作成
 			$sql = "SELECT " . $select  . " FROM " . $from . $join . $where . $group .$order . $limit;
 			
+			if( is_array( $creation_kit["bind"]["limit"] ) ){
+				$bind = array_merge( $bind, $creation_kit["bind"]["limit"] );
+			}
 		}
 		
 		// データ取得
@@ -514,33 +567,50 @@ class DB_master {
 			
 			case _DB_FETCH:
 				if( $cache["mode"] == true ) {
-					$res["data"] = $this->_ADODB->CacheGetRow( $cache["cache_time"], $sql );
+					$res["data"] = $this->_ADODB->CacheGetRow( $cache["cache_time"], $sql, $bind );
 				} else {
-					$res["data"] = $this->_ADODB->GetRow( $sql );
+					$res["data"] = $this->_ADODB->GetRow( $sql, $bind );
 				}
 			break;
 			
 			case _DB_FETCH_ALL:
 				if( $cache["mode"] == true ) {
-					$res["data"] = $this->_ADODB->CacheGetAll( $cache["cache_time"], $sql );
+					$res["data"] = $this->_ADODB->CacheGetAll( $cache["cache_time"], $sql, $bind );
 				} else {
-					$res["data"] = $this->_ADODB->GetAll( $sql );
+					$res["data"] = $this->_ADODB->GetAll( $sql, $bind );
 				}
 			break;
 			
 			case _DB_FETCH_ONE:
-				if( $cache["mode"] == true ) {
-					$res["data"] = $this->_ADODB->CacheGetOne( $cache["cache_time"], $sql );
-				} else {
-					$res["data"] = $this->_ADODB->GetOne( $sql );
+				if( count( $bind ) == 0 ){
+					if( $cache["mode"] == true ) {
+						$res["data"] = $this->_ADODB->CacheGetOne( $cache["cache_time"], $sql );
+					} else {
+						$res["data"] = $this->_ADODB->GetOne( $sql );
+					}
+				}else{
+					if( $cache["mode"] == true ) {
+						$temp = $this->_ADODB->CacheGetRow( $cache["cache_time"], $sql, $bind );
+					} else {
+						$temp = $this->_ADODB->GetRow( $sql, $bind );
+					}
+					$res["data"] = array_shift( $temp );
 				}
 			break;
 			
 			case _DB_FETCH_COL:
 				if( $cache["mode"] == true ) {
-					$res["data"] = $this->_ADODB->CacheGetCol( $cache["cache_time"], $sql );
+					$res["data"] = $this->_ADODB->CacheGetCol( $cache["cache_time"], $sql, $bind );
 				} else {
-					$res["data"] = $this->_ADODB->GetCol( $sql );
+					$res["data"] = $this->_ADODB->GetCol( $sql, $bind );
+				}
+			break;
+			
+			case _DB_FETCH_ASSOC:
+				if( $cache["mode"] == true ) {
+					$res["data"] = $this->_ADODB->CacheGetAssoc( $cache["cache_time"], $sql, $bind );
+				} else {
+					$res["data"] = $this->_ADODB->GetAssoc( $sql, $bind );
 				}
 			break;
 			
@@ -569,16 +639,79 @@ class DB_master {
 	//       : cmpoperator - 比較演算子
 	//       : separator   - AND or OR
 	//       : type        - 変数の型
+	//       : delimiters  - デリミタ
+	//       : bind        - where句プレースホルダデータ配列
 	// 戻り値: SQL発行結果
-	// 内  容: DELETE文作成と発行
+	// 内  容: WHERE文作成と発行
 	//-------------------------------------------------------
-	function createWhereSql( $str, $col, $cmpoperator = "=", $separator = "OR", $type = "string" ) {
+	function createWhereSql( $str, $col, $cmpoperator = "=", $separator = "OR", $type = "string", $delimiters = array( "　", " " ), &$bind = NULL ) {
 		
 		// 初期化
 		$res = null;
 		
-		// 検索条件（スペース区切り）
-		$arrStr = explode( " ", trim( str_replace( "　", " ", $str ) ) );
+		// IN
+		if( strcasecmp( trim( $cmpoperator ), "in" ) == 0 ){
+			// 配列から検索の場合
+			if( is_array( $str ) ){
+				if( empty( $str ) ){
+					return "0";
+				}elseif( func_num_args() >= 7 ){
+					$inList = array();
+					foreach( $str as $inStr ){
+						$bind[] = $inStr;
+						$inList[] = "?";
+					}
+					$res = "{$col} in(" . implode( ", ", $inList ) . ")";
+				}else{
+					// bind変数を指定しない場合mysql変数に格納
+					$inList = array();
+					foreach( $str as $inStr ){
+						$varId = self::$varId;
+						$this->_ADODB->execute( "SET @master_var{$varId}:=?", array( $inStr ) );
+						$inList[] = "@master_var{$varId}";
+						self::$varId ++;
+					}
+					$res = "{$col} in(" . implode( ", ", $inList ) . ")";
+				}
+			}else{
+				if( empty( $delimiters ) ){
+					$delimiter = ",";
+				}elseif( is_array( $delimiters ) ){
+					$delimiter = array_shift( $delimiters );
+					foreach( $delimiters as $replaceFrom ){
+						$str = str_replace( $replaceFrom, $delimiter, $str );
+					}
+				}else{
+					$delimiter = $delimiters;
+				}
+				if( strcmp( $delimiter, "," ) != 0 ){
+					$col = "REPLACE({$col},',',?)";
+					$bind[] = $delimiter;
+					$inStr = explode( $delimiter, $str );
+					for( $i = count( $inStr ) - 1; $i >= 0; $i -- ){
+						$inStr[$i] = str_replace( ",", $delimiter, $inStr[$i] );
+					}
+					$str = implode( ",", $inStr );
+				}
+				$res = "FIND_IN_SET({$col}, ?) > 0";
+				$bind[] = $str;
+			}
+			return $res;
+		}
+		
+		
+		// 検索条件（デフォルトはスペース区切り）
+		if( empty( $delimiters ) ){
+			$arrStr = array( $str );
+		}elseif( is_array($delimiters) ){
+			$delimiter = array_shift( $delimiters );
+			foreach( $delimiters as $replaceFrom ){
+				$str = str_replace( $replaceFrom, $delimiter, $str );
+			}
+			$arrStr = explode( $delimiter, trim( $str ) );
+		}else{
+			$arrStr = explode( $delimiters, trim( $str ) );
+		}
 		
 		// 条件作成
 		if( is_array( $arrStr ) ) {
@@ -587,28 +720,38 @@ class DB_master {
 				// エスケープ
 				switch( strtolower( trim( $cmpoperator ) ) ) {
 					case "like":
+						if( empty( $val ) ){
+							continue 2;
+						}
 						$val = str_replace( array( '\\', '%', '_' ), array( '\\\\', '\%', '\_' ), $val );
 					break;
 				}
 				
 				// 変数型に合わせて変更
-				switch( strtolower( trim( $type ) ) ) {
-					case "string":
-						$val = "'" . $val . "'";
-					break;
-					case "string%":
-						$val = "'" . $val . "%'";
-					break;
-					case "%string":
-						$val = "'%" . $val . "'";
-					break;
-					case "%string%":
-						$val = "'%" . $val . "%'";
-					break;
+				// プレースホルダを使うため一旦MySQL変数に格納
+				$varId = self::$varId;
+				if( $stringType = preg_match( "/^\\s*%?string%?\\s*$/i", $type ) ){
+					$val = str_replace( "string", $val, strtolower( trim( $type ) ) );
 				}
 				
 				// 条件作成
-				$res[] = $col . " " . trim( $cmpoperator ) . " " . $val;
+				// bind変数を指定しない場合mysql変数に格納
+				if( func_num_args() >= 7 ){
+					$bind[] = $val;
+					if( $stringType ){
+						$res[] = "{$col} " . trim( $cmpoperator ) . " ?";
+					}else{
+						$res[] = $col . " " . trim( $cmpoperator ) . " ?";
+					}
+				}else{
+					$this->_ADODB->execute( "SET @master_var{$varId}:=?", array( $val ) );
+					if( $stringType ){
+						$res[] = "{$col} COLLATE utf8_general_ci " . trim( $cmpoperator ) . " @master_var{$varId} COLLATE utf8_general_ci";
+					}else{
+						$res[] = $col . " " . trim( $cmpoperator ) . " @master_var{$varId}";
+					}
+					self::$varId ++;
+				}
 				
 			}
 		}
@@ -627,7 +770,7 @@ class DB_master {
 	// 引  数: $Option[]           - ページ切替用情報配列
 	//       :   PageItemTotal     - 取得総数
 	//       :   PageNumber        - 表示ページ数
-	//       :   PageShowLimit     - １ページの最大表示件数
+	//       :   PageShowLimit     - 1ページの最大表示件数
 	//       :   PageNaviLimit     - ページナビの最大表示件数
 	//       :   PageQueryName     - ページIDのクエリ名
 	//       :   PageInnerAnchor   - ページ内アンカー名
@@ -649,7 +792,7 @@ class DB_master {
 	//       :   PageItemTotal     - 取得総数
 	//       :   PageTotal         - 総ページ数
 	//       :   PageNumber        - 表示ページ数
-	//       :   PageShowLimit     - １ページの最大表示件数
+	//       :   PageShowLimit     - 1ページの最大表示件数
 	//       :   PageNaviLimit     - ページナビの最大表示件数
 	//       :   PageQueryName     - ページIDのクエリ名
 	//       :   PageUrlFreeMode   - URL指定フリーモード
@@ -1095,4 +1238,5 @@ class DB_master {
 	
 	
 }
+
 ?>

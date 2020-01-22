@@ -1,8 +1,8 @@
 <?php
 //----------------------------------------------------------------------------
-// 作成日： 2019/10/21
-// 作成者： 岡田
-// 内  容： お問い合わせ操作クラス
+// 作成日: 2019/10/21
+// 作成者: 岡田
+// 内  容: お問い合わせ操作クラス
 //----------------------------------------------------------------------------
 
 //-------------------------------------------------------
@@ -23,16 +23,17 @@ class AD_contact {
 	// コントロール機能（ログ用）
 	var $_CtrLogName = "お問い合わせ";
 
+
 	//-------------------------------------------------------
-	// 関数名：__construct
-	// 引  数：$dbconn  ： DB接続オブジェクト
-	// 戻り値：なし
-	// 内  容：コンストラクタ
+	// 関数名: __construct
+	// 引  数: $dbconn  :  DB接続オブジェクト
+	// 戻り値: なし
+	// 内  容: コンストラクタ
 	//-------------------------------------------------------
 	function __construct( $dbconn ) {
 
 		// クラス宣言
-		if( !empty( $dbconn ) ) {
+		if( !empty($dbconn) ) {
 			$this->_DBconn  = $dbconn;
 		} else {
 			$this->_DBconn  = new DB_manage( _DNS );
@@ -42,20 +43,20 @@ class AD_contact {
 
 
 	//-------------------------------------------------------
-	// 関数名：__destruct
-	// 引  数：なし
-	// 戻り値：なし
-	// 内  容：デストラクタ
+	// 関数名: __destruct
+	// 引  数: なし
+	// 戻り値: なし
+	// 内  容: デストラクタ
 	//-------------------------------------------------------
 	function __destruct() {
 
 	}
 
 	//-------------------------------------------------------
-	// 関数名：delete
-	// 引  数：$id - 削除するお問い合わせID
-	// 戻り値：true - 正常, false - 異常
-	// 内  容：お問い合わせデータ削除
+	// 関数名: delete
+	// 引  数: $id - 削除するお問い合わせID
+	// 戻り値: true - 正常, false - 異常
+	// 内  容: お問い合わせデータ削除
 	//-------------------------------------------------------
 	function delete( $id ) {
 
@@ -63,9 +64,9 @@ class AD_contact {
 		$res = false;
 
 		// 削除処理
-		if( !empty( $id ) ) {
+		if( !empty($id) ) {
 			// 更新
-			$res = $this->_DBconn->delete( $this->_CtrTable, $this->_CtrTablePk . " = " . $id );
+			$res = $this->_DBconn->delete( $this->_CtrTable, $this->_CtrTablePk . " = ? ", array($id) );
 
 		}
 		// 戻り値
@@ -74,10 +75,10 @@ class AD_contact {
 
 
 	//-------------------------------------------------------
-	// 関数名：check
-	// 引  数：$id - 確認済にするお問い合わせID
-	// 戻り値：true - 正常, false - 異常
-	// 内  容：お問い合わせデータ確認
+	// 関数名: check
+	// 引  数: $id - 確認済にするお問い合わせID
+	// 戻り値: true - 正常, false - 異常
+	// 内  容: お問い合わせデータ確認
 	//-------------------------------------------------------
 	function check( $id ) {
 
@@ -87,7 +88,7 @@ class AD_contact {
 		// 削除処理
 		if( !empty( $id ) ) {
 			// 更新
-			$res = $this->_DBconn->update( $this->_CtrTable, array( "check_flg" => 1 ), null, $this->_CtrTablePk . " = " . $id  );
+			$res = $this->_DBconn->update( $this->_CtrTable, array( "check_flg" => 1 ), null, $this->_CtrTablePk . " = ? ", array($id)  );
 		}
 		// 戻り値
 		return $res;
@@ -95,43 +96,33 @@ class AD_contact {
 
 
 	//-------------------------------------------------------
-	// 関数名：GetSearchList
-	// 引  数：$search - 検索条件
-	//       ：$option - 取得条件
-	// 戻り値：お問い合わせリスト
-	// 内  容：お問い合わせ検索を行いデータを取得
+	// 関数名: GetSearchList
+	// 引  数: $search - 検索条件
+	//       : $option - 取得条件
+	// 戻り値: お問い合わせリスト
+	// 内  容: お問い合わせ検索を行いデータを取得
 	//-------------------------------------------------------
 	function GetSearchList( $search, $option = null ) {
 
 		// SQL配列
-		$creation_kit = array(  "select" => "*",
-								"from"   => $this->_CtrTable,
-								"where"  => "1 ",
-								"order"  => "entry_date DESC"
-							);
+		$creation_kit = array(
+			"select" => "*",
+			"from"   => $this->_CtrTable,
+			"where"  => "1 ",
+			"order"  => "entry_date DESC",
+			"bind"   => array()
+		);
 
 		// 検索条件
 		if( !empty( $search["search_keyword"] ) ) {
-			$creation_kit["where"] .= "AND ( " . $this->_DBconn->createWhereSql( $search["search_keyword"], "title", "LIKE", "OR", "%string%" ) . " ) ";
-		}
-
-		if( !empty( $search["search_date_start"] ) ) {
-			$creation_kit["where"] .= "AND " . $this->_DBconn->createWhereSql( "'" . $search["search_date_start"] . "'", $this->_CtrTable . ".date", " >= ", null, null ) . " ";
-		}
-		if( !empty( $search["search_date_end"] ) ) {
-			$creation_kit["where"] .= "AND " . $this->_DBconn->createWhereSql( "'" . $search["search_date_end"] . "'", $this->_CtrTable . ".date", " <= ", null, null ) . " ";
-		}
-
-
-		if( !empty( $search["search_course"] ) ) {
-			$creation_kit["where"] .= "AND course = '" . $search["search_course"] . "' ";
+			$creation_kit["where"] .= "AND ( " . $this->_DBconn->createWhereSql( $search["search_keyword"], "title", "LIKE", "OR", "%string%", array( "　", " " ), $creation_kit["bind"] ) . " ) ";
 		}
 
 		// 取得条件
 		if( empty( $option ) ) {
 
 			// ページ切り替え配列
-			$_PAGE_INFO = array( "PageNumber"      => ( !empty( $search["page"] ) ) ? $search["page"] : 1,
+			$_PAGE_INFO = array( "PageNumber"      => ( !empty($search["page"]) ) ? $search["page"] : 1,
 								 "PageShowLimit"   => _PAGESHOWLIMIT,
 								 "PageNaviLimit"   => _PAGENAVILIMIT,
 								 "LinkSeparator"   => " | ",
@@ -148,15 +139,15 @@ class AD_contact {
 		$res = $this->_DBconn->selectCtrl( $creation_kit, $option );
 
 
-		if( is_array( $res["data"] ) ) {
+		if( is_array($res["data"]) ) {
 			foreach( $res["data"] as $key => $val ) {
-				if( !empty( $res["data"][$key]["course"] ) ) {
+				if( !empty($res["data"][$key]["course"]) ) {
 					$res["data"][$key]["course"] = explode( ",", $res["data"][$key]["course"] );
 				}
 			}
-		} elseif( is_array( $res ) ) {
+		} elseif( is_array($res) ) {
 			foreach( $res as $key => $val ) {
-				if( !empty( $res[$key]["course"] ) ) {
+				if( !empty($res[$key]["course"]) ) {
 					$res[$key]["course"] = explode( ",", $res[$key]["course"] );
 				}
 			}
@@ -168,31 +159,28 @@ class AD_contact {
 	}
 
 	//-------------------------------------------------------
-	// 関数名：GetIdRow
-	// 引  数：$id - お問い合わせID
-	// 戻り値：お問い合わせ
-	// 内  容：お問い合わせを1件取得する
+	// 関数名: GetIdRow
+	// 引  数: $id - お問い合わせID
+	// 戻り値: お問い合わせ
+	// 内  容: お問い合わせを1件取得する
 	//-------------------------------------------------------
 	function GetIdRow( $id ) {
 
 		// データチェック
-		if( !is_numeric( $id ) ) {
+		if( !is_numeric($id) ) {
 			return null;
 		}
 
 		// SQL配列
-		$creation_kit = array( "select" => "*",
-							   "from"   => $this->_CtrTable,
-							   "where"  => $this->_CtrTablePk . " = " . $id );
+		$creation_kit = array(
+			"select" => "*",
+			"from"   => $this->_CtrTable,
+			"where"  => $this->_CtrTablePk . " = ? ",
+			"bind"   => array( $id )
+		);
 
 		// データ取得
-		$res = $this->_DBconn->selectCtrl( $creation_kit, array( "fetch" => _DB_FETCH ) );
-
-		// データ取得
-		$res = $this->_DBconn->selectCtrl( $creation_kit, array( "fetch" => _DB_FETCH ) );
-		if( !empty( $res["course"] ) ){
-					$res["course"] = explode( ",", $res["course"] );
-				}
+		$res = $this->_DBconn->selectCtrl( $creation_kit, array("fetch" => _DB_FETCH) );
 
 		// 戻り値
 		return $res;
@@ -200,5 +188,4 @@ class AD_contact {
 	}
 
 }
-
 ?>

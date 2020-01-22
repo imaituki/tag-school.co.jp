@@ -52,6 +52,9 @@ $smarty->compile_dir .= _CONTENTS_DIR;
 // テンプレートに設定
 $smarty->assign( "page_navi", $data["page"] );
 $smarty->assign( "arr_data" , $data["data"] );
+
+$smarty->assign( "OptionCategory", $OptionCategory );
+
 if( !empty($_ARR_IMAGE) ){
 	$smarty->assign( '_ARR_IMAGE', $_ARR_IMAGE );
 }

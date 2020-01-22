@@ -4,6 +4,7 @@
 		<tr>
 			<th>日付</th>
 			<th>掲載期間</th>
+			<th>カテゴリー</th>
 			<th>タイトル</th>
 			<th class="photo">写真</th>
 			<th class="showhide">表示</th>
@@ -14,6 +15,7 @@
 		<tr>
 			<th width="100">日付</th>
 			<th width="100">掲載期間</th>
+			<th width="100">カテゴリー</th>
 			<th>タイトル</th>
 			<th class="photo" width="220">写真</th>
 			<th class="showhide" width="60">表示</th>
@@ -32,6 +34,7 @@
 					無期限
 				{/if}
 			</td>
+			<td>{$OptionCategory[$data.id_category]}</td>
 			<td><a href="./edit.php?id={$data.$_CONTENTS_ID}">{$data.title}</a></td>
 			<td class="pos_al">
 				<div class="lightBoxGallery">

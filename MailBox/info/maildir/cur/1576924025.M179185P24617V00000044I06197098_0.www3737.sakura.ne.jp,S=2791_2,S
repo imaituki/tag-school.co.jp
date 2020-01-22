@@ -1,0 +1,50 @@
+Return-Path: <mitsuda.bw@gmail.com>
+Received: from mail-pl1-f174.google.com (mail-pl1-f174.google.com [209.85.214.174])
+	by www3737.sakura.ne.jp (8.15.2/8.15.2) with ESMTPS id xBLAR48U024611
+	(version=TLSv1.2 cipher=AES256-GCM-SHA384 bits=256 verify=FAIL)
+	for <info@tag-school.co.jp>; Sat, 21 Dec 2019 19:27:04 +0900 (JST)
+	(envelope-from mitsuda.bw@gmail.com)
+Received: by mail-pl1-f174.google.com with SMTP id y8so5188156pll.13
+        for <info@tag-school.co.jp>; Sat, 21 Dec 2019 02:27:04 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=content-transfer-encoding:from:mime-version:date:subject:message-id
+         :to;
+        bh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=UE02GTv11kVKBxcq6hqF0ls8GCfUMuQsz79pCOVIUia8UCmoHIoVUYFy7mjNqkaCpA
+         BKCx9FOyDO8dFn28V5YgUFTlJGdvJWJuF0/IaqUaFbVOXzu22jGTaZ/AYbVXBQTN8y5E
+         1MpdXJlUwwI2Fa3KifDrY7AtZBJGwFK94AX35QvI97HEG8/1GCARWsdDil9zfjSNlVMi
+         bs2Wdu3eDEmkP9jb4CPz329TaC8V1+m6h7ccQ/XqYOn6vQCbieG099jzq0wQP4AeyHQI
+         /iVIbqVFg2yxtuoJTP4FlShYeRY0ysngVQkEbEuXzEBfsiCkpVmClIfPXcOdJoNpfjjt
+         tJjA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:content-transfer-encoding:from:mime-version:date
+         :subject:message-id:to;
+        bh=47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=;
+        b=Bn1Pb4Qyfi5EyXZGATYcoYBfgEJRBkb2XB8FbJHf9hbmf1WVAwcEDtMiUvcaF9yleA
+         kyvGNrPJt1W2Ye4PwXZ+AJhE03Uize9uy02rax6cE71srWyfss6DfDkg4g4WBa1hJ92x
+         yeIQOWGNNvdNdv7X6KBsBESdWQ2OOSrHKORgenHpI9xNUkszZsPgiVKJOazhQp3FvLa+
+         nb95dMOP1yG9D2tcYWGPKjQ8HIsAM1DsZ5yIid3ikXzUw4yx0F0YNkLIO15LSdoVIqEw
+         BvDTAK++ejKAZFDokAFMsQ/r5tMJU37ZvCv1LZ6hLe7S6DxHFDKf7PwTjpC1lO6z8qVH
+         /qcA==
+X-Gm-Message-State: APjAAAV9QT1ou50S/VnK1etb3JEa6b8cBNS24TpsTgZjxEzPZEqOrqkk
+	9C6c+5MsH+HZNbQ3Y1yV6aDZ198w
+X-Google-Smtp-Source: APXvYqz6RK57gBFJcfc/tz8ZOE91LXvioICTdMe07eunsqDzppspPNKcz3L17Bl0kKfGobeBltdnOQ==
+X-Received: by 2002:a17:902:700b:: with SMTP id y11mr20547421plk.304.1576924023518;
+        Sat, 21 Dec 2019 02:27:03 -0800 (PST)
+Received: from [10.35.67.99] (sp49-98-61-134.mse.spmode.ne.jp. [49.98.61.134])
+        by smtp.gmail.com with ESMTPSA id l9sm14273513pgh.34.2019.12.21.02.27.02
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 21 Dec 2019 02:27:03 -0800 (PST)
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+From: =?utf-8?B?5YWJ55Sw576O5rOi?= <mitsuda.bw@gmail.com>
+Mime-Version: 1.0 (1.0)
+Date: Sat, 21 Dec 2019 19:27:01 +0900
+Subject: =?utf-8?B?44OG44K544OI44Oh44O844Or?=
+Message-Id: <59CA13C2-D4A0-4C09-ACB3-4D81FC0C8BF5@gmail.com>
+To: info@tag-school.co.jp
+X-Mailer: iPhone Mail (17C54)
+
+

@@ -57,9 +57,8 @@ class AD_siteconf {
 	// 戻り値: なし
 	// 内  容: デストラクタ
 	//-------------------------------------------------------
-	function __destruct() {
+	function __destruct() {}
 
-	}
 
 	//-------------------------------------------------------
 	// 関数名: setImageConfig
@@ -150,7 +149,7 @@ class AD_siteconf {
 		// 登録データの作成
 		$arrVal = $this->_DBconn->arrayKeyMatchFecth( $arrVal, "/^[^\_]/" );
 		$arrVal["update_date"] = date( "Y-m-d H:i:s" );
-		$arrVal["mail_base64"] = ( !empty( $arrVal["mail"] ) ) ? base64_encode( $arrVal["mail"] ) : NULL;
+		$arrVal["mail_base64"] = ( !empty($arrVal["mail"]) ) ? base64_encode( $arrVal["mail"] ) : NULL;
 
 		// 更新条件
 		$where = "id = 1";
@@ -173,17 +172,20 @@ class AD_siteconf {
 	function GetIdRow( $id = 1 ) {
 
 		// データチェック
-		if( !is_numeric( $id ) ) {
+		if( !is_numeric($id) ) {
 			return null;
 		}
 
 		// SQL配列
-		$creation_kit = array( "select" => "*",
-							   "from"   => $this->_CtrTable,
-							   "where"  => "id = " . $id );
+		$creation_kit = array(
+			"select" => "*",
+			"from"   => $this->_CtrTable,
+			"where"  => "id = ? ",
+			"bind"   => array($id)
+		);
 
 		// データ取得
-		$res = $this->_DBconn->selectCtrl( $creation_kit, array( "fetch" => _DB_FETCH ) );
+		$res = $this->_DBconn->selectCtrl( $creation_kit, array("fetch" => _DB_FETCH) );
 
 		// 戻り値
 		return $res;

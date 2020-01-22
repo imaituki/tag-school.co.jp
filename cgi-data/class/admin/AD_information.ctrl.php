@@ -1,7 +1,7 @@
 <?php
 //----------------------------------------------------------------------------
-// 作成日: 2016/11/01
-// 作成者: 鈴木
+// 作成日: 2020/01/21
+// 作成者: yamada
 // 内  容: お知らせ操作クラス
 //----------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ class AD_information {
 	function __construct( $dbconn, $arrImg = NULL, $arrFile = NULL ) {
 
 		// クラス宣言
-		if( !empty( $dbconn ) ) {
+		if( !empty($dbconn) ) {
 			$this->_DBconn  = $dbconn;
 		} else {
 			$this->_DBconn  = new DB_manage( _DNS );
@@ -120,25 +120,31 @@ class AD_information {
 	//-------------------------------------------------------
 	function check( &$arrVal, $mode ) {
 
+		// nonceチェック
+		if( isset( $arrVal["_nonce"] ) && !isMatchNonce( $arrVal["_nonce"] ) ){
+			http_response_code( 400 );
+			exit;
+		}
+
 		// チェッククラス宣言
 		$objInputCheck = new FN_input_check( "UTF-8" );
 
 		// チェックエントリー
-		$objInputCheck->entryData( "日付", "date" , $arrVal["date"] , array( "CHECK_EMPTY", "CHECK_DATE" ), null, null );
-		$objInputCheck->entryData( "タイトル", "title", $arrVal["title"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_LEN" ), 0, 255 );
+		$objInputCheck->entryData( "日付", "date" , $arrVal["date"] , array("CHECK_EMPTY", "CHECK_DATE"), null, null );
+		$objInputCheck->entryData( "タイトル", "title", $arrVal["title"], array("CHECK_EMPTY", "CHECK_MIN_MAX_LEN"), 0, 255 );
 		if( $arrVal["display_indefinite_flg"] == 0 ) {
-			$objInputCheck->entryData( "掲載開始", "display_start", $arrVal["display_start"], array( "CHECK_DATE" ), null, null );
-			$objInputCheck->entryData( "掲載終了", "display_end", $arrVal["display_end"], array( "CHECK_DATE" ), null, null );
-			$objInputCheck->entryData( "掲載終了", "display_end", $arrVal["display_end"], array( "CHECK_DATE_START_TERM" ), $arrVal["display_start"], null );
+			$objInputCheck->entryData( "掲載開始", "display_start", $arrVal["display_start"], array("CHECK_DATE"), null, null );
+			$objInputCheck->entryData( "掲載終了", "display_end", $arrVal["display_end"], array("CHECK_DATE"), null, null );
+			$objInputCheck->entryData( "掲載終了", "display_end", $arrVal["display_end"], array("CHECK_DATE_START_TERM"), $arrVal["display_start"], null );
 		}
-		$objInputCheck->entryData( "表示／非表示", "display_flg", $arrVal["display_flg"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_NUM" ), 0, 1 );
+		$objInputCheck->entryData( "表示／非表示", "display_flg", $arrVal["display_flg"], array("CHECK_EMPTY", "CHECK_MIN_MAX_NUM"), 0, 1 );
 
 		if( (strcmp($mode, "insert") == 0) ) {
 			// 画像チェック
 			if( is_array($this->_ARR_IMAGE) ) {
 				foreach( $this->_ARR_IMAGE as $key => $val ) {
 					if( $val["notnull"] == 1 ) {
-						$objInputCheck->entryData( $val["column"], $val["name"], $arrVal["_preview_image_" . $val["name"]], array( "CHECK_EMPTY" ), null, null );
+						$objInputCheck->entryData( $val["column"], $val["name"], $arrVal["_preview_image_" . $val["name"]], array("CHECK_EMPTY"), null, null );
 					}
 				}
 			}
@@ -146,7 +152,7 @@ class AD_information {
 			if( is_array($this->_ARR_FILE) ) {
 				foreach( $this->_ARR_FILE as $key => $val ) {
 					if( $val["notnull"] == 1 ) {
-						$objInputCheck->entryFile( $val["column"], $val["name"], $_FILES[$val["name"]]["name"], array( "CHECK_EMPTY", "CHECK_EXT" ), null, array("pdf") );
+						$objInputCheck->entryFile( $val["column"], $val["name"], $_FILES[$val["name"]]["name"], array("CHECK_EMPTY", "CHECK_EXT"), null, array("pdf") );
 					}
 				}
 			}
@@ -154,7 +160,7 @@ class AD_information {
 
 		// チェックエントリー（UPDATE時）
 		if( ( strcmp( $mode, "update" ) == 0 ) ) {
-			$objInputCheck->entryData( "お知らせID", "all", $arrVal["id_information"], array( "CHECK_EMPTY", "CHECK_NUM" ), null, null );
+			$objInputCheck->entryData( "お知らせID", "all", $arrVal["id_information"], array("CHECK_EMPTY", "CHECK_NUM"), null, null );
 		}
 
 		// チェック実行
@@ -162,8 +168,8 @@ class AD_information {
 
 		// データ加工
 		if( $arrVal["display_indefinite_flg"] == 0 ) {
-			$arrVal["display_start"] = ( !empty( $arrVal["display_start"] ) ) ? date( "Y-m-d 00:00:00", strtotime( $arrVal["display_start"] ) ) : NULL;
-			$arrVal["display_end"]   = ( !empty( $arrVal["display_end"]   ) ) ? date( "Y-m-d 23:59:59", strtotime( $arrVal["display_end"]   ) ) : NULL;
+			$arrVal["display_start"] = ( !empty($arrVal["display_start"]) ) ? date( "Y-m-d 00:00:00", strtotime($arrVal["display_start"]) ) : NULL;
+			$arrVal["display_end"]   = ( !empty($arrVal["display_end"]  ) ) ? date( "Y-m-d 23:59:59", strtotime($arrVal["display_end"]  ) ) : NULL;
 		} else {
 			$arrVal["display_start"] = null;
 			$arrVal["display_end"]   = null;
@@ -231,10 +237,12 @@ class AD_information {
 		$arrVal["update_date"] = date( "Y-m-d H:i:s" );
 
 		// 更新条件
-		$where = $this->_CtrTablePk . " = " . $arrVal["id_information"];
+		$where = $this->_CtrTablePk . " = ?";
+
+		$bind = array( $arrVal["id_information"] );
 
 		// 更新
-		$res = $this->_DBconn->update( $this->_CtrTable, $arrVal, $arrSql, $where );
+		$res = $this->_DBconn->update( $this->_CtrTable, $arrVal, $arrSql, $where, $bind );
 
 		// 戻り値
 		return $res;
@@ -260,12 +268,15 @@ class AD_information {
 			}
 
 			// SQL配列
-			$creation_kit  = array( "select" => implode( ",", $select ),
-									"from"   => $this->_CtrTable,
-									"where"  => $this->_CtrTablePk . " = " . $id );
+			$creation_kit  = array(
+				"select" => implode( ",", $select ),
+				"from"   => $this->_CtrTable,
+				"where"  => $this->_CtrTablePk . " = ?",
+				"bind"   => array($id)
+			);
 
 			// データ取得
-			$tmp = $this->_DBconn->selectCtrl( $creation_kit, array( "fetch" => _DB_FETCH ) );
+			$tmp = $this->_DBconn->selectCtrl( $creation_kit, array("fetch" => _DB_FETCH) );
 
 			// 画像削除
 			$this->_FN_file->delImage( $this->_ARR_IMAGE, $tmp );
@@ -279,12 +290,15 @@ class AD_information {
 			}
 
 			// SQL配列
-			$creation_kit  = array( "select" => implode( ",", $select ),
-									"from"   => $this->_CtrTable,
-									"where"  => $this->_CtrTablePk . " = " . $id );
+			$creation_kit  = array(
+				"select" => implode( ",", $select ),
+				"from"   => $this->_CtrTable,
+				"where"  => $this->_CtrTablePk . " = ?",
+				"bind"   => array($id)
+			);
 
 			// データ取得
-			$tmp = $this->_DBconn->selectCtrl( $creation_kit, array( "fetch" => _DB_FETCH ) );
+			$tmp = $this->_DBconn->selectCtrl( $creation_kit, array("fetch" => _DB_FETCH) );
 
 			// 画像削除
 			$this->_FN_file->delFile( $this->_ARR_FILE, $tmp );
@@ -292,7 +306,7 @@ class AD_information {
 		}
 
 		// 更新
-		$res = $this->_DBconn->delete( $this->_CtrTable, $this->_CtrTablePk . " = " . $id );
+		$res = $this->_DBconn->delete( $this->_CtrTable, $this->_CtrTablePk . " = ?", array( $id ) );
 
 		// 戻り値
 		return $res;
@@ -313,7 +327,7 @@ class AD_information {
 		$res = false;
 
 		// 切り替え処理
-		$res = $this->_DBconn->update( $this->_CtrTable, array( "display_flg" => $flg ), null, $this->_CtrTablePk . " = " . $id );
+		$res = $this->_DBconn->update( $this->_CtrTable, array( "display_flg" => $flg ), null, $this->_CtrTablePk . " = ?", array($id) );
 
 		// 戻り値
 		return $res;
@@ -331,29 +345,31 @@ class AD_information {
 	function GetSearchList( $search, $option = null ) {
 
 		// SQL配列
-		$creation_kit = array(  "select" => "*",
-								"from"   => $this->_CtrTable,
-								"where"  => "1 ",
-								"order"  => "date DESC"
-							);
+		$creation_kit = array(
+			"select" => "*",
+			"from"   => $this->_CtrTable,
+			"where"  => "1 ",
+			"order"  => "date DESC",
+			"bind"   => array()
+		);
 
 		// 検索条件
 		if( !empty( $search["search_keyword"] ) ) {
-			$creation_kit["where"] .= "AND ( " . $this->_DBconn->createWhereSql( $search["search_keyword"], "title", "LIKE", "OR", "%string%" ) . " ) ";
+			$creation_kit["where"] .= "AND ( " . $this->_DBconn->createWhereSql( $search["search_keyword"], "title", "LIKE", "OR", "%string%", array( "　", " " ), $creation_kit["bind"] ) . " ) ";
 		}
 
 		if( !empty( $search["search_date_start"] ) ) {
-			$creation_kit["where"] .= "AND " . $this->_DBconn->createWhereSql( "'" . $search["search_date_start"] . "'", $this->_CtrTable . ".date", " >= ", null, null ) . " ";
+			$creation_kit["where"] .= "AND " . $this->_DBconn->createWhereSql( "'" . $search["search_date_start"] . "'", $this->_CtrTable . ".date", " >= ", null, null, null, $creation_kit["bind"] ) . " ";
 		}
 		if( !empty( $search["search_date_end"] ) ) {
-			$creation_kit["where"] .= "AND " . $this->_DBconn->createWhereSql( "'" . $search["search_date_end"] . "'", $this->_CtrTable . ".date", " <= ", null, null ) . " ";
+			$creation_kit["where"] .= "AND " . $this->_DBconn->createWhereSql( "'" . $search["search_date_end"] . "'", $this->_CtrTable . ".date", " <= ", null, null, null, $creation_kit["bind"] ) . " ";
 		}
 		
 		// 取得条件
 		if( empty( $option ) ) {
 
 			// ページ切り替え配列
-			$_PAGE_INFO = array( "PageNumber"      => ( !empty( $search["page"] ) ) ? $search["page"] : 1,
+			$_PAGE_INFO = array( "PageNumber"      => ( !empty($search["page"]) ) ? $search["page"] : 1,
 								 "PageShowLimit"   => _PAGESHOWLIMIT,
 								 "PageNaviLimit"   => _PAGENAVILIMIT,
 								 "LinkSeparator"   => " | ",
@@ -384,17 +400,20 @@ class AD_information {
 	function GetIdRow( $id ) {
 
 		// データチェック
-		if( !is_numeric( $id ) ) {
+		if( !is_numeric($id) ) {
 			return null;
 		}
 
 		// SQL配列
-		$creation_kit = array( "select" => "*",
-							   "from"   => $this->_CtrTable,
-							   "where"  => $this->_CtrTablePk . " = " . $id );
+		$creation_kit = array(
+			"select" => "*",
+			"from"   => $this->_CtrTable,
+			"where"  => $this->_CtrTablePk . " = ? ",
+			"bind"   => array( $id )
+		);
 
 		// データ取得
-		$res = $this->_DBconn->selectCtrl( $creation_kit, array( "fetch" => _DB_FETCH ) );
+		$res = $this->_DBconn->selectCtrl( $creation_kit, array("fetch" => _DB_FETCH) );
 
 		// 戻り値
 		return $res;
@@ -411,18 +430,19 @@ class AD_information {
 	function GetOption() {
 
 		// SQL配列
-		$creation_kit = array(  "select" => "id_category, title",
-								"from"   => "mst_info_category",
-								"where"  => "delete_flg = 0 AND display_flg = 1",
-								"order"  => "display_num ASC"
-							);
+		$creation_kit = array(
+			"select" => "id_category, name",
+			"from"   => "mst_category",
+			"where"  => "delete_flg = 0 AND display_flg = 1",
+			"order"  => "display_num ASC"
+		);
 		// データ取得
 		$arr_option = $this->_DBconn->selectCtrl( $creation_kit, array("fetch" => _DB_FETCH_ALL) );
 
 		// オプション用に成形
 		if( !empty($arr_option) ){
 			foreach( $arr_option as $val ){
-				$res[$val["id_category"]] = $val["title"];
+				$res[$val["id_category"]] = $val["name"];
 			}
 		}
 
