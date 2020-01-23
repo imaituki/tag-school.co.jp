@@ -34,14 +34,15 @@
 										<input type="text" id="mail" name="mail" value="{$arr_post.mail}" placeholder="メールアドレス" />
 									{else}
 										<p>メールアドレス</p>
-										<p>{$arr_post.mail}</p>
-										<input type="hidden" id="mail" name="mail" value="{$arr_post.mail}" placeholder="メールアドレス" />
+										<p>{$member.mail}</p>
+										<input type="hidden" id="mail" name="mail" value="{$member.mail}" placeholder="メールアドレス" />
 										<p>パスワード</p>
 										<p>パスワードは<span class="c_red">半角英数8文字以上32字以下</span>で入力してください。</p>
 										{if !empty($message.ng.password)}<p class="error">※{$message.ng.password}</p>{/if}
 										<input type="password" id="password" name="password" value="{$arr_post.password}" placeholder="パスワード" />
 										<p>パスワード(確認用)</p>
 										<input type="password" id="chk_password" name="chk_password" value="{$arr_post.password}" placeholder="パスワード" />
+										<input type="hidden" name="id" value="{$member.id_member}" />
 										<input type="hidden" name="user" value="{$arr_post.user}" />
 									{/if}
 										<p><input type="submit" class="btn_1 mb10" value="入力内容確認" onclick="this.form.action='./check.php'" /></p>

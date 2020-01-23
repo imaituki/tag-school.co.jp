@@ -81,7 +81,6 @@
 										<input type="text" id="address2" name="address2" value="{$arr_post.address2}" placeholder="番地 / 建物・マンション名" />
 									</div>
 									<div>
-										<input type="hidden" name="first_flg" value="{$arr_post.first_flg|default:0}" />
 										<input type="submit" class="btn_1 mb10" value="入力内容確認" />
 									</div>
 								</form>

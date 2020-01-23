@@ -29,7 +29,7 @@ unset( $objMember );
 //  表示
 //----------------------------------------
 // ログイン画面へ
-header( "Location: /mypage/login.php" );
+header( "Location: /". $_DIR_NAME. "/login.php" );
 exit;
 
 ?>

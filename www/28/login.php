@@ -16,7 +16,7 @@ require "./config.ini";
 //------------------------------------------
 // 既にログインしている場合mypageへリダイレクト
 if( !empty($_COOKIE["mem_id_member"]) && $_COOKIE["mem_ssid"] == session_id() ) {
-	header( "Location: /mypage/" );
+	header( "Location: /". $_DIR_NAME. "/" );
 	exit;
 }
 
@@ -26,7 +26,6 @@ if( !empty($_COOKIE["mem_id_member"]) && $_COOKIE["mem_ssid"] == session_id() ) 
 //----------------------------------------
 if ( !empty($arr_post["mail"]) && !empty($arr_post["password"]) ) {
 
-	// クラスをインスタンス化
 	$objManage = new DB_manage( _DNS );
 	$objMember = new FT_member( $objManage );
 
@@ -36,7 +35,6 @@ if ( !empty($arr_post["mail"]) && !empty($arr_post["password"]) ) {
 	// クラス削除
 	unset( $objManage );
 	unset( $objMember );
-
 
 }elseif( !empty($arr_post) ){
 	// POSTはしているが、メールとパスワードが無い場合
@@ -64,13 +62,13 @@ $_HTML_HEADER["description"] = "";
 if( isset( $res["result"] ) && $res["result"] == true ) {
 
 	// マイページTOPへ移動
-	header( "Location: /mypage/" );
+	header( "Location: /". $_DIR_NAME. "/" );
 	exit;
 	
 } else {
 	// smarty設定
 	$smarty = new MySmarty("front");
-	$smarty->compile_dir .= "mypage/";
+	$smarty->compile_dir .= $_DIR_NAME. "/";
 
 	// テンプレートに設定
 	$smarty->assign( "message", $res["message"] );

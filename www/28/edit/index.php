@@ -21,12 +21,6 @@ $objMember = new FT_member( $objManage );
 if( empty($arr_post) ){
 	$arr_post = $objMember->GetIdRow( $_COOKIE["mem_id_member"] );
 	
-	// 本登録の場合(パスワードが登録されていない)
-	if( empty($arr_post["password"]) ){
-		$arr_post["first_flg"] = 1; // 初めて登録する(本登録)
-	}else{
-		$arr_post["first_flg"] = 0; // 本登録完了済み
-	}
 }
 
 // クラス削除
@@ -37,17 +31,14 @@ unset( $objMember );
 //----------------------------------------
 //  メッセージ
 //----------------------------------------
-if( $_SESSION["front"]["mypage"]["edit"]["POST"]["first"] === 1 ){
-	$message["succeed"] = "本登録が完了しました。";
-
-}elseif( $_SESSION["front"]["mypage"]["edit"]["POST"]["succeed"] === 1 ){
+if( $_SESSION["front"][$_DIR_NAME]["edit"]["POST"]["succeed"] == 1 ){
 	$message["succeed"] = "会員情報を更新しました。";
 
-}elseif( $_SESSION["front"]["mypage"]["edit"]["POST"]["succeed"] === 0 ){
+}elseif( $_SESSION["front"][$_DIR_NAME]["edit"]["POST"]["succeed"] == 0 ){
 	$message["fail"] = "会員情報の更新に失敗しました。";
 
 }
-unset( $_SESSION["front"]["mypage"]["edit"]["POST"] );
+unset( $_SESSION["front"][$_DIR_NAME]["edit"]["POST"] );
 
 
 //----------------------------------------
@@ -67,7 +58,7 @@ $_HTML_HEADER["description"] = "";
 //  smarty設定
 //----------------------------------------
 $smarty = new MySmarty("front");
-$smarty->compile_dir .= "mypage/edit/";
+$smarty->compile_dir .= $_DIR_NAME. "/edit/";
 
 $smarty->assign( "message" , $message  );
 $smarty->assign( "arr_post", $arr_post );

@@ -60,7 +60,6 @@
 										<input type="hidden" name="address2" value="{$arr_post.address2}" />
 									</div>
 									<div>
-										<input type="hidden" name="first_flg" value="{$arr_post.first_flg|default:0}" />
 										<input type="submit" class="btn_1" onclick="this.form.action='./'" value="戻る" />
 										<input type="submit" class="btn_1 mb10" value="保存" />
 									</div>

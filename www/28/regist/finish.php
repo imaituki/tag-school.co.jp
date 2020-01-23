@@ -15,7 +15,7 @@ require "./config.ini";
 //  ヘッダー情報
 //----------------------------------------
 // タイトル
-if( !empty($_SESSION["front"]["mypage"]["regist"]["POST"]["temp_var"]) ){
+if( !empty($_SESSION["front"][$_DIR_NAME]["regist"]["POST"]["temp_var"]) ){
 	$_HTML_HEADER["title"] = "新規会員登録 完了";
 }else{
 	$_HTML_HEADER["title"] = "会員本登録 完了";
@@ -31,8 +31,8 @@ $_HTML_HEADER["description"] = "";
 //----------------------------------------
 //  変数
 //----------------------------------------
-if( !empty($_SESSION["front"]["mypage"]["regist"]["POST"]) ){
-	$arr_post = $_SESSION["front"]["mypage"]["regist"]["POST"];
+if( !empty($_SESSION["front"][$_DIR_NAME]["regist"]["POST"]) ){
+	$arr_post = $_SESSION["front"][$_DIR_NAME]["regist"]["POST"];
 }
 
 
@@ -40,7 +40,7 @@ if( !empty($_SESSION["front"]["mypage"]["regist"]["POST"]) ){
 //  smarty設定
 //----------------------------------------
 $smarty = new MySmarty("front");
-$smarty->compile_dir .= "mypage/regist/";
+$smarty->compile_dir .= $_DIR_NAME. "/regist/";
 
 $smarty->assign( "arr_post", $arr_post );
 

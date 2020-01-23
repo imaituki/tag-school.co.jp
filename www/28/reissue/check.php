@@ -53,7 +53,7 @@ $_HTML_HEADER["description"] = "";
 //  smarty設定
 //----------------------------------------
 $smarty = new MySmarty("front");
-$smarty->compile_dir .= "mypage/reissue/";
+$smarty->compile_dir .= $_DIR_NAME. "/reissue/";
 
 // テンプレートに設定
 $smarty->assign( "arr_post" , $arr_post  );

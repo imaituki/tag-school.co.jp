@@ -19,7 +19,7 @@ $objMember = new FT_member($objManage);
 
 // データ変換
 $arr_post = $objMember->convert( $arr_post );
-$arr_post["id_member"] = $_COOKIE["mem_id_member"]; // 会員IDはユーザーに通知しない
+$arr_post["id_member"] = $_COOKIE["mem_id_member"];
 
 // データチェック
 $message = $objMember->check( $arr_post, 'update' );
@@ -50,7 +50,7 @@ $_HTML_HEADER["description"] = "";
 //  smarty設定
 //----------------------------------------
 $smarty = new MySmarty("front");
-$smarty->compile_dir .= "mypage/edit/";
+$smarty->compile_dir .= $_DIR_NAME. "/edit/";
 
 // テンプレートに設定
 $smarty->assign( "arr_post", $arr_post );

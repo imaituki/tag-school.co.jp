@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-17 17:37:27
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-23 16:56:01
          compiled from "./mail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19956183335e159de18515b6-67468039%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '140ed6d1ad3b6643e3b58b9fe629cd46e8b9926b' => 
     array (
       0 => './mail.tpl',
-      1 => 1579250169,
+      1 => 1579764935,
       2 => 'file',
     ),
   ),
@@ -38,8 +38,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 こちらのURLから本登録に進んでください。
 <?php if (empty($_SERVER['HTTPS'])) {?>http://<?php } else { ?>https://<?php }?><?php echo $_SERVER['HTTP_HOST'];?>
 /<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
-/regist/?user=<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['temp_var'];?>
-&mail=<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['mail'];?>
+/regist/?id=<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['id'];?>
+&user=<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['temp_var'];?>
 
 
 <?php } else { ?>

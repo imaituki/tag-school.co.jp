@@ -24,9 +24,9 @@ $_HTML_HEADER["keyword"] = "";
 $_HTML_HEADER["description"] = "";
 
 // 登録したメールアドレス取得
-if( !empty($_SESSION["front"]["mypage"]["reissue"]["POST"]["mail"]) ){
-	$arr_post["mail"] = $_SESSION["front"]["mypage"]["reissue"]["POST"]["mail"];
-	unset( $_SESSION["front"]["mypage"]["reissue"]["POST"]["mail"] );
+if( !empty($_SESSION["front"][$_DIR_NAME]["reissue"]["POST"]["mail"]) ){
+	$arr_post["mail"] = $_SESSION["front"][$_DIR_NAME]["reissue"]["POST"]["mail"];
+	unset( $_SESSION["front"][$_DIR_NAME]["reissue"]["POST"]["mail"] );
 }
 
 
@@ -34,7 +34,7 @@ if( !empty($_SESSION["front"]["mypage"]["reissue"]["POST"]["mail"]) ){
 //  smarty設定
 //----------------------------------------
 $smarty = new MySmarty("front");
-$smarty->compile_dir .= "mypage/reissue/";
+$smarty->compile_dir .= $_DIR_NAME. "/reissue/";
 
 $smarty->assign( "arr_post", $arr_post );
 

@@ -27,12 +27,8 @@ $arr_post["id_member"] = $_COOKIE["mem_id_member"]; // 会員IDはユーザー�
 // データチェック
 $message = $objMember->check( $arr_post, 'insert' );
 
-// 本登録かどうかのフラグ(1なら本登録, 0なら更新)
-$first_flg = $arr_post["first_flg"];
-unset( $arr_post["first_flg"] );
-
 // エラーチェック
-if( empty( $message["ng"] ) ) {
+if( empty($message["ng"]) ) {
 
 	// トランザクション
 	$objMember->_DBconn->StartTrans();
@@ -162,13 +158,11 @@ if( empty($message["ng"]) ) {
 	@session_start();
 
 	// 登録に成功したかどうか
-	$_SESSION["front"]["mypage"]["edit"]["POST"]["succeed"] = 1;
-	// 本登録かどうか
-	$_SESSION["front"]["mypage"]["edit"]["POST"]["first"]   = $first_flg;
+	$_SESSION["front"][$_DIR_NAME]["edit"]["POST"]["succeed"] = 1;
 
 }else{
 	// 登録に成功したかどうか
-	$_SESSION["front"]["mypage"]["edit"]["POST"]["succeed"] = 0;
+	$_SESSION["front"][$_DIR_NAME]["edit"]["POST"]["succeed"] = 0;
 
 }
 

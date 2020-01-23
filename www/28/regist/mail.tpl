@@ -9,7 +9,7 @@
 
 
 こちらのURLから本登録に進んでください。
-{if empty($smarty.server.HTTPS)}http://{else}https://{/if}{$smarty.server.HTTP_HOST}/{$_DIR_NAME}/regist/?id={$arr_post.mail}&user={$arr_post.temp_var}
+{if empty($smarty.server.HTTPS)}http://{else}https://{/if}{$smarty.server.HTTP_HOST}/{$_DIR_NAME}/regist/?id={$arr_post.id}&user={$arr_post.temp_var}
 
 {else}{* 本登録のとき *}
 --------------------------------------------------------

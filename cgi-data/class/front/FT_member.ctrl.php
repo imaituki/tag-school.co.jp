@@ -95,16 +95,20 @@ class FT_member {
 		$objInputCheck->entryData( "お名前(名)", "name2", $arrVal["name2"], array("CHECK_EMPTY", "CHECK_MIN_MAX_LEN"), 0, 30 );
 		$objInputCheck->entryData( "フリガナ(姓)", "ruby1", $arrVal["ruby1"], array("CHECK_EMPTY", "CHECK_MIN_MAX_LEN", "CHECK_KANA"), 0, 30 );
 		$objInputCheck->entryData( "フリガナ(名)", "ruby2", $arrVal["ruby2"], array("CHECK_EMPTY", "CHECK_MIN_MAX_LEN", "CHECK_KANA"), 0, 30 );
-		$objInputCheck->entryData( "メールアドレス", "mail", $arrVal["mail"], array("CHECK_EMPTY", "CHECK_MAIL", "CHECK_MIN_MAX_LEN"), 0, 160 );
-		if( $arrVal["first_flg"] == 1 ){
-			// 本登録の場合はパスワードが必須
-			$objInputCheck->entryData( "パスワード", "password", $arrVal["password"], array("CHECK_EMPTY", "CHECK_MIN_MAX_LEN"), 8, 32 );
-		}else{
-			// 更新の場合はパスワードが任意
+		$objInputCheck->entryData( "Eメールアドレス", "mail", $arrVal["mail"], array("CHECK_EMPTY", "CHECK_MAIL", "CHECK_MIN_MAX_LEN"), 0, 160 );
+		if( !empty($arrVal["password"]) ){
 			$objInputCheck->entryData( "パスワード", "password", $arrVal["password"], array("CHECK_MIN_MAX_LEN"), 8, 32 );
 		}
-		$objInputCheck->entryData( "電話番号", "tel", $arrVal["tel"], array("CHECK_EMPTY", "CHECK_TEL", "CHECK_MIN_MAX_LEN"), 10, 14 );
-		$objInputCheck->entryData( "郵便番号", "zip", $arrVal["zip"], array("CHECK_EMPTY", "CHECK_ZIP", "CHECK_MIN_MAX_LEN"), 7, 8 );
+		if( !empty($arrVal["tel"]) ){
+			$objInputCheck->entryData( "電話番号", "tel", $arrVal["tel"], array("CHECK_TEL", "CHECK_MIN_MAX_LEN"), 10, 14 );
+		}else{
+			$objInputCheck->entryData( "電話番号", "tel", $arrVal["tel"], array("CHECK_EMPTY"), null, null );
+		}
+		if( !empty($arrVal["zip"]) ){
+			$objInputCheck->entryData( "郵便番号", "zip", $arrVal["zip"], array("CHECK_ZIP", "CHECK_MIN_MAX_LEN"), 7, 8 );
+		}else{
+			$objInputCheck->entryData( "郵便番号", "zip", $arrVal["zip"], array("CHECK_EMPTY"), null, null );
+		}
 		$objInputCheck->entryData( "都道府県", "prefecture", $arrVal["prefecture"], array("CHECK_EMPTY_ZERO"), null, null );
 		$objInputCheck->entryData( "市区町村", "address1", $arrVal["address1"], array("CHECK_EMPTY"), null, null );
 		$objInputCheck->entryData( "番地/建物・マンション名", "address2"   , $arrVal["address2"]     , array( "CHECK_EMPTY" ), null, null );
@@ -140,7 +144,7 @@ class FT_member {
 		$objInputCheck = new FN_input_check( "UTF-8" );
 
 		// チェックエントリー
-		$objInputCheck->entryData( "メールアドレス", "mail", $arrVal["mail"], array("CHECK_EMPTY", "CHECK_MAIL", "CHECK_MIN_MAX_LEN"), 0, 160 );
+		$objInputCheck->entryData( "Eメールアドレス", "mail", $arrVal["mail"], array("CHECK_EMPTY", "CHECK_MAIL", "CHECK_MIN_MAX_LEN"), 0, 160 );
 		if( strcmp($mode, "confirm") === 0 ){
 			// 本登録
 			$objInputCheck->entryData( "パスワード", "password", $arrVal["password"], array("CHECK_EMPTY", "CHECK_MIN_MAX_LEN"), 8, 32 );
@@ -297,7 +301,7 @@ class FT_member {
 		$objInputCheck = new FN_input_check( "UTF-8" );
 
 		// チェックエントリー
-		$objInputCheck->entryData( "メールアドレス", "mail", $mail, array("CHECK_EMPTY"), null, null );
+		$objInputCheck->entryData( "Eメールアドレス", "mail", $mail, array("CHECK_EMPTY"), null, null );
 		$objInputCheck->entryData( "パスワード", "password", $password, array("CHECK_EMPTY"), null, null );
 
 		// チェック実行
@@ -393,7 +397,7 @@ class FT_member {
 	// 戻り値: メンバーデータ
 	// 内  容: メンバーを1件取得する
 	//-------------------------------------------------------
-	function GetIdRow( $id, $search = null ) {
+	function GetIdRow( $id ) {
 
 		// データチェック
 		if( !is_numeric($id) ) {
@@ -408,6 +412,48 @@ class FT_member {
 			"bind"   => array( $id )
 		);
 
+		if( !empty($search["user"]) ){
+			$creation_kit["where"] .= " AND temp_var = ? ";
+			$creation_kit["bind"][] = $search["user"];
+		}
+
+		// データ取得
+		$res = $this->_DBconn->selectCtrl( $creation_kit, array("fetch" => _DB_FETCH) );
+
+		// 戻り値
+		return $res;
+
+	}
+
+
+	//-------------------------------------------------------
+	// 関数名: GetMember
+	// 引  数: $search - 検索条件
+	// 戻り値: メンバーデータ
+	// 内  容: メンバーを1件取得する
+	//-------------------------------------------------------
+	function GetMember( $search ) {
+
+		if( empty($search) ){
+			return false;
+		}
+
+		// SQL配列
+		$creation_kit = array(
+			"select" => "*",
+			"from"   => $this->_CtrTable,
+			"where"  => "delete_flg = 0 ",
+			"bind"   => array()
+		);
+
+		if( !empty($search["id"]) ){
+			$creation_kit["where"] .= " AND id_member = ? ";
+			$creation_kit["bind"][] = $search["id"];
+		}
+		if( !empty($search["mail"]) ){
+			$creation_kit["where"] .= " AND mail = ? ";
+			$creation_kit["bind"][] = $search["mail"];
+		}
 		if( !empty($search["user"]) ){
 			$creation_kit["where"] .= " AND temp_var = ? ";
 			$creation_kit["bind"][] = $search["user"];

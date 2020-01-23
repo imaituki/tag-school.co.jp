@@ -27,13 +27,13 @@ if( !empty($arr_get["id"]) ){
 $objManage = new DB_manage( _DNS );
 $objMember = new FT_member($objManage);
 
-$member = $objMember->GetIdRow( $arr_post["id"], $arr_post["user"] );
+$member = $objMember->GetMember( $arr_post );
 
 // クラス削除
 unset( $objManage );
 unset( $objMember );
 
-if( !empty($member) ){
+if( !empty($member["password"]) ){
 	header( "Location: ". $_FRONT["home"]. "/". $_DIR_NAME. "/login.php" );
 	exit;
 }
@@ -60,9 +60,10 @@ $_HTML_HEADER["description"] = "";
 //  smarty設定
 //----------------------------------------
 $smarty = new MySmarty("front");
-$smarty->compile_dir .= "mypage/regist/";
+$smarty->compile_dir .= $_DIR_NAME. "/regist/";
 
 $smarty->assign( "arr_post", $arr_post );
+$smarty->assign( "member"  , $member   );
 
 // 表示
 $smarty->display("index.tpl");

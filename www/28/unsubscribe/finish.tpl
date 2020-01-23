@@ -29,7 +29,7 @@
 										{$arr_post.mail}宛てに自動送信メールをお送りしました。<br />
 										そちらに記載されている仮パスワードでログインし、本登録を完了してください。
 									</p>
-									<p><a href="{$_FRONT.home}/mypage/login.php">ログイン画面</a></p>
+									<p><a href="{$_FRONT.home}/{$_DIR_NAME}/login.php">ログイン画面</a></p>
 								</form>
 							</section>
 						</div>

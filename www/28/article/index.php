@@ -49,7 +49,7 @@ $_HTML_HEADER["description"] = "";
 //  smarty設定
 //----------------------------------------
 $smarty = new MySmarty("front");
-$smarty->compile_dir .= "article/";
+$smarty->compile_dir .= $_DIR_NAME. "/article/";
 
 // テンプレートに設定
 $smarty->assign( "page_navi", $t_article["page"] );

@@ -57,11 +57,11 @@ $_HTML_HEADER["description"] = "";
 //  smarty設定
 //----------------------------------------
 $smarty = new MySmarty("front");
-$smarty->compile_dir .= "mypage/regist/";
+$smarty->compile_dir .= $_DIR_NAME. "/regist/";
 
 // テンプレートに設定
-$smarty->assign( "arr_post" , $arr_post  );
-$smarty->assign( "message"  , $message   );
+$smarty->assign( "arr_post", $arr_post );
+$smarty->assign( "message" , $message  );
 
 // エラーチェック
 if( empty( $message["ng"] ) ) {

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-17 17:25:24
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-23 17:02:53
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5034095455e1598a1b425e2-52814797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1579249461,
+      1 => 1579766569,
       2 => 'file',
     ),
   ),
@@ -27,6 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_HTML_HEADER' => 0,
     'arr_post' => 0,
     'message' => 0,
+    'member' => 0,
     'template_footer' => 0,
   ),
   'has_nocache_code' => false,
@@ -77,9 +78,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " placeholder="メールアドレス" />
 									<?php } else { ?>
 										<p>メールアドレス</p>
-										<p><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['mail'];?>
+										<p><?php echo $_smarty_tpl->tpl_vars['member']->value['mail'];?>
 </p>
-										<input type="hidden" id="mail" name="mail" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['mail'];?>
+										<input type="hidden" id="mail" name="mail" value="<?php echo $_smarty_tpl->tpl_vars['member']->value['mail'];?>
 " placeholder="メールアドレス" />
 										<p>パスワード</p>
 										<p>パスワードは<span class="c_red">半角英数8文字以上32字以下</span>で入力してください。</p>
@@ -90,6 +91,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 										<p>パスワード(確認用)</p>
 										<input type="password" id="chk_password" name="chk_password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['password'];?>
 " placeholder="パスワード" />
+										<input type="hidden" name="id" value="<?php echo $_smarty_tpl->tpl_vars['member']->value['id_member'];?>
+" />
 										<input type="hidden" name="user" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['user'];?>
 " />
 									<?php }?>

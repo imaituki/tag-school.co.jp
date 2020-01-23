@@ -27,7 +27,7 @@
 									<div class="box2">
 										<div class="box2_contents">
 											{if !empty($message.ng)}<p class="error">※{$message.ng.error}</p>{/if}
-											<form action="login.php{if $arr_get.mode != NULL}?mode={$arr_get.mode}{/if}" method="post">
+											<form action="./login.php{if $arr_get.mode != NULL}?mode={$arr_get.mode}{/if}" method="post">
 												<div id="msg" class="pos_ac c_red"></div>
 												<p>メールアドレス</p>
 												<input type="text" id="mail" name="mail" value="" placeholder="メールアドレス" />

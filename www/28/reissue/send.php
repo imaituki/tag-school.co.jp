@@ -27,7 +27,7 @@ $arr_post = $objMember->convert( $arr_post );
 $message = $objMember->check_mail( $arr_post, "update" );
 
 // エラーチェック
-if( empty( $message["ng"] ) ) {
+if( empty($message["ng"]) ) {
 
 	// トランザクション
 	$objMember->_DBconn->StartTrans();
@@ -85,7 +85,7 @@ if( empty($message["ng"]) ) {
 	//----------------------------------------
 	// smarty設定
 	$smarty = new MySmarty("front");
-	$smarty->compile_dir .= "mypage/reissue/";
+	$smarty->compile_dir .= $_DIR_NAME. "/reissue/";
 
 	// テンプレートに設定
 	$arr_post["temp_password"] = $temp_password; // メールに仮パスワードを記載する
@@ -129,7 +129,7 @@ if( empty($message["ng"]) ) {
 	//  管理宛
 	//----------------------------------------
 	// ヘッダー
-	$header2  = "From: " . mb_encode_mimeheader( $arr_post["name"] ) . " <" . $arr_post["mail"] . ">\n";
+	$header2  = "From: " . mb_encode_mimeheader( $arr_post["mail"] ) . " <" . $arr_post["mail"] . ">\n";
 	$header2 .= "Bcc: "  . $mail_conf["info"]["bcc_mail"] . "\n";
 	$header2 .= "Content-Type: text/plain; charset=iso-2022-jp\n";
 	$header2 .= "Content-Transfer-Encoding: 7bit\n";
@@ -159,7 +159,7 @@ if( empty($message["ng"]) ) {
 	@session_start();
 
 	// メールアドレス設定
-	$_SESSION["front"]["mypage"]["reissue"]["POST"]["mail"] = $arr_post["mail"];
+	$_SESSION["front"][$_DIR_NAME]["reissue"]["POST"]["mail"] = $arr_post["mail"];
 
 	// 終了画面へ
 	header( "Location: ./finish.php" );

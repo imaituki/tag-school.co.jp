@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-17 17:25:41
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-23 16:30:10
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4062752445e1598af2eb186-38858781%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1579249538,
+      1 => 1579680203,
       2 => 'file',
     ),
   ),
@@ -73,11 +73,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['user'])) {?>
 									<p>パスワード</p>
 									<p>********</p>
-									<input type="hidden" id="password" name="password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['password'];?>
+									<input type="hidden" name="password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['password'];?>
 " />
-									<input type="hidden" id="chk_password" name="chk_password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['chk_password'];?>
+									<input type="hidden" name="chk_password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['chk_password'];?>
 " />
-									<input type="hidden" id="user" name="user" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['user'];?>
+									<input type="hidden" name="id" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['id'];?>
+" />
+									<input type="hidden" name="user" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['user'];?>
 " />
 								<?php }?>
 									<p><input type="submit" class="btn_1" onclick="this.form.action='./'" value="戻る"></p>

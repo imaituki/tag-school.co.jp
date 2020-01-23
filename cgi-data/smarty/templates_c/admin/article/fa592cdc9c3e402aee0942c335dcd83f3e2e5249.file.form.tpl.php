@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-08 16:10:20
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-23 17:10:28
          compiled from "/home/tag-school/www/admin/contents/article/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4490754365e0498de21d0e4-17886418%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fa592cdc9c3e402aee0942c335dcd83f3e2e5249' => 
     array (
       0 => '/home/tag-school/www/admin/contents/article/template/form.tpl',
-      1 => 1578467352,
+      1 => 1579255500,
       2 => 'file',
     ),
   ),
@@ -61,7 +61,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">カテゴリー</label>
 			<div class="col-sm-6">
 				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['id_article_category'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['id_article_category'];?>

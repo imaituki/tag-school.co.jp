@@ -49,8 +49,12 @@ if( empty($message["ng"]) ) {
 		// 登録処理
 		$res = $objMember->insert( $arr_post );
 
+		// 会員番号
+		$arr_post["id"] = $objManage->Insert_ID();
+
 	}else{
 		// 本登録
+		unset( $arr_post["id"] );
 		unset( $arr_post["user"] );
 		unset( $arr_post["chk_password"] );
 
@@ -58,11 +62,11 @@ if( empty($message["ng"]) ) {
 		$res = $objMember->update( $arr_post );
 	}
 
-		// ロールバック
-		if( $res == false ) {
-			$objMember->_DBconn->RollbackTrans();
-			$message["ng"]["all"] = _ERRHEAD . "登録処理に失敗しました。（ブラウザの再起動を行って改善されない場合は、システム管理者へご連絡ください。）<br />";
-		}
+	// ロールバック
+	if( $res == false ) {
+		$objMember->_DBconn->RollbackTrans();
+		$message["ng"]["all"] = _ERRHEAD . "登録処理に失敗しました。（ブラウザの再起動を行って改善されない場合は、システム管理者へご連絡ください。）<br />";
+	}
 
 	// コミット
 	$objMember->_DBconn->CompleteTrans();
@@ -103,7 +107,7 @@ if( empty($message["ng"]) ) {
 	//----------------------------------------
 	// smarty設定
 	$smarty = new MySmarty("front");
-	$smarty->compile_dir .= "mypage/regist/";
+	$smarty->compile_dir .= $_DIR_NAME. "/regist/";
 
 	// テンプレートに設定
 	$smarty->assign( "arr_post" , $arr_post  );
@@ -176,8 +180,8 @@ if( empty( $message["ng"] ) ) {
 	@session_start();
 
 	// 変数を渡す
-	$_SESSION["front"]["mypage"]["regist"]["POST"]["mail"]     = $arr_post["mail"];
-	$_SESSION["front"]["mypage"]["regist"]["POST"]["temp_var"] = $arr_post["temp_var"];
+	$_SESSION["front"][$_DIR_NAME]["regist"]["POST"]["mail"]     = $arr_post["mail"];
+	$_SESSION["front"][$_DIR_NAME]["regist"]["POST"]["temp_var"] = $arr_post["temp_var"];
 
 	// 終了画面へ
 	header( "Location: ./finish.php" );
