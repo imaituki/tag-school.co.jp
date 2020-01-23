@@ -2,7 +2,7 @@
 //-------------------------------------------------------------------
 // 作成日: 2020/01/21
 // 作成者: yamada
-// 内  容: お問い合わせ 確認
+// 内  容: お問い合わせ
 //-------------------------------------------------------------------
 
 //----------------------------------------
@@ -12,27 +12,10 @@ require "./config.ini";
 
 
 //----------------------------------------
-//  入力情報のチェック
-//----------------------------------------
-$objManage  = new DB_manage( _DNS );
-$objContact = new FT_contact($objManage);
-
-// データ変換
-$arr_post = $objContact->convert( $arr_post );
-
-// データチェック
-$message = $objContact->check( $arr_post, 'insert' );
-
-// クラス削除
-unset( $objManage );
-unset( $objContact );
-
-
-//----------------------------------------
 //  ヘッダー情報
 //----------------------------------------
 // タイトル
-$_HTML_HEADER["title"] = "お問い合わせ　確認";
+$_HTML_HEADER["title"] = "お問い合わせ";
 
 // キーワード
 $_HTML_HEADER["keyword"] = "";
@@ -47,22 +30,12 @@ $_HTML_HEADER["description"] = "";
 $smarty = new MySmarty("front");
 $smarty->compile_dir .= $_DIR_NAME. "/";
 
-// テンプレートに設定
 $smarty->assign( "arr_post", $arr_post );
-$smarty->assign( "message" , $message  );
 
 $smarty->assign( "OptionGrade"  , $OptionGrade   );
 $smarty->assign( "OptionContent", $OptionContent );
 $smarty->assign( "OptionRequest", $OptionRequest );
 
-// エラーチェック
-if( empty($message["ng"]) ) {
-
-	// 表示
-	$smarty->display("_check.tpl");
-
-}else{
-	// 表示
-	$smarty->display("_index.tpl");
-}
+// 表示
+$smarty->display("_index.tpl");
 ?>

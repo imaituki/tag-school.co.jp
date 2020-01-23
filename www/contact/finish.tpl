@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		{include file=$template_meta}
-		<link rel="stylesheet" href="{$_FRONT.home}/common/css/import.css" type="text/css" />
-		<link rel="shortcut icon" href="{$_FRONT.home}/common/favicon/favicon.ico" />
-		<link rel="apple-touch-icon" href="{$_FRONT.home}/common/favicon/apple-touch-icon.png" />
-		{include file=$template_javascript}
-	</head>
-	<body id="{$_DIR_NAME}" class="bottom">
-		<a id="pagetop" name="pagetop"></a>
-		<div id="base">
-			{include file=$template_header}
-			<section class="style--page_title">
-			<div class="container">
-				<div class="back">
-					<h2 class="hl">{$_HTML_HEADER.title}</h2>
-				</div>
+<head>
+<meta charset="utf-8">
+{include file=$template_meta}
+<link rel="stylesheet" href="/common/css/import.css">
+{include file=$template_javascript}
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+</head>
+<body id="contact">
+<div id="base">
+{include file=$template_header}
+<main>
+<div id="body">
+	<div id="page_title">
+		<div class="img_back"><img src="/common/image/contents/contact/top.jpg" alt="お問い合わせ"></div>
+		<div class="page_title_wrap">
+			<div class="center mincho">
+				<h2><span class="main">お問い合わせ</span><span class="sub">Contact</span></h2>
 			</div>
-			</section>
-			<div id="body">
-				<main class="layout--body">
-					<div class="container">
-						<div class="layout--body_box">
-							<section class="style-mypage-list">
-								{if !empty($arr_post.temp_var)}
-									<p>仮登録を行いました。</p>
-									<p>
-										My Page会員に仮登録いただき、ありがとうございます。<br />
-										まだ登録は完了しておりません。<br />
-										{$arr_post.mail}宛てに自動送信メールをお送りしました。<br />
-										本登録用のURLをお送りいたしましたので、そちらから本登録を完了してください。
-									</p>
-								{else}
-									<p>本登録を行いました。</p>
-									<p>
-										My Page会員に本登録いただき、ありがとうございます。<br />
-										ご登録いただいたメールアドレスとパスワードで、マイページにログインしてください。
-									</p>
-									<p><a href="{$_FRONT.home}/{$_DIR_NAME}/login.php">マイページ ログイン</a></p>
-								{/if}
-							</section>
-						</div>
-					</div>
-				</main>
-			</div><!-- #body -->
-			{include file=$template_footer}
-		</div><!-- #base -->
-		<!-- JavaScript -->
-		<script type="text/javascript" src="{$_FRONT.home}/common/js/import.js"></script>
-	</body>
+		</div>
+	</div>
+	<div id="pankuzu">
+		<div class="center">
+			<ul>
+				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
+				<li>お問い合わせ</li>
+			</ul>
+		</div>
+	</div>
+	<section>
+		<div class="wrapper bg_common entry">
+			<div class="center">
+				<h2 class="hl_3 mincho">お問い合わせが完了しました</h2>
+				<p class="mb20">ご入力いただいたメールアドレス{if !empty( $arr_post.mail )}({$arr_post.mail}){/if}宛に、確認メールをお送りしておりますのでご確認ください。</p>
+				<p class="mb20">
+					しばらくたっても自動送信メールが届かない場合には、主に次の原因が考えられます。<br>
+					「ご入力いただいたメールアドレスが間違っている」<br>
+					「迷惑メール対策による受信メールの自動削除設定」<br>
+					「メールボックスの容量オーバー（特にフリーメール）」<br>
+					「メールの受信制限や拒否設定（特に携帯メール）」</p>
+				<p class="mb20">メールアドレスの間違いや、ドメイン指定などの受信設定を今一度ご確認いただき、<br>
+					送受信できる正しいメールアドレスを、メールまたはお電話にてご連絡くださいますようお願い申し上げます。</p>
+				<p class="mb50">その他、何かご不明な点等ございましたら、お気軽にお問い合わせください。</p>
+				<div class="button _type_1"><a href="/">トップページに戻る<i class="fa fa-chevron-right"></i></a></div>
+			</div>
+		</div>
+	</section>
+</div>
+</main>
+{include file=$template_footer}
+</div>
+</body>
 </html>
