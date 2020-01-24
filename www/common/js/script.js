@@ -167,6 +167,23 @@ $(function(){
 		}
 	});
 
+	// tab
+	$('.tab_navi a').on('click',function(){
+		tsp = $(this).parents('.tab_navi');
+		tse = $(tsp).attr('data-tab');
+		ttg = $(this).attr('href');
+		tflg = 1;
+		if( $(this).parents('.tab').hasClass('active') ){ tflg = 0 }
+		
+		$(tsp).find('.tab').removeClass('active');
+		$('.'+tse).removeClass('active');
+		if( tflg == "1" ){
+			$(ttg).addClass('active');
+			$(this).parents('.tab').addClass('active');
+		}
+		return false;
+	});
+
 	// table
 	$('.entry table').each(function(){
 		if( $(this).hasClass('tbl_form') == false ){

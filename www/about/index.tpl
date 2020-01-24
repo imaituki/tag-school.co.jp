@@ -15,7 +15,7 @@
 		<div class="img_back"><img src="/common/image/contents/about/top.jpg" alt="TAG schoolについて"></div>
 		<div class="page_title_wrap">
 			<div class="center mincho">
-				<h2><span class="main">TAG schoolについて</span><span class="sub">Privacy Policy</span></h2>
+				<h2><span class="main">TAG schoolについて</span><span class="sub">About</span></h2>
 			</div>
 		</div>
 	</div>
@@ -28,14 +28,27 @@
 		</div>
 	</div>
 	<section>
-		<div class="wrapper">
-			<div id="top_img">
-				<div class="img_back"><img src="/common/image/contents/about/image1.jpg" alt="TAG schoolについて"></div>
-				<div class="top_img_wrap center">
-					<div class="center3 mincho">
-						<h2>TAG schoolは、岡山初の集団指導と<br>個別指導を融合した新総合学習塾です。<br>『わかる』から『できる』、そして『えらべる』へ<br> “今までにない学び” をご提供いたします。</h2>
+		<div id="about_1">
+			<div class="photo img_back"><img src="/common/image/contents/about/image1.jpg" alt="TAG schoolについて"></div>
+			<div class="text">
+				<div class="center">
+					<div class="text_in">
+						<h2 class="c_brown mincho">TAG schoolは、岡山初の集団指導と<br>個別指導を融合した新総合学習塾です。<br>『わかる』から『できる』、そして『えらべる』へ<br>“今までにない学び”をご提供いたします。</h2>
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div id="about_2" class="wrapper center">
+			ハードスキルうんぬん
+		</div>
+	</section>
+	<section>
+		<div id="about_3" class="wrapper">
+			<div class="center">
+				わかるからできるなんとか
+				（仮トップのcss参考に）
 			</div>
 		</div>
 	</section>
