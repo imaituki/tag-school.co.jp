@@ -28,8 +28,15 @@
 		</div>
 	</div>
 	<section>
-		<div class="wrapper center" >
-			
+		<div class="wrapper">
+			<div id="top_img">
+				<div class="img_back"><img src="/common/image/contents/about/image1.jpg" alt="TAG schoolについて"></div>
+				<div class="top_img_wrap center">
+					<div class="center3 mincho">
+						<h2>TAG schoolは、岡山初の集団指導と<br>個別指導を融合した新総合学習塾です。<br>『わかる』から『できる』、そして『えらべる』へ<br> “今までにない学び” をご提供いたします。</h2>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 </div>
