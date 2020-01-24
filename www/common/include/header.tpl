@@ -2,7 +2,7 @@
 <div id="head">
 	<div class="head_wrap">
 		<h1 class="site_logo"><a class="ov" href="/"><img src="/common/image/head/logo.png" alt="TAG school"></a></h1>
-		<div class="head_contact">
+		<div class="head_contact _head">
 			<div class="tel_unit">
 				<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号">086-123-4567</span>
 				<span class="time">受付時間 14:00 ~ 22:00（日曜定休）</span>
