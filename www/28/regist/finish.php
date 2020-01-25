@@ -16,6 +16,9 @@ require "./config.ini";
 //----------------------------------------
 // タイトル
 if( !empty($_SESSION["front"][$_DIR_NAME]["regist"]["POST"]["temp_var"]) ){
+	$arr_post = $_SESSION["front"][$_DIR_NAME]["regist"]["POST"];
+	unset( $_SESSION["front"][$_DIR_NAME]["regist"]["POST"] );
+
 	$_HTML_HEADER["title"] = "新規会員登録 完了";
 }else{
 	$_HTML_HEADER["title"] = "会員本登録 完了";
@@ -26,14 +29,6 @@ $_HTML_HEADER["keyword"] = "";
 
 // ディスクリプション
 $_HTML_HEADER["description"] = "";
-
-
-//----------------------------------------
-//  変数
-//----------------------------------------
-if( !empty($_SESSION["front"][$_DIR_NAME]["regist"]["POST"]) ){
-	$arr_post = $_SESSION["front"][$_DIR_NAME]["regist"]["POST"];
-}
 
 
 //----------------------------------------

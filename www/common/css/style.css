@@ -80,7 +80,7 @@
 .course .title { text-align:center; font-size:1.75em; margin-bottom:30px; }
 .course_box {}
 .course_box .box_title { text-align:center; font-size:1.15em; padding:20px 0; }
-.course_box .box_in { padding:20px 30px; }
+.course_box .box_in { padding:20px 30px; color:#808080;}
 	#primary { border-color:#de652e; }
 	#middle { border-color::#3494c4; }
 	#high { border-color::#27665b; }
@@ -97,6 +97,8 @@
 #space { padding-top:100px; }
 #space .space_wrap { color:#fff; margin-top:50px; background:url(../image/contents/top/image8.jpg) no-repeat center center / cover; }
 #space .space_wrap p { line-height:250%; }
+
+
 
 #teachers { padding-top:100px; }
 .teacher_unit { margin-bottom:50px; }
@@ -127,38 +129,6 @@
 .info_unit .tag { display:inline-block; vertical-align:middle; line-height:100%; padding:8px 10px; text-align:center; min-width:130px; color:#FFF; background:#87664F; border-radius:3px; }
 .info_unit .date { display:inline-block; vertical-align:middle; color:#999; padding-left:20px; }
 .info_unit .text h3 { line-height:130%; border-bottom:1px dotted #ddd; padding:0 0 8px; font-size:1.25em; }
-
-/*
-.box_unit { position:relative; box-shadow:0 0 3px #999; margin-bottom:40px; }
-.box_unit a { display:block; text-decoration:none; color:#444; }
-.box_unit .photo { text-align:center; }
-.box_unit .text { text-align:center; padding:10px 0; }
-.box_unit h3 { line-height:140%; }
-	@media (max-width: 575px){
-		#top_2 .row { margin:0 -10px; }
-		#top_2 .row > * { padding:0 5px; }
-		#top_2 .box_unit .photo { padding:10px 25px 0; }
-		.box_unit h3 { font-size:1.25em; }
-	}
-	@media (min-width: 576px){
-		.box_unit .photo { padding:10px 35px 0; }
-		.box_unit h3 { font-size:1.75em; }
-	}
-	@media (min-width: 576px) and (max-width: 767px){
-		.box_unit .photo img { max-width:150px; }
-	}
-
-#top_info {}
-	@media (max-width: 575px){
-		.info_unit .photo { width:30%; }
-	}
-	@media (min-width: 576px){
-		.info_unit .photo { width:100px; }
-	}
-	@media (max-width: 768px){
-		#top_info .row > .col-sm-6:first-child { margin-bottom:30px; }
-	}
-*/
 
 /*===================================================================
 	common
@@ -197,9 +167,47 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 #about_1 .text .center { display:table; height:100%; }
 #about_1 .text .text_in { display:table-cell; vertical-align:middle; }
 #about_1 .text .text_in > * { max-width:630px; }
-#about_1 .text h2 { text-align:center; padding:0 0 15px; font-size:1.75em; font-weight:bold; }
+#about_1 .text h2 { text-align:center; font-size:1.75em; font-weight:bold; }
+
+@media (min-width: 768px)and (max-width: 991px){
+	#about_1 .text .text_in h2{font-size: 1.25em; max-width: 500px;}
+}
+@media (max-width: 575px){
+	#about_1 .text .text_in{vertical-align: bottom;}
+	#about_1 .text .text_in h2{font-size: 1em; text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 10px #fff; line-height: 17px;}
+
+}
+
+#about_3 { padding-top:100px; }
+#about_3.about_3_wrap { color:#fff; margin-top:50px; background:url(../image/contents/about/back.jpg) no-repeat center center / cover; }
+#about_3.about_3_wrap p { line-height:250%; }
+#about_3 .title{ text-align: center; font-weight: bold; margin-bottom: 60px; text-shadow: 0 4px 0 #e0323b; font-size: 1.75em;}
+#about_3 .story{ font-weight: bold; font-size: 2.5em; text-align: center;}
 
 
+
+/*===================================================================
+	#strength
+===================================================================*/
+#strength .h_img { position:relative; }
+#strength .h_img .text { position:absolute; top:0; left:0; width:100%; height:100%; }
+#strength .h_img .text .center { display:table; height:100%; }
+#strength .h_img .text .text_in { display:table-cell; vertical-align:middle; }
+#strength .h_img .text .text_in > * { max-width:630px; }
+#strength .h_img .text h2 { text-align:center; font-size:2.5em; font-weight:bold; }
+#strength .h_img .text h2 .sub{  font-size: 0.5em; display: block; }
+#strength .h_img .text h2 .main::after{content: ''; display: block;
+	margin: 0 auto; width: 60%; margin-bottom: 5px; border-bottom: 1px dotted #FFF;}
+
+@media (min-width: 768px)and (max-width: 991px){
+	#strength_1 .text .text_in h2{font-size: 1.25em; max-width: 500px;}
+}
+@media (max-width: 575px){
+	#strength_1 .text .text_in{vertical-align: bottom;}
+	#strength_1 .text .text_in h2{font-size: 1.5em; }
+	#strength .h_img .text h2 {font-size: 1.5em; }
+
+}
 /*===================================================================
 	#information
 ===================================================================*/
@@ -302,13 +310,17 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 /*===================================================================
 	hl
 ===================================================================*/
-.hl_1 { position:relative; margin-top:-90px; padding-bottom:80px; left:-100px; line-height:100%; }
+.hl_1 { position:relative; line-height:100%; }
 .hl_1 > span { display:inline-block; vertical-align:middle; }
-.hl_1 .en { color:#e3deda; font-size:100px; }
-.hl_1 .ja { color:#969696; font-size:20px; margin-left:20px; padding-left:20px; border-left:1px solid #ccc; }
+.hl_1 .ja { color:#969696; font-size: 20px;}
 	@media (max-width: 575px){
+		.hl_1 { padding-bottom: 20px; line-height: 100%; }
+		.hl_1 .en { color: #87664F; font-size: 50px;}
 	}
 	@media (min-width: 576px){
+		.hl_1 { margin-top:-90px; padding-bottom:80px; left:-100px; }
+		.hl_1 .en { color:#e3deda; font-size:100px; }
+		.hl_1 .ja { margin-left:20px; padding-left:20px; border-left:1px solid #ccc; }
 	}
 
 .hl_2 { line-height:100%; margin-bottom:30px; border-bottom:1px solid #ddd; }
@@ -323,8 +335,8 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 .hl_3 { margin-bottom:30px; font-size:1.5em; background:#87664F; padding:20px; line-height:100%; font-weight:bold; border-radius:3px; color:#FFF; box-shadow:0px 5px 5px -4px rgba(112,112,112,0.6); }
 .hl_3 > span { border-left:3px solid #FFF; padding-left:10px; }
 
-
-
+.hl_4{ font-weight: bold; border-bottom: 1px dotted #DEDEDE; padding-left: 15px; color: #87664F; font-size: 1.25em; position: relative; padding: 10px 15px;}
+.hl_4::before{ content: ""; border-right: 3px solid #E5E5E5; position: absolute; left: 0px; top: 0; margin-top: 5px; margin-bottom: 5px; bottom: 0;}
 /*===================================================================
 	button
 ===================================================================*/

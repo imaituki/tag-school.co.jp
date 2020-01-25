@@ -47,7 +47,7 @@ if ( !empty($arr_post["mail"]) && !empty($arr_post["password"]) ) {
 //  ヘッダー情報
 //----------------------------------------
 // タイトル
-$_HTML_HEADER["title"] = "ログイン";
+$_HTML_HEADER["title"] = "28 マイページログイン";
 
 // キーワード
 $_HTML_HEADER["keyword"] = "";

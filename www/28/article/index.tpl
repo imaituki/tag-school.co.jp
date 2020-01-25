@@ -1,61 +1,66 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		{include file=$template_meta}
-		<link rel="stylesheet" href="{$_FRONT.home}/common/css/import.css" type="text/css" />
-		<link rel="shortcut icon" href="{$_FRONT.home}/common/favicon/favicon.ico" />
-		<link rel="apple-touch-icon" href="{$_FRONT.home}/common/favicon/apple-touch-icon.png" />
-		{include file=$template_javascript}
-	</head>
-	<body id="{$_DIR_NAME}" class="bottom">
-		<a id="pagetop" name="pagetop"></a>
-		<div id="base">
-			{include file=$template_header}
-			<section class="style--page_title">
-			<div class="container">
-				<div class="back">
-					<h2 class="hl"><img src="{$_FRONT.home}/common/image/content/{$_DIR_NAME}/title.png" alt="28" /></h2>
-				</div>
-			</div>
-			</section>
-			<div id="body">
-				<main class="layout--body">
-					<div class="container">
-						<div class="layout--body_box">
-							<section class="style-mypage-list">
-								{foreach from=$t_article item=data}
-									<div>
-										<div>{$data.date|date_format:'%Y/%m/%d'}</div>
-										<div>{$OptionArticleCategory[$data.id_article_category]}</div>
-										<div>
-											<a href="{$link}?id={$data.id_article}{if is_numeric($arr_get.page)}&page={$arr_get.page}{/if}">{$data.title}</a>
-										</div>
-										{if !empty($data.image1)}
-										<div>
-											<a href="{$link}?id={$data.id_article}{if is_numeric($arr_get.page)}&page={$arr_get.page}{/if}">
-												<img src="{$_IMAGEFULLPATH}/article/image1/s_{$data.image1}" alt="{$data.title|default:''}" />
-											</a>
-										</div>
-										{/if}
-									</div>
-								{/foreach}
-							</section>
-						</div>
-						{if $page_navi.PageTotal > 1}
-						<div class="pagenation yu-mincho mb100">
-							<ul>
-								{if $page_navi.LinkBack|default:"" != NULL}{$page_navi.LinkBack}{/if}
-								{$page_navi.LinkPage}
-								{if $page_navi.LinkNext|default:"" != NULL}{$page_navi.LinkNext}{/if}
-							</ul>
-						</div><!--//.pagenation-->
-						{/if}
+<head>
+<meta charset="utf-8">
+{include file=$template_meta}
+<link rel="stylesheet" href="/common/css/import.css" />
+{include file=$template_javascript}
+</head>
+<body id="{$_DIR_NAME}">
+<div id="base">
+{include file=$template_header}
+<main>
+<div id="body">
+	<div id="pankuzu">
+		<div class="center">
+			<ul>
+				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
+				<li><a href="{$_FRONT.home}/{$_DIR_NAME}/login.php">28 ログイン</a></li>
+				<li>{$_HTML_HEADER.title}</li>
+			</ul>
+		</div>
+	</div>
+	<section>
+		<div class="wrapper bg_common" >
+			<div class="center">
+				<h2 class="hl_3 mincho">{$_HTML_HEADER.title}</h2>
+				{foreach from=$t_article item=data}
+					<div class="info_box">
+						<a class="ov" href="./detail.php?id={$data.id_article}{if is_numeric($arr_get.page)}&page={$arr_get.page}{/if}">
+							<div class="photo img_rect">
+								<img src="{if !empty($data.image1)}{$_IMAGEFULLPATH}/article/image1/m_{$data.image1}{else}/common/image/contents/null.jpg{/if}" alt="{$data.title}" />
+							</div>
+							<div class="text">
+								<div class="disp_td">
+									<p class="mb10">
+										<span class="tag">{$OptionArticleCategory[$data.id_article_category]}</span>
+										<span class="date">{$data.date|date_format:'%Y.%m.%d'}</span>
+									</p>
+									<h3>{$data.title}</h3>
+								</div>
+							</div>
+						</a>
 					</div>
-				</main>
-			</div><!-- #body -->
-			{include file=$template_footer}
-		</div><!-- #base -->
-		<!-- JavaScript -->
-		<script type="text/javascript" src="{$_FRONT.home}/common/js/import.js"></script>
-	</body>
+				{foreachelse}
+					<div class="info_box">
+						<div class="text">
+							<h3>只今準備中です</h3>
+						</div>
+					</div>
+				{/foreach}
+				{if $page_navi.LinkPage}
+					<div class="list_pager">
+						<ul class="mt10">
+							{$page_navi.LinkPage}
+						</ul>
+					</div>
+				{/if}
+			</div>
+		</div>
+	</section>
+</div>
+</main>
+{include file=$template_footer}
+</div>
+</body>
 </html>

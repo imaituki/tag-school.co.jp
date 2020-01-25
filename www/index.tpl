@@ -16,7 +16,7 @@
 		<div class="center">
 			<div class="text_in">
 				<div class="logo"><img src="common/image/contents/top/logo.png" alt="岡山市の総合学習塾 タッグスクール TAG school"></div>
-				<h2 class="mincho">TAGスクール<br><span class="c_red">2020年春</span>開校予定！</span></h2>
+				<h2 class="mincho">TAGスクール<br><span class="c_red">2020年春</span>開校予定！</h2>
 				<p>岡山市問屋町に今までにない新しい塾が誕生！</p>
 			</div>
 		</div>
@@ -142,7 +142,7 @@
 											<h3 class="mincho c_green">高校生</h3>
 											<p class="caption">High school student</p>
 											<ul class="icon_list c_green">
-												<li>集団<br>指導</li>
+												<li>個別<br>指導</li>
 											</ul>
 										</div>
 									</a>
@@ -163,30 +163,30 @@
 								</div>
 								<div class="col-xs-6">
 									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_orange c0">小1～3　基礎学力定着コース　月額14,200円（税込）</h4>
-										<div class="box_in">楽しみながら、基礎学力の土台となる学びの感覚『体感共育』を行っていきます。</div>
+										<h4 class="box_title bg_orange c0">小４　基礎学力定着コース　月額17,200円（税込）</h4>
+										<div class="box_in">勉強する習慣を身につけることを目的とし、算数・国語を中心とした基礎学力をつけていきます。</div>
 									</div>
 								</div>
 							</div>
-							<h3 class="hl_2"><span class="main c_orange">集団指導</span><span class="sub">『わかる』・『できる』集団指導</span></h3>
-							<p class="mb30">ご要望に応じて、60分コース・60分コースを選択することが可能です。</p>
+							<h3 class="hl_2"><span class="main c_orange">個別指導</span><span class="sub">『えらべる』個別指導【６０分／８０分】</span></h3>
+							<p class="mb30">ご要望に応じて、６０分コース・８０分コースを選択することが可能です。</p>
 							<div class="row">
 								<div class="col-xs-6">
 									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_orange c0">小1～3　基礎学力定着コース　月額14,200円（税込）</h4>
-										<div class="box_in">楽しみながら、基礎学力の土台となる学びの感覚『体感共育』を行っていきます。</div>
+										<h4 class="box_title bg_orange c0">小１～６　基礎学力定着コース  月額14,700円～(税込)</h4>
+										<div class="box_in">基礎学力の定着を目指し、個々のレベル・現状に応じて指導を行ってまいります。</div>
 									</div>
 								</div>
 								<div class="col-xs-6">
 									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_orange c0">小1～3　基礎学力定着コース　月額14,200円（税込）</h4>
-										<div class="box_in">楽しみながら、基礎学力の土台となる学びの感覚『体感共育』を行っていきます。</div>
+										<h4 class="box_title bg_orange c0">小４　応用学力演習コース　月額17,700円～(税込)</h4>
+										<div class="box_in">基礎学力に加え、応用学力の習得を目指し、個々のレベル・現状に応じて指導を行ってまいります。中学受験へ向けた準備コースとしてもご活用ください。</div>
 									</div>
 								</div>
 								<div class="col-xs-6">
 									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_orange c0">小1～3　基礎学力定着コース　月額14,200円（税込）</h4>
-										<div class="box_in">楽しみながら、基礎学力の土台となる学びの感覚『体感共育』を行っていきます。</div>
+										<h4 class="box_title bg_orange c0">小５・６　他塾併用中学受験サポートコース<br>月額17,700円～(税込)</h4>
+										<div class="box_in">中学受験志望者を対象とし、受験へ向けて、個々の志望校・レベル・現状に応じて指導を行ってまいります。</div>
 									</div>
 								</div>
 							</div>
@@ -196,40 +196,40 @@
 							<div class="row mb50">
 								<div class="col-xs-6">
 									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_blue c0">小1～3　基礎学力定着コース　月額14,200円（税込）</h4>
-										<div class="box_in">楽しみながら、基礎学力の土台となる学びの感覚『体感共育』を行っていきます。</div>
+										<h4 class="box_title bg_blue c0">中１～３　高校受験コース　月額18,700円（税込）</h4>
+										<div class="box_in">学校成績の向上はもちろんのこと、高校受験へ向けて各教科ごとにTAG式『LGCT＋F』指導で理解を深めていきます。</div>
 									</div>
 								</div>
 							</div>
-							<h3 class="hl_2"><span class="main c_blue">集団指導</span><span class="sub">『わかる』・『できる』集団指導</span></h3>
+							<h3 class="hl_2"><span class="main c_blue">個別指導</span><span class="sub">『えらべる』個別指導【６０分／８０分】</span></h3>
 							<div class="row">
 								<div class="col-xs-6">
 									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_blue c0">小1～3　基礎学力定着コース　月額14,200円（税込）</h4>
-										<div class="box_in">楽しみながら、基礎学力の土台となる学びの感覚『体感共育』を行っていきます。</div>
+										<h4 class="box_title bg_blue c0">中１～３　高校受験コース　月額19,200円～(税込)</h4>
+										<div class="box_in">高校受験志望者を対象とし、受験へ向けて、個々の志望校・レベル・現状に応じて指導を行ってまいります。</div>
 									</div>
 								</div>
 								<div class="col-xs-6">
 									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_blue c0">小1～3　基礎学力定着コース　月額14,200円（税込）</h4>
-										<div class="box_in">楽しみながら、基礎学力の土台となる学びの感覚『体感共育』を行っていきます。</div>
+										<h4 class="box_title bg_blue c0">中１～３　中高一貫校コース  月額20,700円～(税込)</h4>
+										<div class="box_in">中高一貫校生を対象とし、大学受験も見据え、学校の勉強の補習を中心に指導を行ってまいります。</div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="course" id="high">
-							<h3 class="hl_2"><span class="main c_green">集団指導</span><span class="sub">『わかる』・『できる』集団指導</span></h3>
+							<h3 class="hl_2"><span class="main c_green">個別指導</span><span class="sub">『えらべる』個別指導【８０分】</span></h3>
 							<div class="row">
 								<div class="col-xs-6">
 									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_green c0">小1～3　基礎学力定着コース　月額14,200円（税込）</h4>
-										<div class="box_in">楽しみながら、基礎学力の土台となる学びの感覚『体感共育』を行っていきます。</div>
+										<h4 class="box_title bg_green c0">高１・２　大学受験コース  月額22,200円～(税込)</h4>
+										<div class="box_in">大学受験志望者を対象とし、学校の勉強の補習に加え、受験へ向けて個々の志望校・レベル・現状に応じて指導を行ってまいります。</div>
 									</div>
 								</div>
 								<div class="col-xs-6">
 									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_green c0">小1～3　基礎学力定着コース　月額14,200円（税込）</h4>
-										<div class="box_in">楽しみながら、基礎学力の土台となる学びの感覚『体感共育』を行っていきます。</div>
+										<h4 class="box_title bg_green c0">高３　大学受験コース  月額23,700円～(税込)</h4>
+										<div class="box_in">受験生を対象とし、学校の勉強の補習に加え、受験へ向けて個々の志望校・レベル・現状に応じて指導を行ってまいります。</div>
 									</div>
 								</div>
 							</div>
@@ -257,28 +257,28 @@
 							</div>
 							<div class="col-xs-3 col-6">
 								<div class="flow_unit fa_a">
-									<div class="photo"><img src="common/image/contents/top/flow2.png" alt="お問い合わせ"></div>
+									<div class="photo"><img src="common/image/contents/top/flow2.png" alt="面 談"></div>
 									<div class="text">
-										<h3>お問い合わせ</h3>
-										<p>お電話または問い合わせフォームにて、お気軽にお問い合わせください</p>
+										<h3>面 談</h3>
+										<p>プロ教育アドバイザーによる面談</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-xs-3 col-6">
 								<div class="flow_unit fa_a">
-									<div class="photo"><img src="common/image/contents/top/flow3.png" alt="お問い合わせ"></div>
+									<div class="photo"><img src="common/image/contents/top/flow3.png" alt="体験授業"></div>
 									<div class="text">
-										<h3>お問い合わせ</h3>
-										<p>お電話または問い合わせフォームにて、お気軽にお問い合わせください</p>
+										<h3>体験授業</h3>
+										<p>学力レベルの把握・集団または個別の適性確認</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-xs-3 col-6">
 								<div class="flow_unit">
-									<div class="photo"><img src="common/image/contents/top/flow4.png" alt="お問い合わせ"></div>
+									<div class="photo"><img src="common/image/contents/top/flow4.png" alt="入塾手続き"></div>
 									<div class="text">
-										<h3>お問い合わせ</h3>
-										<p>お電話または問い合わせフォームにて、お気軽にお問い合わせください</p>
+										<h3>入塾手続き</h3>
+										<p>入塾申込み後、授業スタート</p>
 									</div>
 								</div>
 							</div>
@@ -303,6 +303,40 @@
 						様々な接点を生み、繋がりが広がっていく空間となっております。また、塾カフェとして、コーヒーや紅茶などのお飲み物をお楽しみいただけます。</p>
 					<p class="mb0 pos_ac-pc">TAG schoolの教室はコンセプト通り、リラックスして勉強に集中できる学習空間となっています。</p>
 					<p class="pos_ac-pc">良質な学びの時間をTAG schoolでご体感ください。</p>
+				</div>
+				<div class="bg0">
+					<div class="row no-gutters">
+						<div class="col-xl-6 hidden-lg">
+							<div class="row no-gutters">
+								<div class="col-xs-6 col-6">
+									<div class="height-1">
+										<img src="/common/image/contents/top/space2.jpg" alt="">
+										<img src="/common/image/contents/top/space3.jpg" alt="">
+									</div>
+								</div>
+								<div class="col-xs-6 col-6 lounge">
+									<div class="img_back height-1">
+										<img src="/common/image/contents/top/space1.jpg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-6">
+							<div class="row no-gutters">
+								<div class="col-xs-6 col-6">
+									<div class="height-1">
+										<img src="/common/image/contents/top/space2.jpg" alt="">
+										<img src="/common/image/contents/top/space3.jpg" alt="">
+									</div>
+								</div>
+								<div class="col-xs-6 col-6 lounge">
+									<div class="img_back height-1">
+										<img src="/common/image/contents/top/space1.jpg" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -344,22 +378,18 @@ TAG schoolで会いましょう！！</p>
 								<div class="photo mb30"><img src="common/image/contents/top/teacher2.png" alt=""></div>
 							</div>
 							<div class="col-xs-8 col-xs-pull-4">
-								<h3 class="title"><span class="name mincho c_orange">木本 健太郎</span><span class="ruby">KENTARO KIMOTO</span><span class="tag c_orange">塾長</span></h3>
-								<p class="mb30">自然共生ホールディングスの光本社長、恩師の安藤先生とのご縁がつながり、ついに下中野ビル5階で、集団指導と個別指導が融合した新総合学習塾のTAG schoolが開校します。
-安藤先生と出会った小学4年生の時、「僕の夢は先生になることです」と学校の日記に書いたのを思い出します。大人になった今、塾長・塾経営者として、地元岡山で夢が実現できるとは当時は思いもしませんでした。夢は叶うのだなと実感しています。
-受験や進路選択はあくまで手段です。TAG schoolの生徒には手段としての勉強や進路選択ではなく、将来なりたい自分や夢へ向かって頑張る大切さを伝えていけたらと考えています。常に環境変化する現代社会だからこそ、自分の軸を持って強く生きていってほしいと思います。
-TAG schoolで会いましょう！！</p>
+								<h3 class="title"><span class="name mincho c_orange">安藤 正由</span><span class="ruby">MASAYUKI ANDO</span><span class="tag c_orange">TAG総合プロデューサー・校舎長</span></h3>
+								<p class="mb30">TAG schoolを総合プロデュースした安藤と木本塾長との出会いは、木本塾長が小学４年生の時でした。つまり、かつての教え子と先生がTAG（タッグ）を組んで、作りあげた塾なのです。集団授業を受けても「わからない」、大量の宿題をしても「できない」という声を多く耳にしてきました。集団授業を受けて、出される大量の宿題をすれば、本当に学力の向上につながるでしょうか？ますます変化していく学びに対応できるでしょうか？<br>
+個別授業を組み合わせることで集団授業の「わかる」を、自分で「できる」にすることが可能です。「わかる」「できる」「えらべる」集団✕個別の融合型の複合学習塾、それが、TAG schoolです。<br>
+自分が理想とする教育がついにTAG schoolで実現します。皆様、TAG schoolでお待ちしております。</p>
 								<div class="profile_box _orange">
 									<div class="profile c_orange">
 										<dl>
 											<dt>PROFILE</dt>
-											<dd>1985年岡山県岡山市生まれ<br>
-												岡山朝日高校、筑波大学、東京大学大学院出身</dd>
+											<dd>11971年岡山県津山市生まれ、<br>甲南大学 経済学部卒業</dd>
 										</dl>
 									</div>
-									<p>筑波大学で教員免許、東京大学大学院で専修免許を取得。大手メガバンクへ就職し、東京で約5年間ビジネスマンとして、営業や企画を学び、2年目から社長賞を受賞するなど成果を残した。その後、脱サラし教育業界へ。東京自由が丘でマンツーマン個別指導塾を創業・軌道に乗せた後、事業売却した。 現在は、理系教科のプロ講師・教育コンサルタント・学習塾経営者として、中国上海での塾経営、アメリカロサンゼルスでの塾経営コンサルタントにも注力し、日本だけでなく世界中を飛びまわって仕事をしている。
-また最近では、世界に羽ばたくことを夢見る子供たちを応援したいという思いから、探求学習『a-school』の特別講師や国際バカロレア教育のプロデュースに関わり、教科学習にとらわれないグローバル人材の育成を目指している。
-2019年9月、TAG school運営会社の株式会社TAG Corporation 28代表取締役に就任。そして、2020年2月、地元岡山で新総合学習塾のTAG schoolを恩師の安藤先生と共に立ち上げ、塾長を歴任する。</p>
+									<p>小学生の頃から教師を目指し、高校・大学時代には、地域の剣道クラブで、小中学生を指導・育成。その指導経験から、得意の社会で教員免許を取得し、岡山市内の公立中学校で２年間の講師経験をする。しかし、自分が理想とする教育と学校教育にギャップを感じ、学校とは異なるフィールドを探し、岡山県内の大手進学塾O塾に入社した。入社２年目から校舎長やエリア統括を歴任した。O塾退社後は、大手進学塾Nセンターへ転職し、校舎責任者や中学・高校受験指導主任を歴任。<br>2019年9月、TAG school運営会社の株式会社TAG Corporation 28専務取締役に就任。そして、2020年2月、教師歴２７年の経験とノウハウを生かし、新総合学習塾のTAG schoolを教え子の木本と共に立ち上げ、TAG総合プロデューサーを歴任する。、2020年2月、地元岡山で新総合学習塾のTAG schoolを恩師の安藤先生と共に立ち上げ、塾長を歴任する。</p>
 								</div>
 							</div>
 						</div>

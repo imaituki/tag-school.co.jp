@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		{include file=$template_meta}
-		<link rel="stylesheet" href="{$_FRONT.home}/common/css/import.css" type="text/css" />
-		<link rel="shortcut icon" href="{$_FRONT.home}/common/favicon/favicon.ico" />
-		<link rel="apple-touch-icon" href="{$_FRONT.home}/common/favicon/apple-touch-icon.png" />
-		{include file=$template_javascript}
-	</head>
-	<body id="{$_DIR_NAME}" class="bottom">
-		<a id="pagetop" name="pagetop"></a>
-		<div id="base">
-			{include file=$template_header}
-			<section class="style--page_title">
-			<div class="container">
-				<div class="back">
-					<h2 class="hl">マイページ</h2>
+<head>
+<meta charset="utf-8">
+{include file=$template_meta}
+<link rel="stylesheet" href="/common/css/import.css" />
+{include file=$template_javascript}
+</head>
+<body id="contact">
+<div id="base">
+{include file=$template_header}
+<main>
+<div id="body">
+	<div id="pankuzu">
+		<div class="center">
+			<ul>
+				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
+				<li>{$_HTML_HEADER.title}</li>
+			</ul>
+		</div>
+	</div>
+	<section>
+		<div class="wrapper bg_common entry">
+			<div class="center">
+				<h2 id="form" class="hl_3 mincho">{$_HTML_HEADER.title}</h2>
+				{if !empty($message.ng)}<p class="error">※{$message.ng.error}</p>{/if}
+				<form class="mb30" action="./login.php{if $arr_get.mode != NULL}?mode={$arr_get.mode}{/if}" method="post">
+					<table class="tbl_form bg0">
+						<tbody>
+							<tr class="first">
+								<th scope="row">Eメールアドレス<span class="need">必須</span></th>
+								<td>
+									{if $message.ng.mail|default:'' != NULL}<p class="error">{$message.ng.mail}</p>{/if}
+									<input type="email" id="mail" name="mail" value="" placeholder="Eメールアドレス" />
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">パスワード<span class="need">必須</span></th>
+								<td>
+									{if $message.ng.password|default:'' != NULL}<p class="error">{$message.ng.password}</p>{/if}
+									<input type="password" id="password" class="mb10" name="password" value="" placeholder="パスワード" />
+									<p class="pos-ac"><a href="/{$_DIR_NAME}/reissue/">パスワードを忘れた方はこちら</a></p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="pos_ac form_button">
+						<button class="button" type="submit">ログイン<i class="fa fa-chevron-right"></i></button>
+					</div>
+				</form>
+				<div class="pos_ac">
+					<a  class="btn_2" href="{$_FRONT.home}/{$_DIR_NAME}/regist/">新規会員登録はこちら</a>
 				</div>
 			</div>
-			</section>
-			<div id="body">
-				<main class="layout--body">
-					<div class="container">
-						<div class="layout--body_box">
-							<section class="style-mypage-list">
-								<div class="wrap">
-									<div class="box2">
-										<div class="box2_contents">
-											{if !empty($message.ng)}<p class="error">※{$message.ng.error}</p>{/if}
-											<form action="./login.php{if $arr_get.mode != NULL}?mode={$arr_get.mode}{/if}" method="post">
-												<div id="msg" class="pos_ac c_red"></div>
-												<p>メールアドレス</p>
-												<input type="text" id="mail" name="mail" value="" placeholder="メールアドレス" />
-												<p>パスワード</p>
-												<input type="password" id="password" name="password" value="" placeholder="パスワード" />
-												<p><input type="submit" name="login" class="btn_1 mb10" value="ログイン"></p>
-												<p class="pos-ac"><a href="/{$_DIR_NAME}/reissue/">パスワードを忘れた方</a></p>
-											</form>
-											<p>
-												※ログインできないときは<br />
-												・メールアドレスまたはパスワードが間違っている<br />
-												・仮パスワードの有効期限(発行から24時間)が切れている
-											</p>
-										</div>
-									</div>
-									<p class="mt-40">
-										<a  class="btn_2" href="{$_FRONT.home}/{$_DIR_NAME}/regist/">新規会員登録はこちら</a>
-									</p>
-								</div>
-							</section>
-						</div>
-					</div>
-				</main>
-			</div><!-- #body -->
-			{include file=$template_footer}
-		</div><!-- #base -->
-		<!-- JavaScript -->
-		<script type="text/javascript" src="{$_FRONT.home}/common/js/import.js"></script>
-	</body>
+		</div>
+	</section>
+</div>
+</main>
+{include file=$template_footer}
+</div>
+</body>
 </html>

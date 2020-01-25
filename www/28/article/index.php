@@ -54,7 +54,6 @@ $smarty->compile_dir .= $_DIR_NAME. "/article/";
 // テンプレートに設定
 $smarty->assign( "page_navi", $t_article["page"] );
 $smarty->assign( "t_article", $t_article["data"] );
-$smarty->assign( "link", $_FRONT["home"]. "/". $_DIR_NAME. "/". "article". "/detail.php" );
 
 $smarty->assign( "OptionArticleCategory", $OptionArticleCategory );
 

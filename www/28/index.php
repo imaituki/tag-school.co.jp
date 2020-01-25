@@ -15,7 +15,7 @@ require "./config.ini";
 //  ヘッダー情報
 //----------------------------------------
 // タイトル
-$_HTML_HEADER["title"] = "マイページ";
+$_HTML_HEADER["title"] = "28";
 
 // キーワード
 $_HTML_HEADER["keyword"] = "";
@@ -28,7 +28,7 @@ $_HTML_HEADER["description"] = "";
 //  smarty設定
 //----------------------------------------
 $smarty = new MySmarty("front");
-$smarty->compile_dir .= "mypage/";
+$smarty->compile_dir .= $_DIR_NAME. "/";
 
 // 表示
 $smarty->display("index.tpl");
