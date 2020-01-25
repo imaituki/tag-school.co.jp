@@ -43,7 +43,7 @@
 						<p class="mb20">TAG schoolは、岡山初の集団指導と個別指導を融合した新総合学習塾です。<br>
 							『わかる』から『できる』、そして『えらべる』へ<br>
 							“今までにない学び” をご提供いたします。</p>
-						<div class="pos_ac"><a href="/about/" class="button _type1">詳しく見る</a></div>
+						<div class="pos_ac"><a href="/about/" class="button _type1">詳しく見る<i class="fa fa-chevron-right"></i></a></div>
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,7 @@
 									<div class="photo"><img src="common/image/contents/top/image2.jpg" alt="オリジナル指導形態"></div>
 									<div class="text">
 										<div class="icon"><span><img src="common/image/contents/top/icon1.png" alt="オリジナル指導形態"></span></div>
-										<h3 class="mincho c_brown">オリジナル指導形態</h3>
+										<h3 class="mincho c_brown flex_c"><span class="flex_c"><img src="common/image/contents/top/r_icon.png" alt="オリジナル指導形態"></span><span>オリジナル指導形態</span></h3>
 										<p class="caption">Original teaching form</p>
 									</div>
 								</a>
@@ -73,7 +73,7 @@
 									<div class="photo"><img src="common/image/contents/top/image3.jpg" alt="ハイレベル講師陣"></div>
 									<div class="text">
 										<div class="icon"><span><img src="common/image/contents/top/icon2.png" alt="ハイレベル講師陣"></span></div>
-										<h3 class="mincho c_brown">ハイレベル講師陣</h3>
+										<h3 class="mincho c_brown flex_c"><span class="flex_c"><img src="common/image/contents/top/r_icon.png" alt="ハイレベル講師陣"></span><span>ハイレベル講師陣</span></h3>
 										<p class="caption">High-level teachers</p>
 									</div>
 								</a>
@@ -85,14 +85,14 @@
 									<div class="photo"><img src="common/image/contents/top/image4.jpg" alt="IoE"></div>
 									<div class="text">
 										<div class="icon"><span><img src="common/image/contents/top/icon3.png" alt="IoE"></span></div>
-										<h3 class="mincho c_brown">IoE</h3>
+										<h3 class="mincho c_brown flex_c"><span class="flex_c"><img src="common/image/contents/top/r_icon.png" alt="IoE"></span><span>IoE</span></h3>
 										<p class="caption">Internet of Education</p>
 									</div>
 								</a>
 							</div>
 						</div>
 					</div>
-					<div class="pos_ac"><a href="/strength/" class="button _type1">詳しく見る</a></div>
+					<div class="pos_ac"><a href="/strength/" class="button _type1 _w3">詳しく見る<i class="fa fa-chevron-right"></i></a></div>
 				</div>
 			</div>
 		</div>

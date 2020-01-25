@@ -32,7 +32,9 @@ $smarty->compile_dir .= $_DIR_NAME. "/";
 
 $smarty->assign( "arr_post", $arr_post );
 
-$smarty->assign( "OptionGrade", $OptionGrade );
+$smarty->assign( "OptionContent", $OptionContent );
+$smarty->assign( "OptionGrade"  , $OptionGrade   );
+$smarty->assign( "OptionRequest", $OptionRequest );
 
 // 表示
 $smarty->display("index.tpl");

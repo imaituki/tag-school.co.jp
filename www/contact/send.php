@@ -17,7 +17,7 @@ require "./config.ini";
 $message = NULL;
 
 // 操作クラス
-$objManage  = new DB_manage( _DNS );
+$objManage  = new DB_manage( _DNS, 1 );
 $objContact = new FT_contact( $objManage, $_ARR_MAIL[$_DIR_NAME]["savePath"] );
 
 // データ変換
@@ -88,7 +88,9 @@ if( empty($message["ng"]) ) {
 	$smarty->assign( "mail_conf", $mail_conf );
 	$smarty->assign( "message"  , $message   );
 
-	$smarty->assign( "OptionGrade", $OptionGrade );
+	$smarty->assign( "OptionContent", $OptionContent );
+	$smarty->assign( "OptionGrade"  , $OptionGrade   );
+	$smarty->assign( "OptionRequest", $OptionRequest );
 
 	// テンプレートの取得
 	$mail = $smarty->fetch( "mail.tpl" );
@@ -152,7 +154,8 @@ if( empty($message["ng"]) ) {
 unset( $objManage );
 unset( $objContact );
 
-
+echo 777;
+exit;
 //----------------------------------------
 //  表示
 //----------------------------------------

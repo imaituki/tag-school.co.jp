@@ -30,7 +30,7 @@
 				<form action="./#form" method="post">
 					<table class="tbl_form bg0">
 						<tbody>
-							<tr class="first">
+							<tr>
 								<th scope="row">Eメールアドレス</th>
 								<td>
 									{$arr_post.mail}

@@ -29,7 +29,7 @@
 					<table class="tbl_form bg0">
 						<tbody>
 							{if empty($arr_post.user)}
-								<tr class="first">
+								<tr>
 									<th scope="row">Eメールアドレス<span class="need">必須</span></th>
 									<td>
 										<p>
@@ -55,7 +55,7 @@
 										<input type="password" id="password" name="password" value="{$arr_post.password}" placeholder="パスワード" />
 									</td>
 								</tr>
-								<tr>
+								<tr class="last">
 									<th scope="row">パスワード(確認用)<span class="need">必須</span></th>
 									<td>
 										<input type="hidden" name="id" value="{$member.id_member}" />

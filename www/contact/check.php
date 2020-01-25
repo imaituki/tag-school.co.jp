@@ -51,18 +51,18 @@ $smarty->compile_dir .= $_DIR_NAME. "/";
 $smarty->assign( "arr_post", $arr_post );
 $smarty->assign( "message" , $message  );
 
-$smarty->assign( "OptionGrade"  , $OptionGrade   );
 $smarty->assign( "OptionContent", $OptionContent );
+$smarty->assign( "OptionGrade"  , $OptionGrade   );
 $smarty->assign( "OptionRequest", $OptionRequest );
 
 // エラーチェック
 if( empty($message["ng"]) ) {
 
 	// 表示
-	$smarty->display("_check.tpl");
+	$smarty->display("check.tpl");
 
 }else{
 	// 表示
-	$smarty->display("_index.tpl");
+	$smarty->display("index.tpl");
 }
 ?>

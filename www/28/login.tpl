@@ -34,12 +34,12 @@
 									<input type="email" id="mail" name="mail" value="" placeholder="Eメールアドレス" />
 								</td>
 							</tr>
-							<tr>
+							<tr class="last">
 								<th scope="row">パスワード<span class="need">必須</span></th>
 								<td>
 									{if $message.ng.password|default:'' != NULL}<p class="error">{$message.ng.password}</p>{/if}
 									<input type="password" id="password" class="mb10" name="password" value="" placeholder="パスワード" />
-									<p class="pos-ac"><a href="/{$_DIR_NAME}/reissue/">パスワードを忘れた方はこちら</a></p>
+									<p class="pos-ac mb0"><a href="/{$_DIR_NAME}/reissue/">パスワードを忘れた方はこちら</a></p>
 								</td>
 							</tr>
 						</tbody>

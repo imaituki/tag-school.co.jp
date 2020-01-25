@@ -78,7 +78,7 @@
 								<td>
 									{if !empty($message.ng.zip)}<p class="error">※{$message.ng.zip}</p>{/if}
 									<input type="text" id="zip" name="zip" value="{$arr_post.zip}" placeholder="000-0000" />
-									<a href="javascript:AjaxZip3.zip2addr('zip','','prefecture','address1');" class="bTn wp100 w_sm_A dis_b dis_sm_ib">
+									<a href="javascript:AjaxZip3.zip2addr('zip','','prefecture','address1');" class="bTn wp100 w_sm_A dis_b dis_sm_ib zip_block">
 										<i class="fa fa-search" aria-hidden="true"></i>郵便番号から住所を自動入力する
 									</a>
 								</td>
@@ -90,7 +90,7 @@
 									{html_select_ken name="prefecture" class="form-control inline input-s" selected=$arr_post.prefecture|default:"0"}
 								</td>
 							</tr>
-							<tr>
+							<tr class="last">
 								<th scope="row">住所<span class="need">必須</span></th>
 								<td>
 									{if !empty($message.ng.address1)}<p class="error">※{$message.ng.address1}</p>{/if}

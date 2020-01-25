@@ -13,10 +13,10 @@
 <main>
 <div id="body">
 	<div id="page_title">
-		<div class="img_back"><img src="/common/image/contents/contact/top.jpg" alt="お問い合わせ"></div>
+		<div class="img_back"><img src="/common/image/contents/contact/top.jpg" alt="{$_HTML_HEADER.title}"></div>
 		<div class="page_title_wrap">
 			<div class="center mincho">
-				<h2><span class="main">お問い合わせ</span><span class="sub">Contact</span></h2>
+				<h2><span class="main">{$_HTML_HEADER.title}</span><span class="sub">Contact</span></h2>
 			</div>
 		</div>
 	</div>
@@ -24,7 +24,7 @@
 		<div class="center">
 			<ul>
 				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
-				<li>お問い合わせ</li>
+				<li>{$_HTML_HEADER.title}</li>
 			</ul>
 		</div>
 	</div>

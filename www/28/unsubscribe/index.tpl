@@ -27,7 +27,7 @@
 				<form class="mb30" action="check.php" method="post">
 					<table class="tbl_form bg0">
 						<tbody>
-							<tr class="first">
+							<tr>
 								<th scope="row">Eメールアドレス<span class="need">必須</span></th>
 								<td>
 									<p>

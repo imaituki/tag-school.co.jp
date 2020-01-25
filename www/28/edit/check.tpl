@@ -70,7 +70,7 @@
 									<input type="hidden" name="tel" value="{$arr_post.tel}" />
 								</td>
 							</tr>
-							<tr>
+							<tr class="last">
 								<th scope="row">住所</th>
 								<td>
 									{if !empty($arr_post.zip)}{$arr_post.zip}&nbsp;{/if}

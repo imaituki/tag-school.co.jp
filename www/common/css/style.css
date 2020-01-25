@@ -49,6 +49,15 @@
 .icon_box .text .caption { font-size:12px; color:#999; }
 .icon_box .icon { position:absolute; top:-50px; left:0; width:100%; text-align:center; }
 .icon_box .icon > span { display:inline-block; border:1px solid #87664F; background:#fff; border-radius:50px; padding:20px; }
+.icon_box .text h3 span.flex_c{ margin-right: 5px;}
+
+@media (min-width: 768px) and (max-width:991px){
+	.icon_box .text h3 { font-size:1.25em; }
+}
+@media (min-width: 576px) and (max-width:767px){
+	.icon_box .text h3 { font-size:1em; }
+	.icon_box .text h3 span.flex_c img{ width: 60%;}
+}
 
 #course { padding-top:100px; }
 .course_navi { position:relative; border-bottom-width:4px; border-bottom-style:solid; }
@@ -258,6 +267,17 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 	#contact tr.first th{padding-top: 50px !important;}
 	#contact tr.last td{padding-bottom: 50px !important;}
 }
+
+/*===================================================================
+	28
+===================================================================*/
+#top_28 .unit{ box-shadow: 0 2px 3px #ccc; background: #F8F8F8;}
+#top_28 .unit a{ padding: 25px 0; display: block; color: #e0323b; text-decoration: none;}
+#top_28 .unit.unsubscribe  a{ color: #86664f; }
+#top_28 .unit a .image{ font-size: 4em;}
+#top_28 .unit a .text{font-size: 1.5em;}
+
+
 /*===================================================================
 	#entry
 ===================================================================*/
@@ -286,7 +306,9 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 .entry tbody th {font-weight:bold; border-left: 50px solid #fff; position: relative;}
 .entry tbody td {border-right: 50px solid #fff; }
 .entry tbody tr > th:nth-child(1) { width:27%; max-width:280px; }
-
+@media(max-width: 991px){
+.entry .zip_block{display: block;}
+}
 @media (min-width: 768px) and (max-width: 991px){
 	.entry tbody tr > th:nth-child(1) { width:35%;}
 }
@@ -358,8 +380,11 @@ a.button._circle img{ margin-right: 5px;}
 		.button._circle { max-width:250px; }
 	}
 
-.button._type_1,
-a.button._type_1 { position:relative; display:block; border:1px solid #87664F; max-width:300px; margin:0 auto; color:#87664F; border-radius: 50px;}
+.button._type1,
+a.button._type1 { border: 1px solid #87664F; font-weight: bold; border-radius: 50px; background: #fff; max-width: 70%; margin: 0 auto;}
+.button._type1._w3,
+a.button._type1._w3{ max-width: calc(100% / 3)!important;}
+
 body.pc .button._type_1:hover { background:#87664F; }
 body.pc .button._type_1:hover a {color: #FFF;}
 
