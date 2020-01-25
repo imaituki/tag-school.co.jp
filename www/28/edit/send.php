@@ -25,7 +25,7 @@ $arr_post = $objMember->convert( $arr_post );
 $arr_post["id_member"] = $_COOKIE["mem_id_member"]; // 会員IDはユーザーに通知しない
 
 // データチェック
-$message = $objMember->check( $arr_post, 'insert' );
+$message = $objMember->check( $arr_post, 'update' );
 
 // エラーチェック
 if( empty($message["ng"]) ) {
@@ -46,6 +46,7 @@ if( empty($message["ng"]) ) {
 	$objMember->_DBconn->CompleteTrans();
 
 }
+
 
 
 /*
@@ -162,7 +163,7 @@ if( empty($message["ng"]) ) {
 
 }else{
 	// 登録に成功したかどうか
-	$_SESSION["front"][$_DIR_NAME]["edit"]["POST"]["succeed"] = 0;
+	$_SESSION["front"][$_DIR_NAME]["edit"]["POST"]["failed"] = 1;
 
 }
 

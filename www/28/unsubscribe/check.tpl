@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		{include file=$template_meta}
-		<link rel="stylesheet" href="{$_FRONT.home}/common/css/import.css" type="text/css" />
-		<link rel="shortcut icon" href="{$_FRONT.home}/common/favicon/favicon.ico" />
-		<link rel="apple-touch-icon" href="{$_FRONT.home}/common/favicon/apple-touch-icon.png" />
-		{include file=$template_javascript}
-	</head>
-	<body id="{$_DIR_NAME}" class="bottom">
-		<a id="pagetop" name="pagetop"></a>
-		<div id="base">
-			{include file=$template_header}
-			<section class="style--page_title">
-			<div class="container">
-				<div class="back">
-					<h2 class="hl"><img src="{$_FRONT.home}/common/image/content/{$_DIR_NAME}/title.png" alt="会員登録確認" /></h2>
-				</div>
-			</div>
-			</section>
-			<div id="body">
-				<main class="layout--body">
-					<div class="container">
-						<div class="layout--body_box">
-							<section class="style-mypage-list">
-								{if !empty($message.ng)}<p class="error">※{$message.ng.error}</p>{/if}
-								<form action="send.php" method="post">
-									<p>メールアドレス</p>
-									<p>{$arr_post.mail}</p>
-									<input type="hidden" id="mail" name="mail" value="{$arr_post.mail}" />
-									<p><input type="submit" class="btn_1" onclick="this.form.action='./'" value="戻る"></p>
-									<p><input type="submit" class="btn_1 mb10" value="送信"></p>
-								</form>
-							</section>
+<head>
+<meta charset="utf-8">
+{include file=$template_meta}
+<link rel="stylesheet" href="/common/css/import.css">
+{include file=$template_javascript}
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+</head>
+<body id="{$_DIR_NAME}">
+<div id="base">
+{include file=$template_header}
+<main>
+<div id="body">
+	<div id="pankuzu">
+		<div class="center">
+			<ul>
+				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
+				<li><a href="{$_FRONT.home}/{$_DIR_NAME}/login.php">28 ログイン</a></li>
+				<li>{$_HTML_HEADER.title}</li>
+			</ul>
+		</div>
+	</div>
+	<section>
+		<div class="wrapper bg_common entry">
+			<div class="center">
+				<h2 id="form" class="hl_3 mincho">{$_HTML_HEADER.title}</h2>
+				<p class="mb10 c_red">送信するメールアドレスが正しいかご確認ください。</p>
+				<p class="mb30">下記内容をご確認の上、「送信する」ボタンを押してください。</p>
+				<form action="./#form" method="post">
+					<table class="tbl_form bg0">
+						<tbody>
+							<tr class="first">
+								<th scope="row">Eメールアドレス</th>
+								<td>
+									{$arr_post.mail}
+									<input type="hidden" name="mail" value="{$arr_post.mail}" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="row form_button">
+						<div class="col-xs-6 mb20 pos_al">
+							<button class="button _back" type="submit"><i class="fa fa-chevron-left"></i>修正する</button>
+						</div>
+						<div class="col-xs-6 pos_ar">
+							<button id="send_button" class="button" type="submit">送信する<i class="fa fa-chevron-right"></i></button>
 						</div>
 					</div>
-				</main>
-			</div><!-- #body -->
-			{include file=$template_footer}
-		</div><!-- #base -->
-		<!-- JavaScript -->
-		<script type="text/javascript" src="{$_FRONT.home}/common/js/import.js"></script>
-	</body>
+				</form>
+			</div>
+		</div>
+	</section>
+</div>
+</main>
+{include file=$template_footer}
+</div>
+</body>
 </html>

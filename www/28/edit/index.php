@@ -34,7 +34,7 @@ unset( $objMember );
 if( $_SESSION["front"][$_DIR_NAME]["edit"]["POST"]["succeed"] == 1 ){
 	$message["succeed"] = "会員情報を更新しました。";
 
-}elseif( $_SESSION["front"][$_DIR_NAME]["edit"]["POST"]["succeed"] == 0 ){
+}elseif( $_SESSION["front"][$_DIR_NAME]["edit"]["POST"]["failed"] == 1 ){
 	$message["fail"] = "会員情報の更新に失敗しました。";
 
 }

@@ -57,7 +57,7 @@ $smarty->assign( "arr_post", $arr_post );
 $smarty->assign( "message" , $message  );
 
 // エラーチェック
-if( empty( $message["ng"] ) ) {
+if( empty($message["ng"]) ) {
 	// 表示
 	$smarty->display("check.tpl");
 } else {
