@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-23 17:43:07
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-25 20:44:58
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17533795145e295c9bd90d31-47659288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1579768502,
+      1 => 1579952695,
       2 => 'file',
     ),
   ),
@@ -15,99 +15,121 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5e295c9bdf83a6_81278786',
   'variables' => 
   array (
     'template_meta' => 0,
-    '_FRONT' => 0,
     'template_javascript' => 0,
     '_DIR_NAME' => 0,
     'template_header' => 0,
+    '_FRONT' => 0,
     '_HTML_HEADER' => 0,
-    'arr_post' => 0,
     'message' => 0,
+    'arr_post' => 0,
     'member' => 0,
     'template_footer' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5e295c9bdf83a6_81278786',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5e295c9bdf83a6_81278786')) {function content_5e295c9bdf83a6_81278786($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_meta']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<head>
+<meta charset="utf-8">
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_meta']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-		<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/common/css/import.css" type="text/css" />
-		<link rel="shortcut icon" href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/common/favicon/favicon.ico" />
-		<link rel="apple-touch-icon" href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/common/favicon/apple-touch-icon.png" />
-		<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_javascript']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<link rel="stylesheet" href="/common/css/import.css" />
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_javascript']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-	</head>
-	<body id="<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
-" class="bottom">
-		<a id="pagetop" name="pagetop"></a>
-		<div id="base">
-			<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+</head>
+<body id="<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
+">
+<div id="base">
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-			<section class="style--page_title">
-			<div class="container">
-				<div class="back">
-					<h2 class="hl"><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
+<main>
+<div id="body">
+	<div id="pankuzu">
+		<div class="center">
+			<ul>
+				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
+				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
+/<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
+/login.php">28 ログイン</a></li>
+				<li><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
+</li>
+			</ul>
+		</div>
+	</div>
+	<section>
+		<div class="wrapper bg_common entry">
+			<div class="center">
+				<h2 id="form" class="hl_3 mincho"><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
 </h2>
-				</div>
-			</div>
-			</section>
-			<div id="body">
-				<main class="layout--body">
-					<div class="container">
-						<div class="layout--body_box">
-							<section class="style-mypage-list">
-								<form action="check.php" method="post">
-									<?php if (empty($_smarty_tpl->tpl_vars['arr_post']->value['user'])) {?>
-										<p>メールアドレス</p>
+				<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['error'];?>
+</p><?php }?>
+				<form class="mb30" action="check.php" method="post">
+					<table class="tbl_form bg0">
+						<tbody>
+							<?php if (empty($_smarty_tpl->tpl_vars['arr_post']->value['user'])) {?>
+								<tr>
+									<th scope="row">Eメールアドレス<span class="need">必須</span></th>
+									<td>
 										<p>
 											※tag-school.co.jpからのメールを受け取れるよう設定をお願いいたします。<br />
-											※メールアドレスを誤って登録された場合は受付ができませんのでご注意ください。
+											※メールアドレスを誤って送信された場合は受付ができませんのでご注意ください。
 										</p>
-										<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['mail'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['mail'];?>
+										<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['mail'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['mail'];?>
 </p><?php }?>
-										<input type="text" id="mail" name="mail" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['mail'];?>
-" placeholder="メールアドレス" />
-									<?php } else { ?>
-										<p>メールアドレス</p>
-										<p><?php echo $_smarty_tpl->tpl_vars['member']->value['mail'];?>
-</p>
+										<input type="email" id="mail" name="mail" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['mail'];?>
+" placeholder="Eメールアドレス" />
+									</td>
+								</tr>
+							<?php } else { ?>
+								<tr class="first">
+									<th scope="row">Eメールアドレス<span class="need">必須</span></th>
+									<td>
+										<?php echo $_smarty_tpl->tpl_vars['member']->value['mail'];?>
+
 										<input type="hidden" id="mail" name="mail" value="<?php echo $_smarty_tpl->tpl_vars['member']->value['mail'];?>
-" placeholder="メールアドレス" />
-										<p>パスワード</p>
-										<p>パスワードは<span class="c_red">半角英数8文字以上32字以下</span>で入力してください。</p>
-										<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['password'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['password'];?>
+" placeholder="Eメールアドレス" />
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">パスワード<span class="need">必須</span></th>
+									<td>
+										<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['mail'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['mail'];?>
 </p><?php }?>
 										<input type="password" id="password" name="password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['password'];?>
 " placeholder="パスワード" />
-										<p>パスワード(確認用)</p>
-										<input type="password" id="chk_password" name="chk_password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['password'];?>
-" placeholder="パスワード" />
+									</td>
+								</tr>
+								<tr class="last">
+									<th scope="row">パスワード(確認用)<span class="need">必須</span></th>
+									<td>
 										<input type="hidden" name="id" value="<?php echo $_smarty_tpl->tpl_vars['member']->value['id_member'];?>
 " />
 										<input type="hidden" name="user" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['user'];?>
 " />
-									<?php }?>
-										<p><input type="submit" class="btn_1 mb10" value="入力内容確認" onclick="this.form.action='./check.php'" /></p>
-								</form>
-							</section>
-						</div>
+										<input type="password" id="chk_password" name="chk_password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['chk_password'];?>
+" placeholder="パスワード(確認用)" />
+									</td>
+								</tr>
+							<?php }?>
+						</tbody>
+					</table>
+					<div class="pos_ac form_button">
+						<button class="button" type="submit">入力内容確認<i class="fa fa-chevron-right"></i></button>
 					</div>
-				</main>
-			</div><!-- #body -->
-			<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_footer']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+				</form>
+			</div>
+		</div>
+	</section>
+</div>
+</main>
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_footer']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-		</div><!-- #base -->
-		<!-- JavaScript -->
-		<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/common/js/import.js"></script>
-	</body>
-</html><?php }} ?>
+</div>
+</body>
+</html>
+<?php }} ?>

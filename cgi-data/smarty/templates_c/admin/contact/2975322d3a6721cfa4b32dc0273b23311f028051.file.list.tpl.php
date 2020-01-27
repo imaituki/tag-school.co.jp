@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2019-12-19 11:32:23
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 16:09:57
          compiled from "/home/tag-school/www/admin/contents/contact/template/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8700723675dfae137079bb9-86800230%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2975322d3a6721cfa4b32dc0273b23311f028051' => 
     array (
       0 => '/home/tag-school/www/admin/contents/contact/template/list.tpl',
-      1 => 1576722169,
+      1 => 1579849795,
       2 => 'file',
     ),
   ),
@@ -15,16 +15,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5dfae1370ba069_83169319',
   'variables' => 
   array (
     'template_pagenavi' => 0,
     't_contact' => 0,
     'contact' => 0,
+    'OptionContent' => 0,
     '_CONTENTS_NAME' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5dfae1370ba069_83169319',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5dfae1370ba069_83169319')) {function content_5dfae1370ba069_83169319($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/home/tag-school/cgi-data/smarty/libs/plugins/modifier.date_format.php';
 if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
@@ -33,7 +34,8 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 <table class="footable table table-stripped toggle-arrow-tiny tbl_1" data-page-size="15">
 	<thead>
 		<tr>
-			<th width="200">お問い合わせ日時</th>
+			<th width="100">お問い合わせ日時</th>
+			<th width="100">お問い合わせ項目</th>
 			<th width="300">名前</th>
 			<th width="200">メールアドレス</th>
 			<th width="200">住所</th>
@@ -44,7 +46,8 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 	</thead>
 	<tfoot>
 		<tr>
-			<th width="150">お問い合わせ日時</th>
+			<th width="100">お問い合わせ日時</th>
+			<th width="100">お問い合わせ項目</th>
 			<th>名前</th>
 			<th width="150">メールアドレス</th>
 			<th width="200">住所</th>
@@ -62,9 +65,11 @@ $_smarty_tpl->tpl_vars['contact']->_loop = true;
 		<tr <?php if ($_smarty_tpl->tpl_vars['contact']->value['check_flg']==1) {?>style="background-color: #dadada;"<?php }?>>
 			<td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['contact']->value['entry_date'],"%Y/%m/%d %H:%M:%S");?>
 </td>
+			<td><?php echo $_smarty_tpl->tpl_vars['OptionContent']->value[$_smarty_tpl->tpl_vars['contact']->value['content']];?>
+</td>
 			<td><a href="./edit.php?id=<?php echo $_smarty_tpl->tpl_vars['contact']->value['id_contact'];?>
-"><?php echo $_smarty_tpl->tpl_vars['contact']->value['name'];?>
-<br>(<?php echo $_smarty_tpl->tpl_vars['contact']->value['ruby'];?>
+"><?php echo $_smarty_tpl->tpl_vars['contact']->value['name1'];?>
+<br>(<?php echo $_smarty_tpl->tpl_vars['contact']->value['ruby1'];?>
 )</a></td>
 			<td><?php echo $_smarty_tpl->tpl_vars['contact']->value['mail'];?>
 </td>

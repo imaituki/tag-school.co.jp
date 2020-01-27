@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 13:27:20
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 20:28:15
          compiled from "/home/tag-school/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1214992095e294e0454bd86-22325034%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97f6fdaef15088846bff77147fa4b53b49cc4e6f' => 
     array (
       0 => '/home/tag-school/www//common/include/footer.tpl',
-      1 => 1579840030,
+      1 => 1579865253,
       2 => 'file',
     ),
   ),
@@ -23,13 +23,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div id="foot_contact" class="wrapper center">
 	<div class="contact_area">
 		<div class="row">
-			<div class="col-xs-6">
-				<div class="tel_unit">
+			<div class="col-xs-6 height-1 disp_tbl2">
+				<div class="tel_unit disp_td">
 					<h4>お電話でのお問い合わせ</h4>
 					<span class="tel sans" data-tel="086-000-0000"><i class="fa fa-phone-alt"></i>086-000-0000</span>
 				</div>
 			</div>
-			<div class="col-xs-6">
+			<div class="col-xs-6 height-1">
 				<a href="/contact/" class="btn_foot_contact"><i class="fa fa-envelope"></i>お問い合わせ</a>
 			</div>
 		</div>
@@ -40,7 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="col-lg-4 col-md-5 col-xs-6">
 			<div class="address_unit height-1">
 				<div class="disp_td">
-					<h5><a class="ov" href="/"><img src="common/image/foot/logo.png" alt="TAG school"></a></h5>
+					<h5><a class="ov" href="/"><img src="/common/image/foot/logo.png" alt="TAG school"></a></h5>
 					<h5 class="mb0">集団×個別指導塾タッグスクール</h5>
 					<p class="mb20">〒700-0973 岡山市北区下中野1200-4 5F</p>
 					<p class="mb20">TEL：086-XXX-XXXX<br>
@@ -67,14 +67,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div id="copyright" class="bg_brown">
 	<div class="center">
 		<div class="row">
-			<div class="col-sm-6 col-sm-push-6">
-				<div class="foot_sub_navi pos_ar">
+			<div class="col-xs-4 col-xs-push-8 height-2 disp_tbl2">
+				<div class="foot_sub_navi pos_ar disp_td pos_ac-sp">
 					<a href="/privacy/" class="c0">プライバシーポリシー</a>
 				</div>
 			</div>
-			<div class="col-sm-6 col-sm-pull-6">&copy; 2020 集団×個別指導塾タッグスクール TAG school All Rights Reserved.</div>
+			<div class="col-xs-8 col-xs-pull-4 height-2 pos_ac-sp">&copy; 2020 集団×個別指導塾タッグスクール TAG school All Rights Reserved.</div>
 		</div>
 	</div>
 </div>
-<div id="pagetop"><a href="javascript:void(0);" class="fa fa-angle-up"><span>pagetop</span></a></div>
-</footer><?php }} ?>
+<div id="pagetop"><a href="javascript:void(0);"><span><img src="/common/image/foot/page_top.png" alt="page top"></span></a></div>
+</footer>
+<?php }} ?>

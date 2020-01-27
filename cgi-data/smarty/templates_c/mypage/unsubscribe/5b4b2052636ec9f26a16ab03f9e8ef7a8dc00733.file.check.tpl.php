@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-09 19:06:19
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 20:14:17
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12447483125e16fb1b4223d2-12010563%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1578564321,
+      1 => 1579864351,
       2 => 'file',
     ),
   ),
@@ -15,76 +15,88 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5e16fb1b459f77_74057980',
   'variables' => 
   array (
     'template_meta' => 0,
-    '_FRONT' => 0,
     'template_javascript' => 0,
     '_DIR_NAME' => 0,
     'template_header' => 0,
-    'message' => 0,
+    '_FRONT' => 0,
+    '_HTML_HEADER' => 0,
     'arr_post' => 0,
     'template_footer' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5e16fb1b459f77_74057980',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5e16fb1b459f77_74057980')) {function content_5e16fb1b459f77_74057980($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_meta']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<head>
+<meta charset="utf-8">
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_meta']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-		<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/common/css/import.css" type="text/css" />
-		<link rel="shortcut icon" href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/common/favicon/favicon.ico" />
-		<link rel="apple-touch-icon" href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/common/favicon/apple-touch-icon.png" />
-		<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_javascript']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<link rel="stylesheet" href="/common/css/import.css">
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_javascript']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-	</head>
-	<body id="<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
-" class="bottom">
-		<a id="pagetop" name="pagetop"></a>
-		<div id="base">
-			<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+</head>
+<body id="<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
+">
+<div id="base">
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-			<section class="style--page_title">
-			<div class="container">
-				<div class="back">
-					<h2 class="hl"><img src="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/common/image/content/<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
-/title.png" alt="会員登録確認" /></h2>
-				</div>
-			</div>
-			</section>
-			<div id="body">
-				<main class="layout--body">
-					<div class="container">
-						<div class="layout--body_box">
-							<section class="style-mypage-list">
-								<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['error'];?>
-</p><?php }?>
-								<form action="send.php" method="post">
-									<p>メールアドレス</p>
-									<p><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['mail'];?>
-</p>
-									<input type="hidden" id="mail" name="mail" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['mail'];?>
+<main>
+<div id="body">
+	<div id="pankuzu">
+		<div class="center">
+			<ul>
+				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
+				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
+/<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
+/login.php">28 ログイン</a></li>
+				<li><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
+</li>
+			</ul>
+		</div>
+	</div>
+	<section>
+		<div class="wrapper bg_common entry">
+			<div class="center">
+				<h2 id="form" class="hl_3 mincho"><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
+</h2>
+				<p class="mb10 c_red">送信するメールアドレスが正しいかご確認ください。</p>
+				<p class="mb30">下記内容をご確認の上、「送信する」ボタンを押してください。</p>
+				<form action="./#form" method="post">
+					<table class="tbl_form bg0">
+						<tbody>
+							<tr class="first">
+								<th scope="row">Eメールアドレス</th>
+								<td>
+									<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['mail'];?>
+
+									<input type="hidden" name="mail" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['mail'];?>
 " />
-									<p><input type="submit" class="btn_1" onclick="this.form.action='./'" value="戻る"></p>
-									<p><input type="submit" class="btn_1 mb10" value="送信"></p>
-								</form>
-							</section>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="row form_button">
+						<div class="col-xs-6 mb20 pos_al">
+							<button class="button _back" type="submit"><i class="fa fa-chevron-left"></i>修正する</button>
+						</div>
+						<div class="col-xs-6 pos_ar">
+							<button id="send_button" class="button" type="submit">送信する<i class="fa fa-chevron-right"></i></button>
 						</div>
 					</div>
-				</main>
-			</div><!-- #body -->
-			<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_footer']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+				</form>
+			</div>
+		</div>
+	</section>
+</div>
+</main>
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_footer']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-		</div><!-- #base -->
-		<!-- JavaScript -->
-		<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/common/js/import.js"></script>
-	</body>
+</div>
+</body>
 </html><?php }} ?>

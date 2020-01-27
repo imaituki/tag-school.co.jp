@@ -1,24 +1,29 @@
 <div class="ibox-content form-horizontal">
 	<div class="form-group">
-		<label class="col-sm-2 control-label">資料請求</label>
+		<label class="col-sm-2 control-label">お問い合わせ項目</label>
+		<div class="col-sm-6">
+			{$OptionContent[$arr_post.content]}
+		</div>
+	</div>
+	<div class="hr-line-dashed"></div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">生徒氏名</label>
+		<div class="col-sm-6">
+			{$arr_post.name1} {if !empty($arr_post.ruby1)}({$arr_post.ruby1}){/if}
+		</div>
+	</div>
+	<div class="hr-line-dashed"></div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">学年</label>
+		<div class="col-sm-6">
+			{$OptionGrade[$arr_post.grade]}
+		</div>
+	</div>
+	<div class="hr-line-dashed"></div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">希望項目</label>
 		<div class="col-sm-6">
 			{$OptionRequest[$arr_post.request]}
-		</div>
-	</div>
-	<div class="hr-line-dashed"></div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">資料請求される方</label>
-		<div class="col-sm-6">
-			{$OptionWho[$arr_post.who]}
-		</div>
-	</div>
-	<div class="hr-line-dashed"></div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">検討コース</label>
-		<div class="col-sm-6">
-			{foreach from=$arr_post.course item="course" key="key" name="LoopCourse"}
-			{$OptionCourse[$course]}<input type="hidden" name="course[]" value="{$course}" ><br>
-			{/foreach}
 		</div>
 	</div>
 	<div class="hr-line-dashed"></div>
@@ -30,31 +35,16 @@
 	</div>
 	<div class="hr-line-dashed"></div>
 	<div class="form-group">
-		<label class="col-sm-2 control-label">名前</label>
+		<label class="col-sm-2 control-label">保護者氏名</label>
 		<div class="col-sm-6">
-			{$arr_post.name}
+			{if !empty($arr_post.name2)}{$arr_post.name2}{/if} {if !empty($arr_post.ruby2)}({$arr_post.ruby2}){/if}
 		</div>
 	</div>
 	<div class="hr-line-dashed"></div>
 	<div class="form-group">
-		<label class="col-sm-2 control-label">フリガナ</label>
-		<div class="col-sm-6">
-			{$arr_post.ruby}
-		</div>
-	</div>
-	<div class="hr-line-dashed"></div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">メールアドレス</label>
+		<label class="col-sm-2 control-label">Eメールアドレス</label>
 		<div class="col-sm-6">
 			{$arr_post.mail}
-		</div>
-	</div>
-	<div class="hr-line-dashed"></div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">住所</label>
-		<div class="col-sm-6">
-			〒{$arr_post.zip}<br>
-			{html_select_ken selected=$arr_post.prefecture|default:"" pre=1}{$arr_post.address}
 		</div>
 	</div>
 	<div class="hr-line-dashed"></div>
@@ -66,16 +56,10 @@
 	</div>
 	<div class="hr-line-dashed"></div>
 	<div class="form-group">
-		<label class="col-sm-2 control-label">学校名</label>
+		<label class="col-sm-2 control-label">住所</label>
 		<div class="col-sm-6">
-			{$arr_post.school_name}
-		</div>
-	</div>
-	<div class="hr-line-dashed"></div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">学年</label>
-		<div class="col-sm-6">
-			{$arr_post.years}年
+			〒{$arr_post.zip}<br>
+			{html_select_ken selected=$arr_post.prefecture|default:"" pre=1}{$arr_post.address}
 		</div>
 	</div>
 	<div class="hr-line-dashed"></div>

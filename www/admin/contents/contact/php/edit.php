@@ -35,9 +35,9 @@ if( !empty($_POST["id_contact"]) ) {
 	$smarty->compile_dir .= "contact/";
 
 	// オプション設定
-	$smarty->assign( "OptionRequest"   , $OptionRequest  );
-	$smarty->assign( "OptionWho"       , $OptionWho      );
-	$smarty->assign( "OptionCourse"    , $OptionCourse   );
+	$smarty->assign( "OptionContent", $OptionContent );
+	$smarty->assign( "OptionGrade"  , $OptionGrade   );
+	$smarty->assign( "OptionRequest", $OptionRequest );
 
 	// 表示
 	$smarty->display( "edit.tpl" );

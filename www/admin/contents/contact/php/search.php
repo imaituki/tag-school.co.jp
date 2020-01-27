@@ -38,14 +38,14 @@ $smarty = new MySmarty("admin");
 $smarty->compile_dir .= _CONTENTS_DIR;
 
 // テンプレートに設定
-$smarty->assign( "message"       , $message           );
-$smarty->assign( "page_navi"     , $t_contact["page"] );
-$smarty->assign( "t_contact"     , $t_contact["data"] );
+$smarty->assign( "message"  , $message           );
+$smarty->assign( "page_navi", $t_contact["page"] );
+$smarty->assign( "t_contact", $t_contact["data"] );
 
 // オプション設定
-$smarty->assign( "OptionRequest"   , $OptionRequest  );
-$smarty->assign( "OptionWho"       , $OptionWho      );
-$smarty->assign( "OptionCourse"    , $OptionCourse   );
+$smarty->assign( "OptionContent", $OptionContent );
+$smarty->assign( "OptionGrade"  , $OptionGrade   );
+$smarty->assign( "OptionRequest", $OptionRequest );
 
 // 表示
 $smarty->display("list.tpl");

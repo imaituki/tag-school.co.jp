@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-23 18:35:12
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 17:25:39
          compiled from "./finish.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4452313715e280c7f661db3-64215070%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9d20fa539703757ca9b7b6f4a04d5b6b3d279589' => 
     array (
       0 => './finish.tpl',
-      1 => 1579772111,
+      1 => 1579854338,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'template_meta' => 0,
     'template_javascript' => 0,
     'template_header' => 0,
+    '_HTML_HEADER' => 0,
     'arr_post' => 0,
     'template_footer' => 0,
   ),
@@ -45,10 +46,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <main>
 <div id="body">
 	<div id="page_title">
-		<div class="img_back"><img src="/common/image/contents/contact/top.jpg" alt="お問い合わせ"></div>
+		<div class="img_back"><img src="/common/image/contents/contact/top.jpg" alt="<?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
+"></div>
 		<div class="page_title_wrap">
 			<div class="center mincho">
-				<h2><span class="main">お問い合わせ</span><span class="sub">Contact</span></h2>
+				<h2><span class="main"><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
+</span><span class="sub">Contact</span></h2>
 			</div>
 		</div>
 	</div>
@@ -56,7 +59,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="center">
 			<ul>
 				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
-				<li>お問い合わせ</li>
+				<li><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
+</li>
 			</ul>
 		</div>
 	</div>

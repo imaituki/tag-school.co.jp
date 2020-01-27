@@ -53,6 +53,10 @@ $smarty->assign( "message"       , $message           );
 $smarty->assign( "page_navi"     , $t_contact["page"] );
 $smarty->assign( "t_contact"     , $t_contact["data"] );
 
+$smarty->assign( "OptionContent", $OptionContent );
+$smarty->assign( "OptionGrade"  , $OptionGrade   );
+$smarty->assign( "OptionRequest", $OptionRequest );
+
 // 表示
 $smarty->display("index.tpl");
 ?>

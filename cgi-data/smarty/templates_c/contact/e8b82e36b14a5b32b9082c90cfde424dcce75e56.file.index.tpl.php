@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-23 19:08:11
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-25 20:35:36
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7049183775e26d5e01b3869-32464001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1579774058,
+      1 => 1579952134,
       2 => 'file',
     ),
   ),
@@ -73,7 +73,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 	<section>
 		<div class="wrapper bg_common entry">
 			<div class="center">
-				<h2 class="hl_3 mincho">お問い合わせフォーム</h2>
+				<h2 id="form" class="hl_3 mincho">お問い合わせフォーム</h2>
 				<p class="mb20 c_g">下記項目にご入力ください。「必須」印は入力必須項目です。<br>入力後、一番下の「 入力内容を確認する」ボタンをクリックしてください。</p>
 				<form action="./check.php#form" method="post">
 					<table class="tbl_form bg0">
@@ -90,7 +90,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 							<tr>
 								<th>生徒氏名<span class="need">必須</span></th>
 								<td>
-									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['name1'])) {?><span class="c_red">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['name1'];?>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['name1'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['name1'];?>
 </span><?php }?>
 									<input type="text" name="name1" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['name1'])===null||$tmp==='' ? '' : $tmp);?>
 " />
@@ -99,7 +99,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 							<tr>
 								<th>生徒氏名(フリガナ)<span class="need">必須</span></th>
 								<td>
-									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['ruby1'])) {?><span class="c_red">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['ruby1'];?>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['ruby1'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['ruby1'];?>
 </span><?php }?>
 									<input type="text" name="ruby1" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['ruby1'])===null||$tmp==='' ? '' : $tmp);?>
 " />
@@ -108,7 +108,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 							<tr>
 								<th>学年<span class="need">必須</span></th>
 								<td>
-									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['grade'])) {?><span class="c_red">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['grade'];?>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['grade'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['grade'];?>
 </span><?php }?>
 									<select name="grade">
 										<option value="">選択してください。</option>
@@ -129,7 +129,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 							<tr>
 								<th>入塾希望理由</th>
 								<td>
-									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['reason'])) {?><span class="c_red">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['reason'];?>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['reason'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['reason'];?>
 </span><?php }?>
 									<textarea name="reason"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['reason'])===null||$tmp==='' ? '' : $tmp);?>
 </textarea>
@@ -138,7 +138,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 							<tr>
 								<th>保護者氏名</th>
 								<td>
-									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['name2'])) {?><span class="c_red">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['name2'];?>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['name2'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['name2'];?>
 </span><?php }?>
 									<input type="text" name="name2" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['name2'])===null||$tmp==='' ? '' : $tmp);?>
 " />
@@ -147,7 +147,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 							<tr>
 								<th>保護者氏名(フリガナ)</th>
 								<td>
-									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['ruby2'])) {?><span class="c_red">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['ruby2'];?>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['ruby2'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['ruby2'];?>
 </span><?php }?>
 									<input type="text" name="ruby2" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['ruby2'])===null||$tmp==='' ? '' : $tmp);?>
 " />
@@ -156,7 +156,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 							<tr>
 								<th>Eメールアドレス<span class="need">必須</span></th>
 								<td>
-									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['mail'])) {?><span class="c_red">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['mail'];?>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['mail'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['mail'];?>
 </span><?php }?>
 									<input type="email" name="mail" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['mail'])===null||$tmp==='' ? '' : $tmp);?>
 " />
@@ -165,7 +165,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 							<tr>
 								<th>電話番号<span class="need">必須</span></th>
 								<td>
-									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['tel'])) {?><span class="c_red">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['tel'];?>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['tel'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['tel'];?>
 </span><?php }?>
 									<input type="tel" name="tel" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['tel'])===null||$tmp==='' ? '' : $tmp);?>
 " />
@@ -177,11 +177,11 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 									<dl>
 										<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['zip'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['zip'];?>
 </span><?php }?>
-										<dt>郵便番号<span class="c_red" style="font-size:12px;">　半角数字で入力してください</span></dt>
+										<dt>郵便番号<span class="error" style="font-size:12px;">※半角数字で入力してください</span></dt>
 										<dd>
 											<input name="zip" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['zip'])===null||$tmp==='' ? '' : $tmp);?>
 " type="text" class="zip w150" placeholder="000-000" >
-											<a href="javascript:AjaxZip3.zip2addr('zip','','prefecture','address');" class="bTn wp100 w_sm_A dis_b dis_sm_ib"><i class="fa fa-search" aria-hidden="true"></i>郵便番号から住所を自動入力する</a>
+											<a href="javascript:AjaxZip3.zip2addr('zip','','prefecture','address');" class="bTn wp100 w_sm_A dis_b dis_sm_ib zip_block"><i class="fa fa-search" aria-hidden="true"></i>郵便番号から住所を自動入力する</a>
 										</dd>
 									</dl>
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['prefecture'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['prefecture'];?>
@@ -207,7 +207,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 							<tr class="last">
 								<th>備考</th>
 								<td>
-									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['comment'])) {?><span class="c_red">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['comment'];?>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['comment'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['comment'];?>
 </span><?php }?>
 									<textarea name="comment"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['comment'])===null||$tmp==='' ? '' : $tmp);?>
 </textarea>
