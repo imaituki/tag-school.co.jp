@@ -17,7 +17,7 @@ require "./config.ini";
 $message = NULL;
 
 // 操作クラス
-$objManage  = new DB_manage( _DNS, 1 );
+$objManage  = new DB_manage( _DNS );
 $objContact = new FT_contact( $objManage, $_ARR_MAIL[$_DIR_NAME]["savePath"] );
 
 // データ変換
@@ -154,8 +154,7 @@ if( empty($message["ng"]) ) {
 unset( $objManage );
 unset( $objContact );
 
-echo 777;
-exit;
+
 //----------------------------------------
 //  表示
 //----------------------------------------

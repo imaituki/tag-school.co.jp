@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 15:57:20
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-27 14:30:20
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9932258365e280add2d6f40-14070391%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1579848541,
+      1 => 1579854319,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'template_meta' => 0,
     'template_javascript' => 0,
     'template_header' => 0,
+    '_HTML_HEADER' => 0,
     'arr_post' => 0,
     'OptionContent' => 0,
     'OptionGrade' => 0,
@@ -49,10 +50,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <main>
 <div id="body">
 	<div id="page_title">
-		<div class="img_back"><img src="/common/image/contents/contact/top.jpg" alt="お問い合わせ"></div>
+		<div class="img_back"><img src="/common/image/contents/contact/top.jpg" alt="<?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
+" /></div>
 		<div class="page_title_wrap">
 			<div class="center mincho">
-				<h2><span class="main">お問い合わせ</span><span class="sub">Contact</span></h2>
+				<h2><span class="main"><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
+</span><span class="sub">Contact</span></h2>
 			</div>
 		</div>
 	</div>
@@ -60,13 +63,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="center">
 			<ul>
 				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
-				<li>お問い合わせ</li>
+				<li><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
+</li>
 			</ul>
 		</div>
 	</div>
 	<section>
 		<div class="wrapper bg_common entry">
-			<div class="center">
+			<div id="form" class="center">
 				<p class="mb10 c_red">まだフォームの送信は完了していません。</p>
 				<p class="mb30">下記内容をご確認の上、「送信する」ボタンを押してください。</p>
 				<form action="./#form" method="post">
