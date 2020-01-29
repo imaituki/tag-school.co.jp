@@ -26,13 +26,12 @@
 		<div class="wrapper bg_common" >
 			<div class="center">
 				<h2 class="hl_3 mincho">{$_HTML_HEADER.title}</h2>
-				<div class="box bg0">
+				<div class="box bg0 info_box">
 					<div class="box_in">
 						<div class="mb20">
-							<span class="tag">{$OptionArticleCategory[$data.id_category]}</span>
+							<span class="tag">{$OptionArticleCategory[$data.id_article_category]}</span>
 							<span class="date">{$data.date|date_format:'%Y.%m.%d'}</span>
 						</div>
-						<h2 class="title">{$data.title}</h2>
 						{if !empty($data.image1)}
 						<div class="pos_ac mb50">
 							<img src="{$_IMAGEFULLPATH}/article/image1/l_{$data.image1}" alt="{$data.title}" />

@@ -349,7 +349,7 @@ class AD_information {
 			"select" => "*",
 			"from"   => $this->_CtrTable,
 			"where"  => "1 ",
-			"order"  => "date DESC",
+			"order"  => "date DESC, entry_date DESC",
 			"bind"   => array()
 		);
 

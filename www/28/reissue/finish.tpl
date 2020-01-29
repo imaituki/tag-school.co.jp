@@ -37,7 +37,9 @@
 					「メールの受信制限や拒否設定（特に携帯メール）」</p>
 				<p class="mb20">メールアドレスの間違いや、ドメイン指定などの受信設定を今一度ご確認いただき、<br>
 					送受信できる正しいメールアドレスを、メールまたはお電話にてご連絡くださいますようお願い申し上げます。</p>
-				<div class="button _type_1"><a href="{$_FRONT.home}/{$_DIR_NAME}/login.php">ログイン画面に戻る<i class="fa fa-chevron-right"></i></a></div>
+				<div class="pos_ac">
+					<a href="{$_FRONT.home}/{$_DIR_NAME}/login.php" class="button _type1"><i class="fa fa-chevron-right"></i>ログイン画面に戻る</a>
+				</div>
 			</div>
 		</div>
 	</section>

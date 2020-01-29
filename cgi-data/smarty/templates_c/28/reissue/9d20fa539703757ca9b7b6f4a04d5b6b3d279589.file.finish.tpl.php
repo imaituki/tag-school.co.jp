@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 18:28:47
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 16:18:10
          compiled from "./finish.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9114037705e2ab2241c01d4-28280287%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9d20fa539703757ca9b7b6f4a04d5b6b3d279589' => 
     array (
       0 => './finish.tpl',
-      1 => 1579858125,
+      1 => 1580282288,
       2 => 'file',
     ),
   ),
@@ -78,9 +78,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					「メールの受信制限や拒否設定（特に携帯メール）」</p>
 				<p class="mb20">メールアドレスの間違いや、ドメイン指定などの受信設定を今一度ご確認いただき、<br>
 					送受信できる正しいメールアドレスを、メールまたはお電話にてご連絡くださいますようお願い申し上げます。</p>
-				<div class="button _type_1"><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
+				<div class="pos_ac">
+					<a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
-/login.php">ログイン画面に戻る<i class="fa fa-chevron-right"></i></a></div>
+/login.php" class="button _type1"><i class="fa fa-chevron-right"></i>ログイン画面に戻る</a>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -90,4 +92,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 </div>
 </body>
-</html><?php }} ?>
+</html>
+<?php }} ?>

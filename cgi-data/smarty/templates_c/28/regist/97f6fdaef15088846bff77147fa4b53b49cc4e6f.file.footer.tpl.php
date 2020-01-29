@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 17:15:17
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 15:56:15
          compiled from "/home/tag-school/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11993484845e295c9be944b8-35825314%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97f6fdaef15088846bff77147fa4b53b49cc4e6f' => 
     array (
       0 => '/home/tag-school/www//common/include/footer.tpl',
-      1 => 1580197453,
+      1 => 1580261024,
       2 => 'file',
     ),
   ),
@@ -53,7 +53,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<h5 class="mb0"><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['site_name'];?>
 </h5>
 						<p class="mb20">〒<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['zip'];?>
- <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['address'];?>
+ <?php echo nl2br($_smarty_tpl->tpl_vars['_INFO']->value['address']);?>
 </p>
 						<p class="mb20">TEL：<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 <br />
@@ -67,8 +67,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</p>
 						<div class="sns">
 							<a href="https://www.facebook.com/tagschool0902" target="_blank" class="fa"><i class="fab fa-facebook-f"></i></a>
-							<a href="###" class="twitter"><i class="fab fa-twitter"></i></a>
-							<a href="###" class="instagram"><i class="fab fa-instagram"></i></a>
+							<a href="https://twitter.com/tagschool28" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+							<a href="https://www.instagram.com/tagschool_28/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
 						</div>
 					</div>
 				</div>
@@ -103,4 +103,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	    $( ".mailaddress" ).append( atob("<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['mail_base64'];?>
 ") );
 	});
-</script><?php }} ?>
+</script>
+<?php }} ?>

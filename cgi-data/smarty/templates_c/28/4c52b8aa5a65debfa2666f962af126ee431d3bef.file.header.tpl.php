@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 17:14:59
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 10:58:16
          compiled from "/home/tag-school/www//common/include/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21329503225e2954bb857211-79286869%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4c52b8aa5a65debfa2666f962af126ee431d3bef' => 
     array (
       0 => '/home/tag-school/www//common/include/header.tpl',
-      1 => 1580193512,
+      1 => 1580260485,
       2 => 'file',
     ),
   ),
@@ -50,11 +50,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /strength/">TAGの強み</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/#couse">コース紹介</a></li>
+/_test_index.php#course">コース紹介</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/#space">TAGの空間</a></li>
+/_test_index.php#space">TAGの空間</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/#teachers">講師紹介</a></li>
+/_test_index.php#teachers">講師紹介</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /information/">お知らせ</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
@@ -72,11 +72,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</li>
 				<li class="sns">
 					<a href="https://www.facebook.com/tagschool0902" target="_blank" class="fa"><i class="fab fa-facebook-f"></i></a>
-					<a href="###" class="twitter"><i class="fab fa-twitter"></i></a>
-					<a href="###" class="instagram"><i class="fab fa-instagram"></i></a>
+					<a href="https://twitter.com/tagschool28" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/tagschool_28/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
 				</li>
 			</ul>
 		</div>
 	</div>
 </div>
-</header><?php }} ?>
+</header>
+<?php }} ?>

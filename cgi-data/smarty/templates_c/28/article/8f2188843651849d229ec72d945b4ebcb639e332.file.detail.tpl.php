@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 17:53:35
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 10:26:48
          compiled from "./detail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21311468295e29627851d401-11498339%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8f2188843651849d229ec72d945b4ebcb639e332' => 
     array (
       0 => './detail.tpl',
-      1 => 1580201601,
+      1 => 1580261188,
       2 => 'file',
     ),
   ),
@@ -72,16 +72,14 @@ _detail">
 			<div class="center">
 				<h2 class="hl_3 mincho"><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
 </h2>
-				<div class="box bg0">
+				<div class="box bg0 info_box">
 					<div class="box_in">
 						<div class="mb20">
-							<span class="tag"><?php echo $_smarty_tpl->tpl_vars['OptionArticleCategory']->value[$_smarty_tpl->tpl_vars['data']->value['id_category']];?>
+							<span class="tag"><?php echo $_smarty_tpl->tpl_vars['OptionArticleCategory']->value[$_smarty_tpl->tpl_vars['data']->value['id_article_category']];?>
 </span>
 							<span class="date"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['data']->value['date'],'%Y.%m.%d');?>
 </span>
 						</div>
-						<h2 class="title"><?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
-</h2>
 						<?php if (!empty($_smarty_tpl->tpl_vars['data']->value['image1'])) {?>
 						<div class="pos_ac mb50">
 							<img src="<?php echo $_smarty_tpl->tpl_vars['_IMAGEFULLPATH']->value;?>

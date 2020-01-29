@@ -69,7 +69,7 @@ class FT_information {
 			"where"  => "date <= NOW() AND
 						 display_flg = 1 AND
 						 ( display_indefinite = 1 OR ( display_indefinite = 0 AND display_start <= NOW() AND  NOW() <= display_end  ) ) ",
-			"order"  => "date DESC",
+			"order"  => "date DESC, entry_date DESC",
 			"bind"   => array()
 		);
 

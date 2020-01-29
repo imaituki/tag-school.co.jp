@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 19:23:38
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 13:23:57
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19367162525e294e044aaa34-62772733%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580207015,
+      1 => 1580271836,
       2 => 'file',
     ),
   ),
@@ -55,9 +55,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<div id="main_text" class="text">
 		<div class="center">
 			<div class="text_in">
+			<div class="md_flex">
 				<div class="logo"><img src="common/image/contents/top/logo.png" alt="岡山市の総合学習塾 タッグスクール TAG school"></div>
-				<h2 class="mincho">TAGスクール<br><span class="c_red">2020年春</span>開校予定！</h2>
-				<p>岡山市問屋町に今までにない新しい塾が誕生！</p>
+				<div  class="md_tbl">
+					<h2 class="mincho">TAGスクール<br><span class="c_red">2020年春</span>開校予定！</h2>
+				</div>
+				</div>
+				<p>岡山市下中野に今までにない新しい塾が誕生！</p>
 			</div>
 		</div>
 	</div>
@@ -106,7 +110,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<div class="row">
 						<div class="col-xs-4">
 							<div class="box icon_box">
-								<a href="###">
+								<a href="/strength/#strength_1">
 									<div class="photo"><img src="common/image/contents/top/image2.jpg" alt="オリジナル指導形態"></div>
 									<div class="text">
 										<div class="icon"><span><img src="common/image/contents/top/icon1.png" alt="オリジナル指導形態"></span></div>
@@ -118,7 +122,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</div>
 						<div class="col-xs-4">
 							<div class="box icon_box">
-								<a href="###">
+								<a href="/strength/#strength_2">
 									<div class="photo"><img src="common/image/contents/top/image3.jpg" alt="ハイレベル講師陣"></div>
 									<div class="text">
 										<div class="icon"><span><img src="common/image/contents/top/icon2.png" alt="ハイレベル講師陣"></span></div>
@@ -130,7 +134,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</div>
 						<div class="col-xs-4">
 							<div class="box icon_box">
-								<a href="###">
+								<a href="/strength/#strength_3">
 									<div class="photo"><img src="common/image/contents/top/image4.jpg" alt="IoE"></div>
 									<div class="text">
 										<div class="icon"><span><img src="common/image/contents/top/icon3.png" alt="IoE"></span></div>
@@ -359,13 +363,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<div class="row no-gutters">
 								<div class="col-xs-6 col-6">
 									<div class="height-1">
-										<img src="/common/image/contents/top/space2.jpg" alt="">
-										<img src="/common/image/contents/top/space3.jpg" alt="">
+										<img src="/common/image/contents/top/space2.jpg" alt="自習スペース">
+										<img src="/common/image/contents/top/space3.jpg" alt="教室">
 									</div>
 								</div>
 								<div class="col-xs-6 col-6 lounge">
 									<div class="img_back height-1">
-										<img src="/common/image/contents/top/space1.jpg" alt="">
+										<img src="/common/image/contents/top/space1.jpg" alt="コミュニケーションラウンジ">
 									</div>
 								</div>
 							</div>
@@ -374,13 +378,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<div class="row no-gutters">
 								<div class="col-xs-6 col-6">
 									<div class="height-1">
-										<img src="/common/image/contents/top/space2.jpg" alt="">
-										<img src="/common/image/contents/top/space3.jpg" alt="">
+										<img src="/common/image/contents/top/space2.jpg" alt="自習スペース">
+										<img src="/common/image/contents/top/space3.jpg" alt="教室">
 									</div>
 								</div>
 								<div class="col-xs-6 col-6 lounge">
 									<div class="img_back height-1">
-										<img src="/common/image/contents/top/space1.jpg" alt="">
+										<img src="/common/image/contents/top/space1.jpg" alt="コミュニケーションラウンジ">
 									</div>
 								</div>
 							</div>
@@ -428,7 +432,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<div class="photo mb20"><img src="common/image/contents/top/teacher2.png" alt="安藤 正由"></div>
 							</div>
 							<div class="col-xs-8 col-xs-pull-4">
-								<h3 class="title"><span class="name mincho c_orange">安藤 正由</span><span class="ruby">MASAYUKI ANDO</span><span class="tag c_orange">TAG総合プロデューサー・校舎長</span></h3>
+								<h3 class="title"><span class="name mincho c_orange">安藤 正由</span><span class="ruby">MASAYOSHI ANDO</span><span class="tag c_orange">TAG総合プロデューサー・統括責任者</span></h3>
 								<p class="mb10">TAG schoolを総合プロデュースした安藤と木本塾長との出会いは、木本塾長が小学4年生の時でした。つまり、かつての教え子と先生がTAG（タッグ）を組んで、作りあげた塾なのです。集団授業を受けても「わからない」、大量の宿題をしても「できない」という声を多く耳にしてきました。集団授業を受けて、出される大量の宿題をすれば、本当に学力の向上につながるでしょうか？ますます変化していく学びに対応できるでしょうか？</p>
 								<p class="mb10">個別授業を組み合わせることで集団授業の「わかる」を、自分で「できる」にすることが可能です。「わかる」「できる」「えらべる」集団✕個別の融合型の複合学習塾、それが、TAG schoolです。</p>
 								<p class="mb30">自分が理想とする教育がついにTAG schoolで実現します。皆様、TAG schoolでお待ちしております。</p>
@@ -436,7 +440,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									<div class="profile c_orange">
 										<dl>
 											<dt>PROFILE</dt>
-											<dd>11971年岡山県津山市生まれ<br>甲南大学 経済学部卒業</dd>
+											<dd>1971年岡山県津山市生まれ<br>甲南大学 経済学部卒業</dd>
 										</dl>
 									</div>
 									<p class="mb10">小学生の頃から教師を目指し、高校・大学時代には、地域の剣道クラブで、小中学生を指導・育成。その指導経験から、得意の社会で教員免許を取得し、岡山市内の公立中学校で2年間の講師経験をする。しかし、自分が理想とする教育と学校教育にギャップを感じ、学校とは異なるフィールドを探し、岡山県内の大手進学塾O塾に入社した。入社2年目から校舎長やエリア統括を歴任した。O塾退社後は、大手進学塾Nセンターへ転職し、校舎責任者や中学・高校受験指導主任を歴任。</p>

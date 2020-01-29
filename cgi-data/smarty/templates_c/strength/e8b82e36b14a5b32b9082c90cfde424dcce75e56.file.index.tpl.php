@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 20:05:20
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 10:01:40
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17279163915e296ce12ca553-99588296%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580209508,
+      1 => 1580259697,
       2 => 'file',
     ),
   ),
@@ -159,7 +159,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</div>
 				</div>
 				<div class="center3">
-					
+					<p class="c_g">IoEとは、一般的に（Internet of Everything）の略で、すべてのモノがインターネットでつながる世界を目指す概念およびその技術です。
+					TAG schoolでは、IoEをInternet of Educationと定義し、教育とインターネットとを融合させ、効率・即時性・利便性の向上を実現させてまいります。<br>
+					塾用専用アプリやオンライン学習教材の導入、教育情報サイトの開設、SNSの利用、インターネット連動授業導入、そして将来的にはAI（人工知能）の活用などを構想しております。<br>
+					塾用専用アプリでは、生徒さまの入退室の状況確認、塾とのコミュニケーション（チャット形式）、授業ごとの指導報告、成績管理、授業料の確認などが1つのアプリ上で確認・管理することができ、生徒さまの状況が把握できるため、便利で安心安全です。<br>
+					また、学力の定着には塾での学習に加えて、ご家庭での学習が大切になってきます。<br>
+					家庭学習用オンライン学習教材は、小中学生向け基礎学力定着を目的としており、岡山初導入の特別教材となっています。PC・タブレット・スマートフォンでご利用いただけますので、いつでもどこでも学習できるのが特徴です。基礎知識の定着・授業内容の復習・弱点克服・暗記科目である理社の反復演習などをご家庭で行うことができます。塾側では、管理システムから生徒の学習履歴・学習状況の把握ができる為、塾での学習に加え、ご家庭でも勉強の総合サポートをさせていただきます。
+					</p>
 				</div>
 			</div>
 		</div>
