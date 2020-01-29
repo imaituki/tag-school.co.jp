@@ -74,11 +74,14 @@ if( empty( $message["ng"] ) ) {
 	$smarty->compile_dir .= "member/";
 
 	// テンプレートに設定
-	$smarty->assign( "message"   , $message    );
+	$smarty->assign( "message", $message );
+
+	$smarty->assign( "OptionRegistFlg", $OptionRegistFlg );
+	$smarty->assign( "OptionDeleteFlg", $OptionDeleteFlg );
+	$smarty->assign( "OptionReferer"  , $OptionReferer   );
 
 	// 表示
 	$smarty->display( "new.tpl" );
 
 }
-
 ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-20 19:46:54
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 10:42:33
          compiled from "/home/tag-school/www/admin/contents/member/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6828573655e05e45278fb22-94726547%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '22c7efecac6cb2715f186aef1bbe565870ffa156' => 
     array (
       0 => '/home/tag-school/www/admin/contents/member/template/form.tpl',
-      1 => 1579517027,
+      1 => 1580175441,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'mode' => 0,
     'message' => 0,
     'arr_post' => 0,
+    'OptionReferer' => 0,
     'OptionYesNo' => 0,
     '_CONTENTS_ID' => 0,
     '_CONTENTS_DIR' => 0,
@@ -129,6 +130,16 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 					※パスワード<?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['password'])) {?>設定済みです<?php } else { ?>未設定です<?php }?>
 				</span>
 				<input type="password" class="form-control" name="password" id="password" value="" />
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="form-group required">
+			<label class="col-sm-2 control-label">どこからの登録か</label>
+			<div class="col-sm-6">
+				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['referer'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['referer'];?>
+</p><?php }?>
+				<?php echo smarty_function_html_radios(array('name'=>"referer",'options'=>$_smarty_tpl->tpl_vars['OptionReferer']->value,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['referer'])===null||$tmp==='' ? 1 : $tmp),'separator'=>'&nbsp;'),$_smarty_tpl);?>
+
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>

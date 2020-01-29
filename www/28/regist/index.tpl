@@ -24,7 +24,6 @@
 		<div class="wrapper bg_common entry">
 			<div class="center">
 				<h2 id="form" class="hl_3 mincho">{$_HTML_HEADER.title}</h2>
-				{if !empty($message.ng)}<p class="error">※{$message.ng.error}</p>{/if}
 				<form class="mb30" action="check.php" method="post">
 					<table class="tbl_form bg0">
 						<tbody>
@@ -51,7 +50,7 @@
 								<tr>
 									<th scope="row">パスワード<span class="need">必須</span></th>
 									<td>
-										{if $message.ng.mail|default:'' != NULL}<p class="error">{$message.ng.mail}</p>{/if}
+										{if $message.ng.password|default:'' != NULL}<p class="error">{$message.ng.password}</p>{/if}
 										<input type="password" id="password" name="password" value="{$arr_post.password}" placeholder="パスワード" />
 									</td>
 								</tr>

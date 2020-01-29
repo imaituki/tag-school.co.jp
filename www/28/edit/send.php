@@ -33,6 +33,11 @@ if( empty($message["ng"]) ) {
 	// トランザクション
 	$objMember->_DBconn->StartTrans();
 
+	// パスワードを変更したときに、仮パスワードを削除
+	if( !empty($arr_post["password"]) ){
+		$arr_post["temp_password"] = null;
+	}
+
 	// 登録処理
 	$res = $objMember->update( $arr_post );
 

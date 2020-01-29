@@ -39,6 +39,10 @@ if( !empty( $_POST["id_member"] ) ) {
 	$smarty->assign( "pref_codes", $pref_codes);
 	$smarty->assign( "active_content", _ACTIVE_CONTENT );
 
+	$smarty->assign( "OptionRegistFlg", $OptionRegistFlg );
+	$smarty->assign( "OptionDeleteFlg", $OptionDeleteFlg );
+	$smarty->assign( "OptionReferer"  , $OptionReferer   );
+
 	// 表示
 	$smarty->display( "edit.tpl" );
 

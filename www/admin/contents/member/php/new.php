@@ -17,7 +17,10 @@ require "./config.ini";
 $smarty = new MySmarty("admin");
 $smarty->compile_dir .= "member/";
 
+$smarty->assign( "OptionRegistFlg", $OptionRegistFlg );
+$smarty->assign( "OptionDeleteFlg", $OptionDeleteFlg );
+$smarty->assign( "OptionReferer"  , $OptionReferer   );
+
 // 表示
 $smarty->display( "new.tpl" );
-
 ?>

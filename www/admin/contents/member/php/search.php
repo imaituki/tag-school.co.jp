@@ -46,6 +46,7 @@ $smarty->assign( "active_content", _ACTIVE_CONTENT   );
 
 $smarty->assign( "OptionRegistFlg", $OptionRegistFlg );
 $smarty->assign( "OptionDeleteFlg", $OptionDeleteFlg );
+$smarty->assign( "OptionReferer"  , $OptionReferer   );
 
 // 表示
 $smarty->display("list.tpl");

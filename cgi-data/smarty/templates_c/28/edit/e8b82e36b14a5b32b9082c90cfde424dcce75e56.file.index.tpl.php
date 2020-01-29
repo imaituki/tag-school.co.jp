@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-25 20:36:19
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 17:50:43
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936279875e29593be2ca48-49802375%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1579952047,
+      1 => 1580201441,
       2 => 'file',
     ),
   ),
@@ -68,10 +68,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<h2 id="form" class="hl_3 mincho"><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
 </h2>
 				<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['succeed'])) {?>
-					<div class="alert alert-success" role="alert"><?php echo $_smarty_tpl->tpl_vars['message']->value['succeed'];?>
+					<div class="success" role="alert"><?php echo $_smarty_tpl->tpl_vars['message']->value['succeed'];?>
 </div>
 				<?php } elseif (!empty($_smarty_tpl->tpl_vars['message']->value['fail'])) {?>
-					<div class="alert alert-danger" role="alert"><?php echo $_smarty_tpl->tpl_vars['message']->value['fail'];?>
+					<div class="error" role="alert"><?php echo $_smarty_tpl->tpl_vars['message']->value['fail'];?>
 </div>
 				<?php }?>
 				<form class="mb30" action="check.php" method="post">
@@ -122,7 +122,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">電話番号<span class="need">必須</span></th>
+								<th scope="row">電話番号</th>
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['tel'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['tel'];?>
 </p><?php }?>
@@ -131,7 +131,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">郵便番号<span class="need">必須</span></th>
+								<th scope="row">郵便番号</th>
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['zip'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['zip'];?>
 </p><?php }?>
@@ -143,7 +143,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">都道府県<span class="need">必須</span></th>
+								<th scope="row">都道府県</th>
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['prefecture'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['prefecture'];?>
 </p><?php }?>
@@ -152,7 +152,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								</td>
 							</tr>
 							<tr class="last">
-								<th scope="row">住所<span class="need">必須</span></th>
+								<th scope="row">住所</th>
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['address1'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['address1'];?>
 </p><?php }?>

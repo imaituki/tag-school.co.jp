@@ -15,7 +15,7 @@ require "./config.ini";
 //  ヘッダー情報
 //----------------------------------------
 // タイトル
-$_HTML_HEADER["title"] = "28";
+$_HTML_HEADER["title"] = "28 マイページ";
 
 // キーワード
 $_HTML_HEADER["keyword"] = "";

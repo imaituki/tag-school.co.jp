@@ -23,6 +23,7 @@ class AD_member {
 	// コントロール機能（ログ用）
 	var $_CtrLogName = "会員";
 
+
 	//-------------------------------------------------------
 	// 関数名:__construct
 	// 引  数:$dbconn  : DB接続オブジェクト
@@ -47,9 +48,7 @@ class AD_member {
 	// 戻り値: なし
 	// 内  容: デストラクタ
 	//-------------------------------------------------------
-	function __destruct() {
-
-	}
+	function __destruct() {}
 
 	//-------------------------------------------------------
 	// 関数名: convert
@@ -100,7 +99,6 @@ class AD_member {
 		$objInputCheck->entryData( "郵便番号", "zip" , $arrVal["zip"] , array("CHECK_EMPTY", "CHECK_ZIP", "CHECK_MIN_MAX_LEN"), 7, 8 );
 		$objInputCheck->entryData( "都道府県", "prefecture" , $arrVal["prefecture"] , array("CHECK_EMPTY_ZERO"), null, null );
 		$objInputCheck->entryData( "市区町村", "address1" , $arrVal["address1"] , array("CHECK_EMPTY", "CHECK_MIN_MAX_LEN"), 0, 255 );
-		$objInputCheck->entryData( "番地 / 建物・マンション名", "address2" , $arrVal["address2"] , array("CHECK_EMPTY", "CHECK_MIN_MAX_LEN"), 0, 255 );
 
 		// チェックエントリー（UPDATE時）
 		if( strcmp($mode, "update") == 0 ) {
@@ -117,8 +115,8 @@ class AD_member {
 		}else{
 			$where = "";
 		}
-		$chk = $this->_DBconn->_ADODB->GetOne( "SELECT mail	FROM " . $this->_CtrTable . " WHERE mail = '" . $arrVal["mail"] . "' " . $where );
-
+		$chk = $this->_DBconn->_ADODB->GetOne( "SELECT mail	FROM " . $this->_CtrTable . " WHERE delete_flg = 0 AND mail = '" . $arrVal["mail"] . "' " . $where );
+disp_arr($chk);
 		if( !empty($chk) ) {
 			$res["ng"]["mail"] .= "指定のメールアドレスは、既に登録されています。<br />";
 		}

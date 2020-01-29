@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-25 20:44:58
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 17:19:41
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17533795145e295c9bd90d31-47659288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1579952695,
+      1 => 1580199575,
       2 => 'file',
     ),
   ),
@@ -25,8 +25,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'template_header' => 0,
     '_FRONT' => 0,
     '_HTML_HEADER' => 0,
-    'message' => 0,
     'arr_post' => 0,
+    'message' => 0,
     'member' => 0,
     'template_footer' => 0,
   ),
@@ -66,8 +66,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="center">
 				<h2 id="form" class="hl_3 mincho"><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
 </h2>
-				<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['error'];?>
-</p><?php }?>
 				<form class="mb30" action="check.php" method="post">
 					<table class="tbl_form bg0">
 						<tbody>
@@ -98,7 +96,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<tr>
 									<th scope="row">パスワード<span class="need">必須</span></th>
 									<td>
-										<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['mail'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['mail'];?>
+										<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['password'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['password'];?>
 </p><?php }?>
 										<input type="password" id="password" name="password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['password'];?>
 " placeholder="パスワード" />

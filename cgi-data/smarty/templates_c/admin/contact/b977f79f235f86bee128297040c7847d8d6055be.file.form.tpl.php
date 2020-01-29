@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 16:15:38
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 12:22:44
          compiled from "/home/tag-school/www/admin/contents/contact/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1155323555e2a98544439a8-66619384%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b977f79f235f86bee128297040c7847d8d6055be' => 
     array (
       0 => '/home/tag-school/www/admin/contents/contact/template/form.tpl',
-      1 => 1579850136,
+      1 => 1580180292,
       2 => 'file',
     ),
   ),

@@ -1,28 +1,26 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 09:24:43
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 17:54:11
          compiled from "../template/list.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13457839255cd28042e36e69-77872679%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11774874355e2ff6b33bc513-38929319%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '536be3878faadbfd3173360df0efbc870ffbb3e2' => 
     array (
       0 => '../template/list.tpl',
-      1 => 1579595313,
+      1 => 1578997886,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13457839255cd28042e36e69-77872679',
+  'nocache_hash' => '11774874355e2ff6b33bc513-38929319',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5cd28042ee0048_72866544',
   'variables' => 
   array (
     'template_pagenavi' => 0,
     'arr_data' => 0,
     'data' => 0,
-    'OptionCategory' => 0,
+    'OptionArticleCategory' => 0,
     '_CONTENTS_ID' => 0,
     '_ARR_IMAGE' => 0,
     'file' => 0,
@@ -31,8 +29,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_NAME' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5e2ff6b34266d2_77965761',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5cd28042ee0048_72866544')) {function content_5cd28042ee0048_72866544($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/home/tag-school/cgi-data/smarty/libs/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_5e2ff6b34266d2_77965761')) {function content_5e2ff6b34266d2_77965761($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/home/tag-school/cgi-data/smarty/libs/plugins/modifier.date_format.php';
 ?><?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_pagenavi']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <table class="footable table table-stripped toggle-arrow-tiny tbl_1" data-page-size="15">
@@ -51,7 +51,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<tr>
 			<th width="100">日付</th>
 			<th width="100">掲載期間</th>
-			<th width="100">カテゴリー</th>
+			<th width="150">カテゴリー</th>
 			<th>タイトル</th>
 			<th class="photo" width="220">写真</th>
 			<th class="showhide" width="60">表示</th>
@@ -77,7 +77,7 @@ $_smarty_tpl->tpl_vars['data']->_loop = true;
 					無期限
 				<?php }?>
 			</td>
-			<td><?php echo $_smarty_tpl->tpl_vars['OptionCategory']->value[$_smarty_tpl->tpl_vars['data']->value['id_category']];?>
+			<td><?php echo $_smarty_tpl->tpl_vars['OptionArticleCategory']->value[$_smarty_tpl->tpl_vars['data']->value['id_article_category']];?>
 </td>
 			<td><a href="./edit.php?id=<?php echo $_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['_CONTENTS_ID']->value];?>
 "><?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>

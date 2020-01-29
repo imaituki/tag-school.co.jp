@@ -45,8 +45,8 @@
 				</a>
 				<ul class="nav nav-second-level">
 					<li {if $manage == 'member'}class="active"{/if}><a href="{$_ADMIN.home}/contents/member/"><i class="fa fa-group"></i>会員管理</a></li>
-					<li {if $manage == 'article'}class="active"{/if}><a href="{$_ADMIN.home}/contents/article/"><i class="fa fa-folder-open"></i>ブログ管理</a></li>
-					<li {if $manage == 'article_category'}class="active"{/if}><a href="{$_ADMIN.home}/contents/article_category/"><i class="fa fa-folder-open"></i>ブログカテゴリー管理</a></li>
+					<li {if $manage == 'article'}class="active"{/if}><a href="{$_ADMIN.home}/contents/article/"><i class="fa fa-folder-open"></i>28記事管理</a></li>
+					<li {if $manage == 'article_category'}class="active"{/if}><a href="{$_ADMIN.home}/contents/article_category/"><i class="fa fa-folder-open"></i>28カテゴリー管理</a></li>
 					<li {if $manage == 'magazine'}class="active"{/if}><a href="{$_ADMIN.home}/contents/magazine/"><i class="fa fa-newspaper-o"></i>メールマガジン配信</a></li>
 				</ul>
 			</li>

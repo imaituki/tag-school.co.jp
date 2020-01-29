@@ -17,6 +17,9 @@ require "./config.ini";
 $objManage = new DB_manage( _DNS );
 $objMember = new FT_member($objManage);
 
+// 会員情報
+$member = $objMember->GetMember( $arr_post );
+
 // データ変換
 $arr_post = $objMember->convert( $arr_post );
 
@@ -61,6 +64,7 @@ $smarty->compile_dir .= $_DIR_NAME. "/regist/";
 
 // テンプレートに設定
 $smarty->assign( "arr_post", $arr_post );
+$smarty->assign( "member"  , $member   );
 $smarty->assign( "message" , $message  );
 
 // エラーチェック

@@ -81,6 +81,14 @@
 		</div>
 		<div class="hr-line-dashed"></div>
 		<div class="form-group required">
+			<label class="col-sm-2 control-label">どこからの登録か</label>
+			<div class="col-sm-6">
+				{if $message.ng.referer|default:'' != NULL}<p class="error">{$message.ng.referer}</p>{/if}
+				{html_radios name="referer" options=$OptionReferer selected=$arr_post.referer|default:1 separator='&nbsp;'}
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="form-group required">
 			<label class="col-sm-2 control-label">メールマガジン希望</label>
 			<div class="col-sm-6">
 				{if $message.ng.mail_magazine_flg|default:'' != NULL}<p class="error">{$message.ng.mail_magazine_flg}</p>{/if}

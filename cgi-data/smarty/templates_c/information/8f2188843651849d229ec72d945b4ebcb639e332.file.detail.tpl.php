@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 17:09:55
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 20:19:28
          compiled from "./detail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1848399095e294a723ab465-43359926%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8f2188843651849d229ec72d945b4ebcb639e332' => 
     array (
       0 => './detail.tpl',
-      1 => 1579853392,
+      1 => 1580210363,
       2 => 'file',
     ),
   ),
@@ -161,11 +161,9 @@ _detail">
 				</div>
 			</div>
 			<div class="wrapper">
-				<div class="button _type_1">
+				<div class="pos_ac">
 					<a href="./<?php if (is_numeric($_smarty_tpl->tpl_vars['arr_get']->value['page'])) {?>?page=<?php echo $_smarty_tpl->tpl_vars['arr_get']->value['page'];?>
-<?php }?>">
-						<i class="fa fa-chevron-left"></i>一覧へ戻る
-					</a>
+<?php }?>" class="button _type1"><i class="fa fa-chevron-left"></i>一覧へ戻る</a>
 				</div>
 			</div>
 		</div>

@@ -16,7 +16,7 @@
 		<div class="center">
 			<ul>
 				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
-				<li><a href="{$_FRONT.home}/{$_DIR_NAME}/login.php">28 ログイン</a></li>
+				<li><a href="{$_FRONT.home}/{$_DIR_NAME}/">28 マイページ</a></li>
 				<li>{$_HTML_HEADER.title}</li>
 			</ul>
 		</div>
@@ -26,9 +26,9 @@
 			<div class="center">
 				<h2 id="form" class="hl_3 mincho">{$_HTML_HEADER.title}</h2>
 				{if !empty($message.succeed)}
-					<div class="alert alert-success" role="alert">{$message.succeed}</div>
+					<div class="success" role="alert">{$message.succeed}</div>
 				{elseif !empty($message.fail)}
-					<div class="alert alert-danger" role="alert">{$message.fail}</div>
+					<div class="error" role="alert">{$message.fail}</div>
 				{/if}
 				<form class="mb30" action="check.php" method="post">
 					<table class="tbl_form bg0">
@@ -67,14 +67,14 @@
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">電話番号<span class="need">必須</span></th>
+								<th scope="row">電話番号</th>
 								<td>
 									{if !empty($message.ng.tel)}<p class="error">※{$message.ng.tel}</p>{/if}
 									<input type="tel" id="tel" name="tel" value="{$arr_post.tel}" placeholder="電話番号" />
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">郵便番号<span class="need">必須</span></th>
+								<th scope="row">郵便番号</th>
 								<td>
 									{if !empty($message.ng.zip)}<p class="error">※{$message.ng.zip}</p>{/if}
 									<input type="text" id="zip" name="zip" value="{$arr_post.zip}" placeholder="000-0000" />
@@ -84,14 +84,14 @@
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">都道府県<span class="need">必須</span></th>
+								<th scope="row">都道府県</th>
 								<td>
 									{if !empty($message.ng.prefecture)}<p class="error">※{$message.ng.prefecture}</p>{/if}
 									{html_select_ken name="prefecture" class="form-control inline input-s" selected=$arr_post.prefecture|default:"0"}
 								</td>
 							</tr>
 							<tr class="last">
-								<th scope="row">住所<span class="need">必須</span></th>
+								<th scope="row">住所</th>
 								<td>
 									{if !empty($message.ng.address1)}<p class="error">※{$message.ng.address1}</p>{/if}
 									<input type="text" id="address1" name="address1" value="{$arr_post.address1}" placeholder="市区町村" />

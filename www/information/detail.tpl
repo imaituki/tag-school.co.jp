@@ -84,10 +84,8 @@
 				</div>
 			</div>
 			<div class="wrapper">
-				<div class="button _type_1">
-					<a href="./{if is_numeric($arr_get.page)}?page={$arr_get.page}{/if}">
-						<i class="fa fa-chevron-left"></i>一覧へ戻る
-					</a>
+				<div class="pos_ac">
+					<a href="./{if is_numeric($arr_get.page)}?page={$arr_get.page}{/if}" class="button _type1"><i class="fa fa-chevron-left"></i>一覧へ戻る</a>
 				</div>
 			</div>
 		</div>

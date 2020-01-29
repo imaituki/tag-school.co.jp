@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-25 20:37:51
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 17:39:33
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18179687925e29596700dac2-23694622%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1579952270,
+      1 => 1580200771,
       2 => 'file',
     ),
   ),
@@ -83,7 +83,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<th scope="row">パスワード</th>
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['password'])) {?>
-										************
+										<span class="c_red">前の画面に戻った場合、パスワードの入力はリセットされます。</span><br />
+										ご入力いただいたパスワード
 										<input type="hidden" name="password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['password'];?>
 " />
 									<?php } else { ?>

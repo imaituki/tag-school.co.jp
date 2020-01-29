@@ -20,6 +20,8 @@ $objMember = new FT_member($objManage);
 // データ変換
 $arr_post = $objMember->convert( $arr_post );
 
+$message = $objMember->check_mail( $arr_post, 'update' );
+
 // データチェック
 $member = $objMember->GetMember( $arr_post );
 

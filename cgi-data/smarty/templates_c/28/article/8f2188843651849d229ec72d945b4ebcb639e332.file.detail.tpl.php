@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 19:16:37
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 17:53:35
          compiled from "./detail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21311468295e29627851d401-11498339%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8f2188843651849d229ec72d945b4ebcb639e332' => 
     array (
       0 => './detail.tpl',
-      1 => 1579860996,
+      1 => 1580201601,
       2 => 'file',
     ),
   ),
@@ -58,7 +58,7 @@ _detail">
 				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
-/login.php">28 ログイン</a></li>
+/">28 マイページ</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
 /article/">28</a></li>

@@ -56,6 +56,7 @@ $smarty->assign( "t_member" , $t_member["data"] );
 
 $smarty->assign( "OptionRegistFlg", $OptionRegistFlg );
 $smarty->assign( "OptionDeleteFlg", $OptionDeleteFlg );
+$smarty->assign( "OptionReferer"  , $OptionReferer   );
 
 // 表示
 $smarty->display("index.tpl");

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-15 10:01:06
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 09:38:23
          compiled from "/home/tag-school/www//admin/common/inc/secondary.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16453739815e0498da7425d6-02967609%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '59ad31779dfcf10ac350e296343935c28092e074' => 
     array (
       0 => '/home/tag-school/www//admin/common/inc/secondary.tpl',
-      1 => 1578997977,
+      1 => 1580171901,
       2 => 'file',
     ),
   ),
@@ -57,9 +57,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<li <?php if ($_smarty_tpl->tpl_vars['manage']->value=='member') {?>class="active"<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
 /contents/member/"><i class="fa fa-group"></i>会員管理</a></li>
 					<li <?php if ($_smarty_tpl->tpl_vars['manage']->value=='article') {?>class="active"<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
-/contents/article/"><i class="fa fa-folder-open"></i>ブログ管理</a></li>
+/contents/article/"><i class="fa fa-folder-open"></i>28記事管理</a></li>
 					<li <?php if ($_smarty_tpl->tpl_vars['manage']->value=='article_category') {?>class="active"<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
-/contents/article_category/"><i class="fa fa-folder-open"></i>ブログカテゴリー管理</a></li>
+/contents/article_category/"><i class="fa fa-folder-open"></i>28カテゴリー管理</a></li>
 					<li <?php if ($_smarty_tpl->tpl_vars['manage']->value=='magazine') {?>class="active"<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
 /contents/magazine/"><i class="fa fa-newspaper-o"></i>メールマガジン配信</a></li>
 				</ul>

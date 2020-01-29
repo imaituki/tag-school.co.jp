@@ -8,7 +8,6 @@
 			<th width="200">メールアドレス</th>
 			<th width="200">住所</th>
 			<th width="150">電話番号</th>
-			<th class="showhide" width="60">確認</th>
 			<th class="delete">削除</th>
 		</tr>
 	</thead>
@@ -20,7 +19,6 @@
 			<th width="150">メールアドレス</th>
 			<th width="200">住所</th>
 			<th width="150">電話番号</th>
-			<th class="showhide" width="60">確認</th>
 			<th class="delete">削除</th>
 		</tr>
 	</tfoot>
@@ -33,13 +31,6 @@
 			<td>{$contact.mail}</td>
 			<td>〒{$contact.zip}<br>{html_select_ken selected=$contact.prefecture|default:"" pre=1}{$contact.address}</td>
 			<td>{$contact.tel}</td>
-			<td class="pos_ac">
-			{if $contact.check_flg != 1}
-				<a href="javascript:void(0)" class="btn btn-info btn_check" data-id="{$contact.id_contact}">確認</a>
-			{else}
-				確認済
-			{/if}
-			</td>
 			<td class="pos_ac">
 				<a href="javascript:void(0)" class="btn btn-danger btn_delete" data-id="{$contact.id_contact}">削除</a>
 			</td>

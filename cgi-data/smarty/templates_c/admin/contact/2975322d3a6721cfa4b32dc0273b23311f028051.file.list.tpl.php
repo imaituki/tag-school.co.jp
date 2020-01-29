@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 16:09:57
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 12:22:39
          compiled from "/home/tag-school/www/admin/contents/contact/template/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8700723675dfae137079bb9-86800230%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2975322d3a6721cfa4b32dc0273b23311f028051' => 
     array (
       0 => '/home/tag-school/www/admin/contents/contact/template/list.tpl',
-      1 => 1579849795,
+      1 => 1580181758,
       2 => 'file',
     ),
   ),
@@ -40,7 +40,6 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 			<th width="200">メールアドレス</th>
 			<th width="200">住所</th>
 			<th width="150">電話番号</th>
-			<th class="showhide" width="60">確認</th>
 			<th class="delete">削除</th>
 		</tr>
 	</thead>
@@ -52,7 +51,6 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 			<th width="150">メールアドレス</th>
 			<th width="200">住所</th>
 			<th width="150">電話番号</th>
-			<th class="showhide" width="60">確認</th>
 			<th class="delete">削除</th>
 		</tr>
 	</tfoot>
@@ -79,14 +77,6 @@ $_smarty_tpl->tpl_vars['contact']->_loop = true;
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['contact']->value['tel'];?>
 </td>
-			<td class="pos_ac">
-			<?php if ($_smarty_tpl->tpl_vars['contact']->value['check_flg']!=1) {?>
-				<a href="javascript:void(0)" class="btn btn-info btn_check" data-id="<?php echo $_smarty_tpl->tpl_vars['contact']->value['id_contact'];?>
-">確認</a>
-			<?php } else { ?>
-				確認済
-			<?php }?>
-			</td>
 			<td class="pos_ac">
 				<a href="javascript:void(0)" class="btn btn-danger btn_delete" data-id="<?php echo $_smarty_tpl->tpl_vars['contact']->value['id_contact'];?>
 ">削除</a>

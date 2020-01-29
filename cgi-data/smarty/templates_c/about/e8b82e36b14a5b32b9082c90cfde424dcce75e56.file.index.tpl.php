@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 17:42:51
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 19:42:59
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17284487795e296c89961840-55436284%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1579855369,
+      1 => 1580208153,
       2 => 'file',
     ),
   ),
@@ -86,13 +86,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	</section>
 	<section>
 		<div id="about_3" class="wrapper about_3_wrap">
-			<div class="crenter">
-				<h2 class="title mincho">『わかる』から『できる』、そして『えらべる』へ<br>TAG schoolは “今までにない学び” をご提供いたします。</h2>
+			<div class="center">
+				<h2 class="title mincho">『わかる』から『できる』、<br class="visible-only">そして『えらべる』へ<br>TAG schoolは“今までにない学び”を<br class="visible-only">ご提供いたします。</h2>
 				<h3 class="mb50 story mincho">TAG Story </h3>
-				<p class="mb30 pos_ac-pc">1995年春 ＠岡山<br>当時小４の好奇心旺盛な木本くんと安藤先生との出会いから始まる</p>
+				<p class="mb30 pos_ac-pc">1995年春 ＠岡山<br>当時小4の好奇心旺盛な木本くんと安藤先生との出会いから始まる</p>
 				<p class="mb30 pos_ac-pc">木本は朝日・筑波・東大大学院卒業、大手メガバンクで勤務<br>教育業界に転身、東京自由が丘で個別指導塾創業</p>
-				<p class="mb30 pos_ac-pc">安藤は岡山大手進学塾２社で24年にわたり、5000人以上の生徒を指導<br>トッププロ講師の名に恥じない丁寧でわかりやすい指導実績を積み重ねた</p>
-				<p class="mb30 pos_ac-pc">そして、24年の時を経て２人が再会<br>2020年春 TAGプロジェクト始動</p>
+				<p class="mb30 pos_ac-pc">安藤は岡山大手進学塾2社で24年にわたり、5000人以上の生徒を指導<br>トッププロ講師の名に恥じない丁寧でわかりやすい指導実績を積み重ねた</p>
+				<p class="mb30 pos_ac-pc">そして、24年の時を経て2人が再会<br>2020年春 TAGプロジェクト始動</p>
 				<p class="mb30 pos_ac-pc">集団指導塾のプロ 安藤正由×個別指導塾のプロ 木本健太郎</p>
 				<p class="mb30 pos_ac-pc">既存の集団指導塾・個別指導塾の概念を超え、生徒の理解度を最大化するオリジナルスタイルを考案</p>
 				<p class="mb30 pos_ac-pc">生徒×生徒<br>生徒×先生<br>生徒×親<br>親×先生<br>インプット×アウトプット<br>学力・知識×社会で生きる力</p>

@@ -16,7 +16,7 @@
 		<div class="center">
 			<ul>
 				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
-				<li><a href="{$_FRONT.home}/{$_DIR_NAME}/login.php">28 ログイン</a></li>
+				<li><a href="{$_FRONT.home}/{$_DIR_NAME}/">28 マイページ</a></li>
 				<li>{$_HTML_HEADER.title}</li>
 			</ul>
 		</div>
