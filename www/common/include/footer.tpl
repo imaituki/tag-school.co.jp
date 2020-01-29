@@ -21,7 +21,7 @@
 					<div class="disp_td">
 						<h5><a class="ov" href="{$_FRONT.home}/"><img src="/common/image/foot/logo.png" alt="TAG school" /></a></h5>
 						<h5 class="mb0">{$_INFO.site_name}</h5>
-						<p class="mb20">〒{$_INFO.zip} {$_INFO.address}</p>
+						<p class="mb20">〒{$_INFO.zip} {$_INFO.address|nl2br}</p>
 						<p class="mb20">TEL：{$_INFO.tel}<br />
 							FAX：{$_INFO.fax}<br />
 							E-MAIL：<span class="mailaddress"></span><br />
@@ -30,8 +30,8 @@
 						</p>
 						<div class="sns">
 							<a href="https://www.facebook.com/tagschool0902" target="_blank" class="fa"><i class="fab fa-facebook-f"></i></a>
-							<a href="###" class="twitter"><i class="fab fa-twitter"></i></a>
-							<a href="###" class="instagram"><i class="fab fa-instagram"></i></a>
+							<a href="https://twitter.com/tagschool28" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+							<a href="https://www.instagram.com/tagschool_28/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
 						</div>
 					</div>
 				</div>

@@ -166,6 +166,13 @@ $(function(){
 			});
 		}
 	});
+	
+	$('#head_navi a').on('click',function(){
+		if( $('#menu_cover').get(0) ){
+			 $('#btn_open a').trigger('click');
+		}
+	});
+
 
 	// tab
 	$('.tab_navi a').on('click',function(){
@@ -174,7 +181,7 @@ $(function(){
 		ttg = $(this).attr('href');
 		tflg = 1;
 		if( $(this).parents('.tab').hasClass('active') ){ tflg = 0 }
-		
+
 		$(tsp).find('.tab').removeClass('active');
 		$('.'+tse).removeClass('active');
 		if( tflg == "1" ){
