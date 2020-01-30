@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 10:26:48
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 18:44:48
          compiled from "./detail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21311468295e29627851d401-11498339%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8f2188843651849d229ec72d945b4ebcb639e332' => 
     array (
       0 => './detail.tpl',
-      1 => 1580261188,
+      1 => 1580291073,
       2 => 'file',
     ),
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'template_meta' => 0,
     'template_javascript' => 0,
-    '_DIR_NAME' => 0,
     'template_header' => 0,
     '_FRONT' => 0,
+    '_DIR_NAME' => 0,
     '_HTML_HEADER' => 0,
     'data' => 0,
     'OptionArticleCategory' => 0,
@@ -45,8 +45,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <script type="text/javascript" src="/common/js/lightbox/import.js"></script>
 </head>
-<body id="<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
-_detail">
+<body id="information_detail">
 <div id="base">
 <?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

@@ -7,7 +7,7 @@
 {include file=$template_javascript}
 <script type="text/javascript" src="/common/js/lightbox/import.js"></script>
 </head>
-<body id="{$_DIR_NAME}_detail">
+<body id="information_detail">
 <div id="base">
 {include file=$template_header}
 <main>
