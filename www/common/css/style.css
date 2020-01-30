@@ -185,7 +185,8 @@
 #flow {}
 #flow .flow_area { background:rgba(255,255,255,0.5); }
 .flow_unit { position:relative; text-align:center; }
-.flow_unit .text h3 { color:#87664f; background:#fff; border:1px solid #87664f; border-radius:50px; padding:5px; max-width:150px; margin:0 auto 15px; }
+.flow_unit .text h3 { color:#87664f; background:#fff; border:1px solid #87664f; border-radius:50px; padding:5px; max-width:300px; margin:0 auto 15px;}
+.flow_unit .text h3 .comment {display: block; font-size: 12px;}
 .flow_unit .text p { font-size:0.9em; }
 .flow_unit.fa_a:after { color:#e5e0dc; font-size:2.15em; position:absolute; }
 	@media (max-width: 575px){
@@ -232,6 +233,9 @@
 .profile_box .profile { margin-bottom:20px; }
 .profile_box .profile dl dt { font-weight:bold; font-size:1.25em; letter-spacing:2px; }
 .teacher_unit .title .tag.c_orange { border-color:#de652e; }
+	@media (max-width: 409px){
+		.teacher_unit .title .tag.c_orange{display: block; position: relative; margin-top: 5px; max-width: 225px;}
+	}
 	@media (max-width: 575px){
 		.teacher_unit .photo { text-align:center; }
 		.teacher_unit .photo img { max-width:250px; }
@@ -242,21 +246,28 @@
 		.teacher_unit .title .name { font-size:2.75em; }
 		.teacher_unit .title .tag { padding:2px 15px; }
 	}
+	@media (min-width: 576px) and (max-width: 725px){
+		.teacher_unit .title .tag.c_orange{display: block; position: relative; margin-top: 5px; max-width: 280px;}
+	}
 	@media (max-width: 767px){
-		.teacher_unit .title .ruby { display:block; }
 		.profile_box { padding:20px; }
 		.profile_box .profile dl { border-bottom:4px solid #e0323b; }
 			.profile_box .profile.c_orange dl { border-bottom-color:#de652e; }
 		.profile_box .profile dl dd { padding:0 0 15px; }
 	}
 	@media (min-width: 768px){
-		.teacher_unit .title .ruby { padding-left:20px; }
 		.profile_box { padding:30px; }
 		.profile_box .profile dl { display:table; width:100%; }
 		.profile_box .profile dl > * { display:table-cell; vertical-align:middle; }
 		.profile_box .profile dl dt { width:120px; padding:0 0 0 10px; border-right:4px solid #e0323b; }
 		.profile_box .profile dl dd { padding:0 0 0 20px; }
 			.profile_box .profile.c_orange dt { border-right-color:#de652e; }
+	}
+	@media (min-width: 1025px){
+		.teacher_unit .title .ruby { padding-left:20px; }
+	}
+	@media (max-width: 1024px){
+		.teacher_unit .title .ruby { display:block; }
 	}
 
 #top_information {}

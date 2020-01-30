@@ -42,7 +42,9 @@
 				<p class="mb20">メールアドレスの間違いや、ドメイン指定などの受信設定を今一度ご確認いただき、<br>
 					送受信できる正しいメールアドレスを、メールまたはお電話にてご連絡くださいますようお願い申し上げます。</p>
 				<p class="mb50">その他、何かご不明な点等ございましたら、お気軽にお問い合わせください。</p>
-				<div class="button _type_1"><a href="/">トップページに戻る<i class="fa fa-chevron-right"></i></a></div>
+				<div class="pos_ac">
+					<a href="/" class="button _type1"><i class="fa fa-chevron-right"></i>トップページに戻る</a>
+				</div>
 			</div>
 		</div>
 	</section>

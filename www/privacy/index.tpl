@@ -52,7 +52,7 @@
 					<p class="mb10 c_g">当社の個人情報の取扱に関するお問い合せは下記までご連絡ください。</p>
 					<p class="mb50 c_g">{$_INFO.site_name}<br />
 						〒{$_INFO.zip} {$_INFO.address|nl2br}<br />
-						TEL：<span class="tel" data-tel="{$_INFO.tel}">{$_INFO.tel}</span>　FAX：{$_INFO.fax}<br>
+						TEL：<span class="tel" data-tel="{$_INFO.tel}">{$_INFO.tel}</span>{if $_INFO.fax}　FAX：{$_INFO.fax}{/if}<br>
 						E-mail：<a href="mailto:{$_INFO.mail}">{$_INFO.mail}</a>
 					</p>
 				</div>

@@ -23,7 +23,7 @@
 						<h5 class="mb0">{$_INFO.site_name}</h5>
 						<p class="mb20">〒{$_INFO.zip} {$_INFO.address|nl2br}</p>
 						<p class="mb20">TEL：{$_INFO.tel}<br />
-							FAX：{$_INFO.fax}<br />
+							{if $_INFO.fax}FAX：{$_INFO.fax}<br />{/if}
 							E-MAIL：<span class="mailaddress"></span><br />
 							営業時間：{$_INFO.worktime}<br />
 							定休日：{$_INFO.holiday}

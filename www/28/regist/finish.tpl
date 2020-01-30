@@ -49,7 +49,9 @@
 						My Page会員に本登録いただき、ありがとうございます。<br />
 						ご登録いただいたメールアドレスとパスワードで、マイページにログインしてください。
 					</p>
-					<div class="button _type_1"><a href="{$_FRONT.home}/{$_DIR_NAME}/login.php">ログイン画面に戻る<i class="fa fa-chevron-right"></i></a></div>
+					<div class="pos_ac">
+						<a href="{$_FRONT.home}/{$_DIR_NAME}/login.php" class="button _type1"><i class="fa fa-chevron-right"></i>ログイン画面に戻る</a>
+					</div>
 				{/if}
 			</div>
 		</div>
