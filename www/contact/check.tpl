@@ -74,21 +74,21 @@
 							<tr>
 								<th>入塾希望理由</th>
 								<td>
-									{$arr_post.reason|nl2br}
+									{$arr_post.reason|nl2br|default:'--'}
 									<input type="hidden" name="reason" value="{$arr_post.reason|default:''}" />
 								</td>
 							</tr>
 							<tr>
 								<th>保護者氏名</th>
 								<td>
-									{$arr_post.name2|default:''}
+									{$arr_post.name2|default:'--'}
 									<input type="hidden" name="name2" value="{$arr_post.name2|default:''}" />
 								</td>
 							</tr>
 							<tr>
 								<th>保護者氏名(フリガナ)</th>
 								<td>
-									{$arr_post.ruby2|default:''}
+									{$arr_post.ruby2|default:'--'}
 									<input type="hidden" name="ruby2" value="{$arr_post.ruby2|default:''}" />
 								</td>
 							</tr>
@@ -108,17 +108,22 @@
 							</tr>
 							<tr>
 								<th class="pos-vt">住所</th>
-								<td>〒{$arr_post.zip}<br>
-									{html_select_ken selected=$arr_post.prefecture|default:"" pre=1} {$arr_post.address}
-									<input type="hidden" name="zip" value="{$arr_post.zip}">
-									<input type="hidden" name="prefecture" value="{$arr_post.prefecture}">
-									<input type="hidden" name="address" value="{$arr_post.address}">
+								<td>
+									{if $arr_post.zip != NULL ||  $arr_post.prefecture != 0 || $arr_post.address != NULL }
+										{if $arr_post.zip}〒{$arr_post.zip}<br>{/if}
+										{if $arr_post.prefecture != 0}{html_select_ken selected=$arr_post.prefecture|default:"--" pre=1}{/if} {if $arr_post.address}{$arr_post.address}{/if}
+									{else}
+									--
+									{/if}
+								<input type="hidden" name="zip" value="{$arr_post.zip}">
+								<input type="hidden" name="prefecture" value="{$arr_post.prefecture}">
+								<input type="hidden" name="address" value="{$arr_post.address}">
 								</td>
 							</tr>
 							<tr class="last">
 								<th>備考</th>
 								<td>
-									{$arr_post.comment|nl2br}
+									{$arr_post.comment|nl2br|default:'--'}
 									<input type="hidden" name="comment" value="{$arr_post.comment|default:''}" />
 								</td>
 							</tr>

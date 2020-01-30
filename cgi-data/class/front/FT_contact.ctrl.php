@@ -9,7 +9,7 @@
 //  クラス
 //-------------------------------------------------------
 class FT_contact {
-	
+
 	//-------------------------------------------------------
 	//  変数宣言
 	//-------------------------------------------------------
@@ -22,8 +22,8 @@ class FT_contact {
 
 	// XML操作クラス
 	var $_FN_xml = null;
-	
-	
+
+
 	//-------------------------------------------------------
 	// 関数名: __construct
 	// 引  数: $dbconn  : DB接続情報
@@ -43,8 +43,8 @@ class FT_contact {
 			$this->_FN_xml = new FN_xml( $xmlPath );
 		}
 	}
-	
-	
+
+
 	//-------------------------------------------------------
 	// 関数名: __destruct
 	// 引  数: なし
@@ -52,8 +52,8 @@ class FT_contact {
 	// 内  容: デストラクタ
 	//-------------------------------------------------------
 	function __destruct() {}
-	
-	
+
+
 	//-------------------------------------------------------
 	// 関数名: convert
 	// 引  数: $arrVal
@@ -61,22 +61,22 @@ class FT_contact {
 	// 内  容: データ変換を行う
 	//-------------------------------------------------------
 	function convert( $arrVal ) {
-		
+
 		// データ変換クラス宣言
 		$objInputConvert = new FN_input_convert( $arrVal, "UTF-8" );
-		
+
 		// 変換エントリー
 		$objInputConvert->entryConvert( "mail", array("ENC_KANA"), "a" );
 		$objInputConvert->entryConvert( "zip", array("ENC_KANA"),  "n" );
-		
+
 		// 変換実行
 		$objInputConvert->execConvertAll();
-		
+
 		// 戻り値
 		return $objInputConvert->GetData();
 	}
-	
-	
+
+
 	//-------------------------------------------------------
 	// 関数名: check
 	// 引  数: $arrVal
@@ -84,10 +84,10 @@ class FT_contact {
 	// 内  容: データチェック
 	//-------------------------------------------------------
 	function check( &$arrVal ) {
-		
+
 		// チェッククラス宣言
 		$objInputCheck = new FN_input_check( "UTF-8" );
-		
+
 		// チェックエントリー
 		$objInputCheck->entryData( "生徒氏名", "name1", $arrVal["name1"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_LEN" ), 0, 255 );
 		$objInputCheck->entryData( "生徒氏名(フリガナ)", "ruby1", $arrVal["ruby1"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_LEN", "CHECK_KANA" ), 0, 255 );
@@ -96,14 +96,13 @@ class FT_contact {
 		$objInputCheck->entryData( "保護者氏名(フリガナ)", "ruby2", $arrVal["ruby2"], array( "CHECK_MIN_MAX_LEN", "CHECK_KANA" ), 0, 255 );
 		$objInputCheck->entryData( "Eメールアドレス", "mail", $arrVal["mail"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_LEN", "CHECK_MAIL" ), 0, 255 );
 		$objInputCheck->entryData( "電話番号", "tel", $arrVal["tel"], array( "CHECK_EMPTY", "CHECK_TEL", "CHECK_MIN_MAX_LEN" ), 10, 14 );
-		$objInputCheck->entryData( "住所", "address", $arrVal["address"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_LEN" ), 0, 255 );
-		
+
 		// チェック実行
 		$res["ng"] = $objInputCheck->execCheckAll();
-		
+
 		// 戻り値
 		return $res;
-		
+
 	}
 
 
@@ -131,8 +130,8 @@ class FT_contact {
 		return $res;
 
 	}
-	
-	
+
+
 	//-------------------------------------------------------
 	// 関数名: GetArrayXml
 	// 引  数: なし
@@ -142,8 +141,8 @@ class FT_contact {
 	function GetArrayXml() {
 		return $this->_FN_xml->GetArrayXml( null, true, null );
 	}
-	
-	
+
+
 	//-------------------------------------------------------
 	// 関数名: GetAttrXml
 	// 引  数: $xml - xml配列データ
@@ -153,8 +152,8 @@ class FT_contact {
 	function GetAttrXml( $xml ) {
 		return $this->_FN_xml->GetAttrXml( $xml );
 	}
-	
-	
+
+
 	//-------------------------------------------------------
 	// 関数名: GetDataXml
 	// 引  数: $xml - xml配列データ
@@ -164,6 +163,6 @@ class FT_contact {
 	function GetDataXml( $xml ) {
 		return $this->_FN_xml->GetDataXml( $xml );
 	}
-	
+
 }
 ?>

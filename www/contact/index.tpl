@@ -114,7 +114,7 @@
 								<td>
 									<dl>
 										{if !empty($message.ng.zip)}<span class="error">※{$message.ng.zip}</span>{/if}
-										<dt>郵便番号<span class="error" style="font-size:12px;">※半角数字で入力してください</span></dt>
+										<dt>郵便番号</dt>
 										<dd>
 											<input name="zip" value="{$arr_post.zip|default:''}" type="text" class="zip w150" placeholder="000-000" >
 											<a href="javascript:AjaxZip3.zip2addr('zip','','prefecture','address');" class="bTn wp100 w_sm_A dis_b dis_sm_ib zip_block"><i class="fa fa-search" aria-hidden="true"></i>郵便番号から住所を自動入力する</a>

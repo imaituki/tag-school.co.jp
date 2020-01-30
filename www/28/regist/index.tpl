@@ -52,6 +52,7 @@
 									<td>
 										{if $message.ng.password|default:'' != NULL}<p class="error">{$message.ng.password}</p>{/if}
 										<input type="password" id="password" name="password" value="{$arr_post.password}" placeholder="パスワード" />
+										<p style="margin-bottom: 0px;  font-size: 12px;">※パスワードは8-36文字で設定してください。</p>
 									</td>
 								</tr>
 								<tr class="last">
