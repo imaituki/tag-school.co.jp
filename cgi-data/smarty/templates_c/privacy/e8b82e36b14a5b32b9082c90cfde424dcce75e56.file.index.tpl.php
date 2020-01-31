@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 10:37:54
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 14:39:57
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13207818025e295290098406-77290275%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580261870,
+      1 => 1580361535,
       2 => 'file',
     ),
   ),
@@ -68,8 +68,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<h3 class="hl_2">1. 個人情報の管理</h3>
 					<p class="mb50 c_g">当社は、お客さまの個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。</p>
 					<h3 class="hl_2">2.個人情報の利用目的</h3>
-					<p class="mb50 c_g">当社は、お客さまの個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。</p>
-					<h3 class="hl_2">3.個人情報の利用目的</h3>
+					<p class="mb50 c_g">お客さまからお預かりした個人情報は、当社からのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用いたします。</p>
+					<h3 class="hl_2">3.個人情報の第三者への開示・提供の禁止</h3>
 					<p class="mb50 c_g">当社は、お客さまよりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。<br>
 					・お客さまの同意がある場合<br>
 					・お客さまが希望されるサービスを行なうために当社が業務を委託する業者に対して開示する場合<br>
@@ -89,8 +89,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <br />
 						TEL：<span class="tel" data-tel="<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 "><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
-</span>　FAX：<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['fax'];?>
-<br>
+</span><?php if ($_smarty_tpl->tpl_vars['_INFO']->value['fax']) {?>　FAX：<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['fax'];?>
+<?php }?><br>
 						E-mail：<a href="mailto:<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['mail'];?>
 "><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['mail'];?>
 </a>

@@ -84,6 +84,7 @@ body, #base, #body { position:relative; overflow-x:hidden; }
 	}
 
 #head_navi {}
+#head_navi .center { padding-left:0; padding-right:0; }
 #head_navi ul > li > a { color:#444; }
 #head_navi .sns { font-size:20px; }
 	@media (max-width: 575px){
@@ -122,11 +123,14 @@ body, #base, #body { position:relative; overflow-x:hidden; }
 /* top用 */
 #top {}
 	@media (min-width: 768px){
-		#top #head { position:absolute; height:51vw; }
+		#top #head { position:absolute; max-height:740px; }
 		#top #head_navi { position:absolute; bottom:0; left:0; width:100%; }
 	}
-	@media (min-width: 1600px){
-		#top #head { height: 887px;}
+	@media (min-width: 768px) and (max-width:1199px){
+		#top #head { height:calc(43.5vw + 180px); }
+	}
+	@media (min-width:1200px){
+		#top #head { height:44vw; }
 	}
 
 

@@ -75,7 +75,7 @@
 								<th scope="row">住所</th>
 								<td>
 									{if !empty($arr_post.zip)}{$arr_post.zip}&nbsp;{/if}
-									{html_select_ken selected=$arr_post.prefecture pre=1}<br />
+									{if $arr_post.prefecture == 0}--{else}{html_select_ken selected=$arr_post.prefecture pre=1}{/if}<br />
 									{$arr_post.address1}&nbsp;{$arr_post.address2}
 									<input type="hidden" name="zip" value="{$arr_post.zip}" />
 									<input type="hidden" name="prefecture" value="{$arr_post.prefecture}" />

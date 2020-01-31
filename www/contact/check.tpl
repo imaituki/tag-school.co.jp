@@ -109,15 +109,15 @@
 							<tr>
 								<th class="pos-vt">住所</th>
 								<td>
-									{if $arr_post.zip != NULL ||  $arr_post.prefecture != 0 || $arr_post.address != NULL }
+									{if !empty($arr_post.zip) || !empty($arr_post.prefecture) || !empty($arr_post.address)}
 										{if $arr_post.zip}〒{$arr_post.zip}<br>{/if}
-										{if $arr_post.prefecture != 0}{html_select_ken selected=$arr_post.prefecture|default:"--" pre=1}{/if} {if $arr_post.address}{$arr_post.address}{/if}
+										{html_select_ken selected=$arr_post.prefecture pre=1} {$arr_post.address}
 									{else}
-									--
+										--
 									{/if}
-								<input type="hidden" name="zip" value="{$arr_post.zip}">
-								<input type="hidden" name="prefecture" value="{$arr_post.prefecture}">
-								<input type="hidden" name="address" value="{$arr_post.address}">
+									<input type="hidden" name="zip" value="{$arr_post.zip}">
+									<input type="hidden" name="prefecture" value="{$arr_post.prefecture}">
+									<input type="hidden" name="address" value="{$arr_post.address}">
 								</td>
 							</tr>
 							<tr class="last">

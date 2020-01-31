@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 19:03:29
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 13:26:34
          compiled from "./finish.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1046598395e2abfc31e1b56-89849099%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9d20fa539703757ca9b7b6f4a04d5b6b3d279589' => 
     array (
       0 => './finish.tpl',
-      1 => 1579860207,
+      1 => 1580358393,
       2 => 'file',
     ),
   ),
@@ -90,9 +90,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						My Page会員に本登録いただき、ありがとうございます。<br />
 						ご登録いただいたメールアドレスとパスワードで、マイページにログインしてください。
 					</p>
-					<div class="button _type_1"><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
+					<div class="pos_ac">
+						<a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
-/login.php">ログイン画面に戻る<i class="fa fa-chevron-right"></i></a></div>
+/login.php" class="button _type1"><i class="fa fa-chevron-right"></i>ログイン画面に戻る</a>
+					</div>
 				<?php }?>
 			</div>
 		</div>
@@ -172,4 +174,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /common/js/import.js"></script>
 	</body>
-</html><?php }} ?>
+</html>
+<?php }} ?>

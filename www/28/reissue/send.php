@@ -26,6 +26,15 @@ $arr_post = $objMember->convert( $arr_post );
 // データチェック
 $message = $objMember->check_mail( $arr_post, "update" );
 
+// データチェック
+$member = $objMember->GetMember( $arr_post );
+
+if( empty($member) ){
+	$message["ng"]["mail"] = "入力されたメールアドレスの会員が見つかりません。<br />";
+}elseif( empty($member["password"]) ){
+	$message["ng"]["mail"] = "まずは会員の本登録を完了してください。<br />";
+}
+
 // エラーチェック
 if( empty($message["ng"]) ) {
 
@@ -135,10 +144,11 @@ if( empty($message["ng"]) ) {
 	$header2 .= "Content-Transfer-Encoding: 7bit\n";
 
 	// 管理者へ
-	$error_flg2 = mb_send_mail( $mail_conf["info"]["admin_mail"], $mail_conf["master"]["title"], $mail2, $header2 );
+	// $error_flg2 = mb_send_mail( $mail_conf["info"]["admin_mail"], $mail_conf["master"]["title"], $mail2, $header2 );
 
  	// 送信チェック
- 	if( empty( $error_flg1 ) || empty( $error_flg2 ) ) {
+ 	// if( empty( $error_flg1 ) || empty( $error_flg2 ) ) {
+ 	if( empty( $error_flg1 ) ) {
  		$message["ng"] = "メール送信に失敗しました。";
  	}
 

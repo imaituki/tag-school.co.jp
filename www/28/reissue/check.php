@@ -30,7 +30,9 @@ unset( $objManage );
 unset( $objMember );
 
 if( empty($member) ){
-	$message["ng"]["mail"] = "入力されたメールアドレスの会員が見つかりません。<br />";
+	$message["ng"]["mail"] = "※入力されたメールアドレスの会員が見つかりません。<br />";
+}elseif( empty($member["password"]) ){
+	$message["ng"]["mail"] = "※まずは会員の本登録を完了してください。<br />";
 }
 
 

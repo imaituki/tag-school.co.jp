@@ -6,68 +6,57 @@
 /*===================================================================
 	#top
 ===================================================================*/
-#top_main { position:relative; }
+#top_main { position:relative; max-height:800px; }
 #top_main .text .center { display:table; height:100%; }
 #top_main .text_in { display:table-cell; }
-#top_main #main_text .text_in > * { max-width:430px; text-align:center; }
+#top_main #main_text .text_in > * { text-align:center; }
 #top_main #main_text .logo { margin-bottom:30px; }
 #top_main #main_text .logo img { max-width:125px; }
 #top_main #main_text h2 { font-weight:bold; line-height:140%; color:#87664F; margin-bottom:20px; }
-#top_main #main_text p { color:#7c7c7c; font-size:1.1em; }
-
-	@media (min-width: 992px) and (max-width: 1199px){
-		#top_main .news_wrap { max-width: 550px!important;}
-		#top_main #main_text .logo { margin-bottom: 10px;}
-		#top_main #main_text .text_in {padding-bottom: 2vw!important;}
-		#head .head_contact .tel_unit ,#top_main #main_text h2, #top_main #main_text p {text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff;}
-	}
-	@media (max-width: 991px){
-		#top_main .image { opacity:0.6; padding-bottom:20px; }
-		#top_main #main_text { position:absolute; top:0; left:0; width:calc(100% - 10px); height:100%; text-shadow:0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff; }
-		#top_main #main_text .text_in { vertical-align:top; padding-top:20px; }
+#top_main #main_text p { color:#7c7c7c; }
+	@media (max-width: 575px){
+		#top_main #main_text { padding-top:20px; }
 		#top_main #main_text h2 { font-size:2em; }
 	}
+	@media (min-width: 576px) and (max-width: 767px){
+		#top_main #main_text { padding-top:16vw; }
+		#top_main #main_text h2 { font-size:2.5em; }
+	}
+	@media (max-width: 767px){
+		#top_main { padding-bottom:20px; }
+		#top_main .image { position:absolute; top:0; left:0; width:100%; opacity:0.6; }
+		#top_main .text { position:relative; }
+		#top_main #main_text p { padding-bottom:20px; }
+	}
 	@media (min-width: 768px){
-		#top_main .image { padding-bottom:7vw; }
-		#top_main .text { position:absolute; top:0; left:0; width:calc(100% - 10px); height:100%; }
-		#top_main #main_text { background:url(../image/contents/top/main_copyright.png) no-repeat right center; }
-		#top_main #main_text .text_in { vertical-align:middle; padding-bottom:5vw; }
-		#top_main #main_text h2 { font-size:3em; }
+		#top_main .text { position:absolute; top:80px; left:0; width:calc(100% - 10px); height:calc(100% - 180px); }
+		#top_main #main_text .text_in { text-align:center; padding-top:50px; }
+		#top_main #main_text h2 { font-size:2.5em; }
 	}
 	@media (min-width: 768px) and (max-width: 991px){
-		#top_main #main_text .text_in { padding-bottom: 10vw;}
-		#top_main #main_news .text_in { padding-bottom: 10vw!important;}
-		#top_main .news_wrap {margin: 0 auto!important;}
+		#top_main #main_text .logo,
+		#top_main #main_text h2 { display:inline-block; vertical-align:middle; }
 	}
-	@media (min-width: 576px) and (max-width: 991px){
-		#top_main #main_text .text_in .md_flex{display: flex; justify-content: center; max-width: 100%; margin-bottom: 10px;}
-		#top_main #main_text .logo {margin-bottom: 0;}
-		#top_main #main_text .text_in .md_tbl{display: table; height: 155px;}
-		#top_main #main_text h2 {display: table-cell; vertical-align: middle; font-size: 2.75em; padding-left: 5px; }
-		#top_main #main_text .text_in p{max-width: 100%;  font-size: 20px;}
+	@media (max-width: 991px){
+		#top_main #main_text { text-shadow:0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff; }
 	}
-	@media (max-width: 375px){
-		#top_main #main_text .logo { margin-bottom:10px; }
-		#top_main #main_text h2 {margin-bottom: 10px;}
+	@media (min-width: 992px){
+		#top_main #main_text .text_in > * { max-width:430px; }
+		#top_main #main_text p { font-size:1.1em; }
 	}
-
+	@media (min-width: 768px) and (max-width:1200px){
+		#top_main .image { padding:90px 0; }
+	}
 
 #top_main #main_news .center { max-width:1400px; }
-#top_main #main_news .text_in { vertical-align:bottom; padding-bottom:9vw; }
-#top_main .news_wrap { position:relative; z-index:999; width:100%; max-width:700px; margin:0 0 0 auto; background:rgba(255,255,255,0.9); border-radius:50px; overflow:hidden; padding:15px; box-shadow:0 0 5px rgba(0,0,0,0.3); }
+#top_main #main_news .text_in { vertical-align:bottom; }
+#top_main .news_wrap { position:relative; z-index:9991; width:100%; max-width:700px; background:rgba(255,255,255,0.9); border-radius:50px; overflow:hidden; padding:15px 35px 15px 15px; box-shadow:0 0 5px rgba(0,0,0,0.3); }
+#base.open #top_main .news_wrap { z-index:999; }
 #top_main .news_wrap:after { position:absolute; top:calc(50% - 0.5em); right:15px; content:"→"; line-height:100%; }
 #top_main .news_wrap > * { line-height:110%; }
 #top_main .news_wrap dt { font-style:italic; padding:0 15px 0 0; font-weight:bold; }
 #top_main .news_wrap .date { font-weight:bold; margin-right:15px; }
 #top_main .news_wrap a { color:#444; }
-
-	@media (max-width: 344px){
-		#top_main #main_news .text_in {padding-top: 9vw;}
-	}
-	@media (min-width:480px) and (max-width: 575px) {
-		#top_main #main_text .text_in > * { max-width: none;}
-		#top_main #main_text .text_in { padding-top: 80px;}
-	}
 	@media (max-width: 767px){
 		#top_main .news_wrap dt { padding-bottom:5px; }
 	}
@@ -77,6 +66,12 @@
 		#top_main .news_wrap dt { width:90px; text-align:right; border-right:2px solid #ccc; }
 		#top_main .news_wrap dd { padding:0 0 0 15px; }
 	}
+	@media (max-width: 991px){
+		#top_main .news_wrap { margin:0 auto; }
+	}
+	@media (min-width: 992px){
+		#top_main .news_wrap { margin:0 0 0 auto; }
+	}
 
 #top_about { position:relative; }
 #top_about .text { position:absolute; top:0; left:0; width:100%; height:100%; }
@@ -85,12 +80,12 @@
 #top_about .text .text_in > * { max-width:550px; }
 #top_about .text h2 { text-align:center; padding:0 0 15px; font-size:2.5em; font-weight:bold; border-bottom:2px dotted #ccc; margin-bottom:20px; }
 #top_about .text p { line-height:200%; }
-	@media (max-width: 767px){
+	@media (max-width: 991px){
 		#top_about  { padding:60px 0; }
 		#top_about .photo { position:absolute; top:0; left:0; width:100%; height:100%; background-position:65% center; opacity:0.8; }
 		#top_about .text { position:relative; }
 	}
-	@media (min-width: 768px){
+	@media (min-width: 992px){
 		#top_about .text { position:absolute; top:0; left:0; width:100%; height:100%; }
 	}
 
@@ -122,7 +117,7 @@
 .course_navi .text { text-align:center; }
 .course_navi .text h3 { font-size:1.75em; font-weight:bold; }
 .course_navi .text .caption { font-size:12px; color:#999; margin-bottom:20px; }
-.course_navi .icon_list { font-size:14px; line-height:140%; }
+.course_navi .icon_list { line-height:140%; }
 .course_navi .icon_list li { display:inline-block; }
 .course_navi .icon_list.c_orange li { box-shadow:0 0 3px rgba(222,101,46,0.5); }
 .course_navi .icon_list.c_blue li { box-shadow:0 0 3px rgba(52,148,196,0.5); }
@@ -136,13 +131,13 @@
 		#course_navi .row > [class^="col-"] { padding:5px; }
 		.course_navi.active { margin-bottom:30px; }
 		.course_navi .text h3 { font-size:1.5em; }
-		.course_navi .icon_list li { padding:5px 8px; margin:0 0 10px; }
+		.course_navi .icon_list li { margin:0 0 10px; }
 		.course_navi .icon_list li br { display:none; }
 	}
 	@media (min-width: 576px){
 		.course_navi.active { margin-bottom:50px; }
 		.course_navi .text h3 { font-size:1.75em; }
-		.course_navi .icon_list li { padding:8px 12px; margin:0 5px; }
+		.course_navi .icon_list li { margin:0 2px; }
 	}
 	@media (min-width: 576px) and (max-width: 767px){
 		.course_navi .photo { max-height:20vw; }
@@ -153,9 +148,18 @@
 		.course_navi .text { padding:15px 5px; }
 	}
 	@media (min-width: 768px){
-		.course_navi a { display:table; }
+		.course_navi a { display:table; height:100%; }
 		.course_navi a > * { display:table-cell; vertical-align:middle; }
 		.course_navi .photo { width:55%; }
+	}
+	@media (max-width: 991px){
+		.course_navi .icon_list { font-size:13px }
+		.course_navi .icon_list li { padding:5px 8px; }
+	}
+
+	@media (min-width: 992px){
+		.course_navi .icon_list { font-size:14px }
+		.course_navi .icon_list li { padding:8px 10px; }
 	}
 
 #course_area {}

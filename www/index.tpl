@@ -12,18 +12,14 @@
 <main>
 <div id="top_main">
 	<div class="image">
-		<div class="visible-only"><img src="common/image/contents/top/main-sp.jpg" alt="岡山市の集団×個別融合型 新総合学習塾 TAG school[タッグスクール]"></div>
-		<div class="hidden-only"><img src="common/image/contents/top/main.jpg" alt="岡山市の集団×個別融合型 新総合学習塾 TAG school[タッグスクール]"></div>
+		<div class="visible-xs"><img src="common/image/contents/top/main-sp.jpg" alt="岡山市の集団×個別融合型 新総合学習塾 TAG school[タッグスクール]"></div>
+		<div class="hidden-xs"><img src="common/image/contents/top/main.jpg" alt="岡山市の集団×個別融合型 新総合学習塾 TAG school[タッグスクール]"></div>
 	</div>
 	<div id="main_text" class="text">
 		<div class="center">
 			<div class="text_in">
-			<div class="md_flex">
 				<div class="logo"><img src="common/image/contents/top/logo.png" alt="岡山市の総合学習塾 タッグスクール TAG school"></div>
-				<div  class="md_tbl">
-					<h2 class="mincho">TAGスクール<br><span class="c_red">2020年春</span>開校予定！</h2>
-				</div>
-				</div>
+				<h2 class="mincho">TAGスクール<br><span class="c_red">2020年春</span>開校予定！</h2>
 				<p>岡山市下中野に今までにない新しい塾が誕生！</p>
 			</div>
 		</div>
@@ -119,10 +115,10 @@
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _orange tab height-1_all">
 									<a href="#primary">
-										<div class="photo"><img src="common/image/contents/top/image5.jpg" alt="小学生コース"></div>
+										<div class="photo img_back"><img src="common/image/contents/top/image5.jpg" alt="小学生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_orange">小学生</h3>
-											<p class="caption">Schoolchild</p>
+											<p class="caption height-2_all">Schoolchild</p>
 											<ul class="icon_list c_orange">
 												<li>集団<br>指導</li>
 												<li>個別<br>指導</li>
@@ -134,10 +130,10 @@
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _blue tab height-1_all">
 									<a href="#middle">
-										<div class="photo"><img src="common/image/contents/top/image6.jpg" alt="中学生コース"></div>
+										<div class="photo img_back"><img src="common/image/contents/top/image6.jpg" alt="中学生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_blue">中学生</h3>
-											<p class="caption">Middle school<span class="hidden-only"> student</span></p>
+											<p class="caption height-2_all">Middle school<span class="hidden-only"> student</span></p>
 											<ul class="icon_list c_blue">
 												<li>集団<br>指導</li>
 												<li>個別<br>指導</li>
@@ -149,10 +145,10 @@
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _green tab height-1_all">
 									<a href="#high">
-										<div class="photo"><img src="common/image/contents/top/image7.jpg" alt="高校生コース"></div>
+										<div class="photo img_back"><img src="common/image/contents/top/image7.jpg" alt="高校生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_green">高校生</h3>
-											<p class="caption">High school<span class="hidden-only"> student</span></p>
+											<p class="caption height-2_all">High school<span class="hidden-only"> student</span></p>
 											<ul class="icon_list c_green">
 												<li>個別<br>指導</li>
 											</ul>

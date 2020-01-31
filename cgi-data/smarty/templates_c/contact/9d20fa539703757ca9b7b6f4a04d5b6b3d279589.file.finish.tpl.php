@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-24 17:25:39
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 13:25:48
          compiled from "./finish.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4452313715e280c7f661db3-64215070%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9d20fa539703757ca9b7b6f4a04d5b6b3d279589' => 
     array (
       0 => './finish.tpl',
-      1 => 1579854338,
+      1 => 1580358347,
       2 => 'file',
     ),
   ),
@@ -79,7 +79,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<p class="mb20">メールアドレスの間違いや、ドメイン指定などの受信設定を今一度ご確認いただき、<br>
 					送受信できる正しいメールアドレスを、メールまたはお電話にてご連絡くださいますようお願い申し上げます。</p>
 				<p class="mb50">その他、何かご不明な点等ございましたら、お気軽にお問い合わせください。</p>
-				<div class="button _type_1"><a href="/">トップページに戻る<i class="fa fa-chevron-right"></i></a></div>
+				<div class="pos_ac">
+					<a href="/" class="button _type1"><i class="fa fa-chevron-right"></i>トップページに戻る</a>
+				</div>
 			</div>
 		</div>
 	</section>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 10:37:39
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 12:00:59
          compiled from "/home/tag-school/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10846349875e2841817533e7-81995105%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97f6fdaef15088846bff77147fa4b53b49cc4e6f' => 
     array (
       0 => '/home/tag-school/www//common/include/footer.tpl',
-      1 => 1580261024,
+      1 => 1580353187,
       2 => 'file',
     ),
   ),
@@ -57,8 +57,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </p>
 						<p class="mb20">TEL：<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 <br />
-							FAX：<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['fax'];?>
-<br />
+							<?php if ($_smarty_tpl->tpl_vars['_INFO']->value['fax']) {?>FAX：<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['fax'];?>
+<br /><?php }?>
 							E-MAIL：<span class="mailaddress"></span><br />
 							営業時間：<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['worktime'];?>
 <br />

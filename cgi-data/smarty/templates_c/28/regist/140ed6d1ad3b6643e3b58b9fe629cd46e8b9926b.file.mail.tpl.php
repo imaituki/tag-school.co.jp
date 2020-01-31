@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-27 14:10:50
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 20:18:11
          compiled from "./mail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4750858555e2e70da5fc5d7-65213519%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '140ed6d1ad3b6643e3b58b9fe629cd46e8b9926b' => 
     array (
       0 => './mail.tpl',
-      1 => 1579768502,
+      1 => 1580365775,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5e2e70da646817_86598730',
   'variables' => 
   array (
     'arr_post' => 0,
     '_DIR_NAME' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5e2e70da646817_86598730',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5e2e70da646817_86598730')) {function content_5e2e70da646817_86598730($_smarty_tpl) {?><?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['temp_var'])) {?>
 

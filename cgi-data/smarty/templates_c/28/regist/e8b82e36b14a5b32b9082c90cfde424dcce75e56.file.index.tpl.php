@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 17:19:41
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 15:19:51
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17533795145e295c9bd90d31-47659288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580199575,
+      1 => 1580365190,
       2 => 'file',
     ),
   ),
@@ -100,6 +100,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </p><?php }?>
 										<input type="password" id="password" name="password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['password'];?>
 " placeholder="パスワード" />
+										<p style="margin-bottom: 0px;  font-size: 12px;">※パスワードは8-36文字で設定してください。</p>
 									</td>
 								</tr>
 								<tr class="last">

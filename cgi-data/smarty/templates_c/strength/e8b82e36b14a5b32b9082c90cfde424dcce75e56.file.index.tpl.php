@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 10:01:40
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 12:23:39
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17279163915e296ce12ca553-99588296%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580259697,
+      1 => 1580354617,
       2 => 'file',
     ),
   ),
@@ -135,7 +135,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</div>
 						<div class="col-xs-6">
 							<h2 class="hl_4 mincho mb20">講師の研修制度</h2>
-							<p class="c_g mb10">勉強が『できる』と『教える』は異なります。<br>
+							<p class="c_g mb10">講師のもつ学力と『教える』は異なります。<br>
 							従来の学習塾や家庭教師では、単に勉強のできる講師が、教えるテクニックを習得せず、知識やノウハウを提供しているだけという場合が多いのが現状です。</p>
 							<p class="c_g mb10">TAG schoolでは『教える』ということを重要視し、オリジナル講師研修を実施、一定の水準をクリアした講師が、現場に出て授業を行います。</p>
 							<p class="c_g">実際の研修では、教材知識・板書方法・生徒とのコミュニケーション・最新の教育動向などの研修を行い、ハイレベルな授業の提供を目指してまいります。</p>

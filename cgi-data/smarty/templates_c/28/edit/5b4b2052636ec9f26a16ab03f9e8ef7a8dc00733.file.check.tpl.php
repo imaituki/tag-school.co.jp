@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 16:08:04
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 09:18:32
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18179687925e29596700dac2-23694622%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1580201568,
+      1 => 1580429909,
       2 => 'file',
     ),
   ),
@@ -130,8 +130,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['zip'])) {?><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['zip'];?>
 &nbsp;<?php }?>
-									<?php echo smarty_function_html_select_ken(array('selected'=>$_smarty_tpl->tpl_vars['arr_post']->value['prefecture'],'pre'=>1),$_smarty_tpl);?>
-<br />
+									<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['prefecture']==0) {?>--<?php } else { ?><?php echo smarty_function_html_select_ken(array('selected'=>$_smarty_tpl->tpl_vars['arr_post']->value['prefecture'],'pre'=>1),$_smarty_tpl);?>
+<?php }?><br />
 									<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['address1'];?>
 &nbsp;<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['address2'];?>
 
