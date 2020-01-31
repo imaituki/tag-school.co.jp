@@ -5,7 +5,7 @@
 		<div class="head_contact _head hidden-xs">
 			<div class="tel_unit">
 				<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" />{$_INFO.tel}</span>
-				<span class="time">受付時間 {$_INFO.worktime}（{$_INFO.holiday}定休）</span>
+				<span class="time">受付時間 {$_INFO.receipt_time}（{$_INFO.rec_holiday}定休）</span>
 			</div>
 			<div class="mail_unit"><a href="{$_FRONT.home}/contact/" class="button _circle"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ">お問い合わせ</a></div>
 		</div>
@@ -16,15 +16,15 @@
 			<ul>
 				<li><a href="{$_FRONT.home}/about/">TAGについて</a></li>
 				<li><a href="{$_FRONT.home}/strength/">TAGの強み</a></li>
-				<li><a href="{$_FRONT.home}/_test_index.php#course">コース紹介</a></li>
-				<li><a href="{$_FRONT.home}/_test_index.php#space">TAGの空間</a></li>
-				<li><a href="{$_FRONT.home}/_test_index.php#teachers">講師紹介</a></li>
+				<li><a href="{$_FRONT.home}/#course">コース紹介</a></li>
+				<li><a href="{$_FRONT.home}/#space">TAGの空間</a></li>
+				<li><a href="{$_FRONT.home}/#teachers">講師紹介</a></li>
 				<li><a href="{$_FRONT.home}/information/">お知らせ</a></li>
 				<li><a href="{$_FRONT.home}/contact/">お問い合わせ</a></li>
 				<li class="head_contact visible-xs">
 					<div class="tel_unit">
 						<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" />{$_INFO.tel}</span>
-						<span class="time">受付時間 {$_INFO.worktime}（{$_INFO.holiday}定休）</span>
+						<span class="time">受付時間 {$_INFO.receipt_time}（{$_INFO.rec_holiday}定休）</span>
 					</div>
 					<div class="mail_unit"><a href="{$_FRONT.home}/contact/" class="button _circle"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ" />お問い合わせ</a></div>
 				</li>
