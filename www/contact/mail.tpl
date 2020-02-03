@@ -25,11 +25,20 @@
 [ 電話番号 ]
 {$arr_post.tel|default:'-'}
 
-{if $arr_post.zip != NULL ||  $arr_post.prefecture != 0 || $arr_post.address != NULL }
+{if $arr_post.zip != NULL ||  $arr_post.prefecture != 0 || $arr_post.address != NULL}
 [ 住所 ]
-{if $arr_post.zip}〒{$arr_post.zip}{/if}
-{if $arr_post.prefecture != 0}{html_select_ken selected=$arr_post.prefecture|default:"--" pre=1}{/if} {if $arr_post.address}{$arr_post.address}{/if}
+{if $arr_post.zip}〒{$arr_post.zip}{/if} 
+{if $arr_post.prefecture != 0}{html_select_ken selected=$arr_post.prefecture pre=1}{/if} {$arr_post.address}
 {/if}
 
 [ 備考 ]
 {$arr_post.comment|default:'-'}
+
+
+***********************************************
+{$_INFO.company}
+〒{$_INFO.zip}
+{$_INFO.address}
+{if !empty($_INFO.tel)}TEL: {$_INFO.tel}{/if} 
+{if !empty($_INFO.fax)}FAX: {$_INFO.fax}{/if} 
+***********************************************

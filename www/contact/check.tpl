@@ -111,7 +111,7 @@
 								<td>
 									{if !empty($arr_post.zip) || !empty($arr_post.prefecture) || !empty($arr_post.address)}
 										{if $arr_post.zip}〒{$arr_post.zip}<br>{/if}
-										{html_select_ken selected=$arr_post.prefecture pre=1} {$arr_post.address}
+										{if $arr_post.prefecture != 0}{html_select_ken selected=$arr_post.prefecture pre=1}{/if} {$arr_post.address}
 									{else}
 										--
 									{/if}

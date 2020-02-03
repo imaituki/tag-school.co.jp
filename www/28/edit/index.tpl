@@ -43,13 +43,16 @@
 							<tr>
 								<th scope="row">パスワード</th>
 								<td>
-									<p>※空欄の場合は変更されません。</p>
+									<p class="c_red">
+										※空欄の場合は変更されません。<br />
+										※8文字から32文字で入力してください。
+									</p>
 									{if !empty($message.ng.password)}<p class="error">※{$message.ng.password}</p>{/if}
 									<input type="password" id="password" name="password" value="" placeholder="パスワード" />
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">お名前<span class="need">必須</span></th>
+								<th scope="row">お名前</th>
 								<td>
 									{if !empty($message.ng.name1)}<p class="error">※{$message.ng.name1}</p>{/if}
 									{if !empty($message.ng.name2)}<p class="error">※{$message.ng.name2}</p>{/if}
@@ -58,7 +61,7 @@
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">お名前フリガナ<span class="need">必須</span></th>
+								<th scope="row">お名前フリガナ</th>
 								<td>
 									{if !empty($message.ng.ruby1)}<p class="error">※{$message.ng.ruby1}</p>{/if}
 									{if !empty($message.ng.ruby2)}<p class="error">※{$message.ng.ruby2}</p>{/if}

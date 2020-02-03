@@ -31,6 +31,7 @@
 					<div class="ibox-content m-b-sm border-bottom">
 						<div class="row">
 							<form method="post" action="" id="formSearch" enctype="multipart/form-data">
+								{*
 								<div class="col-sm-2">
 									<div class="input-group">
 										<label>
@@ -61,6 +62,7 @@
 										</label>
 									</div>
 								</div>
+								*}
 								<div class="col-sm-4">
 									<input type="text" id="search_keyword" name="search_keyword" value="{$_SESSION.admin.member.search.POST.search_keyword|default:''}" placeholder="キーワード" class="form-control" />
 								</div>

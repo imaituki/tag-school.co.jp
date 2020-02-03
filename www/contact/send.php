@@ -142,6 +142,7 @@ if( empty($message["ng"]) ) {
 
 	// 管理者へ
 	$error_flg2 = mb_send_mail( $mail_conf["info"]["admin_mail"], $mail_conf["master"]["title"], $mail2, $header2 );
+	// $error_flg2 = mb_send_mail( "office@web3.co.jp", $mail_conf["master"]["title"], $mail2, $header2 );
 
  	// 送信チェック
  	if( empty( $error_flg1 ) || empty( $error_flg2 ) ) {

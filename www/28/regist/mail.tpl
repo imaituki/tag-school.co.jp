@@ -25,3 +25,12 @@
 {if empty($smarty.server.HTTPS)}http://{else}https://{/if}{$smarty.server.HTTP_HOST}/{$_DIR_NAME}/login.php
 
 {/if}
+
+
+***********************************************
+{$_INFO.company}
+〒{$_INFO.zip}
+{$_INFO.address}
+{if !empty($_INFO.tel)}TEL: {$_INFO.tel}{/if} 
+{if !empty($_INFO.fax)}FAX: {$_INFO.fax}{/if} 
+***********************************************
