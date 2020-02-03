@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-20 19:46:33
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 12:23:52
          compiled from "../template/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11561778755e05e44ac684f3-23539535%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6c39e247f385d95767962e1dac86ee8434c9a9c2' => 
     array (
       0 => '../template/index.tpl',
-      1 => 1579517191,
+      1 => 1580441030,
       2 => 'file',
     ),
   ),
@@ -26,15 +26,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'template_header' => 0,
     '_CONTENTS_NAME' => 0,
     '_SESSION' => 0,
-    'OptionRegistFlg' => 0,
-    'OptionYesNo' => 0,
     'arr_post' => 0,
     'message' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5e05e44acb9047_53473076')) {function content_5e05e44acb9047_53473076($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include '/home/tag-school/cgi-data/smarty/libs/plugins/function.html_options.php';
-?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5e05e44acb9047_53473076')) {function content_5e05e44acb9047_53473076($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -76,38 +73,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<div class="ibox-content m-b-sm border-bottom">
 						<div class="row">
 							<form method="post" action="" id="formSearch" enctype="multipart/form-data">
-								<div class="col-sm-2">
-									<div class="input-group">
-										<label>
-											<input type="checkbox" name="search_mail_magazine_flg" value="1" <?php if ($_smarty_tpl->tpl_vars['_SESSION']->value['admin']['member']['search']['POST']['search_mail_magazine_flg']==1) {?>checked<?php }?> />
-											メールマガジン配信希望
-										</label>
-									</div>
-								</div>
-								<div class="col-sm-2">
-									<div class="input-group">
-										<label>
-											登録状況
-											<select name="search_regist_flg">
-												<option value="">選択してください。</option>
-												<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['OptionRegistFlg']->value,'selected'=>$_smarty_tpl->tpl_vars['_SESSION']->value['admin']['member']['search']['POST']['search_regist_flg']),$_smarty_tpl);?>
-
-											</select>
-										</label>
-									</div>
-								</div>
-								<div class="col-sm-2">
-									<div class="input-group">
-										<label>
-											退会希望
-											<select name="search_delete_flg">
-												<option value="">選択してください。</option>
-												<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['OptionYesNo']->value,'selected'=>$_smarty_tpl->tpl_vars['_SESSION']->value['admin']['member']['search']['POST']['search_delete_flg']),$_smarty_tpl);?>
-
-											</select>
-										</label>
-									</div>
-								</div>
+								
 								<div class="col-sm-4">
 									<input type="text" id="search_keyword" name="search_keyword" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['_SESSION']->value['admin']['member']['search']['POST']['search_keyword'])===null||$tmp==='' ? '' : $tmp);?>
 " placeholder="キーワード" class="form-control" />

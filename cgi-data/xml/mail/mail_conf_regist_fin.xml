@@ -16,12 +16,7 @@
 &#13;
 ご登録いただいたメールアドレスとパスワードで、マイページにログインしてください。&#13;
 </header>
-    <footer comment="自動返信メールの文末に記述するコメント文です。" name="自動返信フッター" check_empty="1" check_max_len="8000" type="textarea">***********************************************&#13;
-TAG Corporation 28&#13;
-〒700-0973
-岡山市北区下中野1200-4 5F&#13;
-***********************************************&#13;
-</footer>
+    <footer comment="自動返信メールの文末に記述するコメント文です。" name="自動返信フッター" check_empty="1" check_max_len="8000" type="textarea"></footer>
   </user>
   <master cap="管理者受信メール設定">
     <title comment="管理者宛の受信メールタイトルです。" name="受信タイトル" check_empty="1" check_max_len="255" type="text">【TAG Corporation 28】 会員本登録完了</title>

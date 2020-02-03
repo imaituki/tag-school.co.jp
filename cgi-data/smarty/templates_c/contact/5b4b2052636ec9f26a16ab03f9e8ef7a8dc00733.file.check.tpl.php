@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 09:22:24
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 09:36:03
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9932258365e280add2d6f40-14070391%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1580430132,
+      1 => 1580430958,
       2 => 'file',
     ),
   ),
@@ -168,11 +168,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</tr>
 							<tr>
 								<th class="pos-vt">住所</th>
-								<td><?php if ($_smarty_tpl->tpl_vars['arr_post']->value['zip']) {?>〒<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['zip'];?>
+								<td>
+									<?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['zip'])||!empty($_smarty_tpl->tpl_vars['arr_post']->value['prefecture'])||!empty($_smarty_tpl->tpl_vars['arr_post']->value['address'])) {?>
+										<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['zip']) {?>〒<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['zip'];?>
 <br><?php }?>
-									<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['prefecture']==0) {?>--<?php } else { ?><?php echo smarty_function_html_select_ken(array('selected'=>$_smarty_tpl->tpl_vars['arr_post']->value['prefecture'],'pre'=>1),$_smarty_tpl);?>
-<?php }?> <?php if ($_smarty_tpl->tpl_vars['arr_post']->value['address']) {?><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['address'];?>
-<?php }?>
+										<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['prefecture']!=0) {?><?php echo smarty_function_html_select_ken(array('selected'=>$_smarty_tpl->tpl_vars['arr_post']->value['prefecture'],'pre'=>1),$_smarty_tpl);?>
+<?php }?> <?php echo $_smarty_tpl->tpl_vars['arr_post']->value['address'];?>
+
+									<?php } else { ?>
+										--
+									<?php }?>
 									<input type="hidden" name="zip" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['zip'];?>
 ">
 									<input type="hidden" name="prefecture" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['prefecture'];?>

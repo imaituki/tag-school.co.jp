@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 20:18:11
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 13:27:37
          compiled from "./mail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4750858555e2e70da5fc5d7-65213519%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '140ed6d1ad3b6643e3b58b9fe629cd46e8b9926b' => 
     array (
       0 => './mail.tpl',
-      1 => 1580365775,
+      1 => 1580444607,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'arr_post' => 0,
     '_DIR_NAME' => 0,
+    '_INFO' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -59,4 +60,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /login.php
 
 <?php }?>
-<?php }} ?>
+
+
+***********************************************
+<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['company'];?>
+
+〒<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['zip'];?>
+
+<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['address'];?>
+
+<?php if (!empty($_smarty_tpl->tpl_vars['_INFO']->value['tel'])) {?>TEL: <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
+<?php }?> 
+<?php if (!empty($_smarty_tpl->tpl_vars['_INFO']->value['fax'])) {?>FAX: <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['fax'];?>
+<?php }?> 
+***********************************************<?php }} ?>

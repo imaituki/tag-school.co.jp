@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 10:08:14
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 13:38:13
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936279875e29593be2ca48-49802375%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580201555,
+      1 => 1580445487,
       2 => 'file',
     ),
   ),
@@ -89,14 +89,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<tr>
 								<th scope="row">パスワード</th>
 								<td>
-									<p>※空欄の場合は変更されません。</p>
+									<p class="c_red">
+										※空欄の場合は変更されません。<br />
+										※8文字から32文字で入力してください。
+									</p>
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['password'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['password'];?>
 </p><?php }?>
 									<input type="password" id="password" name="password" value="" placeholder="パスワード" />
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">お名前<span class="need">必須</span></th>
+								<th scope="row">お名前</th>
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['name1'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['name1'];?>
 </p><?php }?>
@@ -109,7 +112,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								</td>
 							</tr>
 							<tr>
-								<th scope="row">お名前フリガナ<span class="need">必須</span></th>
+								<th scope="row">お名前フリガナ</th>
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['ruby1'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['ruby1'];?>
 </p><?php }?>

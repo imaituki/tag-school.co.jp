@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-29 10:58:16
+<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 13:24:59
          compiled from "/home/tag-school/www//common/include/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21329503225e2954bb857211-79286869%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4c52b8aa5a65debfa2666f962af126ee431d3bef' => 
     array (
       0 => '/home/tag-school/www//common/include/header.tpl',
-      1 => 1580260485,
+      1 => 1580443595,
       2 => 'file',
     ),
   ),
@@ -33,8 +33,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="tel_unit">
 				<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 </span>
-				<span class="time">受付時間 <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['worktime'];?>
-（<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['holiday'];?>
+				<span class="time">受付時間 <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['receipt_time'];?>
+（<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['rec_holiday'];?>
 定休）</span>
 			</div>
 			<div class="mail_unit"><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
@@ -50,11 +50,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /strength/">TAGの強み</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/_test_index.php#course">コース紹介</a></li>
+/#course">コース紹介</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/_test_index.php#space">TAGの空間</a></li>
+/#space">TAGの空間</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/_test_index.php#teachers">講師紹介</a></li>
+/#teachers">講師紹介</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /information/">お知らせ</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
@@ -63,8 +63,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<div class="tel_unit">
 						<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 </span>
-						<span class="time">受付時間 <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['worktime'];?>
-（<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['holiday'];?>
+						<span class="time">受付時間 <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['receipt_time'];?>
+（<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['rec_holiday'];?>
 定休）</span>
 					</div>
 					<div class="mail_unit"><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
