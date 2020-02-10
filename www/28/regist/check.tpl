@@ -38,7 +38,7 @@
 									<input type="hidden" name="mail" value="{$arr_post.mail}" />
 								</td>
 							</tr>
-							{if !empty($arr_post.user)}
+						{if !empty($arr_post.user)}
 							<tr>
 								<th scope="row">パスワード</th>
 								<td>
@@ -49,7 +49,14 @@
 									<input type="hidden" name="user" value="{$arr_post.user}" />
 								</td>
 							</tr>
-							{/if}
+							<tr class="last">
+								<th scope="row">メールマガジンの送信を希望する</th>
+								<td>
+									{$OptionYesNo[$arr_post.mail_magazine_flg|default:'0']}
+									<input type="hidden" name="mail_magazine_flg" value="{$arr_post.mail_magazine_flg}" />
+								</td>
+							</tr>
+						{/if}
 						</tbody>
 					</table>
 					<div class="row form_button">

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-06 15:21:26
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-10 15:48:14
          compiled from "/home/tag-school/www/admin/contents/article/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4490754365e0498de21d0e4-17886418%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fa592cdc9c3e402aee0942c335dcd83f3e2e5249' => 
     array (
       0 => '/home/tag-school/www/admin/contents/article/template/form.tpl',
-      1 => 1580970084,
+      1 => 1581317286,
       2 => 'file',
     ),
   ),
@@ -103,6 +103,15 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 </p><?php }?>
 				<?php echo smarty_function_html_radios(array('name'=>"autoinfo_flg",'options'=>$_smarty_tpl->tpl_vars['OptionYesNo']->value,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['autoinfo_flg'])===null||$tmp==='' ? 0 : $tmp),'separator'=>'&nbsp;'),$_smarty_tpl);?>
 
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">新着情報自動生成時の本文<br /><span style="color:#FF0000;">※推奨: 30文字程度</span></label>
+			<div class="col-sm-9">
+				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['autoinfo_comment'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['autoinfo_comment'];?>
+</p><?php }?>
+				<input type="text" class="form-control" name="autoinfo_comment" id="autoinfo_comment" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['autoinfo_comment'])===null||$tmp==='' ? '' : $tmp);?>
+" />
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>

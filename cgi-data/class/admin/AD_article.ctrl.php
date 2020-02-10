@@ -223,17 +223,17 @@ class AD_article {
 
 		// 登録データの作成
 		$arrVal = $this->_DBconn->arrayKeyMatchFecth( $arrVal, "/^[^\_]/" );
-		$arrVal["title"] = "28記事を更新しました。"; // タイトル
-		$arrVal["date"]  = date( "Y-m-d H:i:s" );
-		$arrVal["id_category"] = 1; // カテゴリー「お知らせ」
-		$arrVal["comment"] = " ";
-		$arrVal["display_flg"] = 0; // 非表示
-		$arrVal["display_indefinite"] = 1; // 表示無期限
-		$arrVal["entry_date"]  = date( "Y-m-d H:i:s" );
-		$arrVal["update_date"] = date( "Y-m-d H:i:s" );
+		$insert["title"] = "28記事を更新しました。"; // タイトル
+		$insert["date"] = $arrVal["date"]; // 日付
+		$insert["id_category"] = 1; // カテゴリー「お知らせ」
+		$insert["comment"] = $arrVal["autoinfo_comment"];
+		$insert["display_flg"] = 0; // 非表示
+		$insert["display_indefinite"] = 1; // 表示無期限
+		$insert["entry_date"]  = date( "Y-m-d H:i:s" );
+		$insert["update_date"] = date( "Y-m-d H:i:s" );
 
 		// 登録
-		$res = $this->_DBconn->insert( "t_information", $arrVal, $arrSql );
+		$res = $this->_DBconn->insert( "t_information", $insert, $arrSql );
 
 		// 戻り値
 		return $res;

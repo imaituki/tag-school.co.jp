@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 09:36:03
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-10 14:46:34
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9932258365e280add2d6f40-14070391%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1580430958,
+      1 => 1581313488,
       2 => 'file',
     ),
   ),
@@ -202,6 +202,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<button class="button _back" type="submit"><i class="fa fa-chevron-left"></i>修正する</button>
 						</div>
 						<div class="col-xs-6 pos_ar">
+							<input type="hidden" name="referer" value="1" />
+							<input type="hidden" name="status" value="0" />
 							<button id="send_button" class="button" type="submit">送信する<i class="fa fa-chevron-right"></i></button>
 						</div>
 					</div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 12:00:59
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-10 14:17:34
          compiled from "/home/tag-school/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10846349875e2841817533e7-81995105%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97f6fdaef15088846bff77147fa4b53b49cc4e6f' => 
     array (
       0 => '/home/tag-school/www//common/include/footer.tpl',
-      1 => 1580353187,
+      1 => 1581309930,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5e284181754397_65505390')) {function content_5e284181754397_65505390($_smarty_tpl) {?><footer>
-	<div id="foot_contact" class="wrapper center">
+	<div id="foot_contact" class="wrapper-t center mb50">
 		<div class="contact_area">
 			<div class="row">
 				<div class="col-xs-6">
@@ -39,6 +39,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="col-xs-6">
 					<a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /contact/" class="btn_foot_contact"><i class="fa fa-envelope"></i>お問い合わせ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="foot_banner" class="wrapper-b center">
+		<div class="banner_area">
+			<div class="row">
+				<div class="col-xs-6">
+					<a href="https://ok-school.jp/" target="_blank"><img src="/common/image/foot/banner_1.jpg" alt="OKschool"></a>
+				</div>
+				<div class="col-xs-6">
+					<a href="https://www.earth-8.com/aschool/" target="_blank"><img src="/common/image/foot/banner_2.jpg" alt="aschool"></a>
 				</div>
 			</div>
 		</div>

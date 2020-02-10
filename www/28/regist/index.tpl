@@ -55,12 +55,19 @@
 										<p style="margin-bottom: 0px;  font-size: 12px;">※パスワードは8-36文字で設定してください。</p>
 									</td>
 								</tr>
-								<tr class="last">
+								<tr>
 									<th scope="row">パスワード(確認用)<span class="need">必須</span></th>
 									<td>
 										<input type="hidden" name="id" value="{$member.id_member}" />
 										<input type="hidden" name="user" value="{$arr_post.user}" />
 										<input type="password" id="chk_password" name="chk_password" value="{$arr_post.chk_password}" placeholder="パスワード(確認用)" />
+									</td>
+								</tr>
+								<tr class="last">
+									<th scope="row">メールマガジンの送信を希望する<span class="need">必須</span></th>
+									<td>
+										{if !empty($message.ng.mail_magazine_flg)}<p class="error">※{$message.ng.mail_magazine_flg}</p>{/if}
+										{html_radios name="mail_magazine_flg" options=$OptionYesNo selected=$arr_post.mail_magazine_flg|default:1 separator='&nbsp;'}
 									</td>
 								</tr>
 							{/if}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 13:27:37
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-10 16:54:57
          compiled from "./mail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4750858555e2e70da5fc5d7-65213519%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '140ed6d1ad3b6643e3b58b9fe629cd46e8b9926b' => 
     array (
       0 => './mail.tpl',
-      1 => 1580444607,
+      1 => 1581318644,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'arr_post' => 0,
     '_DIR_NAME' => 0,
+    'OptionYesNo' => 0,
     '_INFO' => 0,
   ),
   'has_nocache_code' => false,
@@ -53,6 +54,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 [ パスワード ]
 ※ご入力いただいたパスワード
+
+[ メールマガジン配信を希望する ]
+<?php echo $_smarty_tpl->tpl_vars['OptionYesNo']->value[$_smarty_tpl->tpl_vars['arr_post']->value['mail_magazine_flg']];?>
+
 
 こちらから、メールアドレスとパスワードを入力して、マイページにログインしてください。
 <?php if (empty($_SERVER['HTTPS'])) {?>http://<?php } else { ?>https://<?php }?><?php echo $_SERVER['HTTP_HOST'];?>

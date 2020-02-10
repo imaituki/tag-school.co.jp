@@ -41,7 +41,11 @@ if( empty( $message["ng"] ) ) {
 
 	// 新着情報に自動登録
 	if( $arr_post["autoinfo_flg"] == 1 ){
-		$mainObject->insert_information();
+		$autoinfo = array(
+			"date"             => $arr_post["date"],
+			"autoinfo_comment" => $arr_post["autoinfo_comment"],
+		);
+		$mainObject->insert_information( $autoinfo );
 	}
 
 	// 失敗したらロールバック

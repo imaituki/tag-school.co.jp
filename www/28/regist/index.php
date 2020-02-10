@@ -65,6 +65,8 @@ $smarty->compile_dir .= $_DIR_NAME. "/regist/";
 $smarty->assign( "arr_post", $arr_post );
 $smarty->assign( "member"  , $member   );
 
+$smarty->assign( "OptionYesNo", $OptionYesNo );
+
 // 表示
 $smarty->display("index.tpl");
 ?>

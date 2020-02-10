@@ -121,7 +121,7 @@
 								</td>
 							</tr>
 							<tr class="last">
-								<th>備考</th>
+								<th>お問い合わせ内容</th>
 								<td>
 									{$arr_post.comment|nl2br|default:'--'}
 									<input type="hidden" name="comment" value="{$arr_post.comment|default:''}" />
@@ -134,6 +134,8 @@
 							<button class="button _back" type="submit"><i class="fa fa-chevron-left"></i>修正する</button>
 						</div>
 						<div class="col-xs-6 pos_ar">
+							<input type="hidden" name="referer" value="1" />
+							<input type="hidden" name="status" value="0" />
 							<button id="send_button" class="button" type="submit">送信する<i class="fa fa-chevron-right"></i></button>
 						</div>
 					</div>

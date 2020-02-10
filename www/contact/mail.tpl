@@ -31,7 +31,7 @@
 {if $arr_post.prefecture != 0}{html_select_ken selected=$arr_post.prefecture pre=1}{/if} {$arr_post.address}
 {/if}
 
-[ 備考 ]
+[ お問い合わせ内容 ]
 {$arr_post.comment|default:'-'}
 
 

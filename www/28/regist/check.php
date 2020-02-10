@@ -67,6 +67,8 @@ $smarty->assign( "arr_post", $arr_post );
 $smarty->assign( "member"  , $member   );
 $smarty->assign( "message" , $message  );
 
+$smarty->assign( "OptionYesNo", $OptionYesNo );
+
 // エラーチェック
 if( empty( $message["ng"] ) ) {
 	// 表示

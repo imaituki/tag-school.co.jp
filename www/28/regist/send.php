@@ -114,6 +114,8 @@ if( empty($message["ng"]) ) {
 	$smarty->assign( "mail_conf", $mail_conf );
 	$smarty->assign( "message"  , $message   );
 
+	$smarty->assign( "OptionYesNo", $OptionYesNo );
+
 	// テンプレートの取得
 	$mail = $smarty->fetch( "mail.tpl" );
 

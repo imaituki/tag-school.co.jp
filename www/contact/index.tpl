@@ -78,7 +78,7 @@
 								<th>入塾希望理由</th>
 								<td>
 									{if !empty($message.ng.reason)}<span class="error">※{$message.ng.reason}</span>{/if}
-									<textarea name="reason">{$arr_post.reason|default:''}</textarea>
+									<textarea name="reason" style="min-height:100px;">{$arr_post.reason|default:''}</textarea>
 								</td>
 							</tr>
 							<tr>
@@ -137,10 +137,10 @@
 								</td>
 							</tr>
 							<tr class="last">
-								<th>備考</th>
+								<th>お問い合わせ内容</th>
 								<td>
 									{if !empty($message.ng.comment)}<span class="error">※{$message.ng.comment}</span>{/if}
-									<textarea name="comment">{$arr_post.comment|default:''}</textarea>
+									<textarea name="comment" style="min-height:100px;">{$arr_post.comment|default:''}</textarea>
 								</td>
 							</tr>
 						</tbody>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 15:19:51
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-10 16:54:42
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17533795145e295c9bd90d31-47659288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580365190,
+      1 => 1581318995,
       2 => 'file',
     ),
   ),
@@ -28,11 +28,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'arr_post' => 0,
     'message' => 0,
     'member' => 0,
+    'OptionYesNo' => 0,
     'template_footer' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5e295c9bdf83a6_81278786')) {function content_5e295c9bdf83a6_81278786($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5e295c9bdf83a6_81278786')) {function content_5e295c9bdf83a6_81278786($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-data/smarty/libs/plugins/function.html_radios.php';
+?><!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
@@ -103,7 +105,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 										<p style="margin-bottom: 0px;  font-size: 12px;">※パスワードは8-36文字で設定してください。</p>
 									</td>
 								</tr>
-								<tr class="last">
+								<tr>
 									<th scope="row">パスワード(確認用)<span class="need">必須</span></th>
 									<td>
 										<input type="hidden" name="id" value="<?php echo $_smarty_tpl->tpl_vars['member']->value['id_member'];?>
@@ -112,6 +114,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " />
 										<input type="password" id="chk_password" name="chk_password" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['chk_password'];?>
 " placeholder="パスワード(確認用)" />
+									</td>
+								</tr>
+								<tr class="last">
+									<th scope="row">メールマガジンの送信を希望する<span class="need">必須</span></th>
+									<td>
+										<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['mail_magazine_flg'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['mail_magazine_flg'];?>
+</p><?php }?>
+										<?php echo smarty_function_html_radios(array('name'=>"mail_magazine_flg",'options'=>$_smarty_tpl->tpl_vars['OptionYesNo']->value,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['mail_magazine_flg'])===null||$tmp==='' ? 1 : $tmp),'separator'=>'&nbsp;'),$_smarty_tpl);?>
+
 									</td>
 								</tr>
 							<?php }?>

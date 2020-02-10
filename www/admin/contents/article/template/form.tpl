@@ -54,6 +54,13 @@
 				{html_radios name="autoinfo_flg" options=$OptionYesNo selected=$arr_post.autoinfo_flg|default:0 separator='&nbsp;'}
 			</div>
 		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">新着情報自動生成時の本文<br /><span style="color:#FF0000;">※推奨: 30文字程度</span></label>
+			<div class="col-sm-9">
+				{if $message.ng.autoinfo_comment|default:"" != NULL}<p class="error">{$message.ng.autoinfo_comment}</p>{/if}
+				<input type="text" class="form-control" name="autoinfo_comment" id="autoinfo_comment" value="{$arr_post.autoinfo_comment|default:''}" />
+			</div>
+		</div>
 		<div class="hr-line-dashed"></div>
 		<div class="form-group">
 			<label class="col-sm-2 control-label">掲載期間 </label>

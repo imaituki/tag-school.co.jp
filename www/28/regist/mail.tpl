@@ -21,6 +21,9 @@
 [ パスワード ]
 ※ご入力いただいたパスワード
 
+[ メールマガジン配信を希望する ]
+{$OptionYesNo[$arr_post.mail_magazine_flg]}
+
 こちらから、メールアドレスとパスワードを入力して、マイページにログインしてください。
 {if empty($smarty.server.HTTPS)}http://{else}https://{/if}{$smarty.server.HTTP_HOST}/{$_DIR_NAME}/login.php
 

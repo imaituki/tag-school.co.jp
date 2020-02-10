@@ -232,6 +232,7 @@ class AD_magazine {
 		$creation_kit = array(  "select" => "*",
 								"from"   => $this->_CtrTable,
 								"where"  => "1 ",
+								"order"  => "entry_date DESC",
 								"bind"   => array()
 							);
 

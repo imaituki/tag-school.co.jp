@@ -35,7 +35,7 @@
 		<div class="form-group">
 			<label class="col-sm-2 control-label">入塾希望理由</label>
 			<div class="col-sm-6">
-				<textarea name="reason" class="form-control">{$arr_post.reason}</textarea>
+				<textarea name="reason" class="form-control" style="min-height:100px;">{$arr_post.reason}</textarea>
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
@@ -91,7 +91,7 @@
 			<label class="col-sm-2 control-label">ステータス</label>
 			<div class="col-sm-6">
 				<select name="status">
-					<option value="">選択してください。</option>
+					<option value="0">選択してください。</option>
 					{html_options options=$OptionStatus selected=$arr_post.status}
 				</select>
 			</div>
@@ -100,7 +100,7 @@
 		<div class="form-group">
 			<label class="col-sm-2 control-label">備考</label>
 			<div class="col-sm-6">
-				<textarea name="memo" class="form-control">{$arr_post.memo}</textarea>
+				<textarea name="memo" class="form-control" style="min-height:100px;>{$arr_post.memo}</textarea>
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 15:00:02
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-10 14:58:26
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7049183775e26d5e01b3869-32464001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580364001,
+      1 => 1581314305,
       2 => 'file',
     ),
   ),
@@ -131,7 +131,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['reason'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['reason'];?>
 </span><?php }?>
-									<textarea name="reason"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['reason'])===null||$tmp==='' ? '' : $tmp);?>
+									<textarea name="reason" style="min-height:100px;"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['reason'])===null||$tmp==='' ? '' : $tmp);?>
 </textarea>
 								</td>
 							</tr>
@@ -205,11 +205,11 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 								</td>
 							</tr>
 							<tr class="last">
-								<th>備考</th>
+								<th>お問い合わせ内容</th>
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['comment'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['comment'];?>
 </span><?php }?>
-									<textarea name="comment"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['comment'])===null||$tmp==='' ? '' : $tmp);?>
+									<textarea name="comment" style="min-height:100px;"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['comment'])===null||$tmp==='' ? '' : $tmp);?>
 </textarea>
 								</td>
 							</tr>
