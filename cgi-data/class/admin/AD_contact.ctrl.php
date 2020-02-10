@@ -48,9 +48,113 @@ class AD_contact {
 	// 戻り値: なし
 	// 内  容: デストラクタ
 	//-------------------------------------------------------
-	function __destruct() {
+	function __destruct() {}
+
+
+	//-------------------------------------------------------
+	// 関数名: convert
+	// 引  数: $arrVal
+	// 戻り値: データ変換
+	// 内  容: データ変換を行う
+	//-------------------------------------------------------
+	function convert( $arrVal ) {
+
+		// データ変換クラス宣言
+		$objInputConvert = new FN_input_convert( $arrVal, "UTF-8" );
+
+		// 変換エントリー
+		//$objInputConvert->entryConvert( "url", array( "ENC_KANA" ), "a" );
+
+		// 変換実行
+		$objInputConvert->execConvertAll();
+
+		// 戻り値
+		return $objInputConvert->GetData();
 
 	}
+
+
+	//-------------------------------------------------------
+	// 関数名: check
+	// 引  数: $arrVal
+	//       : $mode - チェックモード（ "insert", "update" ）
+	// 戻り値: エラーメッセージ
+	// 内  容: データチェック
+	//-------------------------------------------------------
+	function check( &$arrVal, $mode ) {
+
+		// nonceチェック
+		if( isset( $arrVal["_nonce"] ) && !isMatchNonce( $arrVal["_nonce"] ) ){
+			http_response_code( 400 );
+			exit;
+		}
+
+		// チェッククラス宣言
+		$objInputCheck = new FN_input_check( "UTF-8" );
+
+		// チェックエントリー（UPDATE時）
+		if( ( strcmp( $mode, "update" ) == 0 ) ) {
+			$objInputCheck->entryData( "お問い合わせID", "all", $arrVal["id_contact"], array("CHECK_EMPTY", "CHECK_NUM"), null, null );
+		}
+
+		// チェック実行
+		$res["ng"] = $objInputCheck->execCheckAll();
+
+		// 戻り値
+		return $res;
+
+	}
+
+
+	//-------------------------------------------------------
+	// 関数名: insert
+	// 引  数: $arrVal - 登録データ（ 'カラム名' => '値' ）
+	//       : $arrSql - 登録データ（ 'カラム名' => 'SQL' ）
+	// 戻り値: なし
+	// 内  容: お知らせデータ登録
+	//-------------------------------------------------------
+	function insert( $arrVal, $arrSql = null ) {
+
+		// 登録データの作成
+		$arrVal = $this->_DBconn->arrayKeyMatchFecth( $arrVal, "/^[^\_]/" );
+		$arrVal["entry_date"]  = date( "Y-m-d H:i:s" );
+		$arrVal["update_date"] = date( "Y-m-d H:i:s" );
+
+		// 登録
+		$res = $this->_DBconn->insert( $this->_CtrTable, $arrVal, $arrSql );
+
+		// 戻り値
+		return $res;
+
+	}
+
+
+	//-------------------------------------------------------
+	// 関数名: update
+	// 引  数: $arrVal - 登録データ（ 'カラム名' => '値' ）
+	//       : $arrSql - 登録データ（ 'カラム名' => 'SQL' ）
+	// 戻り値: なし
+	// 内  容: お知らせデータ更新
+	//-------------------------------------------------------
+	function update( $arrVal, $arrSql = null ) {
+
+		// 登録データの作成
+		$arrVal = $this->_DBconn->arrayKeyMatchFecth( $arrVal, "/^[^\_]/" );
+		$arrVal["update_date"] = date( "Y-m-d H:i:s" );
+
+		// 更新条件
+		$where = $this->_CtrTablePk . " = ?";
+
+		$bind = array( $arrVal["id_contact"] );
+
+		// 更新
+		$res = $this->_DBconn->update( $this->_CtrTable, $arrVal, $arrSql, $where, $bind );
+
+		// 戻り値
+		return $res;
+
+	}
+
 
 	//-------------------------------------------------------
 	// 関数名: delete
@@ -75,23 +179,23 @@ class AD_contact {
 
 
 	//-------------------------------------------------------
-	// 関数名: check
-	// 引  数: $id - 確認済にするお問い合わせID
+	// 関数名: changeDisplay
+	// 引  数: $id  - ID
+	//       : $flg - フラグ
 	// 戻り値: true - 正常, false - 異常
-	// 内  容: お問い合わせデータ確認
+	// 内  容: 表示切り替え
 	//-------------------------------------------------------
-	function check( $id ) {
+	function changeDisplay( $id, $flg ) {
 
 		// 初期化
 		$res = false;
 
-		// 削除処理
-		if( !empty( $id ) ) {
-			// 更新
-			$res = $this->_DBconn->update( $this->_CtrTable, array( "check_flg" => 1 ), null, $this->_CtrTablePk . " = ? ", array($id)  );
-		}
+		// 切り替え処理
+		$res = $this->_DBconn->update( $this->_CtrTable, array( "check_flg" => $flg ), null, $this->_CtrTablePk . " = ?", array($id) );
+
 		// 戻り値
 		return $res;
+
 	}
 
 
@@ -109,7 +213,7 @@ class AD_contact {
 			"select" => "*",
 			"from"   => $this->_CtrTable,
 			"where"  => "1 ",
-			"order"  => "entry_date DESC",
+			"order"  => "check_flg ASC, entry_date DESC",
 			"bind"   => array()
 		);
 

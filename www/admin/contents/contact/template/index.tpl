@@ -23,9 +23,9 @@
 							<li class="active"><strong>{$_CONTENTS_NAME}</strong></li>
 						</ol>
 					</div>
-					{*<div class="col-lg-2 m-b-xs pos_ar mt30">
+					<div class="col-lg-2 m-b-xs pos_ar mt30">
 						<a href="./new.php" class="btn btn-primary btn-s">新規登録</a>
-					</div>*}
+					</div>
 				</div>
 				<div class="wrapper wrapper-content">
 					<div class="ibox-content m-b-sm border-bottom">

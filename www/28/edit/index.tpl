@@ -93,13 +93,20 @@
 									{html_select_ken name="prefecture" class="form-control inline input-s" selected=$arr_post.prefecture|default:"0"}
 								</td>
 							</tr>
-							<tr class="last">
+							<tr>
 								<th scope="row">住所</th>
 								<td>
 									{if !empty($message.ng.address1)}<p class="error">※{$message.ng.address1}</p>{/if}
 									<input type="text" id="address1" name="address1" value="{$arr_post.address1}" placeholder="市区町村" />
 									{if !empty($message.ng.address2)}<p class="error">※{$message.ng.address2}</p>{/if}
 									<input type="text" id="address2" name="address2" value="{$arr_post.address2}" placeholder="番地 / 建物・マンション名" />
+								</td>
+							</tr>
+							<tr class="last">
+								<th scope="row">メールマガジンの送信を希望する</th>
+								<td>
+									{if !empty($message.ng.mail_magazine_flg)}<p class="error">※{$message.ng.mail_magazine_flg}</p>{/if}
+									{html_radios name="mail_magazine_flg" options=$OptionYesNo selected=$arr_post.mail_magazine_flg|default:0 separator='&nbsp;'}
 								</td>
 							</tr>
 						</tbody>

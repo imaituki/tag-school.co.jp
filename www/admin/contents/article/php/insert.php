@@ -39,6 +39,11 @@ if( empty( $message["ng"] ) ) {
 	// 登録処理
 	$res = $mainObject->insert( $arr_post );
 
+	// 新着情報に自動登録
+	if( $arr_post["autoinfo_flg"] == 1 ){
+		$mainObject->insert_information();
+	}
+
 	// 失敗したらロールバック
 	if( $res == false ) {
 		$mainObject->_DBconn->RollbackTrans();

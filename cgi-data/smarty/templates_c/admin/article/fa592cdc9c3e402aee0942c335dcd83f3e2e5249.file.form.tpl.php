@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-23 17:10:28
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-06 15:21:26
          compiled from "/home/tag-school/www/admin/contents/article/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:4490754365e0498de21d0e4-17886418%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fa592cdc9c3e402aee0942c335dcd83f3e2e5249' => 
     array (
       0 => '/home/tag-school/www/admin/contents/article/template/form.tpl',
-      1 => 1579255500,
+      1 => 1580970084,
       2 => 'file',
     ),
   ),
@@ -28,6 +28,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_DIR' => 0,
     '_ARR_FILE' => 0,
     'template_file' => 0,
+    'OptionYesNo' => 0,
     'mode' => 0,
     '_CONTENTS_ID' => 0,
     '_CONTENTS_CONF_PATH' => 0,
@@ -89,6 +90,19 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 </p><?php }?>
 				<textarea name="comment" id="comment" rows="7" class="form-control ckeditor"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['comment'])===null||$tmp==='' ? '' : $tmp);?>
 </textarea>
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">
+				新着情報の記事を自動生成<br />
+				<span style="color:#FF0000;">※(注)記事更新時に「はい」にチェックが入った場合、新たな新着情報の記事が生成されます。</span>
+			</label>
+			<div class="col-sm-6">
+				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['autoinfo_flg'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['autoinfo_flg'];?>
+</p><?php }?>
+				<?php echo smarty_function_html_radios(array('name'=>"autoinfo_flg",'options'=>$_smarty_tpl->tpl_vars['OptionYesNo']->value,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['autoinfo_flg'])===null||$tmp==='' ? 0 : $tmp),'separator'=>'&nbsp;'),$_smarty_tpl);?>
+
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>

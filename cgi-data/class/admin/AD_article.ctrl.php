@@ -213,6 +213,35 @@ class AD_article {
 
 
 	//-------------------------------------------------------
+	// 関数名: insert_information
+	// 引  数: $arrVal - 登録データ（ 'カラム名' => '値' ）
+	//       : $arrSql - 登録データ（ 'カラム名' => 'SQL' ）
+	// 戻り値: なし
+	// 内  容: 28の記事を登録時、希望するならお知らせのための新着情報を自動生成する
+	//-------------------------------------------------------
+	function insert_information( $arrVal = null ) {
+
+		// 登録データの作成
+		$arrVal = $this->_DBconn->arrayKeyMatchFecth( $arrVal, "/^[^\_]/" );
+		$arrVal["title"] = "28記事を更新しました。"; // タイトル
+		$arrVal["date"]  = date( "Y-m-d H:i:s" );
+		$arrVal["id_category"] = 1; // カテゴリー「お知らせ」
+		$arrVal["comment"] = " ";
+		$arrVal["display_flg"] = 0; // 非表示
+		$arrVal["display_indefinite"] = 1; // 表示無期限
+		$arrVal["entry_date"]  = date( "Y-m-d H:i:s" );
+		$arrVal["update_date"] = date( "Y-m-d H:i:s" );
+
+		// 登録
+		$res = $this->_DBconn->insert( "t_information", $arrVal, $arrSql );
+
+		// 戻り値
+		return $res;
+
+	}
+
+
+	//-------------------------------------------------------
 	// 関数名: update
 	// 引  数: $arrVal - 登録データ（ 'カラム名' => '値' ）
 	//       : $arrSql - 登録データ（ 'カラム名' => 'SQL' ）

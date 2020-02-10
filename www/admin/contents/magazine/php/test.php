@@ -39,7 +39,7 @@ unset( $_SESSION["admin"][_CONTENTS_DIR]["message"] );
 if( count($magazine) == 0 ){
 	$message["ng"] = "次回配信予定のメルマガがありません。";
 } elseif( count($magazine) > 1 ){
-	$message["ng"] = "次回配信予定のメルマガが複数あります。";
+	$message["ng"] = "次回配信予定のメルマガが複数あります。1件のみにしてください。";
 }
 
 

@@ -21,7 +21,7 @@ $_SESSION["admin"][_CONTENTS_DIR]["search"]["POST"] = $arr_post;
 //  データ一覧取得
 //----------------------------------------
 // 操作クラス
-$objManage  = new DB_manage( _DNS, 1 );
+$objManage  = new DB_manage( _DNS );
 $mainObject = new $class_name( $objManage );
 
 // データ取得

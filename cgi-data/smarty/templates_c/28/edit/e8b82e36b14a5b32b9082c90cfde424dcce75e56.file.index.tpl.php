@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 13:38:13
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-04 09:38:14
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936279875e29593be2ca48-49802375%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580445487,
+      1 => 1580776689,
       2 => 'file',
     ),
   ),
@@ -27,11 +27,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_HTML_HEADER' => 0,
     'message' => 0,
     'arr_post' => 0,
+    'OptionYesNo' => 0,
     'template_footer' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5e29593beb9d86_57770006')) {function content_5e29593beb9d86_57770006($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
+if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-data/smarty/libs/plugins/function.html_radios.php';
 ?><!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -154,7 +156,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 								</td>
 							</tr>
-							<tr class="last">
+							<tr>
 								<th scope="row">住所</th>
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['address1'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['address1'];?>
@@ -165,6 +167,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </p><?php }?>
 									<input type="text" id="address2" name="address2" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['address2'];?>
 " placeholder="番地 / 建物・マンション名" />
+								</td>
+							</tr>
+							<tr class="last">
+								<th scope="row">メールマガジンの送信を希望する</th>
+								<td>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['mail_magazine_flg'])) {?><p class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['mail_magazine_flg'];?>
+</p><?php }?>
+									<?php echo smarty_function_html_radios(array('name'=>"mail_magazine_flg",'options'=>$_smarty_tpl->tpl_vars['OptionYesNo']->value,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['mail_magazine_flg'])===null||$tmp==='' ? 0 : $tmp),'separator'=>'&nbsp;'),$_smarty_tpl);?>
+
 								</td>
 							</tr>
 						</tbody>

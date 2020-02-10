@@ -25,7 +25,7 @@
 						<ol class="breadcrumb">
 							<li><a href="/">Home</a></li>
 							<li><a href="./">{$_CONTENTS_NAME}</a></li>
-							<li class="active"><strong>編集</strong></li>
+							<li class="active"><strong>新規登録</strong></li>
 						</ol>
 					</div>
 					<div class="col-lg-2"></div>
@@ -37,7 +37,7 @@
 								<div class="ibox-title">
 									<h5>{$_CONTENTS_NAME}管理　確認 </h5>
 								</div>
-								{include file="./form.tpl" mode="edit"}
+								{include file="./form.tpl" mode="new"}
 							</div>
 						</div>
 					</div>

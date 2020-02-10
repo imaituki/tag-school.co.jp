@@ -1,8 +1,8 @@
 <?php
 //-------------------------------------------------------------------
-// 作成日: 2020/01/21
+// 作成日: 2020/02/07
 // 作成者: yamada
-// 内  容: お問い合わせ
+// 内  容: お問い合わせ 新規登録
 //-------------------------------------------------------------------
 
 //----------------------------------------
@@ -12,26 +12,13 @@ require "./config.ini";
 
 
 //----------------------------------------
-//  ヘッダー情報
+//  表示
 //----------------------------------------
-// タイトル
-$_HTML_HEADER["title"] = "お問い合わせ";
+// smarty設定
+$smarty = new MySmarty("admin");
+$smarty->compile_dir .= _CONTENTS_DIR. "/";
 
-// キーワード
-$_HTML_HEADER["keyword"] = "";
-
-// ディスクリプション
-$_HTML_HEADER["description"] = "";
-
-
-//----------------------------------------
-//  smarty設定
-//----------------------------------------
-$smarty = new MySmarty("front");
-$smarty->compile_dir .= $_DIR_NAME. "/";
-
-$smarty->assign( "arr_post", $arr_post );
-
+// オプション設定
 $smarty->assign( "OptionContent", $OptionContent );
 $smarty->assign( "OptionGrade"  , $OptionGrade   );
 $smarty->assign( "OptionRequest", $OptionRequest );
@@ -39,5 +26,5 @@ $smarty->assign( "OptionContactReferer", $OptionContactReferer );
 $smarty->assign( "OptionStatus" , $OptionStatus  );
 
 // 表示
-$smarty->display("index.tpl");
+$smarty->display( "new.tpl" );
 ?>

@@ -38,6 +38,8 @@ if( !empty($_POST["id_contact"]) ) {
 	$smarty->assign( "OptionContent", $OptionContent );
 	$smarty->assign( "OptionGrade"  , $OptionGrade   );
 	$smarty->assign( "OptionRequest", $OptionRequest );
+	$smarty->assign( "OptionContactReferer", $OptionContactReferer );
+	$smarty->assign( "OptionStatus" , $OptionStatus  );
 
 	// 表示
 	$smarty->display( "edit.tpl" );

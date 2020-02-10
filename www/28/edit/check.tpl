@@ -71,7 +71,7 @@
 									<input type="hidden" name="tel" value="{$arr_post.tel}" />
 								</td>
 							</tr>
-							<tr class="last">
+							<tr>
 								<th scope="row">住所</th>
 								<td>
 									{if !empty($arr_post.zip)}{$arr_post.zip}&nbsp;{/if}
@@ -81,6 +81,13 @@
 									<input type="hidden" name="prefecture" value="{$arr_post.prefecture}" />
 									<input type="hidden" name="address1" value="{$arr_post.address1}" />
 									<input type="hidden" name="address2" value="{$arr_post.address2}" />
+								</td>
+							</tr>
+							<tr class="last">
+								<th scope="row">メールマガジンの送信を希望する</th>
+								<td>
+									{$OptionYesNo[$arr_post.mail_magazine_flg|default:'0']}
+									<input type="hidden" name="mail_magazine_flg" value="{$arr_post.mail_magazine_flg}" />
 								</td>
 							</tr>
 						</tbody>

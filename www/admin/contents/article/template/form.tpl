@@ -45,6 +45,17 @@
 		</div>
 		<div class="hr-line-dashed"></div>
 		<div class="form-group">
+			<label class="col-sm-2 control-label">
+				新着情報の記事を自動生成<br />
+				<span style="color:#FF0000;">※(注)記事更新時に「はい」にチェックが入った場合、新たな新着情報の記事が生成されます。</span>
+			</label>
+			<div class="col-sm-6">
+				{if $message.ng.autoinfo_flg|default:"" != NULL}<p class="error">{$message.ng.autoinfo_flg}</p>{/if}
+				{html_radios name="autoinfo_flg" options=$OptionYesNo selected=$arr_post.autoinfo_flg|default:0 separator='&nbsp;'}
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="form-group">
 			<label class="col-sm-2 control-label">掲載期間 </label>
 			<div class="col-sm-4">
 				<div class="radio m-r-xs inline mb15">

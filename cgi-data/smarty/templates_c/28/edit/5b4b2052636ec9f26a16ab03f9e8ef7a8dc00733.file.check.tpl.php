@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 09:18:32
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-04 09:38:36
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18179687925e29596700dac2-23694622%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1580429909,
+      1 => 1580776689,
       2 => 'file',
     ),
   ),
@@ -26,6 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_FRONT' => 0,
     '_HTML_HEADER' => 0,
     'arr_post' => 0,
+    'OptionYesNo' => 0,
     'template_footer' => 0,
   ),
   'has_nocache_code' => false,
@@ -125,7 +126,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " />
 								</td>
 							</tr>
-							<tr class="last">
+							<tr>
 								<th scope="row">住所</th>
 								<td>
 									<?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['zip'])) {?><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['zip'];?>
@@ -142,6 +143,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									<input type="hidden" name="address1" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['address1'];?>
 " />
 									<input type="hidden" name="address2" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['address2'];?>
+" />
+								</td>
+							</tr>
+							<tr class="last">
+								<th scope="row">メールマガジンの送信を希望する</th>
+								<td>
+									<?php echo $_smarty_tpl->tpl_vars['OptionYesNo']->value[(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['mail_magazine_flg'])===null||$tmp==='' ? '0' : $tmp)];?>
+
+									<input type="hidden" name="mail_magazine_flg" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['mail_magazine_flg'];?>
 " />
 								</td>
 							</tr>

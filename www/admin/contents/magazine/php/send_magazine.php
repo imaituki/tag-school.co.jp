@@ -101,12 +101,15 @@ if( isset($magazine["id_magazine"]) ){
 		$body .= $magazine["main"];
 		$body .= "\n";
 		
-		//$body .= "----------\n";
-		//$body .= "メルマガの登録を解除するには下記のリンクをクリックして下さい。\n";
-		//$body .= "http://www.dadaco.co.jp/edit2.php?id=###mst_member_id###\n";
 		$body .= "\n";
 		
 		$body .= $magazine["footer"];
+		$body .= "\n";
+
+		$body .= "----------\n";
+		$body .= "メルマガの登録を解除する場合は、マイページ(会員情報編集)からメールマガジンの送信希望を解除するか、お問い合わせフォームからご連絡ください。\n";
+		$body .= "マイページ(要ログイン) https://tag-school.co.jp/28/edit/\n";
+		$body .= "お問い合わせフォーム https://tag-school.co.jp/contact/\n";
 		
 		// 改行を処理
 		$body = str_replace( "\r", "\n", str_replace( "\r\n", "\n", $body ) );

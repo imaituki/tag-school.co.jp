@@ -43,7 +43,7 @@
 														<td>{$data.title}</td>
 													</tr>
 													<tr>
-														<th class="pos_ac">タイトル</th>
+														<th class="pos_ac">本文</th>
 														<td>
 															{$data.header|nl2br}<br />
 															<br />

@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-07 17:09:58
-         compiled from "../template/edit.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:18458502845e2a9854410306-46017691%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-07 20:00:49
+         compiled from "../template/new.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:15601322385e3d436118a393-04495348%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'be2cd0f6d05c5ea088364c2babfac075512b457f' => 
+    '238c380072b5c29c5fa3993b7a21d862193e5e28' => 
     array (
-      0 => '../template/edit.tpl',
-      1 => 1581062992,
+      0 => '../template/new.tpl',
+      1 => 1581062995,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18458502845e2a9854410306-46017691',
+  'nocache_hash' => '15601322385e3d436118a393-04495348',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5e2a9854438a76_40583435',
   'variables' => 
   array (
     'template_javascript' => 0,
@@ -26,8 +24,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_NAME' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5e3d436119f943_41405947',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5e2a9854438a76_40583435')) {function content_5e2a9854438a76_40583435($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5e3d436119f943_41405947')) {function content_5e3d436119f943_41405947($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -59,7 +59,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<li><a href="/">Home</a></li>
 							<li><a href="./"><?php echo $_smarty_tpl->tpl_vars['_CONTENTS_NAME']->value;?>
 </a></li>
-							<li class="active"><strong>編集</strong></li>
+							<li class="active"><strong>新規登録</strong></li>
 						</ol>
 					</div>
 					<div class="col-lg-2"></div>
@@ -72,7 +72,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									<h5><?php echo $_smarty_tpl->tpl_vars['_CONTENTS_NAME']->value;?>
 管理　確認 </h5>
 								</div>
-								<?php echo $_smarty_tpl->getSubTemplate ("./form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('mode'=>"edit"), 0);?>
+								<?php echo $_smarty_tpl->getSubTemplate ("./form.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('mode'=>"new"), 0);?>
 
 							</div>
 						</div>

@@ -91,6 +91,8 @@ if( empty($message["ng"]) ) {
 	$smarty->assign( "OptionContent", $OptionContent );
 	$smarty->assign( "OptionGrade"  , $OptionGrade   );
 	$smarty->assign( "OptionRequest", $OptionRequest );
+	$smarty->assign( "OptionContactReferer", $OptionContactReferer );
+	$smarty->assign( "OptionStatus" , $OptionStatus  );
 
 	// テンプレートの取得
 	$mail = $smarty->fetch( "mail.tpl" );

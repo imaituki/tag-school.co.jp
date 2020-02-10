@@ -1,8 +1,8 @@
 <?php
 //-------------------------------------------------------------------
-// 作成日: 2019/12/26
+// 作成日: 2020/02/07
 // 作成者: yamada
-// 内  容: 28 編集
+// 内  容: お問い合わせ 新規登録
 //-------------------------------------------------------------------
 
 //----------------------------------------
@@ -12,17 +12,23 @@ require "./config.ini";
 
 
 //----------------------------------------
-//  更新処理
+//  初期化
+//----------------------------------------
+$message = NULL;
+
+
+//----------------------------------------
+//  新規登録処理
 //----------------------------------------
 // 操作クラス
 $objManage  = new DB_manage( _DNS );
-$mainObject = new $class_name( $objManage, $_ARR_IMAGE, $_ARR_FILE );
+$mainObject = new $class_name( $objManage );
 
 // データ変換
 $arr_post = $mainObject->convert( $arr_post );
 
 // データチェック
-$message = $mainObject->check( $arr_post, 'update' );
+$message = $mainObject->check( $arr_post, 'insert' );
 
 // エラーチェック
 if( empty( $message["ng"] ) ) {
@@ -31,12 +37,7 @@ if( empty( $message["ng"] ) ) {
 	$mainObject->_DBconn->StartTrans();
 
 	// 登録処理
-	$res = $mainObject->update( $arr_post );
-
-	// 新着情報に自動登録
-	if( $arr_post["autoinfo_flg"] == 1 ){
-		$mainObject->insert_information();
-	}
+	$res = $mainObject->insert( $arr_post );
 
 	// 失敗したらロールバック
 	if( $res == false ) {
@@ -60,52 +61,30 @@ unset( $mainObject );
 if( empty( $message["ng"] ) ) {
 
 	// メッセージ保管
-	$_SESSION["admin"][_CONTENTS_DIR]["message"]["ok"] = "更新が完了しました。<br />";
+	$_SESSION["admin"][_CONTENTS_DIR]["message"]["ok"] = "登録が完了しました。<br />";
 
 	// 表示
 	header( "Location: ./index.php" );
 
 } else {
 
-	// データ加工
-	if( !empty($arr_post["display_start"]) ){
-		$arr_post["display_start"] = date( "Y/m/d", strtotime($arr_post["display_start"]) );
-	}
-	if( !empty($arr_post["display_end"]) ){
-		$arr_post["display_end"] = date( "Y/m/d", strtotime($arr_post["display_end"]) );
-	}
-	
-	// 写真
-	if( !empty($_ARR_IMAGE) && is_array($_ARR_IMAGE) ){
-		foreach( $_ARR_IMAGE as $key => $val ) {
-			$arr_post[$val["name"]] = $arr_post["_" . $val["name"]."_now"];
-		}
-	}
-	if( !empty($_ARR_FILE) && is_array($_ARR_FILE) ){
-		foreach( $_ARR_FILE as $key => $val ) {
-			$arr_post[$val["name"]] = $arr_post["_" . $val["name"]."_now"];
-		}
-	}
 
 	// smarty設定
 	$smarty = new MySmarty("admin");
-	$smarty->compile_dir .= _CONTENTS_DIR;
+	$smarty->compile_dir .= _CONTENTS_DIR. "/";
 
 	// テンプレートに設定
 	$smarty->assign( "message" , $message  );
 	$smarty->assign( "arr_post", $arr_post );
 
-	$smarty->assign( "OptionArticleCategory", $OptionArticleCategory );
-	
-	if( !empty($_ARR_IMAGE) ){
-		$smarty->assign( '_ARR_IMAGE', $_ARR_IMAGE );
-	}
-	if( !empty($_ARR_FILE) ){
-		$smarty->assign( '_ARR_FILE', $_ARR_FILE );
-	}
+	$smarty->assign( "OptionContent", $OptionContent );
+	$smarty->assign( "OptionGrade"  , $OptionGrade   );
+	$smarty->assign( "OptionRequest", $OptionRequest );
+	$smarty->assign( "OptionContactReferer", $OptionContactReferer );
+	$smarty->assign( "OptionStatus" , $OptionStatus  );
 
 	// 表示
-	$smarty->display( "edit.tpl" );
+	$smarty->display( "new.tpl" );
 
 }
 ?>

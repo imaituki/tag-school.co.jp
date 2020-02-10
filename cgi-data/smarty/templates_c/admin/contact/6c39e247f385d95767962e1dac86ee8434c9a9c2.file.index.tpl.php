@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2019-12-19 11:32:22
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-07 20:06:47
          compiled from "../template/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19054763075de761e72b2f63-33039642%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6c39e247f385d95767962e1dac86ee8434c9a9c2' => 
     array (
       0 => '../template/index.tpl',
-      1 => 1576722169,
+      1 => 1581073602,
       2 => 'file',
     ),
   ),
@@ -60,7 +60,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </strong></li>
 						</ol>
 					</div>
-					
+					<div class="col-lg-2 m-b-xs pos_ar mt30">
+						<a href="./new.php" class="btn btn-primary btn-s">新規登録</a>
+					</div>
 				</div>
 				<div class="wrapper wrapper-content">
 					<div class="ibox-content m-b-sm border-bottom">

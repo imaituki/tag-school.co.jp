@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 13:06:39
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-03 09:34:16
          compiled from "/home/tag-school/www//common/include/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:655336855e296c89a0af01-89706444%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4c52b8aa5a65debfa2666f962af126ee431d3bef' => 
     array (
       0 => '/home/tag-school/www//common/include/header.tpl',
-      1 => 1580443595,
+      1 => 1580689947,
       2 => 'file',
     ),
   ),
@@ -59,6 +59,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /information/">お知らせ</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /contact/">お問い合わせ</a></li>
+				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
+/28/">28</a></li>
 				<li class="head_contact visible-xs">
 					<div class="tel_unit">
 						<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
