@@ -100,8 +100,8 @@ body, #base, #body { position:relative; overflow-x:hidden; }
 		#head_navi li:not(.sns) > a { display:block; padding:10px 15px; }
 		#head_navi .sns { text-align:center; padding:20px 0; }
 	}
-	@media (min-width: 768px) and (max-width:855px){
-		 #head_navi li { padding: 0 3px!important;}
+	@media (min-width: 768px) and (max-width:900px){
+		 #head_navi li { padding: 0 1px!important;}
 	}
 	@media (min-width: 768px){
 		#head_navi { background:#f3f1ed; padding:20px 0; }

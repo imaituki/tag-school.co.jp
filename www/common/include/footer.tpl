@@ -1,5 +1,5 @@
 <footer>
-	<div id="foot_contact" class="wrapper center">
+	<div id="foot_contact" class="wrapper-t center mb50">
 		<div class="contact_area">
 			<div class="row">
 				<div class="col-xs-6">
@@ -10,6 +10,18 @@
 				</div>
 				<div class="col-xs-6">
 					<a href="{$_FRONT.home}/contact/" class="btn_foot_contact"><i class="fa fa-envelope"></i>お問い合わせ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="foot_banner" class="wrapper-b center">
+		<div class="banner_area">
+			<div class="row">
+				<div class="col-xs-6">
+					<a href="https://ok-school.jp/" target="_blank"><img src="/common/image/foot/banner_1.jpg" alt="OKschool"></a>
+				</div>
+				<div class="col-xs-6">
+					<a href="https://www.earth-8.com/aschool/" target="_blank"><img src="/common/image/foot/banner_2.jpg" alt="aschool"></a>
 				</div>
 			</div>
 		</div>

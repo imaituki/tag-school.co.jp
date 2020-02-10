@@ -21,7 +21,7 @@
 				<li><a href="{$_FRONT.home}/#teachers">講師紹介</a></li>
 				<li><a href="{$_FRONT.home}/information/">お知らせ</a></li>
 				<li><a href="{$_FRONT.home}/contact/">お問い合わせ</a></li>
-				<li><a href="{$_FRONT.home}/28/">28</a></li>
+				<li><a href="{$_FRONT.home}/28/">Mypage</a></li>
 				<li class="head_contact visible-xs">
 					<div class="tel_unit">
 						<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" />{$_INFO.tel}</span>
