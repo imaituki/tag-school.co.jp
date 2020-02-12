@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-10 14:46:34
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-11 17:10:59
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9932258365e280add2d6f40-14070391%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1581313488,
+      1 => 1581313888,
       2 => 'file',
     ),
   ),
@@ -187,7 +187,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								</td>
 							</tr>
 							<tr class="last">
-								<th>備考</th>
+								<th>お問い合わせ内容</th>
 								<td>
 									<?php echo (($tmp = @nl2br($_smarty_tpl->tpl_vars['arr_post']->value['comment']))===null||$tmp==='' ? '--' : $tmp);?>
 
