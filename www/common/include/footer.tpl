@@ -14,7 +14,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="foot_banner" class="wrapper-b center">
+	<div id="foot_banner" class="wrapper center">
 		<div class="banner_area">
 			<div class="row">
 				<div class="col-xs-6">
@@ -35,7 +35,7 @@
 					<div class="disp_td">
 						<h5><a class="ov" href="{$_FRONT.home}/"><img src="/common/image/foot/logo.png" alt="岡山の学習塾 TAG school" /></a></h5>
 						<h5 class="mb0">{$_INFO.site_name}</h5>
-						<p class="mb20">〒{$_INFO.zip} {$_INFO.address|nl2br}</p>
+						<p class="mb20">〒{$_INFO.zip} {$_INFO.address|nl2br} <span class="parking">【駐車場・駐輪場完備】</span></p>
 						<p class="mb20">TEL：<span class="tel" data-tel="{$_INFO.tel}">{$_INFO.tel}</span><br />
 							{if $_INFO.fax}FAX：{$_INFO.fax}<br />{/if}
 							E-MAIL：<span class="mailaddress"></span><br />

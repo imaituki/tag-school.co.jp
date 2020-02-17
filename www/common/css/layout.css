@@ -170,6 +170,7 @@ body, #base, #body { position:relative; overflow-x:hidden; }
 
 #foot { position:relative; }
 #foot .address_unit h5 img { max-width:260px; margin-bottom:20px; }
+#foot .address_unit span.parking{color: #DF333E; font-weight: 600;}
 #foot .sns { font-size:1.25em; }
 #copyright { font-size:13px; color:#fff; padding:10px 0; }
 	@media (max-width: 575px){
