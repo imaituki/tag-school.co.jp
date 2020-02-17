@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-10 14:17:35
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-17 17:35:48
          compiled from "/home/tag-school/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20020281035e296ce138f7d0-42041608%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97f6fdaef15088846bff77147fa4b53b49cc4e6f' => 
     array (
       0 => '/home/tag-school/www//common/include/footer.tpl',
-      1 => 1581309930,
+      1 => 1581928524,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     '_INFO' => 0,
     '_FRONT' => 0,
+    'mode' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -38,7 +39,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</div>
 				<div class="col-xs-6">
 					<a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/contact/" class="btn_foot_contact"><i class="fa fa-envelope"></i>お問い合わせ</a>
+/contact/" class="ov btn_foot_contact"><i class="fa fa-envelope"></i>お問い合わせ</a>
 				</div>
 			</div>
 		</div>
@@ -47,11 +48,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="banner_area">
 			<div class="row">
 				<div class="col-xs-6">
-					<a href="https://ok-school.jp/" target="_blank"><img src="/common/image/foot/banner_1.jpg" alt="OKschool"></a>
+					<a href="https://ok-school.jp/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_1.jpg" alt="OKschool"></a>
 				</div>
+				<?php if ($_smarty_tpl->tpl_vars['mode']->value!="mypage") {?>
 				<div class="col-xs-6">
-					<a href="https://www.earth-8.com/aschool/" target="_blank"><img src="/common/image/foot/banner_2.jpg" alt="aschool"></a>
+					<a href="https://www.earth-8.com/aschool/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_2.jpg" alt="aschool"></a>
 				</div>
+				<?php }?>
 			</div>
 		</div>
 	</div>
@@ -61,14 +64,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="address_unit height-1">
 					<div class="disp_td">
 						<h5><a class="ov" href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
-/"><img src="/common/image/foot/logo.png" alt="TAG school" /></a></h5>
+/"><img src="/common/image/foot/logo.png" alt="岡山の学習塾 TAG school" /></a></h5>
 						<h5 class="mb0"><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['site_name'];?>
 </h5>
 						<p class="mb20">〒<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['zip'];?>
  <?php echo nl2br($_smarty_tpl->tpl_vars['_INFO']->value['address']);?>
 </p>
-						<p class="mb20">TEL：<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
-<br />
+						<p class="mb20">TEL：<span class="tel" data-tel="<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
+"><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
+</span><br />
 							<?php if ($_smarty_tpl->tpl_vars['_INFO']->value['fax']) {?>FAX：<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['fax'];?>
 <br /><?php }?>
 							E-MAIL：<span class="mailaddress"></span><br />
@@ -78,9 +82,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 						</p>
 						<div class="sns">
-							<a href="https://www.facebook.com/tagschool0902" target="_blank" class="fa"><i class="fab fa-facebook-f"></i></a>
-							<a href="https://twitter.com/tagschool28" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
-							<a href="https://www.instagram.com/tagschool_28/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+							<a href="https://www.facebook.com/tagschool0902" target="_blank" class="fa ga_link"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://twitter.com/tagschool28" target="_blank" class="twitter ga_link"><i class="fab fa-twitter"></i></a>
+							<a href="https://www.instagram.com/tagschool_28/" target="_blank" class="instagram ga_link"><i class="fab fa-instagram"></i></a>
 						</div>
 					</div>
 				</div>
@@ -102,18 +106,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</div>
 				</div>
 				<div class="col-xs-8 col-xs-pull-4">
-					<p>&copy; 2020 集団×個別指導塾タッグスクール TAG school All Rights Reserved.</p>
+					<p>&copy; 2020 岡山の集団&times;個別指導塾 TAG school（タッグスクール） All Rights Reserved.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div id="pagetop"><a href="javascript:void(0);"><span><img src="/common/image/foot/page_top.png" alt="page top"></span></a></div>
 </footer>
-
 <script>
-	$(document).ready(function(){
-	    $( ".mailaddress" ).append( atob("<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['mail_base64'];?>
+$(document).ready(function(){
+    $(".mailaddress").append( atob("<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['mail_base64'];?>
 ") );
-	});
-</script>
-<?php }} ?>
+});
+</script><?php }} ?>

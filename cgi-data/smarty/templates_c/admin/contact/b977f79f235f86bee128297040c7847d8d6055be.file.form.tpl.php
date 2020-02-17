@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-12 10:08:53
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-12 14:15:01
          compiled from "/home/tag-school/www/admin/contents/contact/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1155323555e2a98544439a8-66619384%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b977f79f235f86bee128297040c7847d8d6055be' => 
     array (
       0 => '/home/tag-school/www/admin/contents/contact/template/form.tpl',
-      1 => 1581314475,
+      1 => 1581484498,
       2 => 'file',
     ),
   ),
@@ -154,7 +154,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 		<div class="form-group">
 			<label class="col-sm-2 control-label">備考</label>
 			<div class="col-sm-6">
-				<textarea name="memo" class="form-control" style="min-height:100px;><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['memo'];?>
+				<textarea name="memo" class="form-control" style="min-height:100px;"><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['memo'];?>
 </textarea>
 			</div>
 		</div>

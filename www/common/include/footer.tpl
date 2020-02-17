@@ -9,7 +9,7 @@
 					</div>
 				</div>
 				<div class="col-xs-6">
-					<a href="{$_FRONT.home}/contact/" class="btn_foot_contact"><i class="fa fa-envelope"></i>お問い合わせ</a>
+					<a href="{$_FRONT.home}/contact/" class="ov btn_foot_contact"><i class="fa fa-envelope"></i>お問い合わせ</a>
 				</div>
 			</div>
 		</div>
@@ -18,11 +18,13 @@
 		<div class="banner_area">
 			<div class="row">
 				<div class="col-xs-6">
-					<a href="https://ok-school.jp/" target="_blank"><img src="/common/image/foot/banner_1.jpg" alt="OKschool"></a>
+					<a href="https://ok-school.jp/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_1.jpg" alt="OKschool"></a>
 				</div>
+				{if $mode != "mypage"}
 				<div class="col-xs-6">
-					<a href="https://www.earth-8.com/aschool/" target="_blank"><img src="/common/image/foot/banner_2.jpg" alt="aschool"></a>
+					<a href="https://www.earth-8.com/aschool/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_2.jpg" alt="aschool"></a>
 				</div>
+				{/if}
 			</div>
 		</div>
 	</div>
@@ -31,19 +33,19 @@
 			<div class="col-lg-4 col-md-5 col-xs-6">
 				<div class="address_unit height-1">
 					<div class="disp_td">
-						<h5><a class="ov" href="{$_FRONT.home}/"><img src="/common/image/foot/logo.png" alt="TAG school" /></a></h5>
+						<h5><a class="ov" href="{$_FRONT.home}/"><img src="/common/image/foot/logo.png" alt="岡山の学習塾 TAG school" /></a></h5>
 						<h5 class="mb0">{$_INFO.site_name}</h5>
 						<p class="mb20">〒{$_INFO.zip} {$_INFO.address|nl2br}</p>
-						<p class="mb20">TEL：{$_INFO.tel}<br />
+						<p class="mb20">TEL：<span class="tel" data-tel="{$_INFO.tel}">{$_INFO.tel}</span><br />
 							{if $_INFO.fax}FAX：{$_INFO.fax}<br />{/if}
 							E-MAIL：<span class="mailaddress"></span><br />
 							営業時間：{$_INFO.worktime}<br />
 							定休日：{$_INFO.holiday}
 						</p>
 						<div class="sns">
-							<a href="https://www.facebook.com/tagschool0902" target="_blank" class="fa"><i class="fab fa-facebook-f"></i></a>
-							<a href="https://twitter.com/tagschool28" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
-							<a href="https://www.instagram.com/tagschool_28/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+							<a href="https://www.facebook.com/tagschool0902" target="_blank" class="fa ga_link"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://twitter.com/tagschool28" target="_blank" class="twitter ga_link"><i class="fab fa-twitter"></i></a>
+							<a href="https://www.instagram.com/tagschool_28/" target="_blank" class="instagram ga_link"><i class="fab fa-instagram"></i></a>
 						</div>
 					</div>
 				</div>
@@ -64,16 +66,15 @@
 					</div>
 				</div>
 				<div class="col-xs-8 col-xs-pull-4">
-					<p>&copy; 2020 集団×個別指導塾タッグスクール TAG school All Rights Reserved.</p>
+					<p>&copy; 2020 岡山の集団&times;個別指導塾 TAG school（タッグスクール） All Rights Reserved.</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div id="pagetop"><a href="javascript:void(0);"><span><img src="/common/image/foot/page_top.png" alt="page top"></span></a></div>
 </footer>
-{* ↓ メールアドレスを表示するスクリプト ↓ *}
-<script>{literal}
-	$(document).ready(function(){
-	    $( ".mailaddress" ).append( atob({/literal}"{$_INFO.mail_base64}"{literal}) );
-	});
+<script>{* ↓ メールアドレスを表示するスクリプト ↓ *}{literal}
+$(document).ready(function(){
+    $(".mailaddress").append( atob({/literal}"{$_INFO.mail_base64}"{literal}) );
+});
 {/literal}</script>
