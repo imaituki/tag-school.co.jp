@@ -60,7 +60,7 @@
 	</section>
 </div>
 </main>
-{include file=$template_footer}
+{include file=$template_footer mode=mypage}
 </div>
 </body>
 </html>
