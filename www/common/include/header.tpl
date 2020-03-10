@@ -4,7 +4,7 @@
 		<h1 class="site_logo"><a class="ov" href="{$_FRONT.home}/"><img src="/common/image/head/logo.png" alt="TAG school" /></a></h1>
 		<div class="head_contact _head hidden-xs">
 			<div class="tel_unit">
-				<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" />{$_INFO.tel}</span>
+				<span class="tel sans" data-tel="{$_INFO.tel}"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" />{$_INFO.tel}</span>
 				<span class="time">受付時間 {$_INFO.receipt_time}（{$_INFO.rec_holiday}定休）</span>
 			</div>
 			<div class="mail_unit"><a href="{$_FRONT.home}/contact/" class="button _circle"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ">お問い合わせ</a></div>
@@ -24,7 +24,7 @@
 				<li><a href="{$_FRONT.home}/28/">Mypage</a></li>
 				<li class="head_contact visible-xs">
 					<div class="tel_unit">
-						<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" />{$_INFO.tel}</span>
+						<span class="tel sans" data-tel="{$_INFO.tel}"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" />{$_INFO.tel}</span>
 						<span class="time">受付時間 {$_INFO.receipt_time}（{$_INFO.rec_holiday}定休）</span>
 					</div>
 					<div class="mail_unit"><a href="{$_FRONT.home}/contact/" class="button _circle"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ" />お問い合わせ</a></div>

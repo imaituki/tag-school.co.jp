@@ -19,7 +19,7 @@
 		<div class="center">
 			<div class="text_in">
 				<div class="logo"><img src="common/image/contents/top/logo.png" alt="岡山市の総合学習塾 タッグスクール TAG school"></div>
-				<h2 class="mincho">TAGスクール<br><span class="c_red">2020年春</span>開校予定！</h2>
+				<h2 class="mincho">TAGスクール<br><span class="c_red">2020年3月23日</span><br />グランドオープン決定！</h2>
 				<p>岡山市下中野に今までにない新しい塾が誕生！</p>
 			</div>
 		</div>
