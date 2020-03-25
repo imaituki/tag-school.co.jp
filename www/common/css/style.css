@@ -50,7 +50,7 @@
 
 #top_main #main_news .center { max-width:1400px; }
 #top_main #main_news .text_in { vertical-align:bottom; }
-#top_main .news_wrap { position:relative; /*z-index:9991;*/ width:100%; max-width:700px; background:rgba(255,255,255,0.9); border-radius:50px; overflow:hidden; padding:15px 35px 15px 15px; box-shadow:0 0 5px rgba(0,0,0,0.3); }
+#top_main .news_wrap { position:relative; z-index:9999; width:100%; max-width:700px; background:rgba(255,255,255,0.9); border-radius:50px; overflow:hidden; padding:15px 35px 15px 15px; box-shadow:0 0 5px rgba(0,0,0,0.3); }
 #base.open #top_main .news_wrap { z-index:999; }
 #top_main .news_wrap:after { position:absolute; top:calc(50% - 0.5em); right:15px; content:"→"; line-height:100%; }
 #top_main .news_wrap > * { line-height:110%; }
