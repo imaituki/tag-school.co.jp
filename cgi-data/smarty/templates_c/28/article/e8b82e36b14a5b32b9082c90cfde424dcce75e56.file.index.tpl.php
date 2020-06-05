@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 17:53:27
+<?php /* Smarty version Smarty-3.1.18, created on 2020-03-19 12:55:13
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12119309595e29586656e7e8-53409011%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580201587,
+      1 => 1581928083,
       2 => 'file',
     ),
   ),
@@ -121,7 +121,7 @@ if (!$_smarty_tpl->tpl_vars['data']->_loop) {
 	</section>
 </div>
 </main>
-<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_footer']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_footer']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('mode'=>'mypage'), 0);?>
 
 </div>
 </body>

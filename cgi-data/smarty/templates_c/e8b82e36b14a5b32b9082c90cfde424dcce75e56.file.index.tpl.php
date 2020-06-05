@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-13 18:03:13
+<?php /* Smarty version Smarty-3.1.18, created on 2020-05-21 09:49:13
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19367162525e294e044aaa34-62772733%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1581584555,
+      1 => 1590022148,
       2 => 'file',
     ),
   ),
@@ -56,8 +56,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="center">
 			<div class="text_in">
 				<div class="logo"><img src="common/image/contents/top/logo.png" alt="岡山市の総合学習塾 タッグスクール TAG school"></div>
-				<h2 class="mincho">TAGスクール<br><span class="c_red">2020年春</span>開校予定！</h2>
+				<h2 class="mincho">集団×個別指導塾 TAGスクール<br><span class="c_red">2020年度<br>新規生徒募集中！</span></h2>
+				<!--
 				<p>岡山市下中野に今までにない新しい塾が誕生！</p>
+				-->
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,63 @@
+Return-Path: <uekieri1120@gmail.com>
+Received: from mail-ot1-f47.google.com (mail-ot1-f47.google.com [209.85.210.47])
+	by www3737.sakura.ne.jp (8.15.2/8.15.2) with ESMTPS id 00U2dZTI050651
+	(version=TLSv1.2 cipher=AES256-GCM-SHA384 bits=256 verify=FAIL)
+	for <info@tag-school.co.jp>; Thu, 30 Jan 2020 11:39:36 +0900 (JST)
+	(envelope-from uekieri1120@gmail.com)
+Received: by mail-ot1-f47.google.com with SMTP id r27so1710956otc.8
+        for <info@tag-school.co.jp>; Wed, 29 Jan 2020 18:39:36 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=tZ8n5l21sbWpAzen285TkGwo74GRIGbX73yUNWDgI/I=;
+        b=mkam+MvrMFwJVsiISk27kxCwtmSyfMxrdO9AQ/e6FZH6n77wEbgFYPbOX7SrpnofyO
+         FJ02cNEjVivcE14SIqf8Mm+jCNgxZf9Wvs7WVJojp/pgHL4LwCNlnSRSPvzDNRyT0lQA
+         gd9v+0C3dza4TSVw551IklwrzfBXGNcy3OMz24g235U23+EFgdIG/2LdBXdoznTDjc4k
+         wZa0OyrAe3QfwFA9CUVB1UhdxJCxgwTAOr5T9QKXk1k4Ugfli/tgaqdWPGx2nfN9ixYk
+         xZ9/sJFyXE0IanJnj4IGKqThqpYivnK/9UjeRI4x6lqy3eYodjdYT6aJF42B55Me2cAp
+         0EQg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=tZ8n5l21sbWpAzen285TkGwo74GRIGbX73yUNWDgI/I=;
+        b=UOOlly03MdrTwgyvxYM8QfKjgP6pVRw7hKkH2myMqvIUiJwJW8Frs6ansDP/LABnxV
+         IIv22A/u+fXiAI6r+FEMElhura9XjW79typRyPH7zZ1PTvv59bNjYRIhmBAiaAkPgeaZ
+         7L6c5O/wJHcx/4J1u4me0lFgNBjy95pjslyzMMd40cAIrg4ZiH7T5Zj0e93dOxONnTxs
+         BvM9r+k0DmVtj4usz6IZEANKkr6jmVuS3tRMt+g4i3NH55fyQj+YPXhStrpYx8g48uUZ
+         vvZEwjd3UWoq+rVwQO6j7loJ2ymFWMc6GkUktEk4PYsTfwpWGWdA0GK3YyTQ//NBWnao
+         Kv6A==
+X-Gm-Message-State: APjAAAUjV7qWYCqsEkplpujt+/SoX8dKLNWvqZ/YJzu6d19zsWyVMAmn
+	NWTTdRX2YGEnimE43o7WLReqiGpRNevgmblw7/iWmcHl
+X-Google-Smtp-Source: APXvYqwjoBj19TdYpxcZzOGvL0F1wJNW9BHEVUTrHEqTKmH4Xh/xY8nPr3IWp78ZVLHXFJFQ2VO7vbWBZMVRvAM69XU=
+X-Received: by 2002:a05:6830:1608:: with SMTP id g8mr1778718otr.169.1580351974728;
+ Wed, 29 Jan 2020 18:39:34 -0800 (PST)
+MIME-Version: 1.0
+From: =?UTF-8?B?44K444Oo44Oz44GP44KTTE9WRQ==?= <uekieri1120@gmail.com>
+Date: Thu, 30 Jan 2020 11:39:23 +0900
+Message-ID: <CACrah29m1o=Hik-nA6FWgZks4H8fQqWQG969aLo1uLsRgNs0dA@mail.gmail.com>
+Subject: 
+To: info@tag-school.co.jp
+Content-Type: multipart/alternative; boundary="00000000000012e5f5059d525e4b"
+
+--00000000000012e5f5059d525e4b
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+44GT44KT44Gr44Gh44Gv44CC5Yid44KB44G+44GX44Gm5qSN5pyo44Go55Sz44GX44G+44GZ44CC
+DQrjg5vjg7zjg6Djg5rjg7zjgrjjgpLopovjgZXjgZvjgabjgYTjgZ/jgaDjgYTjgZ/jga7jgafj
+gZnjgYwNCuWIneacn+iyu+eUqOOChOmAmuW4uOOBruaciOmhjeWPl+ism+iyu+eUqOOAgeaYpeac
+n+ism+e/kuOChOWkj+acn+ism+e/kuOBquOBqeOBrumHkemhjeOBjOOBiuaxuuOBvuOCiuOBp+OB
+l+OBn+OCieaVmeOBiOOBpuOBhOOBn+OBoOOBjeOBn+OBhOOBp+OBmeOAgg0K44KI44KN44GX44GP
+44GK6aGY44GE44GX44G+44GZ44CCDQo=
+--00000000000012e5f5059d525e4b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: base64
+
+PGRpdiBkaXI9ImF1dG8iPuOBk+OCk+OBq+OBoeOBr+OAguWIneOCgeOBvuOBl+OBpuakjeacqOOB
+qOeUs+OBl+OBvuOBmeOAgjxkaXYgZGlyPSJhdXRvIj7jg5vjg7zjg6Djg5rjg7zjgrjjgpLopovj
+gZXjgZvjgabjgYTjgZ/jgaDjgYTjgZ/jga7jgafjgZnjgYw8L2Rpdj48ZGl2IGRpcj0iYXV0byI+
+5Yid5pyf6LK755So44KE6YCa5bi444Gu5pyI6aGN5Y+X6Kyb6LK755So44CB5pil5pyf6Kyb57+S
+44KE5aSP5pyf6Kyb57+S44Gq44Gp44Gu6YeR6aGN44GM44GK5rG644G+44KK44Gn44GX44Gf44KJ
+5pWZ44GI44Gm44GE44Gf44Gg44GN44Gf44GE44Gn44GZ44CCPC9kaXY+PGRpdiBkaXI9ImF1dG8i
+PuOCiOOCjeOBl+OBj+OBiumhmOOBhOOBl+OBvuOBmeOAgjwvZGl2PjwvZGl2Pg0K
+--00000000000012e5f5059d525e4b--

@@ -1,0 +1,140 @@
+Return-Path: <MAILER-DAEMON@www3737.sakura.ne.jp>
+Received: from localhost (localhost)
+	by www3737.sakura.ne.jp (8.15.2/8.15.2) id 01T1sq8d045744;
+	Sat, 29 Feb 2020 10:54:52 +0900 (JST)
+	(envelope-from MAILER-DAEMON)
+Date: Sat, 29 Feb 2020 10:54:52 +0900 (JST)
+From: Mail Delivery Subsystem <MAILER-DAEMON>
+Message-Id: <202002290154.01T1sq8d045744@www3737.sakura.ne.jp>
+To: <tag-school@www3737.sakura.ne.jp>
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="01T1sq8d045744.1582941292/www3737.sakura.ne.jp"
+Subject: Returned mail: see transcript for details
+Auto-Submitted: auto-generated (failure)
+
+This is a MIME-encapsulated message
+
+--01T1sq8d045744.1582941292/www3737.sakura.ne.jp
+
+The original message was received at Sat, 29 Feb 2020 10:54:50 +0900 (JST)
+from localhost [127.0.0.1]
+
+   ----- The following addresses had permanent fatal errors -----
+<mitsuda.bw@gmail.com>
+    (reason: 550-5.7.26 Unauthenticated email from svk.jp is not accepted due to domain's)
+
+   ----- Transcript of session follows -----
+... while talking to gmail-smtp-in.l.google.com.:
+>>> DATA
+<<< 550-5.7.26 Unauthenticated email from svk.jp is not accepted due to domain's
+<<< 550-5.7.26 DMARC policy. Please contact the administrator of svk.jp domain if
+<<< 550-5.7.26 this was a legitimate mail. Please visit
+<<< 550-5.7.26  https://support.google.com/mail/answer/2451690 to learn about the
+<<< 550 5.7.26 DMARC initiative. b27si5417154pgl.246 - gsmtp
+554 5.0.0 Service unavailable
+
+--01T1sq8d045744.1582941292/www3737.sakura.ne.jp
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; www3737.sakura.ne.jp
+Received-From-MTA: DNS; localhost
+Arrival-Date: Sat, 29 Feb 2020 10:54:50 +0900 (JST)
+
+Final-Recipient: RFC822; mitsuda.bw@gmail.com
+Action: failed
+Status: 5.7.26
+Remote-MTA: DNS; gmail-smtp-in.l.google.com
+Diagnostic-Code: SMTP; 550-5.7.26 Unauthenticated email from svk.jp is not accepted due to domain's
+Last-Attempt-Date: Sat, 29 Feb 2020 10:54:52 +0900 (JST)
+
+--01T1sq8d045744.1582941292/www3737.sakura.ne.jp
+Content-Type: message/rfc822
+
+Return-Path: <tag-school@www3737.sakura.ne.jp>
+Received: from www3737.sakura.ne.jp (localhost [127.0.0.1])
+	by www3737.sakura.ne.jp (8.15.2/8.15.2) with ESMTP id 01T1so8d045740
+	for <mitsuda.bw@gmail.com>; Sat, 29 Feb 2020 10:54:50 +0900 (JST)
+	(envelope-from tag-school@www3737.sakura.ne.jp)
+Received: (from tag-school@localhost)
+	by www3737.sakura.ne.jp (8.15.2/8.15.2/Submit) id 01T1soiY045739
+	for mitsuda.bw@gmail.com; Sat, 29 Feb 2020 10:54:50 +0900 (JST)
+	(envelope-from tag-school@www3737.sakura.ne.jp)
+Received: from www3737.sakura.ne.jp (localhost [127.0.0.1])
+	by www3737.sakura.ne.jp (8.15.2/8.15.2) with ESMTP id 01T1sn39045734
+	for <info@tag-school.co.jp>; Sat, 29 Feb 2020 10:54:50 +0900 (JST)
+	(envelope-from tag-school@www3737.sakura.ne.jp)
+Received: (from tag-school@localhost)
+	by www3737.sakura.ne.jp (8.15.2/8.15.2/Submit) id 01T1snB5045733;
+	Sat, 29 Feb 2020 10:54:49 +0900 (JST)
+	(envelope-from tag-school)
+Date: Sat, 29 Feb 2020 10:54:49 +0900 (JST)
+Message-Id: <202002290154.01T1snB5045733@www3737.sakura.ne.jp>
+To: info@tag-school.co.jp
+Subject: =?ISO-2022-JP?B?GyRCIVobKEJUQUcgQ29ycG9yYXRp?=
+ =?ISO-2022-JP?B?b24gMjgbJEIhWyQqTGQ5ZyRvJDskLCQiJGokXiQ3JD8hIxsoQg==?=
+X-PHP-Originating-Script: 1226:send.php
+From: =?ISO-2022-JP?B?GyRCOzBCcCEhNTEbKEI=?= <pedopa@svk.jp>
+Content-Type: text/plain; charset=iso-2022-jp
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+
+
+--------------------------------------------------------
+■ お問い合わせ内容
+--------------------------------------------------------
+[ お問い合わせ項目 ]
+その他
+
+[ 生徒氏名 ]
+三宅　輝 (ミヤケテル)
+[ 学年 ]
+中学校2年
+
+[ 希望項目 ]
+両方
+
+[ 入塾希望理由 ]
+-
+
+[ 保護者氏名 ]
+- 
+[ Eメールアドレス ]
+pedopa@svk.jp
+
+[ 電話番号 ]
+0909068364
+
+[ 住所 ]
+ 
+岡山県 
+
+[ お問い合わせ内容 ]
+初めて問い合わせます。
+コロナウィルスが流行しそうですが、体験授業等は受けられるのでしょうか？あと、生徒（中学生）は何人くらいおられますか？
+説明会などもあれば日程を教えて貰いたいです。
+
+
+***********************************************
+TAG Corporation 28
+〒700-0973
+岡山市北区下中野1200-4 5F
+備前西市駅徒歩7分
+TEL: 086-242-4119 
+FAX: 086-242-4140 
+***********************************************
+
+--------------------------------------------------------
+■ お客様の環境情報
+--------------------------------------------------------
+■ IPアドレス
+49.96.39.101
+■ ユーザーエージェント
+Mozilla/5.0 (iPhone; CPU iPhone OS 13_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.5 Mobile/15E148 Safari/604.1
+
+--------------------------------------------------------
+
+
+--01T1sq8d045744.1582941292/www3737.sakura.ne.jp--
+

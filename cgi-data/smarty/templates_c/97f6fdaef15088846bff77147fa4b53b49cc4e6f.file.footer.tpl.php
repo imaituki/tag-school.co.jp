@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-17 17:35:34
+<?php /* Smarty version Smarty-3.1.18, created on 2020-02-17 18:55:28
          compiled from "/home/tag-school/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1214992095e294e0454bd86-22325034%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97f6fdaef15088846bff77147fa4b53b49cc4e6f' => 
     array (
       0 => '/home/tag-school/www//common/include/footer.tpl',
-      1 => 1581928524,
+      1 => 1581933318,
       2 => 'file',
     ),
   ),
@@ -44,7 +44,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</div>
 		</div>
 	</div>
-	<div id="foot_banner" class="wrapper-b center">
+	<div id="foot_banner" class="wrapper center">
 		<div class="banner_area">
 			<div class="row">
 				<div class="col-xs-6">
@@ -69,7 +69,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </h5>
 						<p class="mb20">〒<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['zip'];?>
  <?php echo nl2br($_smarty_tpl->tpl_vars['_INFO']->value['address']);?>
-</p>
+ <span class="parking">【駐車場・駐輪場完備】</span></p>
 						<p class="mb20">TEL：<span class="tel" data-tel="<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 "><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 </span><br />
@@ -118,4 +118,5 @@ $(document).ready(function(){
     $(".mailaddress").append( atob("<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['mail_base64'];?>
 ") );
 });
-</script><?php }} ?>
+</script>
+<?php }} ?>

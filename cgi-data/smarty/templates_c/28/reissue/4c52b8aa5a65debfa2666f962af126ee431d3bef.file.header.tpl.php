@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-10 14:51:08
+<?php /* Smarty version Smarty-3.1.18, created on 2020-03-13 08:53:35
          compiled from "/home/tag-school/www//common/include/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20302116175e2aae5d86e5b9-07152435%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4c52b8aa5a65debfa2666f962af126ee431d3bef' => 
     array (
       0 => '/home/tag-school/www//common/include/header.tpl',
-      1 => 1581309232,
+      1 => 1583746930,
       2 => 'file',
     ),
   ),
@@ -31,7 +31,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /"><img src="/common/image/head/logo.png" alt="TAG school" /></a></h1>
 		<div class="head_contact _head hidden-xs">
 			<div class="tel_unit">
-				<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
+				<span class="tel sans" data-tel="<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
+"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 </span>
 				<span class="time">受付時間 <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['receipt_time'];?>
 （<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['rec_holiday'];?>
@@ -63,7 +64,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /28/">Mypage</a></li>
 				<li class="head_contact visible-xs">
 					<div class="tel_unit">
-						<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
+						<span class="tel sans" data-tel="<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
+"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 </span>
 						<span class="time">受付時間 <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['receipt_time'];?>
 （<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['rec_holiday'];?>

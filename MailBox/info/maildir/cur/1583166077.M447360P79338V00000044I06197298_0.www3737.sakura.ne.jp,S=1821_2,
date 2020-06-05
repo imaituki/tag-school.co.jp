@@ -1,0 +1,36 @@
+Return-Path: <mifo733@via.tokyo.jp>
+Received: from vps51.erinn.biz (v150-95-136-192.a081.g.tyo1.static.cnode.io [150.95.136.192])
+	by www3737.sakura.ne.jp (8.15.2/8.15.2) with ESMTPS id 022GLGZo079335
+	(version=TLSv1.2 cipher=DHE-RSA-AES256-GCM-SHA384 bits=256 verify=NO)
+	for <info@tag-school.co.jp>; Tue, 3 Mar 2020 01:21:16 +0900 (JST)
+	(envelope-from mifo733@via.tokyo.jp)
+Received: by vps51.erinn.biz (Postfix, from userid 48)
+	id 6F1AE81232D7; Tue,  3 Mar 2020 01:21:16 +0900 (JST)
+DKIM-Filter: OpenDKIM Filter v2.11.0 vps51.erinn.biz 6F1AE81232D7
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=via.tokyo.jp;
+	s=viatokyojp; t=1583166076;
+	bh=68Q2wlOB46SRhDmRzpkWAKPYpY/fatKS+sU4PilVYr8=;
+	h=To:Subject:From:Date:From;
+	b=pX053CYiGZkdkfEOtgMkVcNkS+WuvNJDJfkZv6waL2G7g9hOVKT3kvAgQBpXukE6R
+	 iLsj40WuMA1oIXbsKoV5yQl+vJtl1YM2Gvg0ydvv86d66IlaOVaIoLP+84sytj6uPQ
+	 NNsaxa0nb7SBm1LtkI7swVM/NjpBM5iHjoS4AKtQ=
+To: info@tag-school.co.jp
+Subject: =?UTF-8?B?5ZWP44GE5ZCI44KP44Gb?=
+From: mifo733@via.tokyo.jp
+X-Mailer: MailNow (https://m.kuku.lu/)
+X-Report-Abuse: https://magical.kuku.lu/page.contact.php?type=MailNow
+X-Originating-IP: 49.96.39.101
+X-CloudFlare-Edge-IP: 162.158.6.173
+X-ServerTime: 2020-03-03 01:21:16 +0900 (JST)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Message-Id: <20200302162116.6F1AE81232D7@vps51.erinn.biz>
+Date: Tue,  3 Mar 2020 01:21:16 +0900 (JST)
+Content-Transfer-Encoding: 8bit
+X-MIME-Autoconverted: from base64 to 8bit by www3737.sakura.ne.jp id 022GLGZo079335
+
+チラシを見て問い合わせしています。
+現在中学1年の息子がいるのですが、体験は出来るのでしょうか？集団で３教科とるといくらくらいになるのでしょうか？学校がおやすみになっているので、時間は比較的とれます。
+
+石原美帆
+

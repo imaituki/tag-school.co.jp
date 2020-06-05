@@ -12,11 +12,12 @@
 #top_main #main_text .text_in > * { text-align:center; }
 #top_main #main_text .logo { margin-bottom:30px; }
 #top_main #main_text .logo img { max-width:125px; }
-#top_main #main_text h2 { font-weight:bold; line-height:140%; color:#87664F; margin-bottom:20px; }
+#top_main #main_text h2 { font-weight:bold; line-height:300%; color:#87664F; margin-bottom:20px; }
 #top_main #main_text p { color:#7c7c7c; }
 	@media (max-width: 575px){
 		#top_main #main_text { padding-top:20px; }
-		#top_main #main_text h2 { font-size:2em; }
+		#top_main #main_text h2 { font-size:18px;line-height:270%; }
+		#top_main #main_text span { font-size:40px; }
 	}
 	@media (min-width: 576px) and (max-width: 767px){
 		#top_main #main_text { padding-top:16vw; }
@@ -31,7 +32,8 @@
 	@media (min-width: 768px){
 		#top_main .text { position:absolute; top:80px; left:0; width:calc(100% - 10px); height:calc(100% - 180px); }
 		#top_main #main_text .text_in { text-align:center; padding-top:50px; }
-		#top_main #main_text h2 { font-size:2.5em; }
+		#top_main #main_text h2 { font-size:16px; }
+		#top_main #main_text span { font-size:40px; }
 	}
 	@media (min-width: 768px) and (max-width: 991px){
 		#top_main #main_text .logo,

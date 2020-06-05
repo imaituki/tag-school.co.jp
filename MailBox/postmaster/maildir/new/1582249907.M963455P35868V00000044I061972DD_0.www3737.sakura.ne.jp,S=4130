@@ -1,0 +1,125 @@
+Return-Path: <MAILER-DAEMON@www3737.sakura.ne.jp>
+Received: from localhost (localhost)
+	by www3737.sakura.ne.jp (8.15.2/8.15.2) id 01L1plLl035865;
+	Fri, 21 Feb 2020 10:51:47 +0900 (JST)
+	(envelope-from MAILER-DAEMON)
+Date: Fri, 21 Feb 2020 10:51:47 +0900 (JST)
+From: Mail Delivery Subsystem <MAILER-DAEMON>
+Message-Id: <202002210151.01L1plLl035865@www3737.sakura.ne.jp>
+To: <tag-school@www3737.sakura.ne.jp>
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="01L1plLl035865.1582249907/www3737.sakura.ne.jp"
+Subject: Returned mail: see transcript for details
+Auto-Submitted: auto-generated (failure)
+
+This is a MIME-encapsulated message
+
+--01L1plLl035865.1582249907/www3737.sakura.ne.jp
+
+The original message was received at Fri, 21 Feb 2020 10:51:47 +0900 (JST)
+from localhost [127.0.0.1]
+
+   ----- The following addresses had permanent fatal errors -----
+<shi-ge-ka.ccc@docomo.ne.jp>
+    (reason: 550 Unknown user shi-ge-ka.ccc@docomo.ne.jp)
+
+   ----- Transcript of session follows -----
+... while talking to mfsmax.docomo.ne.jp.:
+>>> DATA
+<<< 550 Unknown user shi-ge-ka.ccc@docomo.ne.jp
+554 5.0.0 Service unavailable
+
+--01L1plLl035865.1582249907/www3737.sakura.ne.jp
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; www3737.sakura.ne.jp
+Received-From-MTA: DNS; localhost
+Arrival-Date: Fri, 21 Feb 2020 10:51:47 +0900 (JST)
+
+Final-Recipient: RFC822; shi-ge-ka.ccc@docomo.ne.jp
+Action: failed
+Status: 5.2.0
+Remote-MTA: DNS; mfsmax.docomo.ne.jp
+Diagnostic-Code: SMTP; 550 Unknown user shi-ge-ka.ccc@docomo.ne.jp
+Last-Attempt-Date: Fri, 21 Feb 2020 10:51:47 +0900 (JST)
+
+--01L1plLl035865.1582249907/www3737.sakura.ne.jp
+Content-Type: message/rfc822
+
+Return-Path: <tag-school@www3737.sakura.ne.jp>
+Received: from www3737.sakura.ne.jp (localhost [127.0.0.1])
+	by www3737.sakura.ne.jp (8.15.2/8.15.2) with ESMTP id 01L1plLl035863
+	for <shi-ge-ka.ccc@docomo.ne.jp>; Fri, 21 Feb 2020 10:51:47 +0900 (JST)
+	(envelope-from tag-school@www3737.sakura.ne.jp)
+Received: (from tag-school@localhost)
+	by www3737.sakura.ne.jp (8.15.2/8.15.2/Submit) id 01L1plPO035860;
+	Fri, 21 Feb 2020 10:51:47 +0900 (JST)
+	(envelope-from tag-school)
+Date: Fri, 21 Feb 2020 10:51:47 +0900 (JST)
+Message-Id: <202002210151.01L1plPO035860@www3737.sakura.ne.jp>
+To: shi-ge-ka.ccc@docomo.ne.jp
+Subject: =?ISO-2022-JP?B?GyRCIVobKEJUQUcgQ29ycG9yYXRp?=
+ =?ISO-2022-JP?B?b24gMjgbJEIhWyQqTGQ5ZyRvJDskIiRqJCwkSCQmJDQkNiQkJF4bKEI=?=
+ =?ISO-2022-JP?B?GyRCJDkhIxsoQg==?=
+X-PHP-Originating-Script: 1226:send.php
+From: =?ISO-2022-JP?B?GyRCPj4/OUAuOWEbKEI=?= <info@tag-school.co.jp>
+Content-Type: text/plain; charset=iso-2022-jp
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+----------------------------------------------------------------------
+　＊このメールは、お客様のお問い合わせをサーバーで受付けた時点で
+　　自動通知システムにて送信しております。
+----------------------------------------------------------------------
+お問い合わせいただきありがとうございます。
+
+お問い合わせを下記の内容で承りましたのでご確認下さい。
+後ほど、担当者より改めましてご連絡差し上げます。
+
+
+--------------------------------------------------------
+■ お問い合わせ内容
+--------------------------------------------------------
+[ お問い合わせ項目 ]
+面談申し込み
+
+[ 生徒氏名 ]
+松森駿太 (マツモリシュンタ)
+[ 学年 ]
+中学校2年
+
+[ 希望項目 ]
+集団
+
+[ 入塾希望理由 ]
+数学が苦手なので、重点的に教えてほしいです。
+
+[ 保護者氏名 ]
+松森成香 (マツモリシゲカ)
+[ Eメールアドレス ]
+shi-ge-ka.ccc@docomo.ne.jp
+
+[ 電話番号 ]
+09048061377
+
+[ 住所 ]
+〒7000962 
+岡山県 岡山市北区北長瀬表町3-6-13 コードヴィレッジ若沼B301
+
+[ お問い合わせ内容 ]
+入塾希望です。詳しい説明が聞きたいので、面談をお願いしたいです。
+
+
+***********************************************
+TAG Corporation 28
+〒700-0973
+岡山市北区下中野1200-4 5F
+備前西市駅徒歩7分
+TEL: 086-242-3318 
+ 
+***********************************************
+
+
+--01L1plLl035865.1582249907/www3737.sakura.ne.jp--
+

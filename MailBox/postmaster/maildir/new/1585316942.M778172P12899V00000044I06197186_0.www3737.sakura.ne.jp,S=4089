@@ -1,0 +1,125 @@
+Return-Path: <MAILER-DAEMON@www3737.sakura.ne.jp>
+Received: from localhost (localhost)
+	by www3737.sakura.ne.jp (8.15.2/8.15.2) id 02RDn2b3012896;
+	Fri, 27 Mar 2020 22:49:02 +0900 (JST)
+	(envelope-from MAILER-DAEMON)
+Date: Fri, 27 Mar 2020 22:49:02 +0900 (JST)
+From: Mail Delivery Subsystem <MAILER-DAEMON>
+Message-Id: <202003271349.02RDn2b3012896@www3737.sakura.ne.jp>
+To: <tag-school@www3737.sakura.ne.jp>
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="02RDn2b3012896.1585316942/www3737.sakura.ne.jp"
+Subject: Returned mail: see transcript for details
+Auto-Submitted: auto-generated (failure)
+
+This is a MIME-encapsulated message
+
+--02RDn2b3012896.1585316942/www3737.sakura.ne.jp
+
+The original message was received at Fri, 27 Mar 2020 22:49:02 +0900 (JST)
+from localhost [127.0.0.1]
+
+   ----- The following addresses had permanent fatal errors -----
+<ma-tan-ni0902@docomo.ne.jp>
+    (reason: 550 Unknown user ma-tan-ni0902@docomo.ne.jp)
+
+   ----- Transcript of session follows -----
+... while talking to mfsmax.docomo.ne.jp.:
+>>> DATA
+<<< 550 Unknown user ma-tan-ni0902@docomo.ne.jp
+554 5.0.0 Service unavailable
+
+--02RDn2b3012896.1585316942/www3737.sakura.ne.jp
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; www3737.sakura.ne.jp
+Received-From-MTA: DNS; localhost
+Arrival-Date: Fri, 27 Mar 2020 22:49:02 +0900 (JST)
+
+Final-Recipient: RFC822; ma-tan-ni0902@docomo.ne.jp
+Action: failed
+Status: 5.2.0
+Remote-MTA: DNS; mfsmax.docomo.ne.jp
+Diagnostic-Code: SMTP; 550 Unknown user ma-tan-ni0902@docomo.ne.jp
+Last-Attempt-Date: Fri, 27 Mar 2020 22:49:02 +0900 (JST)
+
+--02RDn2b3012896.1585316942/www3737.sakura.ne.jp
+Content-Type: message/rfc822
+
+Return-Path: <tag-school@www3737.sakura.ne.jp>
+Received: from www3737.sakura.ne.jp (localhost [127.0.0.1])
+	by www3737.sakura.ne.jp (8.15.2/8.15.2) with ESMTP id 02RDn2b3012894
+	for <ma-tan-ni0902@docomo.ne.jp>; Fri, 27 Mar 2020 22:49:02 +0900 (JST)
+	(envelope-from tag-school@www3737.sakura.ne.jp)
+Received: (from tag-school@localhost)
+	by www3737.sakura.ne.jp (8.15.2/8.15.2/Submit) id 02RDn2Rr012893;
+	Fri, 27 Mar 2020 22:49:02 +0900 (JST)
+	(envelope-from tag-school)
+Date: Fri, 27 Mar 2020 22:49:02 +0900 (JST)
+Message-Id: <202003271349.02RDn2Rr012893@www3737.sakura.ne.jp>
+To: ma-tan-ni0902@docomo.ne.jp
+Subject: =?ISO-2022-JP?B?GyRCIVobKEJUQUcgQ29ycG9yYXRp?=
+ =?ISO-2022-JP?B?b24gMjgbJEIhWyQqTGQ5ZyRvJDskIiRqJCwkSCQmJDQkNiQkJF4bKEI=?=
+ =?ISO-2022-JP?B?GyRCJDkhIxsoQg==?=
+X-PHP-Originating-Script: 1226:send.php
+From: =?ISO-2022-JP?B?GyRCQD4yLDJtSH4bKEI=?= <info@tag-school.co.jp>
+Content-Type: text/plain; charset=iso-2022-jp
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+----------------------------------------------------------------------
+　＊このメールは、お客様のお問い合わせをサーバーで受付けた時点で
+　　自動通知システムにて送信しております。
+----------------------------------------------------------------------
+お問い合わせいただきありがとうございます。
+
+お問い合わせを下記の内容で承りましたのでご確認下さい。
+後ほど、担当者より改めましてご連絡差し上げます。
+
+
+--------------------------------------------------------
+■ お問い合わせ内容
+--------------------------------------------------------
+[ お問い合わせ項目 ]
+その他
+
+[ 生徒氏名 ]
+西岡典眞 (ニシオカテンマ)
+[ 学年 ]
+中学校3年
+
+[ 希望項目 ]
+集団
+
+[ 入塾希望理由 ]
+-
+
+[ 保護者氏名 ]
+西岡雅美 (ニシオカマサミ)
+[ Eメールアドレス ]
+ma-tan-ni0902@docomo.ne.jp
+
+[ 電話番号 ]
+09046977822
+
+
+[ お問い合わせ内容 ]
+能開で安藤先生にお世話になっていました。
+塾について、いろいろ話をお伺いしたいです。
+3/28（土）お時間ありますか?
+人見治樹保護者も一緒にお願いしたいのですが
+
+
+***********************************************
+TAG Corporation 28
+〒700-0973
+岡山市北区下中野1200-4 5F
+備前西市駅徒歩7分
+TEL: 086-242-4119 
+FAX: 086-242-4140 
+***********************************************
+
+
+--02RDn2b3012896.1585316942/www3737.sakura.ne.jp--
+
