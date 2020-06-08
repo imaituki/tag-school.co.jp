@@ -480,6 +480,35 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 	#contact tr.last td{padding-bottom: 50px !important;}
 }
 
+
+
+/*===================================================================
+	online-consultation
+===================================================================*/
+#online-consultation {}
+#online-consultation .tbl_calendar table { width:100%; }
+#online-consultation .tbl_calendar table tr { height:3em; }
+#online-consultation .tbl_calendar table th,
+#online-consultation .tbl_calendar table td { text-align:center; vertical-align:middle; border:1px solid #ccc; }
+#online-consultation .tbl_calendar table th { background:#87664f; color:#fff; }
+#online-consultation .tbl_calendar table td { background:#fff; }
+#online-consultation .tbl_calendar table td.none { background:#f2f1ed; }
+#online-consultation .tbl_calendar table td a {display:block; }
+#online-consultation .tbl_calendar a {color: #E0323B; }
+#online-consultation .tbl_calendar .month{font-size: 1.5em;}
+#online-consultation .tbl_calendar .month a{margin: 0px 10px; text-decoration: none;}
+
+#online-consultation .tbl_calendar .timetable th{width: 50%;}
+#online-consultation .tbl_calendar .button{    color: #87664F;}
+
+#online-consultation #flow1 a{    color: #86664f;}
+
+@media(min-width:576px){
+	#online-consultation .time{text-align: right;}
+}
+@media(max-width:576px){
+	#online-consultation .time{font-size: 13px;}
+}
 /*===================================================================
 	28
 ===================================================================*/
@@ -510,7 +539,7 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 .entry dt { color:#000;}
 .entry dd { margin-bottom:20px; }
 
-.entry table { margin-bottom:50px; width:100%; box-shadow: 0 0 3px #999;}
+.entry table { background: #fff; margin-bottom:50px; width:100%; box-shadow: 0 0 3px #999;}
 .entry th,
 .entry td { padding:30px; border-bottom: 1px solid #ccc; vertical-align: middle; }
 .entry thead th { background:#006b4d; color:#fff; font-weight:bold; }
@@ -595,7 +624,10 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 .hl_4 { font-weight: bold; border-bottom: 1px dotted #DEDEDE; color: #87664F; font-size: 1.25em; position: relative; padding:10px 15px; line-height:140%; }
 .hl_4::before{ content: ""; border-right: 3px solid #E5E5E5; position: absolute; left:0; top:5px; width:0; height:calc(100% - 10px); }
 
+.hl_5 { font-weight: bold; border-bottom: 1px dotted #DEDEDE; color: #87664F; font-size: 1.5em; position: relative; padding:10px 15px; line-height:140%; }
+.hl_5::before{ content: ""; border-right: 3px solid #E5E5E5; position: absolute; left:0; top:5px; width:0; height:calc(100% - 10px); }
 
+h3{color: #87664F; font-size: 1.25em; font-weight: bold;}
 /*===================================================================
 	button
 ===================================================================*/

@@ -12,10 +12,10 @@
 <main>
 <div id="body">
 	<div id="page_title">
-		<div class="img_back"><img src="/common/image/contents/privacy/top.jpg" alt="プライバシーポリシ"></div>
+		<div class="img_back"><img src="/common/image/contents/privacy/top.jpg" alt="プライバシーポリシー"></div>
 		<div class="page_title_wrap">
 			<div class="center mincho">
-				<h2><span class="main">プライバシーポリシ</span><span class="sub">Privacy Policy</span></h2>
+				<h2><span class="main">プライバシーポリシー</span><span class="sub">Privacy Policy</span></h2>
 			</div>
 		</div>
 	</div>
@@ -23,7 +23,7 @@
 		<div class="center">
 			<ul>
 				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
-				<li>プライバシーポリシ</li>
+				<li>プライバシーポリシー</li>
 			</ul>
 		</div>
 	</div>
