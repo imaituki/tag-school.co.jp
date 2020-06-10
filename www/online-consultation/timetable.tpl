@@ -12,7 +12,7 @@
 <main>
 <div id="body">
 	<div id="page_title">
-		<div class="img_back"><img src="/common/image/contents/privacy/top.jpg" alt="LINEオンライン面談予約"></div>
+		<div class="img_back"><img src="/common/image/contents/online-consultation/top.jpg" alt="LINEオンライン面談予約"></div>
 		<div class="page_title_wrap">
 			<div class="center mincho">
 				<h2><span class="main">LINEオンライン面談予約</span><span class="sub">Online-consultation</span></h2>

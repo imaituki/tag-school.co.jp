@@ -490,7 +490,7 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 #online-consultation .tbl_calendar table tr { height:3em; }
 #online-consultation .tbl_calendar table th,
 #online-consultation .tbl_calendar table td { text-align:center; vertical-align:middle; border:1px solid #ccc; }
-#online-consultation .tbl_calendar table th { background:#87664f; color:#fff; }
+#online-consultation .tbl_calendar table th { background:#928278; color:#fff; }
 #online-consultation .tbl_calendar table td { background:#fff; }
 #online-consultation .tbl_calendar table td.none { background:#f2f1ed; }
 #online-consultation .tbl_calendar table td a {display:block; }
@@ -509,6 +509,8 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 @media(max-width:576px){
 	#online-consultation .time{font-size: 13px;}
 }
+
+#online-consultation #flow2 .row p{font-weight: bold; font-size: 1.15em;}
 /*===================================================================
 	28
 ===================================================================*/
@@ -624,8 +626,6 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 .hl_4 { font-weight: bold; border-bottom: 1px dotted #DEDEDE; color: #87664F; font-size: 1.25em; position: relative; padding:10px 15px; line-height:140%; }
 .hl_4::before{ content: ""; border-right: 3px solid #E5E5E5; position: absolute; left:0; top:5px; width:0; height:calc(100% - 10px); }
 
-.hl_5 { font-weight: bold; border-bottom: 1px dotted #DEDEDE; color: #87664F; font-size: 1.5em; position: relative; padding:10px 15px; line-height:140%; }
-.hl_5::before{ content: ""; border-right: 3px solid #E5E5E5; position: absolute; left:0; top:5px; width:0; height:calc(100% - 10px); }
 
 h3{color: #87664F; font-size: 1.25em; font-weight: bold;}
 /*===================================================================
