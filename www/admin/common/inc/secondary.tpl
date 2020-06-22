@@ -34,6 +34,9 @@
 			<li {if $manage == 'contact'} class="active"{/if}>
 				<a href="{$_ADMIN.home}/contents/contact/"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="nav-label">お問い合わせ管理</span></a>
 			</li>
+			<li {if $manage == 'staff'} class="active"{/if}>
+				<a href="{$_ADMIN.home}/contents/staff/"><i class="fa fa-user"></i><span class="nav-label">スタッフ管理</span></a>
+			</li>
 			<li {if $manage == 'siteconf'} class="active"{/if}>
 				<a href="{$_ADMIN.home}/contents/siteconf/"><i class="fa fa-gear"></i><span class="nav-label">サイト設定</span></a>
 			</li>

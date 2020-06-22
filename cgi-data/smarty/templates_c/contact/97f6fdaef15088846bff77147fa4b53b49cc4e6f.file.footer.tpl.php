@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-17 19:18:24
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-12 13:45:04
          compiled from "/home/tag-school/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19130763225e26d5e0287840-15357933%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97f6fdaef15088846bff77147fa4b53b49cc4e6f' => 
     array (
       0 => '/home/tag-school/www//common/include/footer.tpl',
-      1 => 1581933318,
+      1 => 1591930030,
       2 => 'file',
     ),
   ),
@@ -44,20 +44,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</div>
 		</div>
 	</div>
-	<div id="foot_banner" class="wrapper center">
+	<?php if ($_smarty_tpl->tpl_vars['mode']->value!="mypage") {?>
+	<div id="foot_banner" class="wrapper-b center">
 		<div class="banner_area">
 			<div class="row">
 				<div class="col-xs-6">
 					<a href="https://ok-school.jp/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_1.jpg" alt="OKschool"></a>
 				</div>
-				<?php if ($_smarty_tpl->tpl_vars['mode']->value!="mypage") {?>
+
 				<div class="col-xs-6">
 					<a href="https://www.earth-8.com/aschool/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_2.jpg" alt="aschool"></a>
 				</div>
-				<?php }?>
+
 			</div>
 		</div>
 	</div>
+	<?php }?>
 	<div id="foot" class="bg_l_brown">
 		<div class="row">
 			<div class="col-lg-4 col-md-5 col-xs-6">

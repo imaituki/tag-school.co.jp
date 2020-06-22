@@ -30,118 +30,24 @@
 	<section>
 		<div class="wrapper bg_common">
 			<div class="center tbl_calendar">
-				<h2 class="hl_3 mincho">LINEオンライン面談空き時間確認</h2>
+				<h2 class="hl_3 mincho">LINEオンライン面談空き時間確認（{$select_date|date_format:"%Y&#24180;%m&#26376;%d&#26085;"}）</h2>
 				<p class="mb30">下記よりご希望の時間をお選びください。</p>
 				<table class="timetable mb30">
 					<tbody>
+						{foreach from=$OptionReserveTime item="reservetime" key="key"}
 						<tr>
-							<th>9:00</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=1">〇</a>
+							<th>{$reservetime}</th>
+							<td {if $count.$key >= $t_reserve_setting.max_number} class="none"{/if}>
+								{if $count.$key >= $t_reserve_setting.max_number}
+									×
+								{elseif $t_reserve_setting.mid_number != 0 && $count.$key >= $t_reserve_setting.mid_number}
+									<a href="./form.php?y={$select_date|date_format:'%Y'}&m={$select_date|date_format:'%m'}&d={$select_date|date_format:'%d'}&t={$key}">△</a>
+								{else}
+									<a href="./form.php?y={$select_date|date_format:'%Y'}&m={$select_date|date_format:'%m'}&d={$select_date|date_format:'%d'}&t={$key}">〇</a>
+								{/if}
 							</td>
 						</tr>
-						<tr>
-							<th>9:30</th>
-							<td>
-								×
-							</td>
-						</tr>
-						<tr>
-							<th>10:00</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=3">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>10:30</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=4">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>11:00</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=5">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>11:30</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=6">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>12:00</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=7">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>12:30</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=8">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>13:00</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=9">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>13:30</th>
-							<td>
-							<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=10">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>14:00</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=11">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>14:30</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=12">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>15:00</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=13">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>15:30</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=14">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>16:00</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=15">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>16:30</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=16">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>17:00</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=17">〇</a>
-							</td>
-						</tr>
-						<tr>
-							<th>17:30</th>
-							<td>
-								<a href="./form.php?y=2020&amp;m=06&amp;d=09&amp;t=18">〇</a>
-							</td>
-						</tr>
+						{/foreach}
 					</tbody>
 				</table>
 				<div class="pos_ac">

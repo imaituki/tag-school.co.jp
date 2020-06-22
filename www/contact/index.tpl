@@ -40,7 +40,7 @@
 								<th scope="row">お問い合わせ項目<span class="need">必須</span></th>
 								<td>
 									{if $message.ng.content|default:'' != NULL}<p class="error">{$message.ng.content}</p>{/if}
-									{html_radios name="content" options=$OptionContent selected=$arr_post.content|default:1}
+									{html_radios name="content" options=$OptionContent selected=$arr_post.content|default:3}
 								</td>
 							</tr>
 							<tr>
@@ -79,6 +79,21 @@
 								<td>
 									{if !empty($message.ng.reason)}<span class="error">※{$message.ng.reason}</span>{/if}
 									<textarea name="reason" style="min-height:100px;">{$arr_post.reason|default:''}</textarea>
+								</td>
+							</tr>
+							<tr>
+								<th>当校を知ったきっかけ</th>
+								<td>
+									{if !empty($message.ng.kikkake)}<span class="error">※{$message.ng.kikkake}</span>{/if}
+									{foreach from=$OptionKikkake item=kikkake key=key}
+										{if $key > 0}<br />{/if}
+										<label>
+											<input type="checkbox" name="kikkake[]" value="{$key}" {if !empty($arr_post.kikkake) && array_search($key, $arr_post.kikkake) !== false}checked{/if} />
+											{$kikkake}
+										</label>
+										{if $key == 5}&nbsp;<input type="text" name="kikkake_5" value="{$arr_post.kikkake_5}" placeholder="ご紹介者のお名前(※任意)" class="input_note" />{/if}
+										{if $key == 6}&nbsp;<input type="text" name="kikkake_6" value="{$arr_post.kikkake_6}" class="input_note" />{/if}
+									{/foreach}
 								</td>
 							</tr>
 							<tr>

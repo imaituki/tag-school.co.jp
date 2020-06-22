@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-11 17:10:59
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-18 20:22:31
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9932258365e280add2d6f40-14070391%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1581313888,
+      1 => 1592479298,
       2 => 'file',
     ),
   ),
@@ -27,6 +27,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'OptionContent' => 0,
     'OptionGrade' => 0,
     'OptionRequest' => 0,
+    'key' => 0,
+    'val' => 0,
+    'OptionKikkake' => 0,
     'template_footer' => 0,
   ),
   'has_nocache_code' => false,
@@ -128,6 +131,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 									<input type="hidden" name="reason" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['reason'])===null||$tmp==='' ? '' : $tmp);?>
 " />
+								</td>
+							</tr>
+							<tr>
+								<th>当校を知ったきっかけ</th>
+								<td>
+									<?php  $_smarty_tpl->tpl_vars['val'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['val']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['arr_post']->value['kikkake']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['val']->key => $_smarty_tpl->tpl_vars['val']->value) {
+$_smarty_tpl->tpl_vars['val']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['val']->key;
+?>
+										<?php if ($_smarty_tpl->tpl_vars['key']->value>0) {?><br /><?php }?>
+										・<?php echo $_smarty_tpl->tpl_vars['OptionKikkake']->value[$_smarty_tpl->tpl_vars['val']->value];?>
+
+										<input type="hidden" name="kikkake[]" value="<?php echo $_smarty_tpl->tpl_vars['val']->value;?>
+" />
+										<?php if ($_smarty_tpl->tpl_vars['val']->value==5) {?>(<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['kikkake_5'];?>
+)<input type="hidden" name="kikkake_5" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['kikkake_5'];?>
+" /><?php }?>
+										<?php if ($_smarty_tpl->tpl_vars['val']->value==6) {?>(<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['kikkake_6'];?>
+)<input type="hidden" name="kikkake_6" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['kikkake_6'];?>
+" /><?php }?>
+									<?php } ?>
 								</td>
 							</tr>
 							<tr>

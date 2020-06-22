@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-03-19 12:55:10
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-19 17:23:32
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16336556435e2aae38747ad1-07740953%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1581928035,
+      1 => 1592555011,
       2 => 'file',
     ),
   ),
@@ -61,37 +61,37 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="center">
 					<div class="row">
 						<div class="col-xs-4 mb20">
-							<div class="unit">
+							<div class="unit height-1">
 								<a href="/<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
 /article/">
-									<p class="image pos_ac"><i class="fa fa-book" aria-hidden="true"></i></p>
-									<p class="text pos_ac">ブログ</p>
+									<p class="image pos_ac height-2 flex_c"><img src="/common/image/contents/28/logo.png" alt="28"></p>
+									<p class="text pos_ac">blog</p>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-4 mb20">
-							<div class="unit">
+							<div class="unit height-1">
 								<a href="/<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
 /edit/">
-									<p class="image pos_ac"><i class="fa fa-id-card" aria-hidden="true"></i></p>
+									<p class="image pos_ac height-2"><i class="fa fa-id-card" aria-hidden="true"></i></p>
 									<p class="text pos_ac">会員情報編集</p>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-4 mb20">
-							<div class="unit">
+							<div class="unit height-1">
 								<a href="/<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
 /logout.php">
-									<p class="image pos_ac"><i class="fas fa-sign-out-alt"></i></p>
+									<p class="image pos_ac height-2"><i class="fas fa-sign-out-alt"></i></p>
 									<p class="text pos_ac">ログアウト</p>
 								</a>
 							</div>
 						</div>
 						<div class="col-xs-4">
-							<div class="unit unsubscribe">
+							<div class="unit height-1 unsubscribe">
 								<a href="/<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
 /unsubscribe/">
-									<p class="image pos_ac"><i class="far fa-times-circle"></i></p>
+									<p class="image pos_ac height-2"><i class="far fa-times-circle"></i></p>
 									<p class="text pos_ac">退会</p>
 								</a>
 							</div>

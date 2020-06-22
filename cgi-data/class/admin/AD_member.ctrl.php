@@ -90,15 +90,13 @@ class AD_member {
 
 
 		// チェックエントリー
-		$objInputCheck->entryData( "お名前(姓)", "name1" , $arrVal["name1"] , array("CHECK_EMPTY"), null, null );
-		$objInputCheck->entryData( "お名前(名)", "name2" , $arrVal["name2"] , array("CHECK_EMPTY"), null, null );
-		$objInputCheck->entryData( "フリガナ(姓)", "ruby1" , $arrVal["ruby1"] , array("CHECK_EMPTY" , "CHECK_MIN_MAX_LEN", "CHECK_KANA"), 0, 30 );
-		$objInputCheck->entryData( "フリガナ(名)", "ruby2" , $arrVal["ruby2"] , array("CHECK_EMPTY" , "CHECK_MIN_MAX_LEN", "CHECK_KANA"), 0, 30 );
-		$objInputCheck->entryData( "電話番号", "tel" , $arrVal["tel"] , array("CHECK_EMPTY", "CHECK_TEL", "CHECK_MAX_LEN"), 10, 14 );
+		// $objInputCheck->entryData( "お名前(姓)", "name1" , $arrVal["name1"] , array("CHECK_EMPTY"), null, null );
+		// $objInputCheck->entryData( "お名前(名)", "name2" , $arrVal["name2"] , array("CHECK_EMPTY"), null, null );
+		// $objInputCheck->entryData( "フリガナ(姓)", "ruby1" , $arrVal["ruby1"] , array("CHECK_EMPTY" , "CHECK_MIN_MAX_LEN", "CHECK_KANA"), 0, 30 );
+		// $objInputCheck->entryData( "フリガナ(名)", "ruby2" , $arrVal["ruby2"] , array("CHECK_EMPTY" , "CHECK_MIN_MAX_LEN", "CHECK_KANA"), 0, 30 );
+		// $objInputCheck->entryData( "電話番号", "tel" , $arrVal["tel"] , array("CHECK_EMPTY", "CHECK_TEL", "CHECK_MAX_LEN"), 10, 14 );
 		$objInputCheck->entryData( "Eメールアドレス", "mail" , $arrVal["mail"] , array("CHECK_EMPTY", "CHECK_MAIL", "CHECK_MIN_MAX_LEN"), 0, 255 );
-		$objInputCheck->entryData( "郵便番号", "zip" , $arrVal["zip"] , array("CHECK_EMPTY", "CHECK_ZIP", "CHECK_MIN_MAX_LEN"), 7, 8 );
-		$objInputCheck->entryData( "都道府県", "prefecture" , $arrVal["prefecture"] , array("CHECK_EMPTY_ZERO"), null, null );
-		$objInputCheck->entryData( "市区町村", "address1" , $arrVal["address1"] , array("CHECK_EMPTY", "CHECK_MIN_MAX_LEN"), 0, 255 );
+		// $objInputCheck->entryData( "郵便番号", "address1" , $arrVal["address1"] , array("CHECK_EMPTY", "CHECK_MIN_MAX_LEN"), 0, 255 );
 
 		// チェックエントリー（UPDATE時）
 		if( strcmp($mode, "update") == 0 ) {
@@ -116,7 +114,7 @@ class AD_member {
 			$where = "";
 		}
 		$chk = $this->_DBconn->_ADODB->GetOne( "SELECT mail	FROM " . $this->_CtrTable . " WHERE delete_flg = 0 AND mail = '" . $arrVal["mail"] . "' " . $where );
-disp_arr($chk);
+
 		if( !empty($chk) ) {
 			$res["ng"]["mail"] .= "指定のメールアドレスは、既に登録されています。<br />";
 		}

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-12 14:15:01
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-18 20:58:12
          compiled from "/home/tag-school/www/admin/contents/contact/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1155323555e2a98544439a8-66619384%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b977f79f235f86bee128297040c7847d8d6055be' => 
     array (
       0 => '/home/tag-school/www/admin/contents/contact/template/form.tpl',
-      1 => 1581484498,
+      1 => 1592481489,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'arr_post' => 0,
     'OptionGrade' => 0,
     'OptionRequest' => 0,
+    'OptionKikkake' => 0,
+    'key' => 0,
+    'kikkake' => 0,
     'OptionContactReferer' => 0,
     'OptionStatus' => 0,
     'message' => 0,
@@ -80,6 +83,31 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 			<div class="col-sm-6">
 				<textarea name="reason" class="form-control" style="min-height:100px;"><?php echo $_smarty_tpl->tpl_vars['arr_post']->value['reason'];?>
 </textarea>
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">当校を知ったきっかけ</label>
+			<div class="col-sm-6">
+				<?php  $_smarty_tpl->tpl_vars['kikkake'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['kikkake']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['OptionKikkake']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['kikkake']->key => $_smarty_tpl->tpl_vars['kikkake']->value) {
+$_smarty_tpl->tpl_vars['kikkake']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['kikkake']->key;
+?>
+					<?php if ($_smarty_tpl->tpl_vars['key']->value>0) {?><br /><?php }?>
+					<label>
+						<input type="checkbox" name="kikkake[]" value="<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+" <?php if ($_smarty_tpl->tpl_vars['arr_post']->value['kikkake']&&array_search($_smarty_tpl->tpl_vars['key']->value,$_smarty_tpl->tpl_vars['arr_post']->value['kikkake'])!==false) {?>checked<?php }?> />
+						<?php echo $_smarty_tpl->tpl_vars['kikkake']->value;?>
+
+					</label>
+					<?php if ($_smarty_tpl->tpl_vars['key']->value==5) {?><input type="text" name="kikkake_5" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['kikkake_5'];?>
+" /><?php }?>
+					<?php if ($_smarty_tpl->tpl_vars['key']->value==6) {?><input type="text" name="kikkake_6" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['kikkake_6'];?>
+" /><?php }?>
+				<?php } ?>
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>

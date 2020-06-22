@@ -6,6 +6,10 @@
 /*===================================================================
 	#top
 ===================================================================*/
+@media (min-width: 576px){
+    #online_banner a{display: block; background: url(/common/image/contents/top/online_banner.jpg) no-repeat center top / contain; max-height: 171px; overflow: hidden; height: 15vw;}
+}
+
 #top_main { position:relative; max-height:800px; }
 #top_main .text .center { display:table; height:100%; }
 #top_main .text_in { display:table-cell; }
@@ -238,22 +242,22 @@
 	.profile_box._orange { border-color:#de652e; }
 .profile_box .profile { margin-bottom:20px; }
 .profile_box .profile dl dt { font-weight:bold; font-size:1.25em; letter-spacing:2px; }
-.teacher_unit .title .tag.c_orange { border-color:#de652e; }
+.teacher_unit .title .tag.c_orange {position: relative!important; border-color:#de652e; }
 	@media (max-width: 409px){
-		.teacher_unit .title .tag.c_orange{display: block; position: relative; margin-top: 5px; max-width: 225px;}
+		.teacher_unit .title .tag.c_orange{display: block; position: relative; margin-top: 5px; max-width: 240px;}
 	}
 	@media (max-width: 575px){
 		.teacher_unit .photo { text-align:center; }
 		.teacher_unit .photo img { max-width:250px; }
 		.teacher_unit .title .name { font-size:2.25em; }
-		.teacher_unit .title .tag { padding:2px 8px; font-size:12px; }
+		.teacher_unit .title .tag { padding:2px 8px;     font-size: 13px; }
 	}
 	@media (min-width: 576px){
 		.teacher_unit .title .name { font-size:2.75em; }
 		.teacher_unit .title .tag { padding:2px 15px; }
 	}
 	@media (min-width: 576px) and (max-width: 725px){
-		.teacher_unit .title .tag.c_orange{display: block; position: relative; margin-top: 5px; max-width: 280px;}
+		.teacher_unit .title .tag.c_orange{display: block; margin-top: 5px; max-width: 340px;}
 	}
 	@media (max-width: 767px){
 		.profile_box { padding:20px; }
@@ -496,7 +500,8 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 #online-consultation .tbl_calendar table td a {display:block; }
 #online-consultation .tbl_calendar a {color: #E0323B; }
 #online-consultation .tbl_calendar .month{font-size: 1.5em;}
-#online-consultation .tbl_calendar .month a{margin: 0px 10px; text-decoration: none;}
+#online-consultation .tbl_calendar .month a,
+#online-consultation .tbl_calendar .month span{margin: 0px 10px; text-decoration: none;}
 
 #online-consultation .tbl_calendar .timetable th{width: 50%;}
 #online-consultation .tbl_calendar .button{    color: #87664F;}
@@ -519,7 +524,7 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 #top_28 .unit.unsubscribe  a{ color: #86664f; }
 #top_28 .unit a .image{ font-size: 4em;}
 #top_28 .unit a .text{font-size: 1.5em;}
-
+#top_28 .unit a img{height: 95px;}
 
 /*===================================================================
 	#entry
@@ -774,6 +779,8 @@ body.pc .parallax[data-parallax-in="right"]:not(.parallax_on) { right:-100vw; }
 
 @media (min-width: 768px){
 	.pc_none { display:none !important; }
+
+	.input_note { width:50% !important; padding:8px 10px !important; }
 }
 @media (max-width: 767px){
 	.sp_none { display:none !important; }
@@ -783,4 +790,6 @@ body.pc .parallax[data-parallax-in="right"]:not(.parallax_on) { right:-100vw; }
 	.sp_table_wrap::-webkit-scrollbar-thumb { background:#BCBCBC; }
 	.sp_table_wrap table { width:100%; font-size:13px;
 		-webkit-text-size-adjust:100%; -moz-text-size-adjust:none; -ms-text-size-adjust:100%; text-size-adjust:100%; }
+
+	.input_note { padding:8px 10px !important; }
 }

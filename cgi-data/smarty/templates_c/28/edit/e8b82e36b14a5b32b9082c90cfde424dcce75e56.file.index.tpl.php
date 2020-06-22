@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-04 09:38:14
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-11 09:43:05
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936279875e29593be2ca48-49802375%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580776689,
+      1 => 1581928106,
       2 => 'file',
     ),
   ),
@@ -189,7 +189,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 	</section>
 </div>
 </main>
-<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_footer']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_footer']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('mode'=>'mypage'), 0);?>
 
 </div>
 </body>

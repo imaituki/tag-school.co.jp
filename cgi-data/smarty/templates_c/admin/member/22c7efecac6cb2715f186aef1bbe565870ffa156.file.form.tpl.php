@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 10:42:33
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-11 13:25:50
          compiled from "/home/tag-school/www/admin/contents/member/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6828573655e05e45278fb22-94726547%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '22c7efecac6cb2715f186aef1bbe565870ffa156' => 
     array (
       0 => '/home/tag-school/www/admin/contents/member/template/form.tpl',
-      1 => 1580175441,
+      1 => 1591848828,
       2 => 'file',
     ),
   ),
@@ -35,7 +35,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 ?><form class="form-horizontal" action="./<?php if ($_smarty_tpl->tpl_vars['mode']->value=='edit') {?>update<?php } else { ?>insert<?php }?>.php" method="post" enctype="multipart/form-data">
 	<div class="ibox-content">
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">お名前</label>
 			<div class="col-sm-3">
 				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['name1'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['name1'];?>
@@ -47,7 +47,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">フリガナ</label>
 			<div class="col-sm-3">
 				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['ruby1'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['ruby1'];?>
@@ -59,7 +59,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">郵便番号</label>
 			<div class="col-sm-6">
 				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['zip'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['zip'];?>
@@ -70,7 +70,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">都道府県</label>
 			<div class="col-sm-6">
 				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['prefecture'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['prefecture'];?>
@@ -81,7 +81,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">市区町村</label>
 			<div class="col-sm-6">
 				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['address1'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['address1'];?>
@@ -101,7 +101,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">電話番号</label>
 			<div class="col-sm-3">
 				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['tel'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['tel'];?>
@@ -133,7 +133,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">どこからの登録か</label>
 			<div class="col-sm-6">
 				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['referer'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['referer'];?>
@@ -143,7 +143,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">メールマガジン希望</label>
 			<div class="col-sm-6">
 				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['mail_magazine_flg'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['mail_magazine_flg'];?>
@@ -154,7 +154,7 @@ if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-d
 		</div>
 		<?php if ($_smarty_tpl->tpl_vars['arr_post']->value['delete_flg']==1) {?>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">退会希望</label>
 			<div class="col-sm-6">
 				<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['delete_flg'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['delete_flg'];?>

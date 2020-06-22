@@ -16,6 +16,11 @@
 [ 入塾希望理由 ]
 {$arr_post.reason|default:'-'}
 
+[ 当校を知ったきっかけ ]
+{foreach from=$kikkake key=key item=val}
+・{$OptionKikkake[$val]}{if $val == 5}({$arr_post.kikkake_5}){/if}{if $val == 6}({$arr_post.kikkake_6}){/if} 
+{/foreach}
+
 [ 保護者氏名 ]
 {$arr_post.name2|default:'-'} {if !empty($arr_post.ruby2)}({$arr_post.ruby2|default:''}){/if}
 

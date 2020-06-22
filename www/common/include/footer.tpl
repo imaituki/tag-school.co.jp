@@ -14,20 +14,22 @@
 			</div>
 		</div>
 	</div>
-	<div id="foot_banner" class="wrapper center">
+	{if $mode != "mypage"}
+	<div id="foot_banner" class="wrapper-b center">
 		<div class="banner_area">
 			<div class="row">
 				<div class="col-xs-6">
 					<a href="https://ok-school.jp/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_1.jpg" alt="OKschool"></a>
 				</div>
-				{if $mode != "mypage"}
+
 				<div class="col-xs-6">
 					<a href="https://www.earth-8.com/aschool/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_2.jpg" alt="aschool"></a>
 				</div>
-				{/if}
+
 			</div>
 		</div>
 	</div>
+	{/if}
 	<div id="foot" class="bg_l_brown">
 		<div class="row">
 			<div class="col-lg-4 col-md-5 col-xs-6">

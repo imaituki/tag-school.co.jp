@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-10 14:58:26
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-19 09:25:43
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7049183775e26d5e01b3869-32464001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1581314305,
+      1 => 1592526336,
       2 => 'file',
     ),
   ),
@@ -28,6 +28,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'arr_post' => 0,
     'OptionGrade' => 0,
     'OptionRequest' => 0,
+    'OptionKikkake' => 0,
+    'key' => 0,
+    'kikkake' => 0,
     'template_footer' => 0,
   ),
   'has_nocache_code' => false,
@@ -83,7 +86,7 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 								<td>
 									<?php if ((($tmp = @$_smarty_tpl->tpl_vars['message']->value['ng']['content'])===null||$tmp==='' ? '' : $tmp)!=null) {?><p class="error"><?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['content'];?>
 </p><?php }?>
-									<?php echo smarty_function_html_radios(array('name'=>"content",'options'=>$_smarty_tpl->tpl_vars['OptionContent']->value,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['content'])===null||$tmp==='' ? 1 : $tmp)),$_smarty_tpl);?>
+									<?php echo smarty_function_html_radios(array('name'=>"content",'options'=>$_smarty_tpl->tpl_vars['OptionContent']->value,'selected'=>(($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['content'])===null||$tmp==='' ? 3 : $tmp)),$_smarty_tpl);?>
 
 								</td>
 							</tr>
@@ -133,6 +136,32 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 </span><?php }?>
 									<textarea name="reason" style="min-height:100px;"><?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['reason'])===null||$tmp==='' ? '' : $tmp);?>
 </textarea>
+								</td>
+							</tr>
+							<tr>
+								<th>当校を知ったきっかけ</th>
+								<td>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['kikkake'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['kikkake'];?>
+</span><?php }?>
+									<?php  $_smarty_tpl->tpl_vars['kikkake'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['kikkake']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['OptionKikkake']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['kikkake']->key => $_smarty_tpl->tpl_vars['kikkake']->value) {
+$_smarty_tpl->tpl_vars['kikkake']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['kikkake']->key;
+?>
+										<?php if ($_smarty_tpl->tpl_vars['key']->value>0) {?><br /><?php }?>
+										<label>
+											<input type="checkbox" name="kikkake[]" value="<?php echo $_smarty_tpl->tpl_vars['key']->value;?>
+" <?php if (!empty($_smarty_tpl->tpl_vars['arr_post']->value['kikkake'])&&array_search($_smarty_tpl->tpl_vars['key']->value,$_smarty_tpl->tpl_vars['arr_post']->value['kikkake'])!==false) {?>checked<?php }?> />
+											<?php echo $_smarty_tpl->tpl_vars['kikkake']->value;?>
+
+										</label>
+										<?php if ($_smarty_tpl->tpl_vars['key']->value==5) {?>&nbsp;<input type="text" name="kikkake_5" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['kikkake_5'];?>
+" placeholder="ご紹介者のお名前(※任意)" class="input_note" /><?php }?>
+										<?php if ($_smarty_tpl->tpl_vars['key']->value==6) {?>&nbsp;<input type="text" name="kikkake_6" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['kikkake_6'];?>
+" class="input_note" /><?php }?>
+									<?php } ?>
 								</td>
 							</tr>
 							<tr>

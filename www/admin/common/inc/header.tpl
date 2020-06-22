@@ -5,6 +5,7 @@
 		</div>
 	</nav>
 	<ul class="nav navbar-top-links navbar-right">
+		<li><a href="{$_ADMIN.home}/logout.php"><i class="fa fa-desktop"></i>ログアウト</a></li>
 		<li><a href="{$_FRONT.home}/" target="_blank"><i class="fa fa-desktop"></i>Webサイトを表示</a></li>
 	</ul>
 </div>

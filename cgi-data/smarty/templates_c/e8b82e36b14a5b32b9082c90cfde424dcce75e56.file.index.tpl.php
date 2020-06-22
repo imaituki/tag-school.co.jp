@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-05-21 09:49:13
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-19 22:55:37
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19367162525e294e044aaa34-62772733%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1590022148,
+      1 => 1592574844,
       2 => 'file',
     ),
   ),
@@ -49,13 +49,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <main>
 <div id="top_main">
 	<div class="image">
-		<div class="visible-xs"><img src="common/image/contents/top/main-sp.jpg" alt="岡山市の集団×個別融合型 新総合学習塾 TAG school[タッグスクール]"></div>
-		<div class="hidden-xs"><img src="common/image/contents/top/main.jpg" alt="岡山市の集団×個別融合型 新総合学習塾 TAG school[タッグスクール]"></div>
+		<div class="visible-xs"><img src="/common/image/contents/top/main-sp.jpg" alt="岡山市の集団×個別融合型 新総合学習塾 TAG school[タッグスクール]"></div>
+		<div class="hidden-xs"><img src="/common/image/contents/top/main.jpg" alt="岡山市の集団×個別融合型 新総合学習塾 TAG school[タッグスクール]"></div>
 	</div>
 	<div id="main_text" class="text">
 		<div class="center">
 			<div class="text_in">
-				<div class="logo"><img src="common/image/contents/top/logo.png" alt="岡山市の総合学習塾 タッグスクール TAG school"></div>
+				<div class="logo"><img src="/common/image/contents/top/logo.png" alt="岡山市の総合学習塾 タッグスクール TAG school"></div>
 				<h2 class="mincho">集団×個別指導塾 TAGスクール<br><span class="c_red">2020年度<br>新規生徒募集中！</span></h2>
 				<!--
 				<p>岡山市下中野に今までにない新しい塾が誕生！</p>
@@ -84,9 +84,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<?php }?>
 </div>
 <div id="body">
+	
 	<section>
 		<div id="top_about">
-			<div class="photo img_back"><img src="common/image/contents/top/image1.jpg" alt="TAG schoolについて"></div>
+			<div class="photo img_back"><img src="/common/image/contents/top/image1.jpg" alt="TAG schoolについて"></div>
 			<div class="text">
 				<div class="center">
 					<div class="text_in">
@@ -109,10 +110,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<div class="col-xs-4">
 							<div class="box icon_box">
 								<a href="/strength/#strength_1">
-									<div class="photo"><img src="common/image/contents/top/image2.jpg" alt="オリジナル指導形態"></div>
+									<div class="photo"><img src="/common/image/contents/top/image2.jpg" alt="オリジナル指導形態"></div>
 									<div class="text">
-										<div class="icon"><span><img src="common/image/contents/top/icon1.png" alt="オリジナル指導形態"></span></div>
-										<h3 class="mincho c_brown flex_c"><span class="flex_c"><img src="common/image/contents/top/r_icon.png" alt="オリジナル指導形態"></span><span>オリジナル指導形態</span></h3>
+										<div class="icon"><span><img src="/common/image/contents/top/icon1.png" alt="オリジナル指導形態"></span></div>
+										<h3 class="mincho c_brown flex_c"><span class="flex_c"><img src="/common/image/contents/top/r_icon.png" alt="オリジナル指導形態"></span><span>オリジナル指導形態</span></h3>
 										<p class="caption">Original teaching form</p>
 									</div>
 								</a>
@@ -121,10 +122,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<div class="col-xs-4">
 							<div class="box icon_box">
 								<a href="/strength/#strength_2">
-									<div class="photo"><img src="common/image/contents/top/image3.jpg" alt="ハイレベル講師陣"></div>
+									<div class="photo"><img src="/common/image/contents/top/image3.jpg" alt="ハイレベル講師陣"></div>
 									<div class="text">
-										<div class="icon"><span><img src="common/image/contents/top/icon2.png" alt="ハイレベル講師陣"></span></div>
-										<h3 class="mincho c_brown flex_c"><span class="flex_c"><img src="common/image/contents/top/r_icon.png" alt="ハイレベル講師陣"></span><span>ハイレベル講師陣</span></h3>
+										<div class="icon"><span><img src="/common/image/contents/top/icon2.png" alt="ハイレベル講師陣"></span></div>
+										<h3 class="mincho c_brown flex_c"><span class="flex_c"><img src="/common/image/contents/top/r_icon.png" alt="ハイレベル講師陣"></span><span>ハイレベル講師陣</span></h3>
 										<p class="caption">High-level teachers</p>
 									</div>
 								</a>
@@ -133,10 +134,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<div class="col-xs-4">
 							<div class="box icon_box">
 								<a href="/strength/#strength_3">
-									<div class="photo"><img src="common/image/contents/top/image4.jpg" alt="IoE"></div>
+									<div class="photo"><img src="/common/image/contents/top/image4.jpg" alt="IoE"></div>
 									<div class="text">
-										<div class="icon"><span><img src="common/image/contents/top/icon3.png" alt="IoE"></span></div>
-										<h3 class="mincho c_brown flex_c"><span class="flex_c"><img src="common/image/contents/top/r_icon.png" alt="IoE"></span><span>IoE</span></h3>
+										<div class="icon"><span><img src="/common/image/contents/top/icon3.png" alt="IoE"></span></div>
+										<h3 class="mincho c_brown flex_c"><span class="flex_c"><img src="/common/image/contents/top/r_icon.png" alt="IoE"></span><span>IoE</span></h3>
 										<p class="caption">Internet of Education</p>
 									</div>
 								</a>
@@ -158,7 +159,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _orange tab height-1_all">
 									<a href="#primary">
-										<div class="photo img_back"><img src="common/image/contents/top/image5.jpg" alt="小学生コース"></div>
+										<div class="photo img_back"><img src="/common/image/contents/top/image5.jpg" alt="小学生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_orange">小学生</h3>
 											<p class="caption height-2_all">Schoolchild</p>
@@ -173,7 +174,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _blue tab height-1_all">
 									<a href="#middle">
-										<div class="photo img_back"><img src="common/image/contents/top/image6.jpg" alt="中学生コース"></div>
+										<div class="photo img_back"><img src="/common/image/contents/top/image6.jpg" alt="中学生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_blue">中学生</h3>
 											<p class="caption height-2_all">Middle school<span class="hidden-only"> student</span></p>
@@ -188,7 +189,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _green tab height-1_all">
 									<a href="#high">
-										<div class="photo img_back"><img src="common/image/contents/top/image7.jpg" alt="高校生コース"></div>
+										<div class="photo img_back"><img src="/common/image/contents/top/image7.jpg" alt="高校生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_green">高校生</h3>
 											<p class="caption height-2_all">High school<span class="hidden-only"> student</span></p>
@@ -302,7 +303,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<div class="row">
 							<div class="col-xs-4">
 								<div class="flow_unit fa_a height-1">
-									<div class="photo"><img src="common/image/contents/top/flow1.png" alt="お問い合わせ"></div>
+									<div class="photo"><img src="/common/image/contents/top/flow1.png" alt="お問い合わせ"></div>
 									<div class="text">
 										<h3 class="disp_tbl height-2_all"><span class="disp_td">お問い合わせ</span></h3>
 										<p>お電話またはお問い合わせフォームにて、お気軽にお問い合わせください</p>
@@ -311,7 +312,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 							<div class="col-xs-4">
 								<div class="flow_unit fa_a height-1">
-									<div class="photo"><img src="common/image/contents/top/flow2.png" alt="面 談"></div>
+									<div class="photo"><img src="/common/image/contents/top/flow2.png" alt="面 談"></div>
 									<div class="text">
 										<h3 class="disp_tbl height-2_all"><span class="disp_td">面 談<span class="comment">※クラス判定テスト（一部学年）</span></span></h3>
 										<p>・プロ教育アドバイザーによる面談</p>
@@ -321,7 +322,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 							<div class="col-xs-4">
 								<div class="flow_unit height-1">
-									<div class="photo"><img src="common/image/contents/top/flow4.png" alt="入塾手続き"></div>
+									<div class="photo"><img src="/common/image/contents/top/flow4.png" alt="入塾手続き"></div>
 									<div class="text">
 										<h3 class="disp_tbl height-2_all"><span class="disp_td">入塾手続き</span></h3>
 										<p>入塾申込み後、授業スタート</p>
@@ -392,10 +393,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="wrapper bg_common">
 				<div class="center">
 					<h2 class="hl_1 mincho"><span class="en">Teachers</span><span class="ja">講師紹介</span></h2>
-					<div class="teacher_unit bor_b">
+					<div class="teacher_unit bor_b" id="kimoto">
 						<div class="row">
 							<div class="col-xs-4">
-								<div class="photo mb20"><img src="common/image/contents/top/teacher1.png" alt="木本 健太郎"></div>
+								<div class="photo mb20"><img src="/common/image/contents/top/teacher1.png" alt="木本 健太郎"></div>
 							</div>
 							<div class="col-xs-8">
 								<h3 class="title"><span class="name mincho">木本 健太郎</span><span class="ruby">KENTARO KIMOTO</span><span class="tag">塾長</span></h3>
@@ -419,10 +420,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 						</div>
 					</div>
-					<div class="teacher_unit">
+					<div class="teacher_unit" id="ando">
 						<div class="row">
 							<div class="col-xs-4 col-xs-push-8">
-								<div class="photo mb20"><img src="common/image/contents/top/teacher2.png" alt="安藤 正由"></div>
+								<div class="photo mb20"><img src="/common/image/contents/top/teacher2.png" alt="安藤 正由"></div>
 							</div>
 							<div class="col-xs-8 col-xs-pull-4">
 								<h3 class="title"><span class="name mincho c_orange">安藤 正由</span><span class="ruby">MASAYOSHI ANDO</span><span class="tag c_orange">TAG総合プロデューサー・統括責任者</span></h3>

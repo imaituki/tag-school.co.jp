@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-11 17:11:30
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-18 20:46:32
          compiled from "./mail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13676558325e280c7edab230-85337950%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '140ed6d1ad3b6643e3b58b9fe629cd46e8b9926b' => 
     array (
       0 => './mail.tpl',
-      1 => 1581313979,
+      1 => 1592480766,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'OptionContent' => 0,
     'OptionGrade' => 0,
     'OptionRequest' => 0,
+    'kikkake' => 0,
+    'val' => 0,
+    'OptionKikkake' => 0,
     '_INFO' => 0,
   ),
   'has_nocache_code' => false,
@@ -51,6 +54,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 [ 入塾希望理由 ]
 <?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['reason'])===null||$tmp==='' ? '-' : $tmp);?>
 
+
+[ 当校を知ったきっかけ ]
+<?php  $_smarty_tpl->tpl_vars['val'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['val']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['kikkake']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['val']->key => $_smarty_tpl->tpl_vars['val']->value) {
+$_smarty_tpl->tpl_vars['val']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['val']->key;
+?>
+・<?php echo $_smarty_tpl->tpl_vars['OptionKikkake']->value[$_smarty_tpl->tpl_vars['val']->value];?>
+<?php if ($_smarty_tpl->tpl_vars['val']->value==5) {?>(<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['kikkake_5'];?>
+)<?php }?><?php if ($_smarty_tpl->tpl_vars['val']->value==6) {?>(<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['kikkake_6'];?>
+)<?php }?> 
+<?php } ?>
 
 [ 保護者氏名 ]
 <?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['name2'])===null||$tmp==='' ? '-' : $tmp);?>

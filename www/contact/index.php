@@ -37,7 +37,11 @@ $smarty->assign( "OptionGrade"  , $OptionGrade   );
 $smarty->assign( "OptionRequest", $OptionRequest );
 $smarty->assign( "OptionContactReferer", $OptionContactReferer );
 $smarty->assign( "OptionStatus" , $OptionStatus  );
+$smarty->assign( "OptionKikkake", $OptionKikkake );
 
 // 表示
 $smarty->display("index.tpl");
+echo "<!--";
+disp_arr($arr_post);
+echo "-->";
 ?>

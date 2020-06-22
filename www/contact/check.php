@@ -56,6 +56,7 @@ $smarty->assign( "OptionGrade"  , $OptionGrade   );
 $smarty->assign( "OptionRequest", $OptionRequest );
 $smarty->assign( "OptionContactReferer", $OptionContactReferer );
 $smarty->assign( "OptionStatus" , $OptionStatus  );
+$smarty->assign( "OptionKikkake", $OptionKikkake );
 
 // エラーチェック
 if( empty($message["ng"]) ) {

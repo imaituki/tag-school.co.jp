@@ -5,6 +5,7 @@
 {include file=$template_meta}
 <link rel="stylesheet" href="/common/css/import.css">
 {include file=$template_javascript}
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 </head>
 <body id="online-consultation">
 <div id="base">
@@ -36,17 +37,27 @@
 					<table class="tbl_form">
 						<tbody>
 							<tr class="first">
+								<th>面談希望日時<span class="need">必須</span></th>
+								<td>
+									{if !empty($message.ng.date)}<span class="error">※{$message.ng.date}</span>{/if}
+									{if !empty($message.ng.time)}<span class="error">※{$message.ng.time}</span>{/if}
+									{$arr_post.date|date_format:"%Y&#24180;%m&#26376;%d&#26085;"}({$OptionWeek[$arr_post.date|date_format:"w"]}) {if !empty($OptionReserveTime[$arr_post.time])}{$OptionReserveTime[$arr_post.time]}{/if}
+									<input type="hidden" name="date" value="{$arr_post.date}" />
+									<input type="hidden" name="time" value="{$arr_post.time}" />
+								</td>
+							</tr>
+							<tr>
 								<th>保護者氏名<span class="need">必須</span></th>
 								<td>
-									{if !empty($message.ng.name1)}<span class="error">※{$message.ng.name1}</span>{/if}
-									<input type="text" name="name1" value="{$arr_post.name1|default:''}" />
+									{if !empty($message.ng.name2)}<span class="error">※{$message.ng.name2}</span>{/if}
+									<input type="text" name="name2" value="{$arr_post.name2|default:''}" />
 								</td>
 							</tr>
 							<tr>
 								<th>保護者氏名(フリガナ)<span class="need">必須</span></th>
 								<td>
-									{if !empty($message.ng.ruby1)}<span class="error">※{$message.ng.ruby1}</span>{/if}
-									<input type="text" name="ruby1" value="{$arr_post.ruby1|default:''}" />
+									{if !empty($message.ng.ruby2)}<span class="error">※{$message.ng.ruby2}</span>{/if}
+									<input type="text" name="ruby2" value="{$arr_post.ruby2|default:''}" />
 								</td>
 							</tr>
 							<tr>
@@ -93,15 +104,15 @@
 							<tr>
 								<th>児童・生徒氏名</th>
 								<td>
-									{if !empty($message.ng.name2)}<span class="error">※{$message.ng.name2}</span>{/if}
-									<input type="text" name="name2" value="{$arr_post.name2|default:''}" />
+									{if !empty($message.ng.name1)}<span class="error">※{$message.ng.name1}</span>{/if}
+									<input type="text" name="name1" value="{$arr_post.name1|default:''}" />
 								</td>
 							</tr>
 							<tr>
 								<th>児童・生徒氏名(フリガナ)</th>
 								<td>
-									{if !empty($message.ng.ruby2)}<span class="error">※{$message.ng.ruby2}</span>{/if}
-									<input type="text" name="ruby2" value="{$arr_post.ruby2|default:''}" />
+									{if !empty($message.ng.ruby1)}<span class="error">※{$message.ng.ruby1}</span>{/if}
+									<input type="text" name="ruby1" value="{$arr_post.ruby1|default:''}" />
 								</td>
 							</tr>
 							<tr>
@@ -133,10 +144,15 @@
 							</tr>
 						</tbody>
 					</table>
-
-					<div class="pos_ac form_button">
-						<button class="button" type="submit">入力内容を確認する<i class="fa fa-chevron-right"></i></button>
+					<div class="row form_button">
+						<div class="col-xs-6 mb20 pos_al">
+							<a href="./timetable.php?y={$arr_post.date|date_format:'%Y'}&m={$arr_post.date|date_format:'%m'}&d={$arr_post.date|date_format:'%d'}&w={$arr_post.date|date_format:'%w'}" class="button _back"><i class="fa fa-chevron-left"></i>時間選択に戻る</a>
+						</div>
+						<div class="col-xs-6 pos_ar">
+							<button class="button" type="submit">入力内容を確認する<i class="fa fa-chevron-right"></i></button>
+						</div>
 					</div>
+
 				</form>
 			</div>
 		</div>

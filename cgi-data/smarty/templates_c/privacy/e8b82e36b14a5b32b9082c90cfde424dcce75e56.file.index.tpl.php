@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-30 14:39:57
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-08 19:09:55
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:13207818025e295290098406-77290275%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1580361535,
+      1 => 1591595613,
       2 => 'file',
     ),
   ),
@@ -44,10 +44,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <main>
 <div id="body">
 	<div id="page_title">
-		<div class="img_back"><img src="/common/image/contents/privacy/top.jpg" alt="プライバシーポリシ"></div>
+		<div class="img_back"><img src="/common/image/contents/privacy/top.jpg" alt="プライバシーポリシー"></div>
 		<div class="page_title_wrap">
 			<div class="center mincho">
-				<h2><span class="main">プライバシーポリシ</span><span class="sub">Privacy Policy</span></h2>
+				<h2><span class="main">プライバシーポリシー</span><span class="sub">Privacy Policy</span></h2>
 			</div>
 		</div>
 	</div>
@@ -55,7 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="center">
 			<ul>
 				<li><a href="/"><i class="fa fa-home"></i>HOME</a></li>
-				<li>プライバシーポリシ</li>
+				<li>プライバシーポリシー</li>
 			</ul>
 		</div>
 	</div>

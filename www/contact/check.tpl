@@ -79,6 +79,18 @@
 								</td>
 							</tr>
 							<tr>
+								<th>当校を知ったきっかけ</th>
+								<td>
+									{foreach from=$arr_post.kikkake key=key item=val}
+										{if $key > 0}<br />{/if}
+										・{$OptionKikkake[$val]}
+										<input type="hidden" name="kikkake[]" value="{$val}" />
+										{if $val == 5}({$arr_post.kikkake_5})<input type="hidden" name="kikkake_5" value="{$arr_post.kikkake_5}" />{/if}
+										{if $val == 6}({$arr_post.kikkake_6})<input type="hidden" name="kikkake_6" value="{$arr_post.kikkake_6}" />{/if}
+									{/foreach}
+								</td>
+							</tr>
+							<tr>
 								<th>保護者氏名</th>
 								<td>
 									{$arr_post.name2|default:'--'}

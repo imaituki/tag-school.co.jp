@@ -37,17 +37,25 @@
 						<table class="tbl_form bg0">
 							<tbody>
 								<tr>
+									<th>面談希望日時</th>
+									<td>
+										{$arr_post.date|date_format:"%Y&#24180;%m&#26376;%d&#26085;"}({$OptionWeek[$arr_post.date|date_format:"w"]}) {$OptionReserveTime[$arr_post.time]}
+										<input type="hidden" name="date" value="{$arr_post.date}">
+										<input type="hidden" name="time" value="{$arr_post.time}">
+									</td>
+								</tr>
+								<tr>
 									<th>保護者氏名</th>
 									<td>
-										{$arr_post.name1|default:''}
-										<input type="hidden" name="name1" value="{$arr_post.name1|default:''}" />
+										{$arr_post.name2|default:''}
+										<input type="hidden" name="name2" value="{$arr_post.name2|default:''}" />
 									</td>
 								</tr>
 								<tr>
 									<th>保護者氏名(フリガナ)</th>
 									<td>
-										{$arr_post.ruby1|default:''}
-										<input type="hidden" name="ruby1" value="{$arr_post.ruby1|default:''}" />
+										{$arr_post.ruby2|default:''}
+										<input type="hidden" name="ruby2" value="{$arr_post.ruby2|default:''}" />
 									</td>
 								</tr>
 								<tr>
@@ -81,29 +89,29 @@
 								<tr>
 									<th>児童・生徒氏名</th>
 									<td>
-										{$arr_post.name2|default:'--'}
-										<input type="hidden" name="name2" value="{$arr_post.name2|default:''}" />
-									</td>
-								</tr>
-								<tr>
-									<th>性別</th>
-									<td>
-										{$arr_post.ruby2|default:'--'}
-										<input type="hidden" name="ruby2" value="{$arr_post.ruby2|default:''}" />
-									</td>
-								</tr>
-								<tr>
-									<th>学年</th>
-									<td>
-										{$arr_post.ruby2|default:'--'}
-										<input type="hidden" name="ruby2" value="{$arr_post.ruby2|default:''}" />
+										{$arr_post.name1|default:'--'}
+										<input type="hidden" name="name1" value="{$arr_post.name1|default:''}" />
 									</td>
 								</tr>
 								<tr>
 									<th>児童・生徒氏名(フリガナ)</th>
 									<td>
-										{$arr_post.ruby2|default:'--'}
-										<input type="hidden" name="ruby2" value="{$arr_post.ruby2|default:''}" />
+										{$arr_post.ruby1|default:'--'}
+										<input type="hidden" name="ruby1" value="{$arr_post.ruby1|default:''}" />
+									</td>
+								</tr>
+								<tr>
+									<th>性別</th>
+									<td>
+										{$OptionSex[$arr_post.sex]}
+										<input type="hidden" name="sex" value="{$arr_post.sex|default:''}" />
+									</td>
+								</tr>
+								<tr>
+									<th>学年</th>
+									<td>
+										{$OptionGrade[$arr_post.grade]}
+										<input type="hidden" name="grade" value="{$arr_post.grade|default:''}" />
 									</td>
 								</tr>
 								<tr class="last">
@@ -117,7 +125,7 @@
 						</table>
 						<div class="row form_button">
 							<div class="col-xs-6 mb20 pos_al">
-								<button class="button _back" type="submit"><i class="fa fa-chevron-left"></i>修正する</button>
+								<button class="button _back" onclick="this.form.action='./form.php'"><i class="fa fa-chevron-left"></i>修正する</button>
 							</div>
 							<div class="col-xs-6 pos_ar">
 								<input type="hidden" name="referer" value="1" />

@@ -40,6 +40,21 @@
 		</div>
 		<div class="hr-line-dashed"></div>
 		<div class="form-group">
+			<label class="col-sm-2 control-label">当校を知ったきっかけ</label>
+			<div class="col-sm-6">
+				{foreach from=$OptionKikkake item=kikkake key=key}
+					{if $key > 0}<br />{/if}
+					<label>
+						<input type="checkbox" name="kikkake[]" value="{$key}" {if $arr_post.kikkake && array_search($key, $arr_post.kikkake) !== false}checked{/if} />
+						{$kikkake}
+					</label>
+					{if $key == 5}<input type="text" name="kikkake_5" value="{$arr_post.kikkake_5}" />{/if}
+					{if $key == 6}<input type="text" name="kikkake_6" value="{$arr_post.kikkake_6}" />{/if}
+				{/foreach}
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="form-group">
 			<label class="col-sm-2 control-label">保護者氏名</label>
 			<div class="col-sm-6">
 				<input type="text" name="name2" class="form-control" value="{$arr_post.name2}" /><br />

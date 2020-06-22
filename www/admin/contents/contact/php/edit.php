@@ -25,6 +25,10 @@ $_POST = $objContact->GetIdRow( $arr_get["id"] );
 unset( $objManage  );
 unset( $objContact );
 
+if( !empty($_POST["kikkake"]) ){
+	$_POST["kikkake"] = explode( ",", $_POST["kikkake"] );
+}
+
 
 //----------------------------------------
 //  表示
@@ -40,6 +44,7 @@ if( !empty($_POST["id_contact"]) ) {
 	$smarty->assign( "OptionRequest", $OptionRequest );
 	$smarty->assign( "OptionContactReferer", $OptionContactReferer );
 	$smarty->assign( "OptionStatus" , $OptionStatus  );
+	$smarty->assign( "OptionKikkake", $OptionKikkake );
 
 	// 表示
 	$smarty->display( "edit.tpl" );
@@ -51,6 +56,6 @@ if( !empty($_POST["id_contact"]) ) {
 
 	// 表示
 	header( "Location: ./index.php" );
-
+	exit;
 }
 ?>

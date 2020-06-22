@@ -30,6 +30,10 @@ $arr_post = $mainObject->convert( $arr_post );
 // データチェック
 $message = $mainObject->check( $arr_post, 'insert' );
 
+if( is_array($arr_post["kikkake"]) ){
+	$arr_post["kikkake"] = implode( ",", $arr_post["kikkake"] );
+}
+
 // エラーチェック
 if( empty( $message["ng"] ) ) {
 
@@ -82,6 +86,7 @@ if( empty( $message["ng"] ) ) {
 	$smarty->assign( "OptionRequest", $OptionRequest );
 	$smarty->assign( "OptionContactReferer", $OptionContactReferer );
 	$smarty->assign( "OptionStatus" , $OptionStatus  );
+	$smarty->assign( "OptionKikkake", $OptionKikkake );
 
 	// 表示
 	$smarty->display( "new.tpl" );

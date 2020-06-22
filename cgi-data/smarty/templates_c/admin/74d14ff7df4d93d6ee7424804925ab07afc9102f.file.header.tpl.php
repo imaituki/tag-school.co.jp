@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2019-12-19 11:24:03
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-19 19:18:29
          compiled from "/home/tag-school/www//admin/common/inc/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15654713665dfadebddfa908-44256534%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '74d14ff7df4d93d6ee7424804925ab07afc9102f' => 
     array (
       0 => '/home/tag-school/www//admin/common/inc/header.tpl',
-      1 => 1576722163,
+      1 => 1592561907,
       2 => 'file',
     ),
   ),
@@ -19,6 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5dfadebddfdfc3_57099585',
   'variables' => 
   array (
+    '_ADMIN' => 0,
     '_FRONT' => 0,
   ),
   'has_nocache_code' => false,
@@ -30,6 +31,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</div>
 	</nav>
 	<ul class="nav navbar-top-links navbar-right">
+		<li><a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
+/logout.php"><i class="fa fa-desktop"></i>ログアウト</a></li>
 		<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /" target="_blank"><i class="fa fa-desktop"></i>Webサイトを表示</a></li>
 	</ul>

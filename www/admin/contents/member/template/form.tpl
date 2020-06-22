@@ -1,7 +1,7 @@
 <form class="form-horizontal" action="./{if $mode == 'edit'}update{else}insert{/if}.php" method="post" enctype="multipart/form-data">
 	<div class="ibox-content">
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">お名前</label>
 			<div class="col-sm-3">
 				{if $message.ng.name1|default:'' != NULL}<p class="error">{$message.ng.name1}</p>{/if}
@@ -10,7 +10,7 @@
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">フリガナ</label>
 			<div class="col-sm-3">
 				{if $message.ng.ruby1|default:'' != NULL}<p class="error">{$message.ng.ruby1}</p>{/if}
@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">郵便番号</label>
 			<div class="col-sm-6">
 				{if $message.ng.zip|default:'' != NULL}<p class="error">{$message.ng.zip}</p>{/if}
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">都道府県</label>
 			<div class="col-sm-6">
 				{if $message.ng.prefecture|default:'' != NULL}<p class="error">{$message.ng.prefecture}</p>{/if}
@@ -37,7 +37,7 @@
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">市区町村</label>
 			<div class="col-sm-6">
 				{if $message.ng.address1|default:'' != NULL}<p class="error">{$message.ng.address1}</p>{/if}
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">電話番号</label>
 			<div class="col-sm-3">
 				{if $message.ng.tel|default:'' != NULL}<p class="error">{$message.ng.tel}</p>{/if}
@@ -80,7 +80,7 @@
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">どこからの登録か</label>
 			<div class="col-sm-6">
 				{if $message.ng.referer|default:'' != NULL}<p class="error">{$message.ng.referer}</p>{/if}
@@ -88,7 +88,7 @@
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">メールマガジン希望</label>
 			<div class="col-sm-6">
 				{if $message.ng.mail_magazine_flg|default:'' != NULL}<p class="error">{$message.ng.mail_magazine_flg}</p>{/if}
@@ -97,7 +97,7 @@
 		</div>
 		{if $arr_post.delete_flg == 1}
 		<div class="hr-line-dashed"></div>
-		<div class="form-group required">
+		<div class="form-group">
 			<label class="col-sm-2 control-label">退会希望</label>
 			<div class="col-sm-6">
 				{if $message.ng.delete_flg|default:'' != NULL}<p class="error">{$message.ng.delete_flg}</p>{/if}

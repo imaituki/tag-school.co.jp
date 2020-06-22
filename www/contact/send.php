@@ -26,6 +26,13 @@ $arr_post = $objContact->convert( $arr_post );
 // データチェック
 $message = $objContact->check( $arr_post, 'insert' );
 
+// きっかけ
+if( is_array($arr_post["kikkake"]) ){
+	// メール表示用に別変数に避難
+	$kikkake = $arr_post["kikkake"];
+	// DB登録用にカンマ区切り文字列に変更
+	$arr_post["kikkake"] = implode( ",", $arr_post["kikkake"] );
+}
 
 // エラーチェック
 if( empty($message["ng"]) ) {
@@ -85,6 +92,7 @@ if( empty($message["ng"]) ) {
 
 	// テンプレートに設定
 	$smarty->assign( "arr_post" , $arr_post  );
+	$smarty->assign( "kikkake"  , $kikkake   );
 	$smarty->assign( "mail_conf", $mail_conf );
 	$smarty->assign( "message"  , $message   );
 
@@ -93,6 +101,7 @@ if( empty($message["ng"]) ) {
 	$smarty->assign( "OptionRequest", $OptionRequest );
 	$smarty->assign( "OptionContactReferer", $OptionContactReferer );
 	$smarty->assign( "OptionStatus" , $OptionStatus  );
+	$smarty->assign( "OptionKikkake", $OptionKikkake );
 
 	// テンプレートの取得
 	$mail = $smarty->fetch( "mail.tpl" );

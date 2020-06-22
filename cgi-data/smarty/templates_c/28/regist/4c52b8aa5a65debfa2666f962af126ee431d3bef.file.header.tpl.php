@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-03-12 02:37:25
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-18 16:52:34
          compiled from "/home/tag-school/www//common/include/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16927729905e295c9be8e927-68008430%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4c52b8aa5a65debfa2666f962af126ee431d3bef' => 
     array (
       0 => '/home/tag-school/www//common/include/header.tpl',
-      1 => 1583746930,
+      1 => 1592466416,
       2 => 'file',
     ),
   ),
@@ -36,7 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </span>
 				<span class="time">受付時間 <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['receipt_time'];?>
 （<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['rec_holiday'];?>
-定休）</span>
+休校）</span>
 			</div>
 			<div class="mail_unit"><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /contact/" class="button _circle"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ">お問い合わせ</a></div>

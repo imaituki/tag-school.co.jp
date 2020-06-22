@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 09:38:23
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-19 19:43:15
          compiled from "/home/tag-school/www//admin/common/inc/secondary.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16453739815e0498da7425d6-02967609%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '59ad31779dfcf10ac350e296343935c28092e074' => 
     array (
       0 => '/home/tag-school/www//admin/common/inc/secondary.tpl',
-      1 => 1580171901,
+      1 => 1592561864,
       2 => 'file',
     ),
   ),
@@ -42,6 +42,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<li <?php if ($_smarty_tpl->tpl_vars['manage']->value=='contact') {?> class="active"<?php }?>>
 				<a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
 /contents/contact/"><i class="fa fa-question-circle" aria-hidden="true"></i><span class="nav-label">お問い合わせ管理</span></a>
+			</li>
+			<li <?php if ($_smarty_tpl->tpl_vars['manage']->value=='staff') {?> class="active"<?php }?>>
+				<a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
+/contents/staff/"><i class="fa fa-user"></i><span class="nav-label">スタッフ管理</span></a>
 			</li>
 			<li <?php if ($_smarty_tpl->tpl_vars['manage']->value=='siteconf') {?> class="active"<?php }?>>
 				<a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
