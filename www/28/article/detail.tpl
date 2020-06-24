@@ -23,7 +23,7 @@
 		</div>
 	</div>
 	<section>
-		<div class="wrapper bg_common" >
+		<div class="wrapper bg_common" id="article">
 			<div class="center">
 				<h2 class="hl_3 mincho">{$_HTML_HEADER.title}</h2>
 				<div class="box bg0 info_box">
@@ -37,7 +37,7 @@
 							<img src="{$_IMAGEFULLPATH}/article/image1/l_{$data.image1}" alt="{$data.title}" />
 						</div>
 						{/if}
-						<div class="entry mb50">
+						<div class="entry mb50 comment">
 							{$data.comment}
 						</div>
 						{if !empty($data.image2) || !empty($data.image3) || !empty($data.image4) || !empty($data.image5)}
@@ -76,10 +76,8 @@
 				</div>
 			</div>
 			<div class="wrapper">
-				<div class="button _type_1">
-					<a href="./{if is_numeric($arr_get.page)}?page={$arr_get.page}{/if}">
-						<i class="fa fa-chevron-left"></i>一覧へ戻る
-					</a>
+				<div class="pos_ac">
+					<a href="./{if is_numeric($arr_get.page)}?page={$arr_get.page}{/if}" class="button _type1 ov"><i class="fa fa-chevron-left"></i>一覧へ戻る</a>
 				</div>
 			</div>
 		</div>

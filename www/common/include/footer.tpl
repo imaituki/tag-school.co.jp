@@ -46,8 +46,8 @@
 						</p>
 						<div class="sns">
 							<a href="https://www.facebook.com/tagschool0902" target="_blank" class="fa ga_link"><i class="fab fa-facebook-f"></i></a>
-							<a href="https://twitter.com/tagschool28" target="_blank" class="twitter ga_link"><i class="fab fa-twitter"></i></a>
-							<a href="https://www.instagram.com/tagschool_28/" target="_blank" class="instagram ga_link"><i class="fab fa-instagram"></i></a>
+							{*<a href="https://twitter.com/tagschool28" target="_blank" class="twitter ga_link"><i class="fab fa-twitter"></i></a>
+							<a href="https://www.instagram.com/tagschool_28/" target="_blank" class="instagram ga_link"><i class="fab fa-instagram"></i></a>*}
 						</div>
 					</div>
 				</div>

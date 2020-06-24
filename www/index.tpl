@@ -43,13 +43,13 @@
 	{/if}
 </div>
 <div id="body">
-	{*<section>
+	<section>
 		<div id="online_banner" class=" wrapper center">
 			<a href="/online-consultation/" class="ov">
                 <img src="/common/image/contents/top/online_banner_sp.jpg" alt="LINEオンライン面談" class="visible-only">
             </a>
 		</div>
-	</section>*}
+	</section>
 	<section>
 		<div id="top_about">
 			<div class="photo img_back"><img src="/common/image/contents/top/image1.jpg" alt="TAG schoolについて"></div>
@@ -425,7 +425,7 @@
 									<div class="info_unit">
 										<a href="{$_FRONT.home}/information/detail.php?id={$data.id_information}">
 											<div class="photo img_rect">
-												<img src="{if !empty($data.image1)}{$_IMAGEFULLPATH}/information/image1/m_{$data.image1}{else}common/image/contents/top/image3.jpg{/if}" alt="{$data.title}" />
+												<img src="{if !empty($data.image1)}{$_IMAGEFULLPATH}/information/image1/m_{$data.image1}{else}common/image/contents/null.jpg{/if}" alt="{$data.title}" />
 											</div>
 											<div class="text">
 												<div class="meta">

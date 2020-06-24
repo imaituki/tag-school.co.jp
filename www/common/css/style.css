@@ -459,6 +459,11 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 		.info_box .tag { min-width:100px; padding:8px 5px; }
 	}
 
+/*===================================================================
+#article
+===================================================================*/
+
+#article .info_box .comment a{color: #87664F; text-decoration: underline;     display: inline-block;     width: auto;}
 
 /*===================================================================
 	contact

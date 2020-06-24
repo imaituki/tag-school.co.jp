@@ -31,7 +31,8 @@
 		<div class="wrapper bg_common" >
 			<div class="center">
 				<h2 class="hl_3 mincho">LINEでオンライン面談はじめました</h2>
-				<p class="mb30">下記予約カレンダーより日付をクリックしてご予約下さい。<br>日付をクリックすると空き時間が確認できます。</p>
+				<p class="mb10">下記予約カレンダーより日付をクリックしてご予約下さい。<br>日付をクリックすると空き時間が確認できます。</p>
+				<p class="mb30">当日の予約については、お電話でご相談ください。<br><a href="tel:0862424119" class="fw_bold"><i class="fas fa-phone-alt"></i>086-242-4119</a></p>
 				<div class="content wrap tbl_calendar">
 						<p class="pos_ac fw_bold mb10 month">
 							{if $mst_calendar.back_date|date_format:'%Y-%m-1' >= date("Y-m-1")}

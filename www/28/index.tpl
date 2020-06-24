@@ -29,7 +29,7 @@
 							<div class="unit height-1">
 								<a href="/{$_DIR_NAME}/article/">
 									<p class="image pos_ac height-2 flex_c"><img src="/common/image/contents/28/logo.png" alt="28"></p>
-									<p class="text pos_ac">blog</p>
+									<p class="text pos_ac">Column</p>
 								</a>
 							</div>
 						</div>
