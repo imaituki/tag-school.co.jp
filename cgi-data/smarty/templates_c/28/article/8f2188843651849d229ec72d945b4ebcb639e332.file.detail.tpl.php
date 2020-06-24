@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-20 09:18:59
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-22 09:33:02
          compiled from "./detail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:21311468295e29627851d401-11498339%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8f2188843651849d229ec72d945b4ebcb639e332' => 
     array (
       0 => './detail.tpl',
-      1 => 1581928075,
+      1 => 1592785981,
       2 => 'file',
     ),
   ),
@@ -67,7 +67,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</div>
 	</div>
 	<section>
-		<div class="wrapper bg_common" >
+		<div class="wrapper bg_common" id="article">
 			<div class="center">
 				<h2 class="hl_3 mincho"><?php echo $_smarty_tpl->tpl_vars['_HTML_HEADER']->value['title'];?>
 </h2>
@@ -87,7 +87,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " />
 						</div>
 						<?php }?>
-						<div class="entry mb50">
+						<div class="entry mb50 comment">
 							<?php echo $_smarty_tpl->tpl_vars['data']->value['comment'];?>
 
 						</div>
@@ -147,11 +147,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</div>
 			</div>
 			<div class="wrapper">
-				<div class="button _type_1">
+				<div class="pos_ac">
 					<a href="./<?php if (is_numeric($_smarty_tpl->tpl_vars['arr_get']->value['page'])) {?>?page=<?php echo $_smarty_tpl->tpl_vars['arr_get']->value['page'];?>
-<?php }?>">
-						<i class="fa fa-chevron-left"></i>一覧へ戻る
-					</a>
+<?php }?>" class="button _type1 ov"><i class="fa fa-chevron-left"></i>一覧へ戻る</a>
 				</div>
 			</div>
 		</div>
@@ -162,4 +160,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 </div>
 </body>
-</html><?php }} ?>
+</html>
+<?php }} ?>

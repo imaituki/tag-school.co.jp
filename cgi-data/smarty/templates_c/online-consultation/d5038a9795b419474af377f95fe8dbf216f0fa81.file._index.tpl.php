@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-20 10:10:15
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-22 10:44:48
          compiled from "./_index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12344858345eecc16adaa7c6-08962717%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd5038a9795b419474af377f95fe8dbf216f0fa81' => 
     array (
       0 => './_index.tpl',
-      1 => 1592615414,
+      1 => 1592790287,
       2 => 'file',
     ),
   ),
@@ -66,7 +66,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="wrapper bg_common" >
 			<div class="center">
 				<h2 class="hl_3 mincho">LINEでオンライン面談はじめました</h2>
-				<p class="mb30">下記予約カレンダーより日付をクリックしてご予約下さい。<br>日付をクリックすると空き時間が確認できます。</p>
+				<p class="mb10">下記予約カレンダーより日付をクリックしてご予約下さい。<br>日付をクリックすると空き時間が確認できます。</p>
+				<p class="mb30">当日の予約については、お電話でご相談ください。<br><a href="tel:0862424119" class="fw_bold"><i class="fas fa-phone-alt"></i>086-242-4119</a></p>
 				<div class="content wrap tbl_calendar">
 						<p class="pos_ac fw_bold mb10 month">
 							<?php if (smarty_modifier_date_format($_smarty_tpl->tpl_vars['mst_calendar']->value['back_date'],'%Y-%m-1')>=date("Y-m-1")) {?>

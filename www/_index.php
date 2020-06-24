@@ -38,5 +38,5 @@ $smarty->assign( "t_information" , $t_information  );
 $smarty->assign( "OptionCategory", $OptionCategory );
 
 // 表示
-$smarty->display("index.tpl");
+$smarty->display("_index.tpl");
 ?>

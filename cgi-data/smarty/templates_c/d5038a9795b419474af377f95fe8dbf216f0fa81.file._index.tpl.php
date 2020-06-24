@@ -1,14 +1,51 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-23 18:25:15
+         compiled from "./_index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:954445445ef1c0a2a82749-96614369%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'd5038a9795b419474af377f95fe8dbf216f0fa81' => 
+    array (
+      0 => './_index.tpl',
+      1 => 1592904314,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '954445445ef1c0a2a82749-96614369',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ef1c0a2ac8b03_29555951',
+  'variables' => 
+  array (
+    'template_meta' => 0,
+    'template_javascript' => 0,
+    'template_header' => 0,
+    't_information' => 0,
+    '_FRONT' => 0,
+    'data' => 0,
+    '_IMAGEFULLPATH' => 0,
+    'OptionCategory' => 0,
+    'template_footer' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5ef1c0a2ac8b03_29555951')) {function content_5ef1c0a2ac8b03_29555951($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/home/tag-school/cgi-data/smarty/libs/plugins/modifier.date_format.php';
+?><!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-{include file=$template_meta}
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_meta']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 <link rel="stylesheet" href="/common/css/import.css">
-{include file=$template_javascript}
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_javascript']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 </head>
 <body id="top">
 <div id="base">
-{include file=$template_header}
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 <main>
 <div id="top_main">
 	<div class="image">
@@ -26,21 +63,25 @@
 			</div>
 		</div>
 	</div>
-	{if !empty($t_information.0)}
+	<?php if (!empty($_smarty_tpl->tpl_vars['t_information']->value[0])) {?>
 	<div id="main_news" class="text">
 		<div class="center">
 			<div class="text_in">
 				<dl class="news_wrap">
 					<dt class="c_red">NEWS</dt>
 					<dd>
-						<span class="date">{$t_information.0.date|date_format:'%Y.%m.%d'}</span>
-						<a href="{$_FRONT.home}/information/detail.php?id={$t_information.0.id_information}">{$t_information.0.title}</a>
+						<span class="date"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['t_information']->value[0]['date'],'%Y.%m.%d');?>
+</span>
+						<a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
+/information/detail.php?id=<?php echo $_smarty_tpl->tpl_vars['t_information']->value[0]['id_information'];?>
+"><?php echo $_smarty_tpl->tpl_vars['t_information']->value[0]['title'];?>
+</a>
 					</dd>
 				</dl>
 			</div>
 		</div>
 	</div>
-	{/if}
+	<?php }?>
 </div>
 <div id="body">
 	<section>
@@ -51,11 +92,11 @@
 		</div>
 	</section>
 	<section>
-		{literal}
+		
 		<style>
 			#top_about .text .text_in > * { max-width:390px; }
 		</style>
-		{/literal}
+		
 		<div id="top_about">
 			<div class="photo img_back"><img src="/common/image/contents/top/image1.jpg" alt="TAG schoolについて"></div>
 			<div class="text">
@@ -468,7 +509,7 @@
 			</div>
 		</div>
 	</section>
-	{if !empty($t_information)}
+	<?php if (!empty($_smarty_tpl->tpl_vars['t_information']->value)) {?>
 	<section>
 		<div id="top_information">
 			<div class="wrapper">
@@ -476,35 +517,50 @@
 					<h2 class="hl_1 mincho"><span class="en">Information</span><span class="ja">新着情報</span></h2>
 					<div class="info_list">
 						<div class="row">
-							{foreach from=$t_information item=data}
+							<?php  $_smarty_tpl->tpl_vars['data'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['data']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['t_information']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['data']->key => $_smarty_tpl->tpl_vars['data']->value) {
+$_smarty_tpl->tpl_vars['data']->_loop = true;
+?>
 								<div class="col-xs-4">
 									<div class="info_unit">
-										<a href="{$_FRONT.home}/information/detail.php?id={$data.id_information}">
+										<a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
+/information/detail.php?id=<?php echo $_smarty_tpl->tpl_vars['data']->value['id_information'];?>
+">
 											<div class="photo img_rect">
-												<img src="{if !empty($data.image1)}{$_IMAGEFULLPATH}/information/image1/m_{$data.image1}{else}common/image/contents/null.jpg{/if}" alt="{$data.title}" />
+												<img src="<?php if (!empty($_smarty_tpl->tpl_vars['data']->value['image1'])) {?><?php echo $_smarty_tpl->tpl_vars['_IMAGEFULLPATH']->value;?>
+/information/image1/m_<?php echo $_smarty_tpl->tpl_vars['data']->value['image1'];?>
+<?php } else { ?>common/image/contents/null.jpg<?php }?>" alt="<?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
+" />
 											</div>
 											<div class="text">
 												<div class="meta">
-													<span class="tag">{$OptionCategory[$data.id_category]}</span>
-													<span class="date">{$data.date|date_format:'%Y.%m.%d'}</span>
+													<span class="tag"><?php echo $_smarty_tpl->tpl_vars['OptionCategory']->value[$_smarty_tpl->tpl_vars['data']->value['id_category']];?>
+</span>
+													<span class="date"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['data']->value['date'],'%Y.%m.%d');?>
+</span>
 												</div>
-												<h3>{$data.title}</h3>
+												<h3><?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
+</h3>
 											</div>
 										</a>
 									</div>
 								</div>
-							{/foreach}
+							<?php } ?>
 						</div>
 					</div>
-					<div class="pos_ac"><a href="{$_FRONT.home}/information/" class="button _type2">すべてのお知らせ<i class="fa fa-chevron-right"></i></a></div>
+					<div class="pos_ac"><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
+/information/" class="button _type2">すべてのお知らせ<i class="fa fa-chevron-right"></i></a></div>
 				</div>
 			</div>
 		</div>
 	</section>
-	{/if}
+	<?php }?>
 </div>
 </main>
-{include file=$template_footer}
+<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_footer']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 </div>
 </body>
 </html>
+<?php }} ?>

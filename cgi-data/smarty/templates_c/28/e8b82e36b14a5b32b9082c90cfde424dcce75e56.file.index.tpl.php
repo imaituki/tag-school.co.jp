@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-19 17:23:32
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-22 09:33:58
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16336556435e2aae38747ad1-07740953%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1592555011,
+      1 => 1592786037,
       2 => 'file',
     ),
   ),
@@ -65,7 +65,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<a href="/<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
 /article/">
 									<p class="image pos_ac height-2 flex_c"><img src="/common/image/contents/28/logo.png" alt="28"></p>
-									<p class="text pos_ac">blog</p>
+									<p class="text pos_ac">Column</p>
 								</a>
 							</div>
 						</div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-19 22:55:37
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-22 15:16:31
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19367162525e294e044aaa34-62772733%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1592574844,
+      1 => 1592806585,
       2 => 'file',
     ),
   ),
@@ -84,7 +84,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<?php }?>
 </div>
 <div id="body">
-	
+	<section>
+		<div id="online_banner" class=" wrapper center">
+			<a href="/online-consultation/" class="ov">
+                <img src="/common/image/contents/top/online_banner_sp.jpg" alt="LINEオンライン面談" class="visible-only">
+            </a>
+		</div>
+	</section>
 	<section>
 		<div id="top_about">
 			<div class="photo img_back"><img src="/common/image/contents/top/image1.jpg" alt="TAG schoolについて"></div>
@@ -468,7 +474,7 @@ $_smarty_tpl->tpl_vars['data']->_loop = true;
 											<div class="photo img_rect">
 												<img src="<?php if (!empty($_smarty_tpl->tpl_vars['data']->value['image1'])) {?><?php echo $_smarty_tpl->tpl_vars['_IMAGEFULLPATH']->value;?>
 /information/image1/m_<?php echo $_smarty_tpl->tpl_vars['data']->value['image1'];?>
-<?php } else { ?>common/image/contents/top/image3.jpg<?php }?>" alt="<?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
+<?php } else { ?>common/image/contents/null.jpg<?php }?>" alt="<?php echo $_smarty_tpl->tpl_vars['data']->value['title'];?>
 " />
 											</div>
 											<div class="text">
