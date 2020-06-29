@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-23 18:25:15
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-24 20:22:38
          compiled from "./_index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:954445445ef1c0a2a82749-96614369%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd5038a9795b419474af377f95fe8dbf216f0fa81' => 
     array (
       0 => './_index.tpl',
-      1 => 1592904314,
+      1 => 1592997755,
       2 => 'file',
     ),
   ),
@@ -183,7 +183,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<div class="row">
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _orange tab height-1_all">
-									<a href="#primary">
+									<a href="#primary" class="ov">
 										<div class="photo img_back"><img src="/common/image/contents/top/image5.jpg" alt="小学生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_orange">小学生</h3>
@@ -199,7 +199,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _blue tab height-1_all">
-									<a href="#middle">
+									<a href="#middle" class="ov">
 										<div class="photo img_back"><img src="/common/image/contents/top/image6.jpg" alt="中学生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_blue">中学生</h3>
@@ -214,7 +214,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _green tab height-1_all">
-									<a href="#high">
+									<a href="#high" class="ov">
 										<div class="photo img_back"><img src="/common/image/contents/top/image7.jpg" alt="高校生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_green">高校生</h3>

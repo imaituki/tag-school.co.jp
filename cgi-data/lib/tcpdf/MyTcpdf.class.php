@@ -21,14 +21,17 @@ class MyTCPDF extends TCPDF {
 		
 	}
 	
-	function fontAutoCell( $pdf, $w, $h, $txt, $border, $align = "L", $fill = 0, $ln = 0, $x, $y, $reseth, $stretch, $ishtml, $autopadding = true, $maxh, $fontSize = 10, $valign = "M" ) {
+	function fontAutoCell( $pdf, $w, $h, $txt, $border, $align = "L", $fill = 0, $ln = 0, $x, $y, $reseth, $stretch, $ishtml, $autopadding = true, $maxh, $fontSize = 10, $valign = "M", $auto = 1 ) {
 		
-		// 幅によってフォントサイズを6段階で縮小する。
-		for( $lowFont = 0; $lowFont < 6; $lowFont++ ) {
-			if( ( $w * 2 ) >= ( mb_strwidth( $txt, 'UTF-8' ) / 2 ) * ( $fontSize - $lowFont ) * 0.35 ) {
-				break;
+		if( $auto == 1 ) {
+			// 幅によってフォントサイズを6段階で縮小する。
+			for( $lowFont = 0; $lowFont < 6; $lowFont++ ) {
+				if( ( $w * 2 ) >= ( mb_strwidth( $txt, 'UTF-8' ) / 2 ) * ( $fontSize - $lowFont ) * 0.35 ) {
+					break;
+				}
 			}
 		}
+		
 		
 		// フォントサイズ
 		$pdf->SetFontSize($fontSize - $lowFont);

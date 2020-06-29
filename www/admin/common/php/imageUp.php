@@ -94,8 +94,6 @@ if( empty( $_POST["_contents_conf_path"] ) || empty( $_FILES ) ) {
 							}
 							// ファイル名の分解
 							$pathInfo = pathinfo( $_FILES["detail"]["tmp_name"][$key3][$val["name"]] . $ext );
-							disp_arr($pathInfo);
-							disp_arr($val);
 
 							// アップロード
 							if( is_array( $val["option"] ) ) {
@@ -116,7 +114,7 @@ if( empty( $_POST["_contents_conf_path"] ) || empty( $_FILES ) ) {
 							
 							// 出力
 							$html  = "<img src=\"/admin/common/php/imageDisp.php?dir=" . $arr_post["_contents_dir"] . "&image=" . $val["name"] . "&time=" . strtotime("now") . "\" />&nbsp;";
-							$html .= "<span class=\"c_red\"> ※この画像はプレビュー用です。まだ保存されていません。 </span><br />";
+							$html .= "<span class=\"c_red\"> ※この画像はプレビュー用です。まだ保存されていません。 </span>&nbsp;&nbsp;<a href=\"javascript:void(0);\" class='delete_preview'>プレビュー削除</a><br />";
 							$html .= "<input type=\"hidden\" name=\"detail[" . $key3 . "][_preview_" . $val["name"] . "]\" value=\"" . $val["name"]  . "\" />";
 							$html .= '<input type="hidden" name="detail[' . $key3 . '][_preview_image_' . $val["name"] . ']" value="' . $pathInfo["filename"] . $ext . '" />';
 							$html .= '<input type="hidden" name="detail[' . $key3 . '][_preview_image_dir]" value="' . $pathInfo["dirname"] . '" />';
@@ -201,7 +199,7 @@ if( empty( $_POST["_contents_conf_path"] ) || empty( $_FILES ) ) {
 
 								// 出力
 								$html  = "<img src=\"/admin/common/php/imageDisp.php?dir=" . $arr_post["_contents_dir"] . "&image=" . $val["name"] . "&time=" . strtotime("now") . "\" />&nbsp;";
-								$html .= "<span class=\"c_red\"> ※この画像はプレビュー用です。まだ保存されていません。 </span><br />";
+								$html .= "<span class=\"c_red\"> ※この画像はプレビュー用です。まだ保存されていません。 </span>&nbsp;&nbsp;<a href=\"javascript:void(0);\" class='delete_preview'>プレビュー削除</a><br />";
 								$html .= "<input type=\"hidden\" name=\"imagelist[" . $key3 . "][_preview_" . $val["name"] . "]\" value=\"" . $val["name"]  . "\" />";
 								$html .= '<input type="hidden" name="imagelist[' . $key3 . '][_preview_image_' . $val["name"] . ']" value="' . $pathInfo["filename"] . $ext . '" />';
 								$html .= '<input type="hidden" name="imagelist[' . $key3 . '][_preview_image_dir]" value="' . $pathInfo["dirname"] . '" />';
@@ -280,7 +278,7 @@ if( empty( $_POST["_contents_conf_path"] ) || empty( $_FILES ) ) {
 							}
 							// 出力
 							$html  = "<img src=\"/admin/common/php/imageDisp.php?dir=" . $arr_post["_contents_dir"] . "&image=" . $val["name"] . "&time=" . strtotime("now") . "\" />&nbsp;";
-							$html .= "<span class=\"c_red\"> ※この画像はプレビュー用です。まだ保存されていません。 </span><br />";
+							$html .= "<span class=\"c_red\"> ※この画像はプレビュー用です。まだ保存されていません。 </span>&nbsp;&nbsp;<a href=\"javascript:void(0);\" class='delete_preview'>プレビュー削除</a><br />";
 							$html .= "<input type=\"hidden\" name=\"_preview_" . $val["name"] . "\" value=\"" . $val["name"]  . "\" />";
 							$html .= '<input type="hidden" name="_preview_image_' . $val["name"] . '" value="' . $pathInfo["filename"] . $ext . '" />';
 							$html .= '<input type="hidden" name="_preview_image_dir" value="' . $pathInfo["dirname"] . '" />';

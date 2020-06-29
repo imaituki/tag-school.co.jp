@@ -19,6 +19,13 @@ $( function() {
 		$("#inputForm").attr('action', './update.php').attr('target', '').submit();
 	});
 
+	// プレビュー削除
+	$(document).on( 'click', ".delete_preview", function(){
+		// 確認
+		if( !confirm("プレビュー削除を行ってよろしいですか？") ) return false;
+		$(this).parents('div').children('.load_image').remove();	
+	});
+
 
 	//-------------------------------------------
 	//  画像変更処理

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-02-07 19:30:03
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-25 20:21:10
          compiled from "/home/tag-school/www/admin/contents/contact/template/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8700723675dfae137079bb9-86800230%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2975322d3a6721cfa4b32dc0273b23311f028051' => 
     array (
       0 => '/home/tag-school/www/admin/contents/contact/template/list.tpl',
-      1 => 1581071401,
+      1 => 1593084068,
       2 => 'file',
     ),
   ),
@@ -40,9 +40,9 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 			<th width="100">お問い合わせ<br />項目</th>
 			<th width="100">ステータス</th>
 			<th>名前</th>
-			<th width="150">メールアドレス</th>
-			<th width="200">住所</th>
-			<th width="150">電話番号</th>
+			<th width="100">メールアドレス</th>
+			<th width="150">住所</th>
+			<th width="100">電話番号</th>
 			<th width="80">対応状況</th>
 			<th class="delete">削除</th>
 		</tr>
@@ -69,8 +69,12 @@ $_smarty_tpl->tpl_vars['data']->_loop = true;
 		<tr <?php if ($_smarty_tpl->tpl_vars['data']->value['check_flg']==1) {?>style="background-color: #dadada;"<?php }?>>
 			<td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['data']->value['entry_date'],"%Y/%m/%d %H:%M:%S");?>
 </td>
-			<td><?php echo $_smarty_tpl->tpl_vars['OptionContent']->value[$_smarty_tpl->tpl_vars['data']->value['content']];?>
-</td>
+			<td>
+				<?php echo $_smarty_tpl->tpl_vars['OptionContent']->value[$_smarty_tpl->tpl_vars['data']->value['content']];?>
+<br />
+				(<a href="./export.php?id=<?php echo $_smarty_tpl->tpl_vars['data']->value['id_contact'];?>
+" target="_blank">ファーストコンタクトカード</a>)
+			</td>
 			<td><?php if ($_smarty_tpl->tpl_vars['data']->value['status']==0) {?>-<?php } else { ?><?php echo $_smarty_tpl->tpl_vars['OptionStatus']->value[$_smarty_tpl->tpl_vars['data']->value['status']];?>
 <?php }?></td>
 			<td><a href="./edit.php?id=<?php echo $_smarty_tpl->tpl_vars['data']->value['id_contact'];?>

@@ -6,9 +6,9 @@
 			<th width="100">お問い合わせ<br />項目</th>
 			<th width="100">ステータス</th>
 			<th>名前</th>
-			<th width="150">メールアドレス</th>
-			<th width="200">住所</th>
-			<th width="150">電話番号</th>
+			<th width="100">メールアドレス</th>
+			<th width="150">住所</th>
+			<th width="100">電話番号</th>
 			<th width="80">対応状況</th>
 			<th class="delete">削除</th>
 		</tr>
@@ -30,7 +30,10 @@
 		{foreach from=$t_contact item=data}
 		<tr {if $data.check_flg == 1}style="background-color: #dadada;"{/if}>
 			<td>{$data.entry_date|date_format:"%Y/%m/%d %H:%M:%S"}</td>
-			<td>{$OptionContent[$data.content]}</td>
+			<td>
+				{$OptionContent[$data.content]}<br />
+				(<a href="./export.php?id={$data.id_contact}" target="_blank">ファーストコンタクトカード</a>)
+			</td>
 			<td>{if $data.status == 0}-{else}{$OptionStatus[$data.status]}{/if}</td>
 			<td><a href="./edit.php?id={$data.id_contact}">{$data.name1}<br>({$data.ruby1})</a></td>
 			<td>{$data.mail}</td>

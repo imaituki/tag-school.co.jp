@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2019-12-19 11:27:54
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-25 20:04:34
          compiled from "/home/tag-school/www//admin/common/inc/image.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:6789742835dfae02a47bfd6-41646599%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '2874bea021a88dee230a22684602e0b7ef39c89e' => 
     array (
       0 => '/home/tag-school/www//admin/common/inc/image.tpl',
-      1 => 1576722163,
+      1 => 1593083073,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5dfae02a519b88_04034609',
   'variables' => 
   array (
     '_ARR_IMAGE' => 0,
@@ -32,8 +34,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'type' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5dfae02a519b88_04034609',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5dfae02a519b88_04034609')) {function content_5dfae02a519b88_04034609($_smarty_tpl) {?><?php  $_smarty_tpl->tpl_vars['file'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['file']->_loop = false;
  $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
@@ -81,7 +81,7 @@ _now" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value[$_sm
 /common/php/imageDisp.php?dir=<?php echo $_smarty_tpl->tpl_vars['_CONTENTS_DIR']->value;?>
 &image=<?php echo $_smarty_tpl->tpl_vars['file']->value['name'];?>
 " />
-					<span class="c_red"> ※この画像はプレビュー用です。まだ保存されていません。</span>
+					<span class="c_red"> ※この画像はプレビュー用です。まだ保存されていません.</span>
 					<input type="hidden" name="_preview_<?php echo $_smarty_tpl->tpl_vars['file']->value['name'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['file']->value['name'];?>
 " />

@@ -25,7 +25,7 @@
 			{if $arr_post[$preview_name]|default:'' != NULL}
 				<div class="load_image">
 					<img src="{$_ADMIN.home}/common/php/imageDisp.php?dir={$_CONTENTS_DIR}&image={$file.name}" />
-					<span class="c_red"> ※この画像はプレビュー用です。まだ保存されていません。</span>
+					<span class="c_red"> ※この画像はプレビュー用です。まだ保存されていません.</span>
 					<input type="hidden" name="_preview_{$file.name}" value="{$file.name}" />
 					<input type="hidden" name="_preview_image_{$file.name}" value="{$arr_post[$preview_name]}" />
 					<input type="hidden" name="_preview_image_dir" value="{$arr_post._preview_image_dir}" />
