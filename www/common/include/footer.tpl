@@ -18,11 +18,11 @@
 	<div id="foot_banner" class="wrapper-b center">
 		<div class="banner_area">
 			<div class="row">
-				<div class="col-xs-6">
+				<div class="col-xs-6 mb10">
 					<a href="https://ok-school.jp/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_1.jpg" alt="OKschool"></a>
 				</div>
 
-				<div class="col-xs-6">
+				<div class="col-xs-6 mb10">
 					<a href="https://www.earth-8.com/aschool/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_2.jpg" alt="aschool"></a>
 				</div>
 

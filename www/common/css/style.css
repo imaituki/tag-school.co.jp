@@ -512,15 +512,20 @@ body.pc .page_link a:hover { background:#e8f1f1; }
 #online-consultation .tbl_calendar .button{    color: #87664F;}
 
 #online-consultation #flow1 a{    color: #86664f;}
+#online-consultation #flow2 .row p{font-weight: bold;}
 
 @media(min-width:576px){
 	#online-consultation .time{text-align: right;}
+    #online-consultation #flow2 .row p{font-size: 1.15em;}
+
 }
 @media(max-width:576px){
+    #online-consultation .tbl_calendar table th{font-size: 13px;}
 	#online-consultation .time{font-size: 13px;}
+    #online-consultation .tbl_calendar .month{font-size: 1em;}
+
 }
 
-#online-consultation #flow2 .row p{font-weight: bold; font-size: 1.15em;}
 /*===================================================================
 	28
 ===================================================================*/
