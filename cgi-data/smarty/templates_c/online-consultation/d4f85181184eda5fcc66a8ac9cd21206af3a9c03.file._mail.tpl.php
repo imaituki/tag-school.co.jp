@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-29 17:14:26
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-30 16:28:22
          compiled from "./_mail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1708071025ef9a2e26b8488-05813745%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd4f85181184eda5fcc66a8ac9cd21206af3a9c03' => 
     array (
       0 => './_mail.tpl',
-      1 => 1593409320,
+      1 => 1593420420,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ef9a2e2722b62_62129636',
   'variables' => 
   array (
     'arr_post' => 0,
@@ -26,8 +28,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_INFO' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ef9a2e2722b62_62129636',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef9a2e2722b62_62129636')) {function content_5ef9a2e2722b62_62129636($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/home/tag-school/cgi-data/smarty/libs/plugins/modifier.date_format.php';
 if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/cgi-data/smarty/libs/plugins/function.html_select_ken.php';
@@ -41,14 +41,14 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 <?php }?>
 
 
+[ 担当講師 ]
+<?php echo $_smarty_tpl->tpl_vars['OptionTeacher']->value[$_smarty_tpl->tpl_vars['arr_post']->value['teacher']];?>
+
+
 [ 保護者氏名 ]
 <?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['name2'])===null||$tmp==='' ? '' : $tmp);?>
 <?php if ((($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['ruby2'])===null||$tmp==='' ? '' : $tmp)!=null) {?>（<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['ruby2'])===null||$tmp==='' ? '' : $tmp);?>
 ）<?php }?>
-
-
-[ 担当講師 ]
-<?php echo $_smarty_tpl->tpl_vars['OptionTeacher']->value[$_smarty_tpl->tpl_vars['arr_post']->value['teacher']];?>
 
 
 [ Eメールアドレス ]

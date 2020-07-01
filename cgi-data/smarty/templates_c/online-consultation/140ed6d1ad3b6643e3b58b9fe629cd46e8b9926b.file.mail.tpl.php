@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-17 16:02:37
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-30 16:32:11
          compiled from "./mail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18857831415ee70e1aa3b496-45597273%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '140ed6d1ad3b6643e3b58b9fe629cd46e8b9926b' => 
     array (
       0 => './mail.tpl',
-      1 => 1592377200,
+      1 => 1593502259,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'arr_post' => 0,
     'OptionWeek' => 0,
     'OptionReserveTime' => 0,
+    'OptionTeacher' => 0,
     'OptionSex' => 0,
     'OptionGrade' => 0,
     '_INFO' => 0,
@@ -38,6 +39,10 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 (<?php echo $_smarty_tpl->tpl_vars['OptionWeek']->value[smarty_modifier_date_format($_smarty_tpl->tpl_vars['arr_post']->value['date'],"w")];?>
 ) <?php if (!empty($_smarty_tpl->tpl_vars['OptionReserveTime']->value[$_smarty_tpl->tpl_vars['arr_post']->value['time']])) {?><?php echo $_smarty_tpl->tpl_vars['OptionReserveTime']->value[$_smarty_tpl->tpl_vars['arr_post']->value['time']];?>
 <?php }?>
+
+
+[ 担当講師 ]
+<?php echo $_smarty_tpl->tpl_vars['OptionTeacher']->value[$_smarty_tpl->tpl_vars['arr_post']->value['teacher']];?>
 
 
 [ 保護者氏名 ]

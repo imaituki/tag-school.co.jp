@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-29 17:36:16
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-30 16:27:18
          compiled from "/home/tag-school/www/admin/contents/online-consultation2/template/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20953010455ef7097e13a8f7-94408101%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8685912d4e5ccc2939010fd0275fe9c4b668bbc9' => 
     array (
       0 => '/home/tag-school/www/admin/contents/online-consultation2/template/list.tpl',
-      1 => 1593419520,
+      1 => 1593501958,
       2 => 'file',
     ),
   ),

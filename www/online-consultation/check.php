@@ -20,7 +20,7 @@ $message   = NULL;
 //----------------------------------------
 // クラス呼び出し
 $objManage  = new DB_manage( _DNS );
-$objReservations = new FT_online_consultation( $objManage );
+$objReservations = new FT_online_consultation2( $objManage );
 
 // 文字エンコード
 $arr_post = $objReservations->convert( $arr_post );
@@ -46,6 +46,7 @@ $smarty->assign( "OptionReserveTime", $OptionReserveTime );
 $smarty->assign( "OptionWeek"       , $OptionWeek        );
 $smarty->assign( "OptionGrade"      , $OptionGrade       );
 $smarty->assign( "OptionSex"        , $OptionSex         );
+$smarty->assign( "OptionTeacher"    , $OptionTeacher     );
 
 //エラーチェック
 if( empty( $message["ng"] ) ) {

@@ -45,6 +45,13 @@
 									</td>
 								</tr>
 								<tr>
+									<th>担当講師</th>
+									<td>
+										{$OptionTeacher[$arr_post.teacher]}
+										<input type="hidden" name="teacher" value="{$arr_post.teacher}">
+									</td>
+								</tr>
+								<tr>
 									<th>保護者氏名</th>
 									<td>
 										{$arr_post.name2|default:''}
@@ -130,7 +137,8 @@
 							<div class="col-xs-6 pos_ar">
 								<input type="hidden" name="referer" value="1" />
 								<input type="hidden" name="status" value="0" />
-								<button id="send_button" class="button" type="submit">送信する<i class="fa fa-chevron-right"></i></button>
+								<!-- <button id="send_button" class="button" type="submit">送信する<i class="fa fa-chevron-right"></i></button> -->
+								<button id="" class="button" type="submit" onclick="$(this).attr('formaction', './send.php');">送信する<i class="fa fa-chevron-right"></i></button>
 							</div>
 						</div>
 					</form>

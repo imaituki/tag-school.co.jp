@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-29 17:36:16
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-30 16:27:18
          compiled from "../template/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17966714575ef7097def46d7-61119800%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6c39e247f385d95767962e1dac86ee8434c9a9c2' => 
     array (
       0 => '../template/index.tpl',
-      1 => 1593419640,
+      1 => 1593501958,
       2 => 'file',
     ),
   ),
@@ -77,7 +77,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 <body class="fixed-sidebar no-skin-config">
 <div id="wrapper">
-	<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_secondary']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('action'=>'public','manage'=>$_smarty_tpl->tpl_vars['_CONTENTS_DIR']->value), 0);?>
+	<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_secondary']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('action'=>"online-consultation",'manage'=>$_smarty_tpl->tpl_vars['_CONTENTS_DIR']->value), 0);?>
 
 	<div id="page-wrapper" class="gray-bg">
 		<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>

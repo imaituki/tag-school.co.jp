@@ -14,7 +14,7 @@ $message = NULL;
 
 // 操作クラス
 $objManage  = new DB_manage( _DNS );
-$objReservations = new FT_online_consultation( $objManage, $_ARR_MAIL["line_consul"]["savePath"] );
+$objReservations = new FT_online_consultation2( $objManage, $_ARR_MAIL["line_consul"]["savePath"] );
 
 // データ変換
 $arr_post = $objReservations->convert( $arr_post );
@@ -83,6 +83,7 @@ if( empty($message["ng"]) ) {
 	$smarty->assign( "OptionWeek"        , $OptionWeek        );
 	$smarty->assign( "OptionGrade"      , $OptionGrade       );
 	$smarty->assign( "OptionSex"        , $OptionSex         );
+	$smarty->assign( "OptionTeacher"    , $OptionTeacher     );
 
 	// テンプレートの取得
 	$mail = $smarty->fetch( "mail.tpl" );
@@ -132,7 +133,7 @@ if( empty($message["ng"]) ) {
 
 	// 管理者へ
 	$error_flg2 = mb_send_mail( $mail_conf["info"]["admin_mail"], $mail_conf["master"]["title"], $mail2, $header2 );
-	//$error_flg2 = mb_send_mail( "office@web3.co.jp", $mail_conf["master"]["title"], $mail2, $header2 );
+//	$error_flg2 = mb_send_mail( "office@web3.co.jp", $mail_conf["master"]["title"], $mail2, $header2 );
 
 
 	// 送信チェック
@@ -165,8 +166,8 @@ if( empty( $message["ng"] ) ) {
 } else {
 
 	// フォームへ
-	// header( "Location: ./index.php" );
-	var_dump($message["ng"]);
+	header( "Location: ./index.php" );
+	// var_dump($message["ng"]);
 	exit;
 
 }

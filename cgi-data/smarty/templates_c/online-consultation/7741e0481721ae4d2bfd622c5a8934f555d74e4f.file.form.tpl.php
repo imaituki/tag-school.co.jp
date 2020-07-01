@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-15 14:51:58
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-30 16:31:31
          compiled from "./form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2794325415edde15d764ec0-67294401%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7741e0481721ae4d2bfd622c5a8934f555d74e4f' => 
     array (
       0 => './form.tpl',
-      1 => 1592200303,
+      1 => 1593502259,
       2 => 'file',
     ),
   ),
@@ -26,6 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'arr_post' => 0,
     'OptionWeek' => 0,
     'OptionReserveTime' => 0,
+    'OptionTeacher' => 0,
     'OptionSex' => 0,
     'OptionGrade' => 0,
     'template_footer' => 0,
@@ -90,6 +91,17 @@ if (!is_callable('smarty_function_html_options')) include '/home/tag-school/cgi-
 									<input type="hidden" name="date" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['date'];?>
 " />
 									<input type="hidden" name="time" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['time'];?>
+" />
+								</td>
+							</tr>
+							<tr>
+								<th>担当講師<span class="need">必須</span></th>
+								<td>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['teacher'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['teacher'];?>
+</span><?php }?>
+									<?php if (!empty($_smarty_tpl->tpl_vars['OptionTeacher']->value[$_smarty_tpl->tpl_vars['arr_post']->value['teacher']])) {?><?php echo $_smarty_tpl->tpl_vars['OptionTeacher']->value[$_smarty_tpl->tpl_vars['arr_post']->value['teacher']];?>
+<?php }?>
+									<input type="hidden" name="teacher" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['teacher'];?>
 " />
 								</td>
 							</tr>
@@ -217,7 +229,7 @@ if (!is_callable('smarty_function_html_options')) include '/home/tag-school/cgi-
 					</table>
 					<div class="row form_button">
 						<div class="col-xs-6 mb20 pos_al">
-							<a href="./timetable.php?y=<?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['arr_post']->value['date'],'%Y');?>
+							<a href="./index.php?y=<?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['arr_post']->value['date'],'%Y');?>
 &m=<?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['arr_post']->value['date'],'%m');?>
 &d=<?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['arr_post']->value['date'],'%d');?>
 &w=<?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['arr_post']->value['date'],'%w');?>

@@ -26,7 +26,7 @@
 </head>
 <body class="fixed-sidebar no-skin-config">
 <div id="wrapper">
-	{include file=$template_secondary action=public manage=$_CONTENTS_DIR}
+	{include file=$template_secondary action="online-consultation" manage=$_CONTENTS_DIR}
 	<div id="page-wrapper" class="gray-bg">
 		{include file=$template_header}
 		<div class="wrapper-content-main">

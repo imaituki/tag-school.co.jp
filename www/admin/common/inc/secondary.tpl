@@ -40,6 +40,18 @@
 			<li {if $manage == 'siteconf'} class="active"{/if}>
 				<a href="{$_ADMIN.home}/contents/siteconf/"><i class="fa fa-gear"></i><span class="nav-label">サイト設定</span></a>
 			</li>
+			<li {if $action == 'online-consultation'} class="active"{/if}>
+				<a href="#" class="nav-drop">
+					<i class="fa fa-r fa-th-large"></i>
+					<span class="nav-label">オンライン面談管理 </span>
+					<i class="fa {if $action == 'mypage'}fa-angle-down{else}fa-angle-left{/if} fl_arrow_r"></i>
+				</a>
+				<ul class="nav nav-second-level">
+					<li {if $manage == 'online-consultation2'}class="active"{/if}><a href="{$_ADMIN.home}/contents/online-consultation2/"><i class="fa fa-group"></i>オンライン面談予約</a></li>
+					<li {if $manage == 'online-consultation-recept'}class="active"{/if}><a href="{$_ADMIN.home}/contents/online-consultation-recept/"><i class="fa fa-folder-open"></i>予約受付枠設定</a></li>
+					<li {if $manage == 'online-consultation-teacher'}class="active"{/if}><a href="{$_ADMIN.home}/contents/online-consultation-teacher/"><i class="fa fa-folder-open"></i>講師設定</a></li>
+				</ul>
+			</li>
 			<li {if $action == 'mypage'} class="active"{/if}>
 				<a href="#" class="nav-drop">
 					<i class="fa fa-r fa-th-large"></i>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-15 14:53:28
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-30 16:31:48
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17488510835edddcf694cd63-45214983%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1592200302,
+      1 => 1593502259,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'arr_post' => 0,
     'OptionWeek' => 0,
     'OptionReserveTime' => 0,
+    'OptionTeacher' => 0,
     'OptionSex' => 0,
     'OptionGrade' => 0,
     'template_footer' => 0,
@@ -84,6 +85,15 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 										<input type="hidden" name="date" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['date'];?>
 ">
 										<input type="hidden" name="time" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['time'];?>
+">
+									</td>
+								</tr>
+								<tr>
+									<th>担当講師</th>
+									<td>
+										<?php echo $_smarty_tpl->tpl_vars['OptionTeacher']->value[$_smarty_tpl->tpl_vars['arr_post']->value['teacher']];?>
+
+										<input type="hidden" name="teacher" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['teacher'];?>
 ">
 									</td>
 								</tr>
@@ -197,7 +207,8 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 							<div class="col-xs-6 pos_ar">
 								<input type="hidden" name="referer" value="1" />
 								<input type="hidden" name="status" value="0" />
-								<button id="send_button" class="button" type="submit">送信する<i class="fa fa-chevron-right"></i></button>
+								<!-- <button id="send_button" class="button" type="submit">送信する<i class="fa fa-chevron-right"></i></button> -->
+								<button id="" class="button" type="submit" onclick="$(this).attr('formaction', './send.php');">送信する<i class="fa fa-chevron-right"></i></button>
 							</div>
 						</div>
 					</form>

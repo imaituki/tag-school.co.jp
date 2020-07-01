@@ -47,6 +47,14 @@
 								</td>
 							</tr>
 							<tr>
+								<th>担当講師<span class="need">必須</span></th>
+								<td>
+									{if !empty($message.ng.teacher)}<span class="error">※{$message.ng.teacher}</span>{/if}
+									{if !empty($OptionTeacher[$arr_post.teacher])}{$OptionTeacher[$arr_post.teacher]}{/if}
+									<input type="hidden" name="teacher" value="{$arr_post.teacher}" />
+								</td>
+							</tr>
+							<tr>
 								<th>保護者氏名<span class="need">必須</span></th>
 								<td>
 									{if !empty($message.ng.name2)}<span class="error">※{$message.ng.name2}</span>{/if}
@@ -146,7 +154,7 @@
 					</table>
 					<div class="row form_button">
 						<div class="col-xs-6 mb20 pos_al">
-							<a href="./timetable.php?y={$arr_post.date|date_format:'%Y'}&m={$arr_post.date|date_format:'%m'}&d={$arr_post.date|date_format:'%d'}&w={$arr_post.date|date_format:'%w'}" class="button _back"><i class="fa fa-chevron-left"></i>時間選択に戻る</a>
+							<a href="./index.php?y={$arr_post.date|date_format:'%Y'}&m={$arr_post.date|date_format:'%m'}&d={$arr_post.date|date_format:'%d'}&w={$arr_post.date|date_format:'%w'}" class="button _back"><i class="fa fa-chevron-left"></i>時間選択に戻る</a>
 						</div>
 						<div class="col-xs-6 pos_ar">
 							<button class="button" type="submit">入力内容を確認する<i class="fa fa-chevron-right"></i></button>

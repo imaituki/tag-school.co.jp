@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-29 12:48:12
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-30 16:47:15
          compiled from "/home/tag-school/www/admin/contents/online-consultation2/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12433908865ef9647c88f024-83862627%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1184ffd8b92d729f2c7d8064c00bb30f418bf865' => 
     array (
       0 => '/home/tag-school/www/admin/contents/online-consultation2/template/form.tpl',
-      1 => 1593147960,
+      1 => 1593501958,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ef9647c952c49_93440123',
   'variables' => 
   array (
     'mode' => 0,
@@ -28,8 +30,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_CONF_PATH' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ef9647c952c49_93440123',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef9647c952c49_93440123')) {function content_5ef9647c952c49_93440123($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include '/home/tag-school/cgi-data/smarty/libs/plugins/function.html_options.php';
 if (!is_callable('smarty_modifier_date_format')) include '/home/tag-school/cgi-data/smarty/libs/plugins/modifier.date_format.php';

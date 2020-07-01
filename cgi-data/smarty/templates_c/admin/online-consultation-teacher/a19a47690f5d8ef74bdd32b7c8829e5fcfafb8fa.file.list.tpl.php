@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-27 17:58:22
+<?php /* Smarty version Smarty-3.1.18, created on 2020-06-30 16:27:41
          compiled from "/home/tag-school/www/admin/contents/online-consultation-teacher/template/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16497824335ef70a2e5b7725-14006348%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a19a47690f5d8ef74bdd32b7c8829e5fcfafb8fa' => 
     array (
       0 => '/home/tag-school/www/admin/contents/online-consultation-teacher/template/list.tpl',
-      1 => 1593146340,
+      1 => 1593501954,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ef70a2e5d84c2_10799400',
   'variables' => 
   array (
     'template_pagenavi' => 0,
@@ -24,8 +26,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_NAME' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ef70a2e5d84c2_10799400',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef70a2e5d84c2_10799400')) {function content_5ef70a2e5d84c2_10799400($_smarty_tpl) {?>
 <script type="text/javascript">

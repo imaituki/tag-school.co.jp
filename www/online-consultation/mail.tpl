@@ -5,6 +5,9 @@
 {$arr_post.date|date_format:"%Y/%m/%d"}({$OptionWeek[$arr_post.date|date_format:"w"]}) {if !empty($OptionReserveTime[$arr_post.time])}{$OptionReserveTime[$arr_post.time]}{/if}
 
 
+[ 担当講師 ]
+{$OptionTeacher[$arr_post.teacher]}
+
 [ 保護者氏名 ]
 {$arr_post.name2|default:''}{if $arr_post.ruby2|default:'' != NULL}（{$arr_post.ruby2|default:''}）{/if}
 
@@ -39,5 +42,7 @@
 〒{$_INFO.zip}
 {$_INFO.address}
 {if !empty($_INFO.tel)}TEL: {$_INFO.tel}{/if}
+
 {if !empty($_INFO.fax)}FAX: {$_INFO.fax}{/if}
+
 ***********************************************
