@@ -16,6 +16,17 @@
 		</div>
 		<div class="hr-line-dashed"></div>
 		<div class="form-group">
+			<label class="col-sm-2 control-label">在籍学校名</label>
+			<div class="col-sm-6">
+				<select name="school_type">
+					<option value="">選択してください。</option>
+					{html_options options=$OptionSchoolType selected=$arr_post.school_type}
+				</select>
+				<input type="text" name="school" class="form-control" value="{$arr_post.school}" placeholder="学校名" /><br />
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="form-group">
 			<label class="col-sm-2 control-label">学年</label>
 			<div class="col-sm-6">
 				<select name="grade">

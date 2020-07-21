@@ -102,6 +102,7 @@ if( empty($message["ng"]) ) {
 	$smarty->assign( "OptionContactReferer", $OptionContactReferer );
 	$smarty->assign( "OptionStatus" , $OptionStatus  );
 	$smarty->assign( "OptionKikkake", $OptionKikkake );
+	$smarty->assign( "OptionSchoolType", $OptionSchoolType );
 
 	// テンプレートの取得
 	$mail = $smarty->fetch( "mail.tpl" );

@@ -51,19 +51,13 @@
 		</div>
 	</section>
 	<section>
-		{literal}
-		<style>
-			#top_about .text .text_in > * { max-width:390px; }
-		</style>
-		{/literal}
 		<div id="top_about">
 			<div class="photo img_back"><img src="/common/image/contents/top/image1.jpg" alt="TAG schoolについて"></div>
 			<div class="text">
 				<div class="center">
 					<div class="text_in">
 						<h2 class="c_brown mincho">TAG schoolについて</h2>
-						<p class="mb20">TAG schoolは、岡山初の集団指導と個別指導の<br>
-スマートスライド学習ができる新総合学習塾です。<br>
+						<p class="mb20">TAG schoolは、岡山初の集団指導と個別指導を融合した新総合学習塾です。<br>
 							『わかる』から『できる』、そして『えらべる』へ<br>
 							“今までにない学び” をご提供いたします。</p>
 						<div class="pos_ac"><a href="/about/" class="button _type1">詳しく見る<i class="fa fa-chevron-right"></i></a></div>
@@ -121,65 +115,37 @@
 		</div>
 	</section>
 	<section>
-		<style>
-			.icon_list { display: flex; flex-direction: column; }
-			.icon_list li { padding: 5px !important; }
-			.icon_list li + li { margin-top: 5px !important; }
-			.course_navi .text .caption { margin-bottom: 5px; }
-			@media (min-width: 992px){
-				.icon_list { padding-right: 20px; padding-left: 20px; }
-			}
-			@media (max-width: 991px){
-				.icon_list li { font-size: 12px; }
-				.icon_list li + li { margin-top: 0px !important; }
-			}
-		</style>
 		<div id="course">
 			<div class="wrapper bg_common">
 				<div class="center">
 					<h2 class="hl_1 mincho"><span class="en">Course</span><span class="ja">コース紹介</span></h2>
 					<div id="course_navi" class="tab_navi" data-tab="course">
 						<div class="row">
-							<div class="col-xs-4 col-4">
+							<div class="col-xs-6 col-6 mb30">
 								<div class="box course_navi _orange tab height-1_all">
-									<a href="#primary" class="ov">
-										<div class="photo img_back"><img src="/common/image/contents/top/image5.jpg" alt="小学生コース"></div>
+									<a href="#tag">
+										<div class="photo img_back"><img src="/common/image/contents/top/image5.jpg" alt="TAG school（タッグスクール）"></div>
 										<div class="text">
-											<h3 class="mincho c_orange">小学生</h3>
-											<p class="caption height-2_all">Schoolchild</p>
+											<p class="caption height-2_all">「わかる」「できる」「えらべる」</p>
+											<h3 class="mincho c_orange">TAG school</h3>
 											<ul class="icon_list c_orange">
-												<li>1x2個別指導</li>
-												<li>J'school</li>
-												<li>学童plus</li>
+												<li class="bg_orange">集団×個別</li>
+												<li class="bg_blue">コミル対応</li>
 											</ul>
 										</div>
 									</a>
 								</div>
 							</div>
-							<div class="col-xs-4 col-4">
-								<div class="box course_navi _blue tab height-1_all">
-									<a href="#middle" class="ov">
-										<div class="photo img_back"><img src="/common/image/contents/top/image6.jpg" alt="中学生コース"></div>
+							<div class="col-xs-6 col-6 mb30">
+								<div class="box course_navi _orange tab height-1_all">
+									<a href="#rising">
+										<div class="photo img_back"><img src="/common/image/contents/top/image7.jpg" alt="Rising（ライジング）"></div>
 										<div class="text">
-											<h3 class="mincho c_blue">中学生</h3>
-											<p class="caption height-2_all">Middle school<span class="hidden-only"> student</span></p>
-											<ul class="icon_list c_blue">
-												<li>集団指導</li>
-												<li>1x2個別指導</li>
-											</ul>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="col-xs-4 col-4">
-								<div class="box course_navi _green tab height-1_all">
-									<a href="#high" class="ov">
-										<div class="photo img_back"><img src="/common/image/contents/top/image7.jpg" alt="高校生コース"></div>
-										<div class="text">
-											<h3 class="mincho c_green">高校生</h3>
-											<p class="caption height-2_all">High school<span class="hidden-only"> student</span></p>
-											<ul class="icon_list c_green">
-												<li>1x2個別指導</li>
+											<p class="caption height-2_all">High Quality & High Brand</p>
+											<h3 class="mincho c_orange">Rising<span>（ライジング）</span></h3>
+											<ul class="icon_list c_orange">
+												<li class="bg_orange">7月新設</li>
+												<li class="bg_blue">コミル対応</li>
 											</ul>
 										</div>
 									</a>
@@ -188,128 +154,123 @@
 						</div>
 					</div>
 					<div id="course_area">
-						<div class="course" id="primary">
-							<h2 class="title mincho c_orange">「TAG式小学生の学力の考え方」に基づき各コースを設定しています。</h2>
-							<h3 class="hl_2"><span class="main c_orange">集団指導</span><span class="sub">『わかる』・『できる』集団指導</span></h3>
-							<div class="row mb50">
-								<div class="col-xs-6">
-									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_orange c0">小1～3 基礎学力定着コース　<span class="disp_ib">月額14,200円（税込）</span></h4>
-										<div class="box_in">楽しみながら、基礎学力の土台となる学びの感覚『体感共育』を行っていきます。</div>
-									</div>
-								</div>
-								<div class="col-xs-6">
-									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_orange c0">小4 基礎学力定着コース　<span class="disp_ib">月額17,200円（税込）</span></h4>
-										<div class="box_in">勉強する習慣を身につけることを目的とし、算数・国語を中心とした基礎学力をつけていきます。</div>
-									</div>
-								</div>
-							</div>
-							<h3 class="hl_2"><span class="main c_orange">個別指導</span><span class="sub">『えらべる』個別指導【60分／80分】</span></h3>
-							<p class="mb30">ご要望に応じて、60分コース・80分コースを選択することが可能です。</p>
+						<div class="course mb30" id="tag">
+							<h2 class="title mincho c_orange fw_bold">講師連携による集団と個別の「スマートスライド学習」で苦手を克服します。</h2>
+							<table>
+								<tr>
+									<th class="c_orange fw_bold">対　象</th>
+									<td>小学4年生〜中学3年生</td>
+								</tr>
+								<tr>
+									<th class="c_orange fw_bold">内　容</th>
+									<td>TAG式集団+「対面式」1x2個別指導　※自習室完備（予約制）。</td>
+								</tr>
+								<tr>
+									<th class="c_orange fw_bold">授業日</th>
+									<td>要問い合わせ、自習室利用可</td>
+								</tr>
+								<tr>
+									<th class="c_orange fw_bold">受講料</th>
+									<td>[一例] 中学生の集団指導（英・数2科目）‥週2回4時間　月額17,000円（税別）</td>
+								</tr>
+							</table>
+						</div>
+						<div class="course mb30" id="rising">
+							<h2 class="title mincho c_orange fw_bold">個別指導のプロ講師が医学部受験レベルに学力に引き上げます。</h2>
+							<table>
+								<tr>
+									<th class="c_orange fw_bold">対　象</th>
+									<td>医学部.難関校を目指す小学1年生~高校3年生(浪人生不可)</td>
+								</tr>
+								<tr>
+									<th class="c_orange fw_bold">内　容</th>
+									<td>ロ講師による1×1マンツーマン「オーダーメイド式」個別指導※授業時間、受講料については相談により決定。</td>
+								</tr>
+								<tr>
+									<th class="c_orange fw_bold">授業日</th>
+									<td>要問い合わせ、自習室利用可</td>
+								</tr>
+								<tr>
+									<th class="c_orange fw_bold">受講料</th>
+									<td>[一例] 中学生の集団指導（英・数2科目）‥週2回4時間　月額17,000円（税別）</td>
+								</tr>
+							</table>
+						</div>
+						<div id="course_navi" class="tab_navi" data-tab="course">
 							<div class="row">
-								<div class="col-xs-6">
-									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_orange c0">小1～6 基礎学力定着コース　<span class="disp_ib">月額14,700円～（税込）</span></h4>
-										<div class="box_in">基礎学力の定着を目指し、個々のレベル・現状に応じて指導を行ってまいります。</div>
+								<div class="col-xs-6 col-6 mb30">
+									<div class="box course_navi _orange tab height-1_all">
+										<a href="#plus">
+											<div class="photo img_back"><img src="/common/image/contents/top/image10.jpg" alt="学童plus"></div>
+											<div class="text">
+												<p class="caption height-2_all">小学4年生からの</p>
+												<h3 class="mincho c_orange">学童plus</h3>
+												<ul class="icon_list c_orange">
+													<li class="bg_orange _1">7月新設</li>
+												</ul>
+											</div>
+										</a>
 									</div>
 								</div>
-								<div class="col-xs-6">
-									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_orange c0">小4 応用学力演習コース　<span class="disp_ib">月額17,700円～（税込）</span></h4>
-										<div class="box_in">基礎学力に加え、応用学力の習得を目指し、個々のレベル・現状に応じて指導を行ってまいります。中学受験へ向けた準備コースとしてもご活用ください。</div>
+								<div class="col-xs-6 col-6 mb30">
+									<div class="box course_navi _orange tab height-1_all">
+										<a href="#jschool">
+											<div class="photo img_back"><img src="/common/image/contents/top/image11.jpg" alt="Rising（ライジング）"></div>
+											<div class="text">
+												<p class="caption height-2_all">学力と学習習慣が身につく</p>
+												<h3 class="mincho c_orange">J’school</h3>
+												<ul class="icon_list c_orange">
+													<li class="bg_blue _1">コミル一部対応</li>
+												</ul>
+											</div>
+										</a>
 									</div>
-								</div>
-								<div class="col-xs-6">
-									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_orange c0">小5・6 他塾併用中学受験サポートコース<br><span class="disp_ib">月額17,700円～（税込）</span></h4>
-										<div class="box_in">中学受験志望者を対象とし、受験へ向けて、個々の志望校・レベル・現状に応じて指導を行ってまいります。</div>
-									</div>
-								</div>
-							</div>
-							<p class="pos_ar c_g">※別途、入会金・諸費・テキスト代が必要になります。</p>
-						</div>
-						<div class="course" id="middle">
-							<h3 class="hl_2"><span class="main c_blue">集団指導</span><span class="sub">『わかる』・『できる』集団指導</span></h3>
-							<div class="row mb50">
-								<div class="col-xs-6">
-									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_blue c0">中1～3 高校受験コース　<span class="disp_ib">月額18,700円（税込）</span></h4>
-										<div class="box_in">学校成績の向上はもちろんのこと、高校受験へ向けて各教科ごとにTAG式『LGCT＋F』指導で理解を深めていきます。</div>
-									</div>
-								</div>
-							</div>
-							<h3 class="hl_2"><span class="main c_blue">個別指導</span><span class="sub">『えらべる』個別指導【80分】</span></h3>
-							<div class="row">
-								<div class="col-xs-6">
-									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_blue c0">中1～3 高校受験コース　<span class="disp_ib">月額19,200円～（税込）</span></h4>
-										<div class="box_in">高校受験志望者を対象とし、受験へ向けて、個々の志望校・レベル・現状に応じて指導を行ってまいります。</div>
-									</div>
-								</div>
-								<div class="col-xs-6">
-									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_blue c0">中1～3 中高一貫校コース　<span class="disp_ib">月額20,700円～（税込）</span></h4>
-										<div class="box_in">中高一貫校生を対象とし、大学受験も見据え、学校の勉強の補習を中心に指導を行ってまいります。</div>
-									</div>
-								</div>
-							</div>
-							<p class="pos_ar c_g">※別途、入会金・諸費・テキスト代が必要になります。</p>
-						</div>
-						<div class="course" id="high">
-							<h3 class="hl_2"><span class="main c_green">個別指導</span><span class="sub">『えらべる』個別指導【80分】</span></h3>
-							<div class="row">
-								<div class="col-xs-6">
-									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_green c0">高1・2 大学受験コース　<span class="disp_ib">月額22,200円～（税込）</span></h4>
-										<div class="box_in">大学受験志望者を対象とし、学校の勉強の補習に加え、受験へ向けて個々の志望校・レベル・現状に応じて指導を行ってまいります。</div>
-									</div>
-								</div>
-								<div class="col-xs-6">
-									<div class="box course_box mb30 height-1">
-										<h4 class="box_title bg_green c0">高3 大学受験コース　<span class="disp_ib">月額23,700円～（税込）</span></h4>
-										<div class="box_in">受験生を対象とし、学校の勉強の補習に加え、受験へ向けて個々の志望校・レベル・現状に応じて指導を行ってまいります。</div>
-									</div>
-								</div>
-							</div>
-							<p class="pos_ar c_g">※別途、入会金・諸費・テキスト代が必要になります。</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
-		<style>
-			.course_navi .icon_list.c_red li { box-shadow:0 0 3px rgba(224, 50, 59,0.5); }
-			.course_navi._red { padding-top: 30px; padding-bottom: 30px; border-bottom-color: rgba(224, 50, 59);  }
-			@media (min-width: 992px){
-				#course_2 { margin-top: 120px; }
-			}
-			@media (max-width: 991px){
-				#course_2 { margin-top: 30px; }
-				.course_navi._red { padding-top: 0px; padding-bottom: 0px; }
-			}
-		</style>
-		<div id="course_2">
-			<div class="wrapper bg_common">
-				<div class="center">
-					<h2 class="hl_1 mincho"><span class="en">TAG Rising</span><span class="ja">ライジング</span></h2>
-					<div class="tab_navi">
-						<div class="row">
-							<div class="col-xs-12 col-12">
-								<div class="box course_navi _red">
-										<div class="photo img_back"></div>
-										<div class="text">
-											<h3 class="mincho c_red">小学生・中学生・高校生</h3>
-											<p class="caption height-2_all">Schoolchild・Middle school student・High school student</p>
-											<ul class="icon_list c_red">
-												<li>1x1マンツーマン個別指導</li>
-											</ul>
-										</div>
 								</div>
 							</div>
 						</div>
+						<div id="course_area">
+							<div class="course mb30" id="plus">
+								<h2 class="title mincho c_orange fw_bold">〈知育遊び+宿題〉学校帰りに楽しく遊び、楽しく学ぶ時間を提供します。</h2>
+								<table>
+									<tr>
+										<th class="c_orange fw_bold">対　象</th>
+										<td>小学4年生〜中学3年生</td>
+									</tr>
+									<tr>
+										<th class="c_orange fw_bold">内　容</th>
+										<td>TAG式集団+「対面式」1x2個別指導　※自習室完備（予約制）。</td>
+									</tr>
+									<tr>
+										<th class="c_orange fw_bold">授業日</th>
+										<td>要問い合わせ、自習室利用可</td>
+									</tr>
+									<tr>
+										<th class="c_orange fw_bold">受講料</th>
+										<td>[一例] 中学生の集団指導（英・数2科目）‥週2回4時間　月額17,000円（税別）</td>
+									</tr>
+								</table>
+							</div>
+							<div class="course mb30" id="jschool">
+								<h2 class="title mincho c_orange fw_bold">学年に関係なく、習熟度に合わせてスタートし、どんどん進級していきます。</h2>
+								<table>
+									<tr>
+										<th class="c_orange fw_bold">対　象</th>
+										<td>小学4年生〜中学3年生</td>
+									</tr>
+									<tr>
+										<th class="c_orange fw_bold">内　容</th>
+										<td>TAG式集団+「対面式」1x2個別指導　※自習室完備（予約制）。</td>
+									</tr>
+									<tr>
+										<th class="c_orange fw_bold">授業日</th>
+										<td>要問い合わせ、自習室利用可</td>
+									</tr>
+									<tr>
+										<th class="c_orange fw_bold">受講料</th>
+										<td>[一例] 中学生の集団指導（英・数2科目）‥週2回4時間　月額17,000円（税別）</td>
+									</tr>
+								</table>
+							</div>
 					</div>
 				</div>
 			</div>
@@ -458,8 +419,8 @@
 											<dd>1971年岡山県津山市生まれ<br>甲南大学 経済学部卒業</dd>
 										</dl>
 									</div>
-									<p class="mb10">小学生の頃から教師を目指し、高校・大学時代には、地域の剣道クラブで、小中学生を指導・育成。その指導経験から、得意の社会で教員免許を取得し、岡山市内の公立中学校で2年間の講師経験をする。しかし、自分が理想とする教育と学校教育にギャップを感じ、学校とは異なるフィールドを探し、岡山県内の大手進学塾O塾に入社した。入社2年目から校舎長やエリア統括を歴任した。O塾退社後は、大手進学塾Nセンターへ転職し、校舎責任者や中学・高校受験指導主任を歴任。</p>
-									<p>2019年9月、TAG school運営会社の株式会社TAG Corporation 28専務取締役に就任。そして、2020年2月、教師歴27年の経験とノウハウを生かし、新総合学習塾のTAG schoolを教え子の木本と共に立ち上げ、TAG総合プロデューサー兼統括責任者に就任する。</p>
+									<p class="mb10">小学生の頃から教師を目指し、高校・大学時代には、地域の剣道クラブで小中学生を指導・育成。その指導経験から、得意の社会で教員免許を取得し、岡山市内の公立中学校で2年間教鞭を執る。しかし、自分が理想とする教育と学校教育にギャップを感じ、学校とは異なるフィールドを求めて岡山県内の大手進学塾に入社。入社2年目から校舎長やエリア統括を歴任。退社後は、別の大手進学塾へ転職し、校舎責任者や中学・高校受験指導主任を務める。</p>
+									<p>2019年9月、TAG school運営会社の株式会社TAG Corporation 28専務取締役に就任。2020年2月、教師歴27年の経験とノウハウを生かし、教え子の木本と共に新総合学習塾TAG schoolを立ち上げ、TAG総合プロデューサー兼統括責任者に就任する。</p>
 								</div>
 							</div>
 						</div>

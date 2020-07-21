@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-29 12:49:55
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-01 16:20:22
          compiled from "/home/tag-school/www/admin/contents/online-consultation-teacher/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17615719955ef964e3214942-38171812%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dfdc87894b0f71c33357a53d515bdaace3bce61b' => 
     array (
       0 => '/home/tag-school/www/admin/contents/online-consultation-teacher/template/form.tpl',
-      1 => 1593235380,
+      1 => 1593501954,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ef964e32518a2_59498822',
   'variables' => 
   array (
     'mode' => 0,
@@ -25,8 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_CONF_PATH' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ef964e32518a2_59498822',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef964e32518a2_59498822')) {function content_5ef964e32518a2_59498822($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_radios')) include '/home/tag-school/cgi-data/smarty/libs/plugins/function.html_radios.php';
 ?><form id="inputForm" name="inputForm" class="form-horizontal" action="./<?php if ($_smarty_tpl->tpl_vars['mode']->value=='edit') {?>update<?php } else { ?>insert<?php }?>.php" method="post" enctype="multipart/form-data">

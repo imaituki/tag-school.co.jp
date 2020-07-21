@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-22 10:46:42
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-03 10:29:17
          compiled from "/home/tag-school/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19695591415e295866647322-77692349%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97f6fdaef15088846bff77147fa4b53b49cc4e6f' => 
     array (
       0 => '/home/tag-school/www//common/include/footer.tpl',
-      1 => 1592790401,
+      1 => 1593475280,
       2 => 'file',
     ),
   ),
@@ -48,11 +48,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<div id="foot_banner" class="wrapper-b center">
 		<div class="banner_area">
 			<div class="row">
-				<div class="col-xs-6">
+				<div class="col-xs-6 mb10">
 					<a href="https://ok-school.jp/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_1.jpg" alt="OKschool"></a>
 				</div>
 
-				<div class="col-xs-6">
+				<div class="col-xs-6 mb10">
 					<a href="https://www.earth-8.com/aschool/" class="ov ga_link" target="_blank"><img src="/common/image/foot/banner_2.jpg" alt="aschool"></a>
 				</div>
 

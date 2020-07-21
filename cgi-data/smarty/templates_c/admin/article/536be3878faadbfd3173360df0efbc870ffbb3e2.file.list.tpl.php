@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 17:54:11
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-07 16:00:59
          compiled from "../template/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11774874355e2ff6b33bc513-38929319%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '536be3878faadbfd3173360df0efbc870ffbb3e2' => 
     array (
       0 => '../template/list.tpl',
-      1 => 1578997886,
+      1 => 1594105255,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5e2ff6b34266d2_77965761',
   'variables' => 
   array (
     'template_pagenavi' => 0,
@@ -29,8 +31,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_NAME' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5e2ff6b34266d2_77965761',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5e2ff6b34266d2_77965761')) {function content_5e2ff6b34266d2_77965761($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/home/tag-school/cgi-data/smarty/libs/plugins/modifier.date_format.php';
 ?><?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_pagenavi']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -43,6 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<th>カテゴリー</th>
 			<th>タイトル</th>
 			<th class="photo">写真</th>
+			<th>お知らせ</th>
 			<th class="showhide">表示</th>
 			<th class="delete">削除</th>
 		</tr>
@@ -54,6 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<th width="150">カテゴリー</th>
 			<th>タイトル</th>
 			<th class="photo" width="220">写真</th>
+			<th>お知らせ</th>
 			<th class="showhide" width="60">表示</th>
 			<th class="delete" width="60">削除</th>
 		</tr>
@@ -108,6 +110,10 @@ $_smarty_tpl->tpl_vars['file']->_loop = true;
 						<?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['file']['iteration']%3==0) {?><br /><?php }?>
 					<?php } ?>
 				</div>
+			</td>
+			<td>
+				<a href="../php/insert_information.php?id=<?php echo $_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['_CONTENTS_ID']->value];?>
+">自動生成</a>
 			</td>
 			<td class="pos_ac">
 				<div class="switch">

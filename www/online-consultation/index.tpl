@@ -31,8 +31,8 @@
 		<div class="wrapper bg_common" >
 			<div class="center">
 				<h2 class="hl_3 mincho">LINEでオンライン面談はじめました</h2>
-				<p class="mb10">下記予約カレンダーより日付をクリックしてご予約下さい。<br>日付をクリックすると空き時間が確認できます。</p>
-				<p class="mb30">当日の予約については、お電話でご相談ください。<br><a href="tel:0862424119" class="fw_bold"><i class="fas fa-phone-alt"></i>086-242-4119</a></p>
+				<p class="mb30">下記予約カレンダーより日付をクリックしてご予約下さい。<br>日付をクリックすると空き時間が確認できます。</p>
+
 
 				{foreach from=$t_teacher item="teacher"}
 					<h2 class="hl_4 mincho mb20">

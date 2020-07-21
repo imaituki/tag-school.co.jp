@@ -80,6 +80,7 @@ if( empty( $message["ng"] ) ) {
 	$smarty->assign( "OptionContactReferer", $OptionContactReferer );
 	$smarty->assign( "OptionStatus" , $OptionStatus  );
 	$smarty->assign( "OptionKikkake", $OptionKikkake );
+	$smarty->assign( "OptionSchoolType", $OptionSchoolType );
 
 	// 表示
 	$smarty->display( "edit.tpl" );

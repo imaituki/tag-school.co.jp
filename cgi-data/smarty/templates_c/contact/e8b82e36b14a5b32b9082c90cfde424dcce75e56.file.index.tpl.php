@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-19 09:25:43
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-07 17:40:07
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:7049183775e26d5e01b3869-32464001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1592526336,
+      1 => 1594111192,
       2 => 'file',
     ),
   ),
@@ -26,6 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'message' => 0,
     'OptionContent' => 0,
     'arr_post' => 0,
+    'OptionSchoolType' => 0,
     'OptionGrade' => 0,
     'OptionRequest' => 0,
     'OptionKikkake' => 0,
@@ -105,6 +106,22 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['ruby1'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['ruby1'];?>
 </span><?php }?>
 									<input type="text" name="ruby1" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['ruby1'])===null||$tmp==='' ? '' : $tmp);?>
+" />
+								</td>
+							</tr>
+							<tr>
+								<th>在籍学校名<span class="need">必須</span></th>
+								<td>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['school_type'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['school_type'];?>
+</span><?php }?>
+									<select name="school_type">
+										<option value="">選択してください。</option>
+										<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['OptionSchoolType']->value,'selected'=>$_smarty_tpl->tpl_vars['arr_post']->value['school_type']),$_smarty_tpl);?>
+
+									</select>
+									<?php if (!empty($_smarty_tpl->tpl_vars['message']->value['ng']['school'])) {?><span class="error">※<?php echo $_smarty_tpl->tpl_vars['message']->value['ng']['school'];?>
+</span><?php }?>
+									<input type="text" name="school" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['school'])===null||$tmp==='' ? '' : $tmp);?>
 " />
 								</td>
 							</tr>

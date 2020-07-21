@@ -20,6 +20,14 @@
 		</div>
 		<div class="hr-line-dashed"></div>
 		<div class="form-group">
+			<label class="col-sm-2 control-label">リード文 </label>
+			<div class="col-sm-9">
+				{if $message.ng.autoinfo_comment|default:"" != NULL}<p class="error">{$message.ng.autoinfo_comment}</p>{/if}
+				<textarea name="autoinfo_comment" id="autoinfo_comment" rows="7" class="form-control">{$arr_post.autoinfo_comment|default:''}</textarea>
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="form-group">
 			<label class="col-sm-2 control-label">カテゴリー</label>
 			<div class="col-sm-6">
 				{if $message.ng.id_article_category|default:"" != NULL}<p class="error">{$message.ng.id_article_category}</p>{/if}
@@ -43,7 +51,7 @@
 				<textarea name="comment" id="comment" rows="7" class="form-control ckeditor">{$arr_post.comment|default:''}</textarea>
 			</div>
 		</div>
-		<div class="hr-line-dashed"></div>
+	{*	<div class="hr-line-dashed"></div>
 		<div class="form-group">
 			<label class="col-sm-2 control-label">
 				新着情報の記事を自動生成<br />
@@ -53,14 +61,7 @@
 				{if $message.ng.autoinfo_flg|default:"" != NULL}<p class="error">{$message.ng.autoinfo_flg}</p>{/if}
 				{html_radios name="autoinfo_flg" options=$OptionYesNo selected=$arr_post.autoinfo_flg|default:0 separator='&nbsp;'}
 			</div>
-		</div>
-		<div class="form-group">
-			<label class="col-sm-2 control-label">新着情報自動生成時の本文<br /><span style="color:#FF0000;">※推奨: 30文字程度</span></label>
-			<div class="col-sm-9">
-				{if $message.ng.autoinfo_comment|default:"" != NULL}<p class="error">{$message.ng.autoinfo_comment}</p>{/if}
-				<input type="text" class="form-control" name="autoinfo_comment" id="autoinfo_comment" value="{$arr_post.autoinfo_comment|default:''}" />
-			</div>
-		</div>
+		</div> *}
 		<div class="hr-line-dashed"></div>
 		<div class="form-group">
 			<label class="col-sm-2 control-label">掲載期間 </label>

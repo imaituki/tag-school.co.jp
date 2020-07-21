@@ -30,7 +30,7 @@
 					<div class="mail_unit"><a href="{$_FRONT.home}/contact/" class="button _circle"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ" />お問い合わせ</a></div>
 				</li>
 				<li class="sns">
-					<a href="https://www.facebook.com/tagschool0902" target="_blank" class="fa"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.facebook.com/%E9%9B%86%E5%9B%A3%E5%80%8B%E5%88%A5%E6%8C%87%E5%B0%8E%E5%A1%BE-TAG-school-113292580428083/" target="_blank" class="fa"><i class="fab fa-facebook-f"></i></a>
 				{*	<a href="https://twitter.com/tagschool28" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
 					<a href="https://www.instagram.com/tagschool_28/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>*}
 				</li>

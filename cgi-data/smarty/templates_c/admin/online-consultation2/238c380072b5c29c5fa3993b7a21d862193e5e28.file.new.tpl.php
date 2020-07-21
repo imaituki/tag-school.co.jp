@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-29 12:48:12
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-10 12:44:03
          compiled from "../template/new.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5641020715ef9647c83d307-39933895%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '238c380072b5c29c5fa3993b7a21d862193e5e28' => 
     array (
       0 => '../template/new.tpl',
-      1 => 1593147180,
+      1 => 1593501958,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5ef9647c8861d3_11344726',
   'variables' => 
   array (
     '_ADMIN' => 0,
@@ -25,8 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_CONTENTS_NAME' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5ef9647c8861d3_11344726',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5ef9647c8861d3_11344726')) {function content_5ef9647c8861d3_11344726($_smarty_tpl) {?><!DOCTYPE html>
 <html>
@@ -71,7 +71,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 <body class="fixed-sidebar no-skin-config">
 <div id="wrapper">
-	<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_secondary']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('action'=>'public','manage'=>$_smarty_tpl->tpl_vars['_CONTENTS_DIR']->value), 0);?>
+	<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_secondary']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('action'=>"online-consultation",'manage'=>$_smarty_tpl->tpl_vars['_CONTENTS_DIR']->value), 0);?>
 
 	<div id="page-wrapper" class="gray-bg">
 		<?php echo $_smarty_tpl->getSubTemplate ($_smarty_tpl->tpl_vars['template_header']->value, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>

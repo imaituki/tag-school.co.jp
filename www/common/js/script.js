@@ -225,6 +225,7 @@ $(function(){
 		return false;
 	});
 
+
 	// table
 	$('.entry table').each(function(){
 		if( $(this).hasClass('tbl_form') == false ){

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-30 16:32:11
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-02 17:11:51
          compiled from "./mail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18857831415ee70e1aa3b496-45597273%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '140ed6d1ad3b6643e3b58b9fe629cd46e8b9926b' => 
     array (
       0 => './mail.tpl',
-      1 => 1593502259,
+      1 => 1593502426,
       2 => 'file',
     ),
   ),
@@ -95,7 +95,9 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 
 <?php if (!empty($_smarty_tpl->tpl_vars['_INFO']->value['tel'])) {?>TEL: <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 <?php }?>
+
 <?php if (!empty($_smarty_tpl->tpl_vars['_INFO']->value['fax'])) {?>FAX: <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['fax'];?>
 <?php }?>
+
 ***********************************************
 <?php }} ?>

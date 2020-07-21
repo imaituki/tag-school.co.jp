@@ -168,7 +168,11 @@ $tcpdf->fontAutoCell( $tcpdf, _W5, _H8, "",  1, 'C', 0, 0, NULL, NULL, NULL, NUL
 // 在籍学校名・学年
 $tcpdf->SetXY( 10, 41 );
 $tcpdf->fontAutoCell( $tcpdf, _W25,  _H16, "(3)在籍学校名",                             1, 'C', 0, 0, NULL, NULL, NULL, NULL, NULL, true, _H16 , _FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W100, _H16, "□公立\n□私立\n□国立",                       1, 'L', 0, 0, NULL, NULL, NULL, NULL, NULL, true, _H16 , _FONT_SIZE10 );
+if( empty($data["school"]) ){
+	$tcpdf->fontAutoCell( $tcpdf, _W100, _H16, "□公立\n□私立\n□国立",                       1, 'L', 0, 0, NULL, NULL, NULL, NULL, NULL, true, _H16 , _FONT_SIZE10 );
+}else{
+	$tcpdf->fontAutoCell( $tcpdf, _W100, _H16, $OptionSchoolType[$data["school_type"]]. "\n". $data["school"], 1, 'L', 0, 0, NULL, NULL, NULL, NULL, NULL, true, _H16 , _FONT_SIZE10 );
+}
 $tcpdf->fontAutoCell( $tcpdf, _W20,  _H16, "(4)学年",                                   1, 'C', 0, 0, NULL, NULL, NULL, NULL, NULL, true, _H16 , _FONT_SIZE10 );
 $tcpdf->fontAutoCell( $tcpdf, _W40,  _H16, "(現 ・ 新)\n". $OptionGrade[$data["grade"]], 1, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H16 , _FONT_SIZE10 );
 
@@ -182,19 +186,30 @@ $tcpdf->fontAutoCell( $tcpdf, _W160, _H14, "□自宅  □携帯  所有者【�
 
 // 保護者メールアドレス
 $tcpdf->fontAutoCell( $tcpdf, _W25,  _H20, "(7)保護者\nﾒｰﾙｱﾄﾞﾚｽ",                                                                   1, 'C', 0, 0, NULL, NULL, NULL, NULL, NULL, true, _H20 , _FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W160, _H20, "\n\n ※0(ゼロ)とo(オー)や、-(ハイフン)と_(アンダーバー)などの混同しやすい文字についてはフリガナをお願いします。", 1, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H20 , _FONT_SIZE8 );
+if( empty($data["mail"]) ){
+	$tcpdf->fontAutoCell( $tcpdf, _W160, _H20, "\n\n ※0(ゼロ)とo(オー)や、-(ハイフン)と_(アンダーバー)などの混同しやすい文字についてはフリガナをお願いします。", 1, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H20 , _FONT_SIZE8 );
+}else{
+	$tcpdf->fontAutoCell( $tcpdf, _W160, _H20, $data["mail"], 1, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H20 , _FONT_SIZE10 );
+}
 
 // Q1
 $tcpdf->SetXY( 10, 110 );
 $tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "Q1 今回ご来校された目的をお選びください。",          0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W50,  _H6, "1. 塾に通い始めたい",                          0, 'L', 0, 0, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W110, _H6, "2. 他塾からの転塾を考えている【塾名:　　　　　　　　　　　】", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W50,  _H8, "3. 話だけ聞きたい",                            0, 'L', 0, 0, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W100, _H8, "4. その他(　　　　　　　　　　)", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
+$tcpdf->fontAutoCell( $tcpdf, _W50,  _H6, "　1. 塾に通い始めたい",                          0, 'L', 0, 0, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
+$tcpdf->fontAutoCell( $tcpdf, _W110, _H6, "　2. 他塾からの転塾を考えている【塾名:　　　　　　　　　　　】", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
+$tcpdf->fontAutoCell( $tcpdf, _W50,  _H8, "　3. 話だけ聞きたい",                            0, 'L', 0, 0, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
+$tcpdf->fontAutoCell( $tcpdf, _W100, _H8, "　4. その他(　　　　　　　　　　)", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
 
 // Q2
 $tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "Q2 ご希望の指導形態を教えてください。",  0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W50,  _H8, $OptionRequest[$data["request"]], 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
+if( !empty($data["request"]) ){
+	$tcpdf->fontAutoCell( $tcpdf, _W50,  _H8,  "　・" . $OptionRequest[$data["request"]], 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
+}else{
+	foreach ( $OptionRequest as $key => $val ) {
+		$tcpdf->fontAutoCell( $tcpdf, _W50,  _H8,  "　・" . $val, 0, 'L', 0, 0, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
+	}
+	$tcpdf->Ln();
+}
 
 // Q3
 $tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "Q3 当校を知ったきっかけをお選びください。",  0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
@@ -205,46 +220,55 @@ if( !empty($data["kikkake"]) ){
 		}else{
 			$position = 0;
 		}
+		if( $key % 3 == 0 ){
+			$blank = "　";
+		}
 		if( $val == 5 && !empty($data["kikkake_5"]) ){
 			$sonota = "(". $data["kikkake_5"]. ")";
 		}elseif( $val == 6 && !empty($data["kikkake_6"]) ){
 			$sonota = "(". $data["kikkake_6"]. ")";
 		}
-		$tcpdf->fontAutoCell( $tcpdf, _W60,  _H6, "・". $OptionKikkake[$val]. $sonota, 0, 'L', 0, $position, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
+		$tcpdf->fontAutoCell( $tcpdf, _W60,  _H6, $blank. "・". $OptionKikkake[$val]. $sonota, 0, 'L', 0, $position, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
 	}
 }else{
 	foreach( $OptionKikkake as $key => $val ){
-		if( $key % 3 == 2 ){
+		// keyの中身が上と少し違うので注意
+		if( $key % 3 == 0 ){
 			$position = 1;
 		}else{
 			$position = 0;
 		}
-		if( $key == 5 || $key == 6 ){
-			$sonota = "(　　　　　　)";
+		if( $key % 3 == 1 ){
+			$blank = "　";
 		}
-		$tcpdf->fontAutoCell( $tcpdf, _W60,  _H6, "・". $val. $sonota, 0, 'L', 0, $position, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
+		if( $key == 5 ){ // お知り合いの紹介
+			$sonota = "(　　　　　)";
+		}elseif( $key == 6 ){ // その他
+			$sonota = "(　　　　　　　　　)";
+		}
+		$tcpdf->fontAutoCell( $tcpdf, _W60,  _H6, $blank. "□". $val. $sonota, 0, 'L', 0, $position, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
 	}
 }
 $tcpdf->Ln();
 
 // Q4
 $tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "Q4 ご兄弟姉妹がおられる場合にはご記入ください。", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "学校名(　　　　　　　　　　　　) 小 ・ 中 ・ 高　新　　年　お名前(　　　　　　　　　) 男 ・ 女", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W160, _H8, "学校名(　　　　　　　　　　　　) 小 ・ 中 ・ 高　新　　年　お名前(　　　　　　　　　) 男 ・ 女", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
+$tcpdf->fontAutoCell( $tcpdf, _W170, _H6, "　・学校名(　　　　　　　　　　　　) 小 ・ 中 ・ 高　新　　年　お名前(　　　　　　　　　) 男 ・ 女", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
+$tcpdf->fontAutoCell( $tcpdf, _W170, _H8, "　・学校名(　　　　　　　　　　　　) 小 ・ 中 ・ 高　新　　年　お名前(　　　　　　　　　) 男 ・ 女", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
 
 // Q5
 $tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "Q5 得意教科、苦手教科を教えてください。　※複数回答可", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "・得意教科(　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　)", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W160, _H8, "・苦手教科(　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　)", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
+$tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "　・得意教科(　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　)", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
+$tcpdf->fontAutoCell( $tcpdf, _W160, _H8, "　・苦手教科(　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　)", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
 
 // Q6
 $tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "Q6 受験を考えておられる方は、現時点の志望校を教えてください。　※複数回答可", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W160, _H8, "・志望校(　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　)", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
+$tcpdf->fontAutoCell( $tcpdf, _W160, _H8, "　・志望校(　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　)", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H8,_FONT_SIZE10 );
 
 // Q7
 $tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "Q7 習い事、または部活動を教えてください。", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "・習い事(　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　)", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
-$tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "・部活動(　　　　　　　　　　　　　　　　　　　　　　)部　※中学生のみ", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
+$tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "　・習い事(　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　)", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
+$tcpdf->fontAutoCell( $tcpdf, _W160, _H6, "　・部活動(　　　　　　　　　　　　　　　　　　　　　　)部　※中学生のみ", 0, 'L', 0, 1, NULL, NULL, NULL, NULL, NULL, true, _H6,_FONT_SIZE10 );
 $tcpdf->Ln();
 
 $tcpdf->Write( 6, "ご回答ありがとうございました。", "", false, "R" );

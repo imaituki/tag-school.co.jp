@@ -81,8 +81,12 @@
 						</div>
 						{/if}
 						<div class="row file">
-							<p><a href=""><i class="fas fa-file"></i>ファイル名キャプション</a></p>
-							<p><a href=""><i class="fas fa-file"></i>ファイル名キャプション</a></p>
+							{if !empty($data.file1)}
+							<p><a href="{$_IMAGEFULLPATH}/{$_DIR_NAME}/file1/{$data.file1}" target="_blank"><i class="fas fa-file"></i>{$data.file1_caption}</a></p>
+							{/if}
+							{if !empty($data.file2)}
+							<p><a href="{$_IMAGEFULLPATH}/{$_DIR_NAME}/file2/{$data.file2}" target="_blank><i class="fas fa-file"></i>{$data.file2_caption}</a></p>
+							{/if}
 						</div>
 					</div>
 				</div>

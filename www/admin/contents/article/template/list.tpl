@@ -7,6 +7,7 @@
 			<th>カテゴリー</th>
 			<th>タイトル</th>
 			<th class="photo">写真</th>
+			<th>お知らせ</th>
 			<th class="showhide">表示</th>
 			<th class="delete">削除</th>
 		</tr>
@@ -18,6 +19,7 @@
 			<th width="150">カテゴリー</th>
 			<th>タイトル</th>
 			<th class="photo" width="220">写真</th>
+			<th>お知らせ</th>
 			<th class="showhide" width="60">表示</th>
 			<th class="delete" width="60">削除</th>
 		</tr>
@@ -47,6 +49,9 @@
 						{if $smarty.foreach.file.iteration % 3 == 0}<br />{/if}
 					{/foreach}
 				</div>
+			</td>
+			<td>
+				<a href="../php/insert_information.php?id={$data.$_CONTENTS_ID}">自動生成</a>
 			</td>
 			<td class="pos_ac">
 				<div class="switch">

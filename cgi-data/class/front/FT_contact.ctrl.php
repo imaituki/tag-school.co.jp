@@ -91,6 +91,8 @@ class FT_contact {
 		// チェックエントリー
 		$objInputCheck->entryData( "生徒氏名", "name1", $arrVal["name1"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_LEN" ), 0, 255 );
 		$objInputCheck->entryData( "生徒氏名(フリガナ)", "ruby1", $arrVal["ruby1"], array( "CHECK_EMPTY", "CHECK_MIN_MAX_LEN", "CHECK_KANA" ), 0, 255 );
+		$objInputCheck->entryData( "在籍学校名", "school_type", $arrVal["school_type"], array( "CHECK_EMPTY" ), null, null );
+		$objInputCheck->entryData( "学校名", "school", $arrVal["school"], array( "CHECK_EMPTY" ), 0, 255 );
 		$objInputCheck->entryData( "学年", "grade", $arrVal["grade"], array( "CHECK_EMPTY" ), null, null );
 		$objInputCheck->entryData( "保護者氏名", "name2", $arrVal["name2"], array( "CHECK_MIN_MAX_LEN" ), 0, 255 );
 		$objInputCheck->entryData( "保護者氏名(フリガナ)", "ruby2", $arrVal["ruby2"], array( "CHECK_MIN_MAX_LEN", "CHECK_KANA" ), 0, 255 );

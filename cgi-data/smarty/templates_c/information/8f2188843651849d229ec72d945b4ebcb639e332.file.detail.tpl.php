@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-28 20:19:28
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-07 14:56:31
          compiled from "./detail.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1848399095e294a723ab465-43359926%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8f2188843651849d229ec72d945b4ebcb639e332' => 
     array (
       0 => './detail.tpl',
-      1 => 1580210363,
+      1 => 1594101387,
       2 => 'file',
     ),
   ),
@@ -157,6 +157,22 @@ _detail">
 							<?php }?>
 						</div>
 						<?php }?>
+						<div class="row file">
+							<?php if (!empty($_smarty_tpl->tpl_vars['data']->value['file1'])) {?>
+							<p><a href="<?php echo $_smarty_tpl->tpl_vars['_IMAGEFULLPATH']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
+/file1/<?php echo $_smarty_tpl->tpl_vars['data']->value['file1'];?>
+" target="_blank"><i class="fas fa-file"></i><?php echo $_smarty_tpl->tpl_vars['data']->value['file1_caption'];?>
+</a></p>
+							<?php }?>
+							<?php if (!empty($_smarty_tpl->tpl_vars['data']->value['file2'])) {?>
+							<p><a href="<?php echo $_smarty_tpl->tpl_vars['_IMAGEFULLPATH']->value;?>
+/<?php echo $_smarty_tpl->tpl_vars['_DIR_NAME']->value;?>
+/file2/<?php echo $_smarty_tpl->tpl_vars['data']->value['file2'];?>
+" target="_blank"><i class="fas fa-file"></i><?php echo $_smarty_tpl->tpl_vars['data']->value['file2_caption'];?>
+</a></p>
+							<?php }?>
+						</div>
 					</div>
 				</div>
 			</div>

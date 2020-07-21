@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-14 19:31:27
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-07 16:00:57
          compiled from "/home/tag-school/www/admin/contents/article/template/list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9415694915e0498da76fb29-80323247%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9aea850d4f669299b09734d2d68e2033b4fd8398' => 
     array (
       0 => '/home/tag-school/www/admin/contents/article/template/list.tpl',
-      1 => 1578997886,
+      1 => 1594105255,
       2 => 'file',
     ),
   ),
@@ -43,6 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<th>カテゴリー</th>
 			<th>タイトル</th>
 			<th class="photo">写真</th>
+			<th>お知らせ</th>
 			<th class="showhide">表示</th>
 			<th class="delete">削除</th>
 		</tr>
@@ -54,6 +55,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<th width="150">カテゴリー</th>
 			<th>タイトル</th>
 			<th class="photo" width="220">写真</th>
+			<th>お知らせ</th>
 			<th class="showhide" width="60">表示</th>
 			<th class="delete" width="60">削除</th>
 		</tr>
@@ -108,6 +110,10 @@ $_smarty_tpl->tpl_vars['file']->_loop = true;
 						<?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['file']['iteration']%3==0) {?><br /><?php }?>
 					<?php } ?>
 				</div>
+			</td>
+			<td>
+				<a href="../php/insert_information.php?id=<?php echo $_smarty_tpl->tpl_vars['data']->value[$_smarty_tpl->tpl_vars['_CONTENTS_ID']->value];?>
+">自動生成</a>
 			</td>
 			<td class="pos_ac">
 				<div class="switch">

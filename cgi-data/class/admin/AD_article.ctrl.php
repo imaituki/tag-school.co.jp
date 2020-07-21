@@ -223,10 +223,14 @@ class AD_article {
 
 		// 登録データの作成
 		$arrVal = $this->_DBconn->arrayKeyMatchFecth( $arrVal, "/^[^\_]/" );
-		$insert["title"] = "28記事を更新しました。"; // タイトル
+		$insert["title"] = "コラム28の第●回を公開しました。"; // タイトル
 		$insert["date"] = $arrVal["date"]; // 日付
 		$insert["id_category"] = 1; // カテゴリー「お知らせ」
-		$insert["comment"] = $arrVal["autoinfo_comment"];
+		$insert["comment"] = "TAG schoolのホームページでは、塾が発信する学びの情報をMypegeで公開しています。<br>
+								Mypage会員だけが読める掲載コラム『28』の第●回のテーマは、『".$arrVal["title"]."』です。<br><br>"
+								.$arrVal["autoinfo_comment"]
+								."<br><br>メールアドレスとパスワードを登録して、TAG schoolのMypage会員になると、つづきをご覧いただけます。<br>
+								Mypageへのログイン・新規会員登録は<a href='https://tag-school.co.jp/28/regist/' target='_blank'>こちら</a>";
 		$insert["display_flg"] = 0; // 非表示
 		$insert["display_indefinite"] = 1; // 表示無期限
 		$insert["entry_date"]  = date( "Y-m-d H:i:s" );

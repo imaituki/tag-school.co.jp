@@ -8,7 +8,7 @@
 ===================================================================*/
 html { background:#fff; }
 body { text-align:center; }
-body, #base, #body { position:relative; overflow-x:hidden; }
+body, #base, #body { position:relative;  }
 
 .wrapper, .wrapper-t, .wrapper-b { position:relative; }
 	@media (max-width: 991px){

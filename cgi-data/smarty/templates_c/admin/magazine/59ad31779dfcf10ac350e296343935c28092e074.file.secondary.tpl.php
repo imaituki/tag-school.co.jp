@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-22 09:39:03
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-03 11:00:27
          compiled from "/home/tag-school/www//admin/common/inc/secondary.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20315345175e12e839994c25-21757141%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '59ad31779dfcf10ac350e296343935c28092e074' => 
     array (
       0 => '/home/tag-school/www//admin/common/inc/secondary.tpl',
-      1 => 1592561864,
+      1 => 1593502053,
       2 => 'file',
     ),
   ),
@@ -50,6 +50,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<li <?php if ($_smarty_tpl->tpl_vars['manage']->value=='siteconf') {?> class="active"<?php }?>>
 				<a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
 /contents/siteconf/"><i class="fa fa-gear"></i><span class="nav-label">サイト設定</span></a>
+			</li>
+			<li <?php if ($_smarty_tpl->tpl_vars['action']->value=='online-consultation') {?> class="active"<?php }?>>
+				<a href="#" class="nav-drop">
+					<i class="fa fa-r fa-th-large"></i>
+					<span class="nav-label">オンライン面談管理 </span>
+					<i class="fa <?php if ($_smarty_tpl->tpl_vars['action']->value=='mypage') {?>fa-angle-down<?php } else { ?>fa-angle-left<?php }?> fl_arrow_r"></i>
+				</a>
+				<ul class="nav nav-second-level">
+					<li <?php if ($_smarty_tpl->tpl_vars['manage']->value=='online-consultation2') {?>class="active"<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
+/contents/online-consultation2/"><i class="fa fa-group"></i>オンライン面談予約</a></li>
+					<li <?php if ($_smarty_tpl->tpl_vars['manage']->value=='online-consultation-recept') {?>class="active"<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
+/contents/online-consultation-recept/"><i class="fa fa-folder-open"></i>予約受付枠設定</a></li>
+					<li <?php if ($_smarty_tpl->tpl_vars['manage']->value=='online-consultation-teacher') {?>class="active"<?php }?>><a href="<?php echo $_smarty_tpl->tpl_vars['_ADMIN']->value['home'];?>
+/contents/online-consultation-teacher/"><i class="fa fa-folder-open"></i>講師設定</a></li>
+				</ul>
 			</li>
 			<li <?php if ($_smarty_tpl->tpl_vars['action']->value=='mypage') {?> class="active"<?php }?>>
 				<a href="#" class="nav-drop">

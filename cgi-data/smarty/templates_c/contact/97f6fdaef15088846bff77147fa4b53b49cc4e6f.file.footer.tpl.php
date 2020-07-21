@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-30 10:17:35
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-03 12:23:55
          compiled from "/home/tag-school/www//common/include/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19130763225e26d5e0287840-15357933%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97f6fdaef15088846bff77147fa4b53b49cc4e6f' => 
     array (
       0 => '/home/tag-school/www//common/include/footer.tpl',
-      1 => 1593475280,
+      1 => 1593746343,
       2 => 'file',
     ),
   ),
@@ -84,7 +84,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 						</p>
 						<div class="sns">
-							<a href="https://www.facebook.com/tagschool0902" target="_blank" class="fa ga_link"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://www.facebook.com/%E9%9B%86%E5%9B%A3%E5%80%8B%E5%88%A5%E6%8C%87%E5%B0%8E%E5%A1%BE-TAG-school-113292580428083/" target="_blank" class="fa ga_link"><i class="fab fa-facebook-f"></i></a>
 							
 						</div>
 					</div>

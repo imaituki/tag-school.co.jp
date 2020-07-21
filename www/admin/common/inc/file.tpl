@@ -9,7 +9,7 @@
 			{if $arr_post[$file.name] == NULL}
 				NOT FILE<br />
 			{else}
-				<i class="icon-doc-text"></i> <a href="{$_UPLOADFULLPATH}/{$dir}/{$file.name}/{$arr_post[$file.name]}" target="_blank">{$arr_post[$fnkey]|default:"添付ファイル"}</a>
+				<i class="icon-doc-text"></i> <a href="{$_IMAGEFULLPATH}/{$_DIR_NAME}{$dir}/{$file.name}/{$arr_post[$file.name]}" target="_blank">{$arr_post[$fnkey]|default:"添付ファイル"}</a>
 				{if $file.notnull|default:"" != 1}
 				<input type="checkbox" name="_delete_file[{$file.name}]" value="{$arr_post[$file.name]|default:''}" /> このファイルを削除する<br />
 				{/if}

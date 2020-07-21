@@ -7,6 +7,10 @@
 [ 生徒氏名 ]
 {$arr_post.name1|default:'-'} {if !empty($arr_post.ruby1)}({$arr_post.ruby1|default:''}){/if}
 
+[ 在籍学校名 ]
+{$OptionSchoolType[$arr_post.school_type]}
+{$arr_post.school|default:''}
+
 [ 学年 ]
 {$OptionGrade[$arr_post.grade]}
 

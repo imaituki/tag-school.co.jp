@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-18 20:22:31
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-07 17:44:38
          compiled from "./check.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9932258365e280add2d6f40-14070391%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b4b2052636ec9f26a16ab03f9e8ef7a8dc00733' => 
     array (
       0 => './check.tpl',
-      1 => 1592479298,
+      1 => 1594111192,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '_HTML_HEADER' => 0,
     'arr_post' => 0,
     'OptionContent' => 0,
+    'OptionSchoolType' => 0,
     'OptionGrade' => 0,
     'OptionRequest' => 0,
     'key' => 0,
@@ -103,6 +104,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 									<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['ruby1'])===null||$tmp==='' ? '' : $tmp);?>
 
 									<input type="hidden" name="ruby1" value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['ruby1'])===null||$tmp==='' ? '' : $tmp);?>
+" />
+								</td>
+							</tr>
+							<tr>
+								<th>在籍学校名</th>
+								<td>
+									<?php echo $_smarty_tpl->tpl_vars['OptionSchoolType']->value[$_smarty_tpl->tpl_vars['arr_post']->value['school_type']];?>
+
+									<input type="hidden" name="school_type" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['school_type'];?>
+" />
+									<?php echo (($tmp = @$_smarty_tpl->tpl_vars['arr_post']->value['school'])===null||$tmp==='' ? '' : $tmp);?>
+
+									<input type="hidden" name="school" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['school'];?>
 " />
 								</td>
 							</tr>

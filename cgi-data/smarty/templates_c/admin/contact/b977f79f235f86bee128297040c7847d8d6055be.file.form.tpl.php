@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-18 20:58:12
+<?php /* Smarty version Smarty-3.1.18, created on 2020-07-07 17:34:14
          compiled from "/home/tag-school/www/admin/contents/contact/template/form.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1155323555e2a98544439a8-66619384%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b977f79f235f86bee128297040c7847d8d6055be' => 
     array (
       0 => '/home/tag-school/www/admin/contents/contact/template/form.tpl',
-      1 => 1592481489,
+      1 => 1594110830,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'OptionContent' => 0,
     'arr_post' => 0,
+    'OptionSchoolType' => 0,
     'OptionGrade' => 0,
     'OptionRequest' => 0,
     'OptionKikkake' => 0,
@@ -56,6 +57,19 @@ if (!is_callable('smarty_function_html_select_ken')) include '/home/tag-school/c
 " placeholder="漢字" /><br />
 				<input type="text" name="ruby1" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['ruby1'];?>
 " placeholder="フリガナ" />
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label">在籍学校名</label>
+			<div class="col-sm-6">
+				<select name="school_type">
+					<option value="">選択してください。</option>
+					<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['OptionSchoolType']->value,'selected'=>$_smarty_tpl->tpl_vars['arr_post']->value['school_type']),$_smarty_tpl);?>
+
+				</select>
+				<input type="text" name="school" class="form-control" value="<?php echo $_smarty_tpl->tpl_vars['arr_post']->value['school'];?>
+" placeholder="学校名" /><br />
 			</div>
 		</div>
 		<div class="hr-line-dashed"></div>

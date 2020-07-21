@@ -58,6 +58,7 @@ $smarty->assign( "OptionGrade"  , $OptionGrade   );
 $smarty->assign( "OptionRequest", $OptionRequest );
 $smarty->assign( "OptionContactReferer", $OptionContactReferer );
 $smarty->assign( "OptionStatus" , $OptionStatus  );
+$smarty->assign( "OptionSchoolType", $OptionSchoolType );
 
 // 表示
 $smarty->display("index.tpl");
