@@ -126,11 +126,11 @@
 									<a href="#tag">
 										<div class="photo img_back"><img src="/common/image/contents/top/image5.jpg" alt="TAG school（タッグスクール）"></div>
 										<div class="text">
-											<p class="caption height-2_all">「わかる」「できる」「えらべる」</p>
+											<p class="caption height-2_all" style="margin-bottom:0;">「わかる」「できる」「えらべる」</p>
 											<h3 class="mincho c_orange">TAG school</h3>
 											<ul class="icon_list c_orange">
-												<li class="bg_orange">集団×個別</li>
-												<li class="bg_blue">コミル対応</li>
+												<li class="bg_orange c0" style="box-shadow:none;">集団×個別</li>
+												<li class="bg_blue c0" style="box-shadow:none;">コミル対応</li>
 											</ul>
 										</div>
 									</a>
@@ -141,11 +141,11 @@
 									<a href="#rising">
 										<div class="photo img_back"><img src="/common/image/contents/top/image7.jpg" alt="Rising（ライジング）"></div>
 										<div class="text">
-											<p class="caption height-2_all">High Quality & High Brand</p>
+											<p class="caption height-2_all" style="margin-bottom:0;">High Quality & High Brand</p>
 											<h3 class="mincho c_orange">Rising<span>（ライジング）</span></h3>
 											<ul class="icon_list c_orange">
-												<li class="bg_orange">7月新設</li>
-												<li class="bg_blue">コミル対応</li>
+												<li class="bg_orange c0" style="box-shadow:none;">7月新設</li>
+												<li class="bg_blue c0" style="box-shadow:none;">コミル対応</li>
 											</ul>
 										</div>
 									</a>
@@ -154,7 +154,7 @@
 						</div>
 					</div>
 					<div id="course_area">
-						<div class="course mb30" id="tag">
+						<div class="course mb30" style="border:1px solid #DF652E ;" id="tag">
 							<h2 class="title mincho c_orange fw_bold">講師連携による集団と個別の「スマートスライド学習」で苦手を克服します。</h2>
 							<table>
 								<tr>
@@ -163,7 +163,7 @@
 								</tr>
 								<tr>
 									<th class="c_orange fw_bold">内　容</th>
-									<td>TAG式集団+「対面式」1x2個別指導　※自習室完備（予約制）。</td>
+									<td>TAG式集団＋「対面式」1x2個別指導　※自習室完備（予約制）。</td>
 								</tr>
 								<tr>
 									<th class="c_orange fw_bold">授業日</th>
@@ -175,24 +175,16 @@
 								</tr>
 							</table>
 						</div>
-						<div class="course mb30" id="rising">
+						<div class="course mb30" style="border:1px solid #DF652E;" id="rising">
 							<h2 class="title mincho c_orange fw_bold">個別指導のプロ講師が医学部受験レベルに学力に引き上げます。</h2>
 							<table>
 								<tr>
 									<th class="c_orange fw_bold">対　象</th>
-									<td>医学部.難関校を目指す小学1年生~高校3年生(浪人生不可)</td>
+									<td>医学部・難関校を目指す小学1年生〜高校3年生（浪人生不可）</td>
 								</tr>
 								<tr>
 									<th class="c_orange fw_bold">内　容</th>
-									<td>ロ講師による1×1マンツーマン「オーダーメイド式」個別指導※授業時間、受講料については相談により決定。</td>
-								</tr>
-								<tr>
-									<th class="c_orange fw_bold">授業日</th>
-									<td>要問い合わせ、自習室利用可</td>
-								</tr>
-								<tr>
-									<th class="c_orange fw_bold">受講料</th>
-									<td>[一例] 中学生の集団指導（英・数2科目）‥週2回4時間　月額17,000円（税別）</td>
+									<td>プロ講師による1×1マンツーマン「オーダーメイド式」個別指導　※授業時間、受講料については相談により決定</td>
 								</tr>
 							</table>
 						</div>
@@ -203,10 +195,10 @@
 										<a href="#plus">
 											<div class="photo img_back"><img src="/common/image/contents/top/image10.jpg" alt="学童plus"></div>
 											<div class="text">
-												<p class="caption height-2_all">小学4年生からの</p>
-												<h3 class="mincho c_orange">学童plus</h3>
+												<p class="caption height-2_all" style="margin-bottom:0;">小学4年生からの</p>
+												<h3 class="mincho c_orange c0" style="box-shadow:none;">学童plus</h3>
 												<ul class="icon_list c_orange">
-													<li class="bg_orange _1">7月新設</li>
+													<li class="bg_orange _1 c0" style="box-shadow:none;">7月新設</li>
 												</ul>
 											</div>
 										</a>
@@ -217,10 +209,10 @@
 										<a href="#jschool">
 											<div class="photo img_back"><img src="/common/image/contents/top/image11.jpg" alt="Rising（ライジング）"></div>
 											<div class="text">
-												<p class="caption height-2_all">学力と学習習慣が身につく</p>
-												<h3 class="mincho c_orange">J’school</h3>
+												<p class="caption height-2_all" style="margin-bottom:0;">学力と学習習慣が身につく</p>
+												<h3 class="mincho c_orange c0" style="box-shadow:none;">J’school</h3>
 												<ul class="icon_list c_orange">
-													<li class="bg_blue _1">コミル一部対応</li>
+													<li class="bg_blue _1 c0" style="box-shadow:none;">コミル一部対応</li>
 												</ul>
 											</div>
 										</a>
@@ -229,45 +221,49 @@
 							</div>
 						</div>
 						<div id="course_area">
-							<div class="course mb30" id="plus">
+							<div class="course mb30" style="border:1px solid #DF652E;" id="plus">
 								<h2 class="title mincho c_orange fw_bold">〈知育遊び+宿題〉学校帰りに楽しく遊び、楽しく学ぶ時間を提供します。</h2>
 								<table>
 									<tr>
 										<th class="c_orange fw_bold">対　象</th>
-										<td>小学4年生〜中学3年生</td>
+										<td>小学4年生〜6年生</td>
 									</tr>
 									<tr>
 										<th class="c_orange fw_bold">内　容</th>
-										<td>TAG式集団+「対面式」1x2個別指導　※自習室完備（予約制）。</td>
+										<td>知育遊び（将棋・オセロ・折り紙など）＋学校の宿題</td>
 									</tr>
 									<tr>
 										<th class="c_orange fw_bold">授業日</th>
-										<td>要問い合わせ、自習室利用可</td>
+										<td>月〜金曜　15:30〜18:00</td>
 									</tr>
 									<tr>
 										<th class="c_orange fw_bold">受講料</th>
-										<td>[一例] 中学生の集団指導（英・数2科目）‥週2回4時間　月額17,000円（税別）</td>
+										<td>月額6,000円（税別）〜（週5回受講可）※別途運営費要</td>
 									</tr>
 								</table>
 							</div>
-							<div class="course mb30" id="jschool">
+							<div class="course mb30" style="border:1px solid #DF652E;" id="jschool">
 								<h2 class="title mincho c_orange fw_bold">学年に関係なく、習熟度に合わせてスタートし、どんどん進級していきます。</h2>
 								<table>
 									<tr>
 										<th class="c_orange fw_bold">対　象</th>
-										<td>小学4年生〜中学3年生</td>
+										<td>小学1年生～6年生</td>
 									</tr>
 									<tr>
 										<th class="c_orange fw_bold">内　容</th>
-										<td>TAG式集団+「対面式」1x2個別指導　※自習室完備（予約制）。</td>
+										<td>無学年進級式サイクル学習</td>
 									</tr>
 									<tr>
 										<th class="c_orange fw_bold">授業日</th>
-										<td>要問い合わせ、自習室利用可</td>
+										<td>月～金曜　15:30～18:00</td>
+									</tr>
+									<tr>
+										<th class="c_orange fw_bold">科目</th>
+										<td>算数・国語（1科目から受講可）</td>
 									</tr>
 									<tr>
 										<th class="c_orange fw_bold">受講料</th>
-										<td>[一例] 中学生の集団指導（英・数2科目）‥週2回4時間　月額17,000円（税別）</td>
+										<td>50分　月額6,000円(税別)～　※別途テキスト代要</td>
 									</tr>
 								</table>
 							</div>
