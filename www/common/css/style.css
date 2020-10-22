@@ -215,6 +215,12 @@
 	}
 
 
+#comiru{    background: #fff; border: 1px solid #009FB2; padding: 30px; margin-top: 50px;}
+@media (max-width: 575px){
+    #comiru img{margin-bottom: 20px;}
+}
+
+
 #flow {}
 #flow .flow_area { background:rgba(255,255,255,0.5); }
 .flow_unit { position:relative; text-align:center; }

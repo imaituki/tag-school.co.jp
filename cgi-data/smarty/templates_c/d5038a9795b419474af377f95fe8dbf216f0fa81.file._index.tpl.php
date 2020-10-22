@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-06-24 20:22:38
+<?php /* Smarty version Smarty-3.1.18, created on 2020-08-27 18:16:17
          compiled from "./_index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:954445445ef1c0a2a82749-96614369%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd5038a9795b419474af377f95fe8dbf216f0fa81' => 
     array (
       0 => './_index.tpl',
-      1 => 1592997755,
+      1 => 1598435221,
       2 => 'file',
     ),
   ),
@@ -92,19 +92,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</div>
 	</section>
 	<section>
-		
-		<style>
-			#top_about .text .text_in > * { max-width:390px; }
-		</style>
-		
 		<div id="top_about">
 			<div class="photo img_back"><img src="/common/image/contents/top/image1.jpg" alt="TAG schoolについて"></div>
 			<div class="text">
 				<div class="center">
 					<div class="text_in">
 						<h2 class="c_brown mincho">TAG schoolについて</h2>
-						<p class="mb20">TAG schoolは、岡山初の集団指導と個別指導の<br>
-スマートスライド学習ができる新総合学習塾です。<br>
+						<p class="mb20">TAG schoolは、岡山初の集団指導と個別指導を融合した新総合学習塾です。<br>
 							『わかる』から『できる』、そして『えらべる』へ<br>
 							“今までにない学び” をご提供いたします。</p>
 						<div class="pos_ac"><a href="/about/" class="button _type1">詳しく見る<i class="fa fa-chevron-right"></i></a></div>
@@ -162,19 +156,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</div>
 	</section>
 	<section>
-		<style>
-			.icon_list { display: flex; flex-direction: column; }
-			.icon_list li { padding: 5px !important; }
-			.icon_list li + li { margin-top: 5px !important; }
-			.course_navi .text .caption { margin-bottom: 5px; }
-			@media (min-width: 992px){
-				.icon_list { padding-right: 20px; padding-left: 20px; }
-			}
-			@media (max-width: 991px){
-				.icon_list li { font-size: 12px; }
-				.icon_list li + li { margin-top: 0px !important; }
-			}
-		</style>
 		<div id="course">
 			<div class="wrapper bg_common">
 				<div class="center">
@@ -183,15 +164,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<div class="row">
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _orange tab height-1_all">
-									<a href="#primary" class="ov">
+									<a href="#primary">
 										<div class="photo img_back"><img src="/common/image/contents/top/image5.jpg" alt="小学生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_orange">小学生</h3>
 											<p class="caption height-2_all">Schoolchild</p>
 											<ul class="icon_list c_orange">
-												<li>1x2個別指導</li>
-												<li>J'school</li>
-												<li>学童plus</li>
+												<li>集団<br>指導</li>
+												<li>個別<br>指導</li>
 											</ul>
 										</div>
 									</a>
@@ -199,14 +179,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _blue tab height-1_all">
-									<a href="#middle" class="ov">
+									<a href="#middle">
 										<div class="photo img_back"><img src="/common/image/contents/top/image6.jpg" alt="中学生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_blue">中学生</h3>
 											<p class="caption height-2_all">Middle school<span class="hidden-only"> student</span></p>
 											<ul class="icon_list c_blue">
-												<li>集団指導</li>
-												<li>1x2個別指導</li>
+												<li>集団<br>指導</li>
+												<li>個別<br>指導</li>
 											</ul>
 										</div>
 									</a>
@@ -214,13 +194,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 							<div class="col-xs-4 col-4">
 								<div class="box course_navi _green tab height-1_all">
-									<a href="#high" class="ov">
+									<a href="#high">
 										<div class="photo img_back"><img src="/common/image/contents/top/image7.jpg" alt="高校生コース"></div>
 										<div class="text">
 											<h3 class="mincho c_green">高校生</h3>
 											<p class="caption height-2_all">High school<span class="hidden-only"> student</span></p>
 											<ul class="icon_list c_green">
-												<li>1x2個別指導</li>
+												<li>個別<br>指導</li>
 											</ul>
 										</div>
 									</a>
@@ -314,42 +294,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								</div>
 							</div>
 							<p class="pos_ar c_g">※別途、入会金・諸費・テキスト代が必要になります。</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section>
-		<style>
-			.course_navi .icon_list.c_red li { box-shadow:0 0 3px rgba(224, 50, 59,0.5); }
-			.course_navi._red { padding-top: 30px; padding-bottom: 30px; border-bottom-color: rgba(224, 50, 59);  }
-			@media (min-width: 992px){
-				#course_2 { margin-top: 120px; }
-			}
-			@media (max-width: 991px){
-				#course_2 { margin-top: 30px; }
-				.course_navi._red { padding-top: 0px; padding-bottom: 0px; }
-			}
-		</style>
-		<div id="course_2">
-			<div class="wrapper bg_common">
-				<div class="center">
-					<h2 class="hl_1 mincho"><span class="en">TAG Rising</span><span class="ja">ライジング</span></h2>
-					<div class="tab_navi">
-						<div class="row">
-							<div class="col-xs-12 col-12">
-								<div class="box course_navi _red">
-										<div class="photo img_back"></div>
-										<div class="text">
-											<h3 class="mincho c_red">小学生・中学生・高校生</h3>
-											<p class="caption height-2_all">Schoolchild・Middle school student・High school student</p>
-											<ul class="icon_list c_red">
-												<li>1x1マンツーマン個別指導</li>
-											</ul>
-										</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -462,8 +406,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 							<div class="col-xs-8">
 								<h3 class="title"><span class="name mincho">木本 健太郎</span><span class="ruby">KENTARO KIMOTO</span><span class="tag">塾長</span></h3>
-								<p class="mb10">自然共生ホールディングスの光本社長、恩師の安藤先生とのご縁がつながり、ついに下中野ビル5階で、集団指導と個別指導が融合した新総合学習塾のTAG schoolが開校します。</p>
-								<p class="mb10">安藤先生と出会った小学4年生の時、「僕の夢は先生になることです」と学校の日記に書いたのを思い出します。大人になった今、塾長・塾経営者として、地元岡山で夢が実現できるとは当時は思いもしませんでした。夢は叶うのだなと実感しています。</p>
+								<p class="mb10">自然共生ホールディングスの光本社長とのご縁がつながり、ついに下中野ビル5階で、集団指導と個別指導が融合した新総合学習塾のTAG schoolが開校します。</p>
+								<p class="mb10">小学4年生の時、「僕の夢は先生になることです」と学校の日記に書いたのを思い出します。大人になった今、塾長・塾経営者として、地元岡山で夢が実現できるとは当時は思いもしませんでした。夢は叶うのだなと実感しています。</p>
 								<p class="mb10">受験や進路選択はあくまで手段です。TAG schoolの生徒には手段としての勉強や進路選択ではなく、将来なりたい自分や夢へ向かって頑張る大切さを伝えていけたらと考えています。常に環境変化する現代社会だからこそ、自分の軸を持って強く生きていってほしいと思います。</p>
 								<p class="mb30">TAG schoolで会いましょう!!</p>
 								<div class="profile_box">
@@ -477,11 +421,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<p class="mb10">筑波大学で教員免許、東京大学大学院で専修免許を取得。大手メガバンクへ就職し、東京で約5年間ビジネスマンとして、営業や企画を学び、2年目から社長賞を受賞するなど成果を残した。その後、脱サラし教育業界へ。東京自由が丘でマンツーマン個別指導塾を創業。</p>
 								<p class="mb10">現在は、理系教科のプロ講師・教育コンサルタント・学習塾経営者として、中国上海やアメリカロサンゼルスでの塾運営にも関わり、日本だけでなく世界中を飛びまわって仕事をしている。</p>
 								<p class="mb10">また最近では、世界に羽ばたくことを夢見る子供たちを応援したいという思いから、探求学習『a-school』の特別講師や国際バカロレア教育のプロデュースに関わり、教科学習にとらわれないグローバル人材の育成を目指している。</p>
-								<p>2019年9月、TAG school運営会社の株式会社TAG Corporation 28代表取締役に就任。そして、2020年2月、地元岡山で新総合学習塾のTAG schoolを恩師の安藤先生と共に立ち上げ、塾長に就任する。</p>
+								<p>2019年9月、TAG school運営会社の株式会社TAG Corporation 28代表取締役に就任。そして、2020年2月、地元岡山で新総合学習塾のTAG schoolを立ち上げ、塾長に就任する。</p>
 								</div>
 							</div>
 						</div>
 					</div>
+				<!--
 					<div class="teacher_unit" id="ando">
 						<div class="row">
 							<div class="col-xs-4 col-xs-push-8">
@@ -499,12 +444,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 											<dd>1971年岡山県津山市生まれ<br>甲南大学 経済学部卒業</dd>
 										</dl>
 									</div>
-									<p class="mb10">小学生の頃から教師を目指し、高校・大学時代には、地域の剣道クラブで、小中学生を指導・育成。その指導経験から、得意の社会で教員免許を取得し、岡山市内の公立中学校で2年間の講師経験をする。しかし、自分が理想とする教育と学校教育にギャップを感じ、学校とは異なるフィールドを探し、岡山県内の大手進学塾O塾に入社した。入社2年目から校舎長やエリア統括を歴任した。O塾退社後は、大手進学塾Nセンターへ転職し、校舎責任者や中学・高校受験指導主任を歴任。</p>
-									<p>2019年9月、TAG school運営会社の株式会社TAG Corporation 28専務取締役に就任。そして、2020年2月、教師歴27年の経験とノウハウを生かし、新総合学習塾のTAG schoolを教え子の木本と共に立ち上げ、TAG総合プロデューサー兼統括責任者に就任する。</p>
+									<p class="mb10">小学生の頃から教師を目指し、高校・大学時代には、地域の剣道クラブで小中学生を指導・育成。その指導経験から、得意の社会で教員免許を取得し、岡山市内の公立中学校で2年間教鞭を執る。しかし、自分が理想とする教育と学校教育にギャップを感じ、学校とは異なるフィールドを求めて岡山県内の大手進学塾に入社。入社2年目から校舎長やエリア統括を歴任。退社後は、別の大手進学塾へ転職し、校舎責任者や中学・高校受験指導主任を務める。</p>
+									<p>2019年9月、TAG school運営会社の株式会社TAG Corporation 28専務取締役に就任。2020年2月、教師歴27年の経験とノウハウを生かし、教え子の木本と共に新総合学習塾TAG schoolを立ち上げ、TAG総合プロデューサー兼統括責任者に就任する。</p>
 								</div>
 							</div>
 						</div>
 					</div>
+				-->
 				</div>
 			</div>
 		</div>

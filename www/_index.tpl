@@ -267,6 +267,18 @@
 									</tr>
 								</table>
 							</div>
+						</div>
+					</div>
+					<div id="comiru">
+						<div class="row">
+							<div class="col-xs-3 height-1">
+								<p class="pos_ac"><img src="/common/image/contents/top/comiru.jpg" alt=""></p></div>
+							<div class="col-xs-9 height-1 disp_tbl2">
+								<div class="disp_td">
+									<p>塾と保護者をつなぐアプリ。 入退室状況をお知らせするのはもちろん、指導報告書として、その日にできるようになったことや、ご家庭で気をつけてほしいことなど、お子さまの状況を細かくお知らせします。塾や学びについて、 ご家庭でも話題にしていただき、 お子さまの学習意欲の醸成を図ります。</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

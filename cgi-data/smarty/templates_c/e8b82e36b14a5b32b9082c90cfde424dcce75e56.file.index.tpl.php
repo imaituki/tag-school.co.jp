@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-07-03 18:34:05
+<?php /* Smarty version Smarty-3.1.18, created on 2020-08-31 11:44:29
          compiled from "./index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19367162525e294e044aaa34-62772733%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e8b82e36b14a5b32b9082c90cfde424dcce75e56' => 
     array (
       0 => './index.tpl',
-      1 => 1593768843,
+      1 => 1598841860,
       2 => 'file',
     ),
   ),
@@ -406,8 +406,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 							<div class="col-xs-8">
 								<h3 class="title"><span class="name mincho">木本 健太郎</span><span class="ruby">KENTARO KIMOTO</span><span class="tag">塾長</span></h3>
-								<p class="mb10">自然共生ホールディングスの光本社長、恩師の安藤先生とのご縁がつながり、ついに下中野ビル5階で、集団指導と個別指導が融合した新総合学習塾のTAG schoolが開校します。</p>
-								<p class="mb10">安藤先生と出会った小学4年生の時、「僕の夢は先生になることです」と学校の日記に書いたのを思い出します。大人になった今、塾長・塾経営者として、地元岡山で夢が実現できるとは当時は思いもしませんでした。夢は叶うのだなと実感しています。</p>
+								<p class="mb10">自然共生ホールディングスの光本社長とのご縁がつながり、ついに下中野ビル5階で、集団指導と個別指導が融合した新総合学習塾のTAG schoolが開校します。</p>
+								<p class="mb10">小学4年生の時、「僕の夢は先生になることです」と学校の日記に書いたのを思い出します。大人になった今、塾長・塾経営者として、地元岡山で夢が実現できるとは当時は思いもしませんでした。夢は叶うのだなと実感しています。</p>
 								<p class="mb10">受験や進路選択はあくまで手段です。TAG schoolの生徒には手段としての勉強や進路選択ではなく、将来なりたい自分や夢へ向かって頑張る大切さを伝えていけたらと考えています。常に環境変化する現代社会だからこそ、自分の軸を持って強く生きていってほしいと思います。</p>
 								<p class="mb30">TAG schoolで会いましょう!!</p>
 								<div class="profile_box">
@@ -421,11 +421,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 								<p class="mb10">筑波大学で教員免許、東京大学大学院で専修免許を取得。大手メガバンクへ就職し、東京で約5年間ビジネスマンとして、営業や企画を学び、2年目から社長賞を受賞するなど成果を残した。その後、脱サラし教育業界へ。東京自由が丘でマンツーマン個別指導塾を創業。</p>
 								<p class="mb10">現在は、理系教科のプロ講師・教育コンサルタント・学習塾経営者として、中国上海やアメリカロサンゼルスでの塾運営にも関わり、日本だけでなく世界中を飛びまわって仕事をしている。</p>
 								<p class="mb10">また最近では、世界に羽ばたくことを夢見る子供たちを応援したいという思いから、探求学習『a-school』の特別講師や国際バカロレア教育のプロデュースに関わり、教科学習にとらわれないグローバル人材の育成を目指している。</p>
-								<p>2019年9月、TAG school運営会社の株式会社TAG Corporation 28代表取締役に就任。そして、2020年2月、地元岡山で新総合学習塾のTAG schoolを恩師の安藤先生と共に立ち上げ、塾長に就任する。</p>
+								<p>2019年9月、TAG school運営会社の株式会社TAG Corporation 28代表取締役に就任。そして、2020年2月、地元岡山で新総合学習塾のTAG schoolを立ち上げ、塾長に就任する。</p>
 								</div>
 							</div>
 						</div>
 					</div>
+				<!--
 					<div class="teacher_unit" id="ando">
 						<div class="row">
 							<div class="col-xs-4 col-xs-push-8">
@@ -449,6 +450,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							</div>
 						</div>
 					</div>
+				-->
 				</div>
 			</div>
 		</div>

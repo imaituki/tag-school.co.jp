@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-01-31 13:40:43
+<?php /* Smarty version Smarty-3.1.18, created on 2020-08-03 16:08:34
          compiled from "/home/tag-school/www//common/include/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:578083295e16fae2ada182-67266382%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4c52b8aa5a65debfa2666f962af126ee431d3bef' => 
     array (
       0 => '/home/tag-school/www//common/include/header.tpl',
-      1 => 1580443595,
+      1 => 1593746344,
       2 => 'file',
     ),
   ),
@@ -31,11 +31,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /"><img src="/common/image/head/logo.png" alt="TAG school" /></a></h1>
 		<div class="head_contact _head hidden-xs">
 			<div class="tel_unit">
-				<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
+				<span class="tel sans" data-tel="<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
+"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 </span>
 				<span class="time">受付時間 <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['receipt_time'];?>
 （<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['rec_holiday'];?>
-定休）</span>
+休校）</span>
 			</div>
 			<div class="mail_unit"><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /contact/" class="button _circle"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ">お問い合わせ</a></div>
@@ -59,9 +60,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /information/">お知らせ</a></li>
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /contact/">お問い合わせ</a></li>
+				<li><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
+/28/">Mypage</a></li>
 				<li class="head_contact visible-xs">
 					<div class="tel_unit">
-						<span class="tel sans" data-tel="086"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
+						<span class="tel sans" data-tel="<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
+"><img src="/common/image/head/phone.png" class="pos_vm" alt="電話番号" /><?php echo $_smarty_tpl->tpl_vars['_INFO']->value['tel'];?>
 </span>
 						<span class="time">受付時間 <?php echo $_smarty_tpl->tpl_vars['_INFO']->value['receipt_time'];?>
 （<?php echo $_smarty_tpl->tpl_vars['_INFO']->value['rec_holiday'];?>
@@ -71,9 +75,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /contact/" class="button _circle"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ" />お問い合わせ</a></div>
 				</li>
 				<li class="sns">
-					<a href="https://www.facebook.com/tagschool0902" target="_blank" class="fa"><i class="fab fa-facebook-f"></i></a>
-					<a href="https://twitter.com/tagschool28" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
-					<a href="https://www.instagram.com/tagschool_28/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.facebook.com/%E9%9B%86%E5%9B%A3%E5%80%8B%E5%88%A5%E6%8C%87%E5%B0%8E%E5%A1%BE-TAG-school-113292580428083/" target="_blank" class="fa"><i class="fab fa-facebook-f"></i></a>
+				
 				</li>
 			</ul>
 		</div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2020-07-03 12:21:11
+<?php /* Smarty version Smarty-3.1.18, created on 2020-08-26 15:27:49
          compiled from "/home/tag-school/www//common/include/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15915805195e296ce138a816-66946736%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4c52b8aa5a65debfa2666f962af126ee431d3bef' => 
     array (
       0 => '/home/tag-school/www//common/include/header.tpl',
-      1 => 1593746344,
+      1 => 1598423100,
       2 => 'file',
     ),
   ),
@@ -74,10 +74,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<div class="mail_unit"><a href="<?php echo $_smarty_tpl->tpl_vars['_FRONT']->value['home'];?>
 /contact/" class="button _circle"><img src="/common/image/head/mail.png" class="pos_vm" alt="お問い合わせ" />お問い合わせ</a></div>
 				</li>
-				<li class="sns">
-					<a href="https://www.facebook.com/%E9%9B%86%E5%9B%A3%E5%80%8B%E5%88%A5%E6%8C%87%E5%B0%8E%E5%A1%BE-TAG-school-113292580428083/" target="_blank" class="fa"><i class="fab fa-facebook-f"></i></a>
 				
-				</li>
 			</ul>
 		</div>
 	</div>
