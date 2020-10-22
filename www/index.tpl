@@ -385,31 +385,6 @@
 							</div>
 						</div>
 					</div>
-				<!--
-					<div class="teacher_unit" id="ando">
-						<div class="row">
-							<div class="col-xs-4 col-xs-push-8">
-								<div class="photo mb20"><img src="/common/image/contents/top/teacher2.png" alt="安藤 正由"></div>
-							</div>
-							<div class="col-xs-8 col-xs-pull-4">
-								<h3 class="title"><span class="name mincho c_orange">安藤 正由</span><span class="ruby">MASAYOSHI ANDO</span><span class="tag c_orange">TAG総合プロデューサー・統括責任者</span></h3>
-								<p class="mb10">TAG schoolを総合プロデュースした安藤と木本塾長との出会いは、木本塾長が小学４年生の時でした。つまり、かつての教え子と先生がTAG（タッグ）を組んで、作りあげた塾なのです。集団指導を受けても「わからない」、大量の宿題をしても「できない」という声を多く耳にしてきました。集団指導を受けて、出される大量の宿題をすれば、本当に学力の向上につながるでしょうか？ますます変化していく学びに対応できるでしょうか？</p>
-								<p class="mb10">個別指導を組み合わせることで集団指導の「わかる」を、自分で「できる」にすることが可能です。「わかる」「できる」「えらべる」集団✕個別の融合型の複合学習塾、それが、TAG schoolです。</p>
-								<p class="mb30">自分が思い描く理想とする教育がついにTAG schoolで実現します。皆様、TAG schoolでお待ちしております。</p>
-								<div class="profile_box _orange">
-									<div class="profile c_orange">
-										<dl>
-											<dt>PROFILE</dt>
-											<dd>1971年岡山県津山市生まれ<br>甲南大学 経済学部卒業</dd>
-										</dl>
-									</div>
-									<p class="mb10">小学生の頃から教師を目指し、高校・大学時代には、地域の剣道クラブで小中学生を指導・育成。その指導経験から、得意の社会で教員免許を取得し、岡山市内の公立中学校で2年間教鞭を執る。しかし、自分が理想とする教育と学校教育にギャップを感じ、学校とは異なるフィールドを求めて岡山県内の大手進学塾に入社。入社2年目から校舎長やエリア統括を歴任。退社後は、別の大手進学塾へ転職し、校舎責任者や中学・高校受験指導主任を務める。</p>
-									<p>2019年9月、TAG school運営会社の株式会社TAG Corporation 28専務取締役に就任。2020年2月、教師歴27年の経験とノウハウを生かし、教え子の木本と共に新総合学習塾TAG schoolを立ち上げ、TAG総合プロデューサー兼統括責任者に就任する。</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				-->
 				</div>
 			</div>
 		</div>
